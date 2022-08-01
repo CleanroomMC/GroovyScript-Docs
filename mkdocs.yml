@@ -1,5 +1,8 @@
 site_name: GroovyScript
 
+repo_name: CleanroomMC/GroovyScript-Docs
+repo_url: https://github.com/CleanroomMC/GroovyScript-Docs
+
 nav:
     - 'Introduction': 'index.md'
 
@@ -7,3 +10,14 @@ theme:
     name: material
     palette:
         scheme: slate
+    features:
+        - content.code.annotate
+
+markdown_extensions:
+    - admonition
+    - pymdownx.details
+    - pymdownx.superfences
+    - pymdownx.tabbed:
+        alternate_style: true
+    - attr_list
+    - md_in_html
