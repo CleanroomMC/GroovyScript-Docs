@@ -1,6 +1,4 @@
 site_name: GroovyScript
 
 theme: 
-    name: material
-    palette:
-        scheme: slate
+    name: readthedocs
