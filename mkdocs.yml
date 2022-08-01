@@ -1,4 +1,7 @@
 site_name: GroovyScript
 
+nav:
+    - 'Introduction': 'index.md'
+
 theme: 
     name: readthedocs
