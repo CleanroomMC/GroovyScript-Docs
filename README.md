@@ -1,5 +1,6 @@
 # GroovyScript Docs
-This is the official repository for the GroovyScript Documentation using Read the Docs and MkDocs
+This is the official repository for the GroovyScript Documentation using Read the Docs and MkDocs\
+Docs are hosted [here](https://groovyscript-docs.readthedocs.io/en/latest/)
 
 ## Test locally
 Run the following from a terminal
