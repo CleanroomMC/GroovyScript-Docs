@@ -6,8 +6,9 @@ repo_url: https://github.com/CleanroomMC/GroovyScript-Docs
 nav:
     - 'Groovy':
         - 'Introduction': 'groovy/introduction.md'
+        - 'Builders': 'groovy/builder.md'
     - 'GroovyScript':
-        - 'mods':
+        - 'Mods':
             - 'EnderIO':
                 - 'Alloy Smelter': 'groovyscript/mods/enderio/alloySmelter.md'
             - 'Mekanism':
