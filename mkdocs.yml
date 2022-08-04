@@ -10,9 +10,12 @@ nav:
     - 'GroovyScript':
         - 'Mods':
             - 'EnderIO':
-                - 'Alloy Smelter': 'groovyscript/mods/enderio/alloySmelter.md'
+                - 'Alloy Smelter': 'groovyscript/mods/enderio/alloy_smelter.md'
+                - 'SAG Mill': 'groovyscript/mods/enderio/sag_mill.md'
             - 'Mekanism':
                 - 'Crusher': 'groovyscript/mods/mekanism/crusher.md'
+        - 'Minecraft':
+              - 'Crafting': 'groovyscript/minecraft/crafting.md'
     - 'Introduction': 'index.md'
 
 theme:

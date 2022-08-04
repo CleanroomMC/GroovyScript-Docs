@@ -1,4 +1,5 @@
 # Builder
+
 A builder is a class that contains methods to build an object. Those methods can be chained together and often end in a `.build()` call.
 Each method, except the `build()` method, should return the same builder instance. 
 

@@ -1,4 +1,4 @@
-# Alloy Smelter
+# EnderIO Alloy Smelter
 
 ## Adding Recipes
 Just like other recipe types, the Alloy Smelter also uses a recipe builder. <br>
