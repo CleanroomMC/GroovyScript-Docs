@@ -21,7 +21,16 @@ nav:
 theme:
     name: material
     palette:
-        scheme: slate
+        - scheme: slate
+          accent: blue
+          toggle:
+            icon: material/brightness-4
+            name: Switch to light mode
+        - scheme: default
+          toggle:
+            icon: material/brightness-7
+            name: Switch to dark mode
+
     features:
         - content.code.annotate
         - navigation.tracking
@@ -38,3 +47,6 @@ markdown_extensions:
         alternate_style: true
     - attr_list
     - md_in_html
+
+extra_css:
+  - stylesheets/extra.css
