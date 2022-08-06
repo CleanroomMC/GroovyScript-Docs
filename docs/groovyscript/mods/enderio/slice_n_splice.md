@@ -9,7 +9,7 @@ mods.enderio.SliceNSplce.recipeBuilder()
 
 Adding inputs: (requires 1 - 6) <br>
 Here the order of inputs is important. The slot order is from left to right and top to bottom. 
-All Slice'n'Splice recipres are "shaped". Meaning all inputs must go in their specified slot.
+All Slice'n'Splice recipes are "shaped". Meaning all inputs must go in their specified slot. Empty ingredients aka. `null` are allowed.
 ```groovy
 .input(IIngredient)
 .input(IIngredient...)
