@@ -69,5 +69,5 @@ mods.enderio.SagMill.removeByInput(ItemStack input)
 ### Example
 ````groovy
 // removes wheat milling in Sag Mill
-mods.enderio.SagMill.remove('<minecraft:wheat>')
+mods.enderio.SagMill.removeByInput('<minecraft:wheat>')
 ````
