@@ -2,6 +2,7 @@
 
 A builder is a class that contains methods to build an object. Those methods can be chained together and often end in a `.build()` call.
 Each method, except the `build()` method, should return the same builder instance. 
+The Recipe Builders in GroovyScript and with a `.register()` call, because the recipe is registered rather than just build and `.buildAndRegister()` is too long. 
 
 ## Builder class example
 Let's see what a simple Builder class can look like:

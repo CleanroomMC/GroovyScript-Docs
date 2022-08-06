@@ -34,7 +34,7 @@ Set required total energy: (optional (default is 5000))
 
 Set xp chance: (optional (default is 0))
 ````groovy
-.xp(float)
+.xp(float) // 0.0 = 0% / 1.0 = 100%
 ````
 
 Register recipe: (returns nothing)

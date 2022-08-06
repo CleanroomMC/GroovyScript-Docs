@@ -12,6 +12,8 @@ nav:
             - 'EnderIO':
                 - 'Alloy Smelter': 'groovyscript/mods/enderio/alloy_smelter.md'
                 - 'SAG Mill': 'groovyscript/mods/enderio/sag_mill.md'
+                - 'Soul Binder':  'groovyscript/mods/enderio/soul_binder.md'
+                - "Slice'n'Splice": 'groovyscript/mods/enderio/slice_n_splice.md'
             - 'Mekanism':
                 - 'Crusher': 'groovyscript/mods/mekanism/crusher.md'
         - 'Minecraft':
