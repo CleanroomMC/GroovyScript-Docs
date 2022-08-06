@@ -16,6 +16,7 @@ nav:
                 - "Slice'n'Splice": 'groovyscript/mods/enderio/slice_n_splice.md'
                 - 'Combustion Generator': 'groovyscript/mods/enderio/combustion_gen.md'
                 - 'Enchanter': 'groovyscript/mods/enderio/enchanter.md'
+                - 'Vat': 'groovyscript/mods/enderio/vat.md'
             - 'Mekanism':
                 - 'Crusher': 'groovyscript/mods/mekanism/crusher.md'
         - 'Minecraft':
