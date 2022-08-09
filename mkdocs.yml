@@ -17,6 +17,7 @@ nav:
                 - 'Combustion Generator': 'groovyscript/mods/enderio/combustion_gen.md'
                 - 'Enchanter': 'groovyscript/mods/enderio/enchanter.md'
                 - 'Vat': 'groovyscript/mods/enderio/vat.md'
+                - 'Tank': 'groovyscript/mods/enderio/tank.md'
             - 'Mekanism':
                 - 'Crusher': 'groovyscript/mods/mekanism/crusher.md'
         - 'Minecraft':
