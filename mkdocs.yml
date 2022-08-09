@@ -20,6 +20,8 @@ nav:
                 - 'Tank': 'groovyscript/mods/enderio/tank.md'
             - 'Mekanism':
                 - 'Crusher': 'groovyscript/mods/mekanism/crusher.md'
+            - 'Thermal Expansion':
+                - 'Pulverizer': 'groovyscript/mods/thermal/pulverizer.md'
         - 'Minecraft':
               - 'Crafting': 'groovyscript/minecraft/crafting.md'
     - 'Introduction': 'index.md'
