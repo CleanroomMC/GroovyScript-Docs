@@ -49,7 +49,7 @@ mods.enderio.AlloySmelter.recipeBuilder()
         .output('<minecraft:nether_star>')
         .tierNormal()       // recipes requires normal or enhanced tier
         .energy(6000)
-        .xp(0.5f)
+        .xpChance(0.5f)
         .register()
 ````
 

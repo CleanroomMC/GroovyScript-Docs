@@ -30,7 +30,7 @@ Set required total energy: (optional (default is 3000))
 
 Register recipe: (returns `cofh.thermalexpansion.util.managers.machine.PulverizerManager.PulverizerRecipe`)
 ````groovy
-.buildAndRegister()
+.register()
 ````
 
 ### Example
@@ -41,7 +41,7 @@ mods.thermalexpansion.Pulverizer.recipeBuilder()
         .output('<minecraft:diamond>')
         .secondaryOutput('<minecraft:diamond>', 1)
         .energy(2000)
-        .buildAndRegister()
+        .register()
 ````
 
 ## Removing Recipes
