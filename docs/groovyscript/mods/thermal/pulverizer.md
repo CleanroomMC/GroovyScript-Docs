@@ -53,5 +53,5 @@ mods.thermalexpansion.Pulverizer.removeByInput(ItemStack input)
 ### Example
 ````groovy
 // removes recipe with Iron Ingot as input from Pulverizer
-mods.thermal.Pulverizer.removeByInput('<minecraft:iron_ingot>')
+mods.thermalexpansion.Pulverizer.removeByInput('<minecraft:iron_ingot>')
 ````
