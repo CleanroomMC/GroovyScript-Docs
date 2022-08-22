@@ -41,7 +41,7 @@ mods.thermalexpansion.Pulverizer.recipeBuilder()
         .output('<minecraft:diamond>')
         .secondaryOutput('<minecraft:diamond>', 1)
         .energy(2000)
-        .register()
+        .buildAndRegister()
 ````
 
 ## Removing Recipes
