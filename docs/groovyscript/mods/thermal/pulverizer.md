@@ -4,7 +4,7 @@
 Just like other recipe types, the Pulverizer also uses a recipe builder. <br>
 You don't know what a builder is? Check [this](https://groovyscript-docs.readthedocs.io/en/latest/groovy/builder/) out
 ```groovy
-mods.thermal.Pulverizer.recipeBuilder()
+mods.thermalexpansion.Pulverizer.recipeBuilder()
 ```
 
 Set input: (requires exactly 1)
@@ -36,7 +36,7 @@ Register recipe: (returns `cofh.thermalexpansion.util.managers.machine.Pulverize
 ### Example
 This creates a recipe where bookshelf turns into a diamond with an extra 1% chance for an extra diamond.
 ````groovy
-mods.thermal.Pulverizer.recipeBuilder()
+mods.thermalexpansion.Pulverizer.recipeBuilder()
         .input('<minecraft:bookshelf>')
         .output('<minecraft:diamond>')
         .secondaryOutput('<minecraft:diamond>', 1)
@@ -47,11 +47,11 @@ mods.thermal.Pulverizer.recipeBuilder()
 ## Removing Recipes
 This removes a recipe that match the given input:
 ````groovy
-mods.thermal.Pulverizer.removeByInput(ItemStack output)
+mods.thermalexpansion.Pulverizer.removeByInput(ItemStack input)
 ````
 
 ### Example
 ````groovy
-// removes Iron Ingot from Pulverizer
-mods.thermal.Pulverizer.removeByInput('<minecraft:iron_ingot>')
+// removes recipe with Iron Ingot as input from Pulverizer
+mods.thermalexpansion.Pulverizer.removeByInput('<minecraft:iron_ingot>')
 ````
