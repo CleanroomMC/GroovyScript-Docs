@@ -24,6 +24,8 @@ nav:
                 - 'Pulverizer': 'groovyscript/mods/thermal/pulverizer.md'
         - 'Minecraft':
               - 'Crafting': 'groovyscript/minecraft/crafting.md'
+              - 'Crafting with Builders': 'groovyscript/minecraft/crafting_builders.md'
+              - 'Furnace': 'groovyscript/minecraft/furnace.md'
     - 'Introduction': 'index.md'
 
 theme:
