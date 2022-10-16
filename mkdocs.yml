@@ -6,6 +6,10 @@ repo_url: https://github.com/CleanroomMC/GroovyScript-Docs
 nav:
     - 'Groovy':
         - 'Introduction': 'groovy/introduction.md'
+        - 'Strings': 'groovy/strings.md'
+        - 'Lists': 'groovy/lists.md'
+        - 'Maps': 'groovy/maps.md'
+        - 'Loops': 'groovy/loops.md'
         - 'Builders': 'groovy/builder.md'
     - 'GroovyScript':
         - 'Mods':

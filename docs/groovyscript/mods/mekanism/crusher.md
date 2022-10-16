@@ -6,7 +6,7 @@ mods.mekanism.crusher.add(IIngredient input, ItemStack output)
 ```
 
 !!! example
-    ```
+    ```groovy
     mods.mekanism.crusher.add('<ore:ingotIron>', '<minecraft:nether_star>')
     ```
 
