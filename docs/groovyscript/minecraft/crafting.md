@@ -18,15 +18,15 @@ crafting.replaceShaped(String name, ItemStack output, List<List<IIngredient>> in
 
 ### Example
 ```groovy
-crafting.addShaped('balanced_clay', 'minecraft:clay_ball' * 3, [
-        ['minecraft:nether_star', null, 'minecraft:nether_star'],
-        [null, 'ore:ingotIron', null], // (1)
-        ['minecraft:nether_star', null, 'minecraft:nether_star']
+crafting.addShaped('balanced_clay', item('minecraft:clay_ball') * 3, [
+        [item('minecraft:nether_star'), null, item('minecraft:nether_star')],
+        [null, ore('ingotIron'), null], // (1)
+        [item('minecraft:nether_star'), null, item('minecraft:nether_star')]
 ])
 
-crafting.addShaped('balanced_clay_2x2', 'minecraft:clay_ball' * 2, [
-        ['minecraft:nether_star', null],
-        [null, 'ore:ingotIron'], // (2)
+crafting.addShaped('balanced_clay_2x2', item('minecraft:clay_ball') * 2, [
+        [item('minecraft:nether_star'), null],
+        [null, ore('ingotIron')], // (2)
 ])
 ```
 
@@ -51,7 +51,7 @@ crafting.replaceShapeless(String name, ItemStack output, List<IIngredient> input
 
 ### Example
 ```groovy
-crafting.addShapeless('unbalanced_clay', 'minecraft:clay_ball' * 32, ['minecraft:dirt', 'minecraft:dirt', 'minecraft:leather'])
+crafting.addShapeless('unbalanced_clay', item('minecraft:clay_ball') * 32, [item('minecraft:dirt'), item('minecraft:dirt'), item('minecraft:leather')])
 ```
 
 ## Removing Recipes

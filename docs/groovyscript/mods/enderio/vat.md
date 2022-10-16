@@ -52,11 +52,11 @@ Register recipe: (returns nothing)
 ### Example
 ````groovy
 mods.enderio.Vat.recipeBuilder()
-        .input('<fluid:water>' * 500)
-        .output('<fluid:lava>' * 500)
-        .itemInputLeft('<minecraft:diamond>', 1.5)
-        .itemInputRight('<minecraft:iron_ingot>', 0.7)
-        .itemInputRight('<minecraft:gold_ingot>', 7)
+        .input(fluid('water') * 500)
+        .output(fluid('lava') * 500)
+        .itemInputLeft(item('minecraft:diamond'), 1.5)
+        .itemInputRight(item('minecraft:iron_ingot'), 0.7)
+        .itemInputRight(item('minecraft:gold_ingot'), 7)
         .baseMultiplier(1)
         .register()
 ````
@@ -70,5 +70,5 @@ mods.enderio.Vat.remove(ItemStack output)
 ### Example
 ````groovy
 // removes Nutrient Distillation recipe from the Vat
-mods.enderio.Vat.remove('<fluid:nutrient_distillation>')
+mods.enderio.Vat.remove(fluid('nutrient_distillation'))
 ````

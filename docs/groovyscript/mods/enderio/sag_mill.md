@@ -52,9 +52,9 @@ Register recipe: (returns a `crazypants.enderio.base.recipe.Recipe` instance if 
 ### Example
 ````groovy
 mods.enderio.SagMill.recipeBuilder()
-        .input('<minecraft:nether_star>')
-        .output('<minecraft:diamond>')              // guaranteed diamond
-        .output('<minecraft:nether_star>', 0.05f)   // 5% chance to get nether star back
+        .input(item('minecraft:nether_star'))
+        .output(item('minecraft:diamond'))              // guaranteed diamond
+        .output(item('minecraft:nether_star'), 0.05f)   // 5% chance to get nether star back
         .tierNormal()       // recipes requires normal or enhanced tier
         .energy(6000)
         .register()
@@ -69,5 +69,5 @@ mods.enderio.SagMill.removeByInput(ItemStack input)
 ### Example
 ````groovy
 // removes wheat milling in Sag Mill
-mods.enderio.SagMill.removeByInput('<minecraft:wheat>')
+mods.enderio.SagMill.removeByInput(item('minecraft:wheat'))
 ````

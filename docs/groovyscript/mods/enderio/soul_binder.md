@@ -43,9 +43,9 @@ Register recipe: (returns a `crazypants.enderio.base.recipe.Recipe` instance if 
 ### Example
 ````groovy
 mods.enderio.SoulBinder.recipeBuilder()
-        .input('<minecraft:diamond>')
+        .input(item('minecraft:diamond'))
         .entitySoul('minecraft:zombie')      // zombie in a soul vial
-        .output('<minecraft:nether_star>')   
+        .output(item('minecraft:nether_star'))   
         .xp(10)                              // requires 10 xp levels
         .energy(6000)
         .register()
@@ -60,5 +60,5 @@ mods.enderio.SoulBinder.remove(ItemStack output)
 ### Example
 ````groovy
 // removes soul binding for enticing crystal
-mods.enderio.SoulBinder.remove('<enderio:item_material:17>')
+mods.enderio.SoulBinder.remove(item('enderio:item_material:17'))
 ````

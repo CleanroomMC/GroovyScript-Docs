@@ -11,7 +11,7 @@ furnace.add(IIngredient input, ItemStack output, float exp)
 ### Example
 ```groovy
 // smelt 1 dirt to produce one cobblestone and 0.5 exp
-furnace.add('minecraft:dirt', 'minecraft:cobblestone', 0.5f)
+furnace.add(item('minecraft:dirt'), item('minecraft:cobblestone'), 0.5f)
 ```
 
 ## Removing Recipes:
@@ -22,5 +22,5 @@ furnace.removeByInput(ItemStack input)
 ### Example
 ```groovy
 // removes all recipes that input iron ore
-furnace.removeByInput('minecraft:iron_ore')
+furnace.removeByInput(item('minecraft:iron_ore'))
 ```

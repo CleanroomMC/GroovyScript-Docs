@@ -31,7 +31,7 @@ Set the recipe function (optional):
 recipeFunction(Closure<ItemStack> recipeFunction) // (1)
 ```
 
-1. See the [Recipe Function and Action page](TODO) for more details.
+1. See the [Recipe Function and Action page](./crafting.md) for more details.
 
 Set the recipe action (optional):
 ```groovy
@@ -99,24 +99,24 @@ Reading the above makes this seem quite complicated. We promise it's not!
 // Shaped Recipes
 crafting.shapedBuilder()                    // create a new shaped recipe
         .name('balanced_clay')              // name the recipe 'balanced_clay'
-        .output('minecraft:clay' * 32)      // output 32 clay
+        .output(item('minecraft:clay') * 32)      // output 32 clay
         .matrix('NIN',                      // create the layout for the recipe
                 'DSD',                      // each character represents a slot
                 'NIN')
-        .key('N', 'minecraft:nether_star')  // everywhere there is an 'N' in the layout, use a nether star
-        .key('I', 'minecraft:iron_ingot')   // all 'I' characters are iron ingots
-        .key('D', 'minecraft:diamond')      // all 'D' characters are diamonds
-        .key('S', 'minecraft:stone')        // all 'I' characters are stone
+        .key('N', item('minecraft:nether_star'))  // everywhere there is an 'N' in the layout, use a nether star
+        .key('I', ore('ingotIron'))               // all 'I' characters are iron ingots
+        .key('D', item('minecraft:diamond'))      // all 'D' characters are diamonds
+        .key('S', ore('stone'))                   // all 'I' characters are stone
         .register()                         // register the recipe
 
 
 crafting.shapedBuilder()
         .name('balanced_clay_v2')
-        .output('minecraft:clay' * 64)
+        .output(item('minecraft:clay') * 64)
         .matrix(' B ',                      // use a space for an empty slot
                 'X X')                      // (1)
-        .key('B', 'minecraft:glass_bottle')
-        .key('X', 'minecraft:gold_nugget')
+        .key('B', item('minecraft:glass_bottle'))
+        .key('X', item('minecraft:gold_nugget'))
         .register()
 ```
 

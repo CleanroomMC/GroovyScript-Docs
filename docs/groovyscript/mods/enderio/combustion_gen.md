@@ -8,7 +8,7 @@ mods.enderio.CombustionGen.addFuel(FluidStack fuel, int rfPerCycle, int burnTime
 ````
 Example
 ````groovy
-mods.enderio.CombustionGen.addFuel('<fluid:water>', 100, 100)
+mods.enderio.CombustionGen.addFuel(fluid('water'), 100, 100)
 ````
 
 ## Removing fuels
@@ -17,7 +17,7 @@ mods.enderio.CombustionGen.removeFuel(FluidStack fuel)
 ````
 Example
 ````groovy
-mods.enderio.CombustionGen.removeFuel('<fluid:rocket_fuel>')
+mods.enderio.CombustionGen.removeFuel(fluid('rocket_fuel'))
 ````
 
 ## Adding coolants
@@ -27,7 +27,7 @@ mods.enderio.CombustionGen.addCoolant(FluidStack fuel, float degreesCoolingPerMb
 ````
 Example
 ````groovy
-mods.enderio.CombustionGen.addCoolant('<fluid:lava>', 20f)
+mods.enderio.CombustionGen.addCoolant(fluid('lava'), 20f)
 ````
 
 ## Removing coolants
@@ -36,5 +36,5 @@ mods.enderio.CombustionGen.removeCoolant(FluidStack fuel)
 ````
 Example
 ````groovy
-mods.enderio.CombustionGen.removeCoolant('<fluid:ender_distillation>')
+mods.enderio.CombustionGen.removeCoolant(fluid('ender_distillation'))
 ````
