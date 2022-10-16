@@ -40,9 +40,9 @@ Register recipe: (returns a `crazypants.enderio.base.recipe.Recipe` instance if 
 Here the inputs are split into two `input()` calls. This helps to visualize the recipe. 
 ````groovy
 mods.enderio.SliceNSplice.recipeBuilder()
-        .input('<minecraft:diamond>', '<minecraft:gold_ingot>', '<minecraft:diamond>')
-        .input('<minecraft:clay_ball>', '<minecraft:nether_star>', '<minecraft:clay_ball>')
-        .output('<minecraft:totem_of_undying>')
+        .input(item('minecraft:diamond'), item('minecraft:gold_ingot'), item('minecraft:diamond'))
+        .input(item('minecraft:clay_ball'), item('minecraft:nether_star'), item('minecraft:clay_ball'))
+        .output(item('minecraft:totem_of_undying'))
         .energy(9999)
         .register()
 ````
@@ -59,5 +59,5 @@ mods.enderio.SliceNSplice.remove(ItemStack output)
 ### Example
 ````groovy
 // removes slice n splice for tormented enderman head
-mods.enderio.SliceNSplice.remove('<enderio:block_enderman_skull:2>')
+mods.enderio.SliceNSplice.remove(item('enderio:block_enderman_skull:2'))
 ````

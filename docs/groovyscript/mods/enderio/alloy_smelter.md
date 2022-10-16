@@ -45,8 +45,8 @@ Register recipe: (returns nothing)
 ### Example
 ````groovy
 mods.enderio.AlloySmelter.recipeBuilder()
-        .input('<minecraft:iron_ingot>', '<ore:ingotGold>', '<minecraft:clay_ball>' * 64)
-        .output('<minecraft:nether_star>')
+        .input(item('minecraft:iron_ingot'), ore('ingotGold'), item('minecraft:clay_ball') * 64)
+        .output(item('minecraft:nether_star'))
         .tierNormal()       // recipes requires normal or enhanced tier
         .energy(6000)
         .xpChance(0.5f)
@@ -62,5 +62,5 @@ mods.enderio.AlloySmelter.remove(ItemStack output)
 ### Example
 ````groovy
 // removes Vibrant Alloy from Alloy Smelter
-mods.enderio.AlloySmelter.remove('<enderio:item_alloy_ingot:2>')
+mods.enderio.AlloySmelter.remove(item('enderio:item_alloy_ingot:2'))
 ````

@@ -6,8 +6,8 @@ mods.mekanism.crusher.add(IIngredient input, ItemStack output)
 ```
 
 !!! example
-    ```
-    mods.mekanism.crusher.add('<ore:ingotIron>', '<minecraft:nether_star>')
+    ```groovy
+    mods.mekanism.crusher.add(ore('ingotIron'), item('minecraft:nether_star'))
     ```
 
 Remove recipe 

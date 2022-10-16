@@ -6,6 +6,10 @@ repo_url: https://github.com/CleanroomMC/GroovyScript-Docs
 nav:
     - 'Groovy':
         - 'Introduction': 'groovy/introduction.md'
+        - 'Strings': 'groovy/strings.md'
+        - 'Lists': 'groovy/lists.md'
+        - 'Maps': 'groovy/maps.md'
+        - 'Loops': 'groovy/loops.md'
         - 'Builders': 'groovy/builder.md'
     - 'GroovyScript':
         - 'Mods':
@@ -24,7 +28,8 @@ nav:
                 - 'Pulverizer': 'groovyscript/mods/thermal/pulverizer.md'
         - 'Minecraft':
               - 'Crafting': 'groovyscript/minecraft/crafting.md'
-    - 'Introduction': 'index.md'
+              - 'Crafting with Builders': 'groovyscript/minecraft/crafting_builders.md'
+              - 'Furnace': 'groovyscript/minecraft/furnace.md'
 
 theme:
     name: material
@@ -53,7 +58,10 @@ markdown_extensions:
     - pymdownx.superfences
     - pymdownx.tabbed:
         alternate_style: true
+    - pymdownx.tasklist:
+        custom_checkbox: true
     - attr_list
+    - def_list
     - md_in_html
 
 extra_css:

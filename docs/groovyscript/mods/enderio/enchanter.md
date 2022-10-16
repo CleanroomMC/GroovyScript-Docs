@@ -47,11 +47,11 @@ Register recipe: (returns a `crazypants.enderio.base.recipe.enchanter.EnchanterR
 ### Example
 ````groovy
 mods.enderio.Enchanter.recipeBuilder()
-        .enchantment('<enchantment:efficiency>')
-        .input('<minecraft:nether_star>' * 2)
+        .enchantment(enchantment('efficiency'))
+        .input(item('minecraft:nether_star') * 2)
         .xpCostMultiplier(3f)
-        .customBook('<enderio:item_dark_steel_upgrade:0>')
-        .customLapis('<minecraft:poisonous_potato>')
+        .customBook(item('enderio:item_dark_steel_upgrade:0'))
+        .customLapis(item('minecraft:poisonous_potato'))
         .register()
 ````
 
@@ -64,5 +64,5 @@ mods.enderio.Enchantment.remove(Enchantment)
 ### Example
 ````groovy
 // removes all efficiency enchantment recipes
-mods.enderio.Enchantment.remove('<enchantment:efficiency>')
+mods.enderio.Enchantment.remove(enchantment('efficiency'))
 ````
