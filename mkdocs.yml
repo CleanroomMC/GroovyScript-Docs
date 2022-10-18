@@ -4,6 +4,9 @@ repo_name: CleanroomMC/GroovyScript-Docs
 repo_url: https://github.com/CleanroomMC/GroovyScript-Docs
 
 nav:
+    - Introduction:
+          - index.md
+          - Getting Started: getting_started.md
     - 'Groovy':
         - 'Introduction': 'groovy/introduction.md'
         - 'Strings': 'groovy/strings.md'
@@ -63,6 +66,7 @@ markdown_extensions:
     - attr_list
     - def_list
     - md_in_html
+    - toc
 
 extra_css:
   - stylesheets/extra.css
