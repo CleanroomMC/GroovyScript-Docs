@@ -25,6 +25,11 @@ nav:
                 - 'Enchanter': 'groovyscript/mods/enderio/enchanter.md'
                 - 'Vat': 'groovyscript/mods/enderio/vat.md'
                 - 'Tank': 'groovyscript/mods/enderio/tank.md'
+            - GregTech:
+                - Recipes: groovyscript/mods/gtceu/recipes.md
+                - Materials: groovyscript/mods/gtceu/material.md
+                - Heating Coils: groovyscript/mods/gtceu/heating_coils.md
+                - Terminal: groovyscript/mods/gtceu/terminal.md
             - 'Mekanism':
                 - 'Crusher': 'groovyscript/mods/mekanism/crusher.md'
             - 'Thermal Expansion':
