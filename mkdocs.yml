@@ -38,6 +38,7 @@ nav:
               - 'Crafting': 'groovyscript/minecraft/crafting.md'
               - 'Crafting with Builders': 'groovyscript/minecraft/crafting_builders.md'
               - 'Furnace': 'groovyscript/minecraft/furnace.md'
+              - Events: groovyscript/minecraft/events.md
 
 theme:
     name: material
@@ -64,6 +65,11 @@ markdown_extensions:
     - admonition
     - pymdownx.details
     - pymdownx.superfences
+    - pymdownx.critic
+    - pymdownx.caret
+    - pymdownx.keys
+    - pymdownx.mark
+    - pymdownx.tilde
     - pymdownx.tabbed:
         alternate_style: true
     - pymdownx.tasklist:

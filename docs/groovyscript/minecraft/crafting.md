@@ -55,9 +55,12 @@ crafting.addShapeless('unbalanced_clay', item('minecraft:clay_ball') * 32, [item
 ```
 
 ## Removing Recipes
+{--
 You can also use JEI/HEI in Creative Mode to remove recipes with ease. 
 Find the recipe you want to remove, and click the `[X]` button to copy code to remove the recipe to your clipboard.
 Then just paste the code into your desired script and you're good to go!
+--}
+(Planned feature)
 
 You can view recipe names in JEI/HEI by hovering over the output with `F3+h` mode enabled.
 
