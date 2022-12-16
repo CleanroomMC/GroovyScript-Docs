@@ -18,3 +18,5 @@ Note: catalyst also accepts oreDicts ``.catalyst(ore('cropPumpkin'))``
 ```groovy
 mods.thaumcraft.Crucible.removeByOutput(item('minecraft:gunpowder'))
 ```
+
+Note: removeByOutput also accepts oreDicts ``.removeByOutput(ore('cropPumpkin'))``
