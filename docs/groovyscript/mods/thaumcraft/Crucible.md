@@ -16,5 +16,5 @@ Note: catalyst also accepts oreDicts ``.catalyst(ore('cropPumpkin'))``
 ### Remove a recipe
 
 ```groovy
-mods.thaumcraft.InfusionCrafting.removeByOutput(item('thaumcraft:crystal_terra'))
+mods.thaumcraft.Crucible.removeByOutput(item('minecraft:gunpowder'))
 ```
