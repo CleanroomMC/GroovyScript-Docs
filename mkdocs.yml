@@ -34,6 +34,15 @@ nav:
                 - 'Crusher': 'groovyscript/mods/mekanism/crusher.md'
             - 'Thermal Expansion':
                 - 'Pulverizer': 'groovyscript/mods/thermal/pulverizer.md'
+            - Thaumcraft:
+                - Arcane Workbench: groovyscript\mods\thaumcraft\ArcaneWorkbench.md
+                - Aspects: groovyscript\mods\thaumcraft\Aspects.md
+                - Crucible: groovyscript\mods\thaumcraft\Crucible.md
+                - Dust Trigger: groovyscript\mods\thaumcraft\DustTrigger.md
+                - Infusion: groovyscript\mods\thaumcraft\Infusion.md
+                - Loot Bag: groovyscript\mods\thaumcraft\Lootbag.md
+                - Research: groovyscript\mods\thaumcraft\Research.md
+                - Warp: groovyscript\mods\thaumcraft\Warp.md
         - 'Minecraft':
               - 'Crafting': 'groovyscript/minecraft/crafting.md'
               - 'Crafting with Builders': 'groovyscript/minecraft/crafting_builders.md'
