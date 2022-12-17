@@ -1,15 +1,23 @@
 # Warp
 
-### Add Warp to an Item
-
-Adds a specified amount of Warp to and Item (amount must be non-negative).
+### Adding Warp
 
 ```groovy
-mods.thaumcraft.Warp.addWarp(item('minecraft:pumpkin'), 3)
+mods.thaumcraft.Warp.addWarp(ItemStack, int) // int must be non-negative
 ```
 
-### Remove Warp from an Item
+!!! example
+    ```groovy
+    mods.thaumcraft.Warp.addWarp(item('minecraft:pumpkin'), 3)
+    ```
+
+### Removing Warp
 
 ```groovy
-mods.thaumcraft.Warp.removeWarp(item('thaumcraft:void_hoe'))
+mods.thaumcraft.Warp.removeWarp(ItemStack)
 ```
+
+!!! example
+    ```groovy
+    mods.thaumcraft.Warp.removeWarp(item('thaumcraft:void_hoe'))
+    ```

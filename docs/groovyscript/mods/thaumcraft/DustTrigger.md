@@ -1,6 +1,42 @@
 # Dust Trigger (Salis Mundus)
 
+The following builder is for creating new Dust Triggers. <br>
+You don't know what a builder is? Check [this](https://groovyscript-docs.readthedocs.io/en/latest/groovy/builder/) out
+
 ### Add a trigger
+
+```groovy
+mods.thaumcraft.DustTrigger.triggerBuilder()
+```
+
+Adding target: (requires exactly 1)
+
+```groovy
+.target(Block)
+.target(String) // for oreDict triggers
+```
+
+Adding outputs: (requires exactly 1)
+
+```groovy
+.output(ItemStack)
+```
+
+Adding research requirement: (optional (default is ""))
+
+```groovy
+.researchKey(String)  // (1)
+```
+
+1. Please see the examples below to better understand how this works
+
+Register recipe: (returns nothing)
+
+```groovy
+.register()
+```
+
+### Example
 
 ```groovy
 mods.thaumcraft.DustTrigger.triggerBuilder()
@@ -13,5 +49,10 @@ mods.thaumcraft.DustTrigger.triggerBuilder()
 ### Remove a trigger
 
 ```groovy
-mods.thaumcraft.DustTrigger.removeByOutput(item('thaumcraft:arcane_workbench'))
+mods.thaumcraft.DustTrigger.removeByOutput(ItemStack)
 ```
+
+!!! example
+    ```groovy
+    mods.thaumcraft.DustTrigger.removeByOutput(item('thaumcraft:arcane_workbench'))
+    ```

@@ -1,8 +1,59 @@
 # Arcane Workbench
 
-The recipe builder for the Arcane Workbench works very similar to the vanilla [Crafting Table](../../minecraft/crafting_builders.md). Except that you can add a required research, Vis and Aspects.
+The recipe builder for the Arcane Workbench works very similar to the vanilla [Crafting Table](../../minecraft/crafting_builders.md). Except that you can add a required Research, Vis and Aspects.
 
-### Add a shapeless recipe
+### Adding Shapeless Recipes
+
+Just like other recipe types, the Arcane Workbench also uses a recipe builder. <br>
+You don't know what a builder is? Check [this](https://groovyscript-docs.readthedocs.io/en/latest/groovy/builder/) out
+
+```groovy
+mods.thaumcraft.ArcaneWorkbench.shapelessBuilder()
+```
+
+Adding inputs: (requires 1-9)
+
+```groovy
+.input(IIngredient)
+.input(IIngredient...)
+.input(Collection<IIngredient>)
+```
+
+Adding outputs: (requires exactly 1)
+
+```groovy
+.output(ItemStack)
+```
+
+Adding research requirement: (optional (default is ""))
+
+```groovy
+.researchKey(String) // (1)
+```
+
+1. Please see the examples below to better understand how this works
+
+Adding aspects: (optional)
+
+```groovy
+.aspect(AspectStack) // must be a primal aspect
+```
+
+Adding vis requirement: (optional (default is 0))
+
+```groovy
+.vis(int) // (1)
+```
+
+1. Amount of vis required to craft, must be >= 0
+
+Register recipe: (returns nothing)
+
+```groovy
+.register()
+```
+
+### Example
 
 ```groovy
 mods.thaumcraft.ArcaneWorkbench.shapelessBuilder()
@@ -15,10 +66,64 @@ mods.thaumcraft.ArcaneWorkbench.shapelessBuilder()
         .register()
 ```
 
-!!! Note
-    `input` also accepts any ingredient type including ore dictionaries (f.e. `.input(ore('cropPumpkin'))`). `vis` consumes a non-negative integer and refers to the amount of specified aspects required to execute the craft.
+### Adding Shaped Recipes
 
-### Add a shaped recipe
+```groovy
+mods.thaumcraft.ArcaneWorkbench.shapedBuilder()
+```
+
+Creating the recipe's layout (required):
+
+```groovy
+matrix(String... matrix)
+shape(String... matrix) // does the same thing as matrix()
+
+// to input a matrix in the style of non-builder shaped addition
+matrix(List<List<IIngredient>> matrix)
+shape(List<List<IIngredient>> matrix)
+```
+
+Matching ingredients to the recipe layout (required):
+
+```groovy
+.key(String, IIngredient)  // (1)
+```
+
+1. Please see the examples below to better understand how this works
+
+Adding outputs: (requires exactly 1)
+
+```groovy
+.output(ItemStack)
+```
+
+Adding research requirement: (optional (default is ""))
+
+```groovy
+.researchKey(String)  // (1)
+```
+
+1. Please see the examples below to better understand how this works
+
+Adding aspects: (optional)
+
+```groovy
+.aspect(AspectStack) // must be a primal aspect
+```
+
+Adding vis requirement: (optional (default is 0))
+
+```groovy
+.vis(int) // amount of vis required to craft. must be >= 0
+```
+
+Register recipe: (returns nothing)
+
+```groovy
+.register()
+```
+
+### Example
 
 ```groovy
 mods.thaumcraft.ArcaneWorkbench.shapedBuilder()
@@ -31,7 +136,7 @@ mods.thaumcraft.ArcaneWorkbench.shapedBuilder()
         .aspect(aspect('terra'))
         .vis(5)
         .register()
-      
+
 mods.thaumcraft.ArcaneWorkbench.shapedBuilder()
         .researchKey('UNLOCKALCHEMY@3')
         .output(item('minecraft:pumpkin'))
@@ -44,14 +149,15 @@ mods.thaumcraft.ArcaneWorkbench.shapedBuilder()
         .register()
 ```
 
-!!! Note
-    `key` also accepts any ingredient type including ore dictionaries (f.e. `.key('S', ore('cropPumpkin'))`). Both shaped recipe examples above are equivalent. vis consumes a non-negative integer and refers to the amount of specified aspects required to execute the craft.
+### Removing Recipes
 
-### Remove a recipe
+This removes ALL recipes that match the given output:
 
 ```groovy
-mods.thaumcraft.Crucible.removeByOutput(item('minecraft:gunpowder'))
+mods.thaumcraft.ArcaneWorkbench.removeByOutput(IIngredient)
 ```
 
-!!! Note
-    `removeByOutput` also accepts any ingredient type including ore dictionaries (f.e. `.removeByOutput(ore('cropPumpkin'))`).
+!!! example
+    ```groovy
+    mods.thaumcraft.ArcaneWorkbench.removeByOutput(item('thaumcraft:mechanism_simple'))
+    ```

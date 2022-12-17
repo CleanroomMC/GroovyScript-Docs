@@ -1,33 +1,50 @@
 # Lootbag
 
-### Remove All
+## Rarity
 
-Removes all items from the given rarity of lootbag (except broken armor which is hard coded into randomized loot function).
+Each lootbag modification is rarity specific. Rarities can be specified using the following methods
 
 ```groovy
-mods.thaumcraft.LootBag.getRare().removeAll()
-mods.thaumcraft.LootBag.getUncommon().removeAll()
-mods.thaumcraft.LootBag.getCommon().removeAll()
+mods.thaumcraft.LootBag.getRare()
+mods.thaumcraft.LootBag.getUncommon()
+mods.thaumcraft.LootBag.getCommon()
 ```
 
+### Remove All
+
+Removes all items from the specified rarity of lootbag (except broken armor which is hard coded into randomized loot function).
+
+```groovy
+.removeAll()
+```
+
+!!! example
+    ```groovy
+    mods.thaumcraft.LootBag.getCommon().removeAll()
+    ```
 
 ### Remove
 
-Removes chance for an item from the given rarity of lootbag.
+Removes chance for an item from the specified rarity of lootbag.
 
 ```groovy
-mods.thaumcraft.LootBag.getRare().removeItem(item('minecraft:ender_pearl'))
-mods.thaumcraft.LootBag.getUncommon().removeItem(item('minecraft:gold_ingot'))
-mods.thaumcraft.LootBag.getCommon().removeItem(item('minecraft:gold_ingot'))
+.removeItem(ItemStack)
 ```
 
+!!! example
+    ```groovy
+    mods.thaumcraft.LootBag.getRare().removeItem(item('minecraft:ender_pearl'))
+    ```
 
 ### Add
 
 Adds chance for an item in the given rarity of lootbag.
 
 ```groovy
-mods.thaumcraft.LootBag.getRare().addItem(item('minecraft:diamond_block'), 10)
-mods.thaumcraft.LootBag.getUncommon().addItem(item('minecraft:diamond_block'), 5)
-mods.thaumcraft.LootBag.getCommon().addItem(item('minecraft:diamond_block'), 1)
+.addItem(ItemStack, int) // int as a non-negative weight (higher number = more likely)
 ```
+
+!!! example
+    ```groovy
+    mods.thaumcraft.LootBag.getRare().addItem(item('minecraft:diamond_block'), 10)
+    ```

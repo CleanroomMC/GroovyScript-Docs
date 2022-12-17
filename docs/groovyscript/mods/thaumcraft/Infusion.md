@@ -2,6 +2,61 @@
 
 ### Add a recipe
 
+Just like other recipe types, Infusion Crafting also uses a recipe builder. <br>
+You don't know what a builder is? Check [this](https://groovyscript-docs.readthedocs.io/en/latest/groovy/builder/) out
+
+```groovy
+mods.thaumcraft.InfusionCrafting.recipeBuilder()
+```
+
+Adding mainInput: (requires exactly 1)
+
+```groovy
+.mainInput(IIngredient)
+```
+
+Adding input: (requires at least 1)
+
+```groovy
+.input(IIngredient)
+.input(IIngredient...)
+.input(Collection<IIngredient>)
+```
+
+Adding outputs: (requires exactly 1)
+
+```groovy
+.output(ItemStack)
+```
+
+Adding aspects: (requires at least 1)
+
+```groovy
+.aspect(AspectStack)
+```
+
+Adding research requirement: (optional (default is ""))
+
+```groovy
+.researchKey(String)  // (1)
+```
+
+1. Please see the examples below to better understand how this works
+
+Adding instability: (required)
+
+```groovy
+.instability(int)
+```
+
+Register recipe: (returns nothing)
+
+```groovy
+.register()
+```
+
+### Example
+
 ```groovy
 mods.thaumcraft.InfusionCrafting.recipeBuilder()
         .researchKey('UNLOCKALCHEMY@3')
@@ -21,5 +76,10 @@ mods.thaumcraft.InfusionCrafting.recipeBuilder()
 ### Remove a recipe
 
 ```groovy
-mods.thaumcraft.InfusionCrafting.removeByOutput(item('thaumcraft:crystal_terra'))
+mods.thaumcraft.InfusionCrafting.removeByOutput(IIngredient)
 ```
+
+!!! example
+    ```groovy
+    mods.thaumcraft.InfusionCrafting.removeByOutput(item('thaumcraft:crystal_terra'))
+    ```
