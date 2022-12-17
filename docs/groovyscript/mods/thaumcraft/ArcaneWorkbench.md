@@ -1,5 +1,7 @@
 # Arcane Workbench
 
+The recipe builder for the Arcane Workbench works very similar to the vanilla [Crafting Table](../../minecraft/crafting_builders.md). Except that you can add a required research, Vis and Aspects.
+
 ### Add a shapeless recipe
 
 ```groovy
@@ -13,7 +15,8 @@ mods.thaumcraft.ArcaneWorkbench.shapelessBuilder()
         .register()
 ```
 
-Note: input also accepts oreDicts ``.input(ore('cropPumpkin'))``. vis consumes a non-negative integer and refers to the amount of specified aspects required to execute the craft.
+!!! Note
+    `input` also accepts any ingredient type including ore dictionaries (f.e. `.input(ore('cropPumpkin'))`). `vis` consumes a non-negative integer and refers to the amount of specified aspects required to execute the craft.
 
 ### Add a shaped recipe
 
@@ -28,7 +31,7 @@ mods.thaumcraft.ArcaneWorkbench.shapedBuilder()
         .aspect(aspect('terra'))
         .vis(5)
         .register()
-        
+      
 mods.thaumcraft.ArcaneWorkbench.shapedBuilder()
         .researchKey('UNLOCKALCHEMY@3')
         .output(item('minecraft:pumpkin'))
@@ -41,7 +44,8 @@ mods.thaumcraft.ArcaneWorkbench.shapedBuilder()
         .register()
 ```
 
-Note: key also accepts oreDicts ``.key('S', ore('cropPumpkin'))``. Both shaped recipe examples above are equivalent. vis consumes a non-negative integer and refers to the amount of specified aspects required to execute the craft.
+!!! Note
+    `key` also accepts any ingredient type including ore dictionaries (f.e. `.key('S', ore('cropPumpkin'))`). Both shaped recipe examples above are equivalent. vis consumes a non-negative integer and refers to the amount of specified aspects required to execute the craft.
 
 ### Remove a recipe
 
@@ -49,4 +53,5 @@ Note: key also accepts oreDicts ``.key('S', ore('cropPumpkin'))``. Both shaped r
 mods.thaumcraft.Crucible.removeByOutput(item('minecraft:gunpowder'))
 ```
 
-Note: removeByOutput also accepts oreDicts ``.removeByOutput(ore('cropPumpkin'))``
+!!! Note
+    `removeByOutput` also accepts any ingredient type including ore dictionaries (f.e. `.removeByOutput(ore('cropPumpkin'))`).
