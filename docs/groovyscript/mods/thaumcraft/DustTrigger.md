@@ -10,8 +10,6 @@ mods.thaumcraft.DustTrigger.triggerBuilder()
         .register()
 ```
 
-Note: target also accepts oreDicts ``.target(ore('cropPumpkin'))``
-
 ### Remove a trigger
 
 ```groovy

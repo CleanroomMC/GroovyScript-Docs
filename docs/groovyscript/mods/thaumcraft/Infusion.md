@@ -18,8 +18,6 @@ mods.thaumcraft.InfusionCrafting.recipeBuilder()
         .register()
 ```
 
-Note: input and mainInput also accept oreDicts ``.catalyst(ore('cropPumpkin'))``. input refers to the items placed on pedestal's around the multiblock. mainInput refers to the item placed in the center underneath the runic matrix block. Instability must be a non-negative integer.
-
 ### Remove a recipe
 
 ```groovy

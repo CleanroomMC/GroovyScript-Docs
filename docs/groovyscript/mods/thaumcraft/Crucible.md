@@ -11,12 +11,8 @@ mods.thaumcraft.Crucible.recipeBuilder()
         .register()
 ```
 
-Note: catalyst also accepts oreDicts ``.catalyst(ore('cropPumpkin'))``
-
 ### Remove a recipe
 
 ```groovy
 mods.thaumcraft.Crucible.removeByOutput(item('minecraft:gunpowder'))
 ```
-
-Note: removeByOutput also accepts oreDicts ``.removeByOutput(ore('cropPumpkin'))``

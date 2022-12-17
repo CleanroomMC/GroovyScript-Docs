@@ -42,6 +42,7 @@ nav:
                 - Infusion: groovyscript\mods\thaumcraft\Infusion.md
                 - Loot Bag: groovyscript\mods\thaumcraft\Lootbag.md
                 - Research: groovyscript\mods\thaumcraft\Research.md
+                - Smelting Bonus: groovyscript\mods\thaumcraft\SmeltingBonus.md
                 - Warp: groovyscript\mods\thaumcraft\Warp.md
         - 'Minecraft':
               - 'Crafting': 'groovyscript/minecraft/crafting.md'
@@ -79,6 +80,7 @@ markdown_extensions:
     - pymdownx.keys
     - pymdownx.mark
     - pymdownx.tilde
+    - def_list
     - pymdownx.tabbed:
         alternate_style: true
     - pymdownx.tasklist:
