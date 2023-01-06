@@ -1,0 +1,24 @@
+# PlayerEvent.LoadFromFile
+
+To use this event use the following import:
+```groovy
+import net.minecraftforge.event.entity.player.PlayerEvent.LoadFromFile
+```
+
+## Sub-Classes
+This event extends the following events and can use all their methods and fields: <br>
+[PlayerEvent](player_event.md), [LivingEvent](living_event.md), [EntityEvent](entity_event.md)
+
+## Methods
+```groovy
+java.io.File getPlayerDirectory()
+```
+
+```groovy
+java.lang.String getPlayerUUID()
+```
+
+```groovy
+java.io.File getPlayerFile(java.lang.String arg0)
+```
+
