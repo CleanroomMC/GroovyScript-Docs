@@ -2,7 +2,7 @@
 
 ## Rarity
 
-Each lootbag modification is rarity specific. Rarities can be specified using the following methods
+Each lootbag modification is rarity specific. Rarities can be specified using the following methods.
 
 ```groovy
 mods.thaumcraft.LootBag.getRare()
@@ -12,7 +12,7 @@ mods.thaumcraft.LootBag.getCommon()
 
 ### Remove All
 
-Removes all items from the specified rarity of lootbag (except broken armor which is hard coded into randomized loot function).
+Removes all items from the specified rarity of lootbag.
 
 ```groovy
 .removeAll()
@@ -22,6 +22,9 @@ Removes all items from the specified rarity of lootbag (except broken armor whic
     ```groovy
     mods.thaumcraft.LootBag.getCommon().removeAll()
     ```
+
+!!! Bug
+    Armor chances are hard coded into randomized loot function, and are not currently removable.
 
 ### Remove
 
@@ -41,8 +44,10 @@ Removes chance for an item from the specified rarity of lootbag.
 Adds chance for an item in the given rarity of lootbag.
 
 ```groovy
-.addItem(ItemStack, int) // int as a non-negative weight (higher number = more likely)
+.addItem(ItemStack, int/*(1)!*/)
 ```
+
+1. a non-negative weight (higher number = more likely)
 
 !!! example
     ```groovy

@@ -1,6 +1,6 @@
 # Smelting Bonus
 
-Add or remove bonus outputs from the infernal furnace
+Add or remove bonus outputs from the Infernal Furnace.
 
 ### Adding Bonus
 
@@ -14,8 +14,10 @@ mods.thaumcraft.SmeltingBonus.recipeBuilder()
 Adding input: (requires exactly 1)
 
 ```groovy
-.input(IIngredient)
+.input(IIngredient/*(1)!*/)
 ```
+
+1. Must be a valid furnace input.
 
 Adding outputs: (requires exactly 1)
 
@@ -26,8 +28,10 @@ Adding outputs: (requires exactly 1)
 Set bonus chance: (optional (default is 33%))
 
 ```groovy
-.chance(float) // 0.0 = 0% / 1.0 = 100%
+.chance(float/*(1)!*/)
 ```
+
+1. 0.0 = 0% / 1.0 = 100%
 
 Register recipe: (returns nothing)
 

@@ -9,7 +9,7 @@ You don't know what a builder is? Check [this](https://groovyscript-docs.readthe
 mods.thaumcraft.InfusionCrafting.recipeBuilder()
 ```
 
-Adding mainInput: (requires exactly 1)
+Adding center pedestal item: (requires exactly 1)
 
 ```groovy
 .mainInput(IIngredient)
@@ -38,10 +38,10 @@ Adding aspects: (requires at least 1)
 Adding research requirement: (optional (default is ""))
 
 ```groovy
-.researchKey(String)  // (1)
+.researchKey(String/*(1)!*/)
 ```
 
-1. Please see the examples below to better understand how this works
+1. The Research Key is the required research to craft the item, research is unlocked via the Thaumonomicon. Obtain a list of all research keys by doing `/tc research list`.
 
 Adding instability: (required)
 
