@@ -34,6 +34,14 @@ nav:
                 - 'Crusher': 'groovyscript/mods/mekanism/crusher.md'
             - 'Thermal Expansion':
                 - 'Pulverizer': 'groovyscript/mods/thermal/pulverizer.md'
+            - 'Blood Magic: Alchemical Wizardry':
+                - 'Blood Altar': 'groovyscript/mods/bloodmagic/blood_altar.md'
+                - 'Alchemy Array': 'groovyscript/mods/bloodmagic/alchemy_array.md'
+                - 'Tartaric Forge': 'groovyscript/mods/bloodmagic/tartaric_forge.md'
+                - 'Alchemy Table': 'groovyscript/mods/bloodmagic/alchemy_table.md'
+                - 'Tranquility': 'groovyscript/mods/bloodmagic/tranquility.md'
+                - 'Sacrificial': 'groovyscript/mods/bloodmagic/sacrificial.md'
+                - 'Meteor': 'groovyscript/mods/bloodmagic/meteor.md'
         - 'Minecraft':
               - 'Crafting': 'groovyscript/minecraft/crafting.md'
               - 'Crafting with Builders': 'groovyscript/minecraft/crafting_builders.md'
@@ -77,6 +85,7 @@ markdown_extensions:
     - attr_list
     - def_list
     - md_in_html
+    - footnotes
     - toc
 
 extra_css:
