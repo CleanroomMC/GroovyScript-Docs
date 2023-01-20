@@ -16,6 +16,14 @@ nav:
       - "Builders": "groovy/builder.md"
   - "GroovyScript":
       - "Mods":
+          - 'Blood Magic: Alchemical Wizardry':
+                - 'Blood Altar': 'groovyscript/mods/bloodmagic/blood_altar.md'
+                - 'Alchemy Array': 'groovyscript/mods/bloodmagic/alchemy_array.md'
+                - 'Tartaric Forge': 'groovyscript/mods/bloodmagic/tartaric_forge.md'
+                - 'Alchemy Table': 'groovyscript/mods/bloodmagic/alchemy_table.md'
+                - 'Tranquility': 'groovyscript/mods/bloodmagic/tranquility.md'
+                - 'Sacrificial': 'groovyscript/mods/bloodmagic/sacrificial.md'
+                - 'Meteor': 'groovyscript/mods/bloodmagic/meteor.md'
           - "EnderIO":
               - "Alloy Smelter": "groovyscript/mods/enderio/alloy_smelter.md"
               - "SAG Mill": "groovyscript/mods/enderio/sag_mill.md"
@@ -32,8 +40,6 @@ nav:
               - Terminal: groovyscript/mods/gtceu/terminal.md
           - "Mekanism":
               - "Crusher": "groovyscript/mods/mekanism/crusher.md"
-          - "Thermal Expansion":
-              - "Pulverizer": "groovyscript/mods/thermal/pulverizer.md"
           - Thaumcraft:
               - Arcane Workbench: groovyscript/mods/thaumcraft/ArcaneWorkbench.md
               - Aspects: groovyscript/mods/thaumcraft/Aspects.md
@@ -44,6 +50,8 @@ nav:
               - Research: groovyscript/mods/thaumcraft/Research.md
               - Smelting Bonus: groovyscript/mods/thaumcraft/SmeltingBonus.md
               - Warp: groovyscript/mods/thaumcraft/Warp.md
+          - "Thermal Expansion":
+              - "Pulverizer": "groovyscript/mods/thermal/pulverizer.md"
       - "Minecraft":
           - "Crafting": "groovyscript/minecraft/crafting.md"
           - "Crafting with Builders": "groovyscript/minecraft/crafting_builders.md"
@@ -247,22 +255,23 @@ theme:
     - toc.integrate
 
 markdown_extensions:
-  - admonition
-  - pymdownx.details
-  - pymdownx.superfences
-  - pymdownx.critic
-  - pymdownx.caret
-  - pymdownx.keys
-  - pymdownx.mark
-  - pymdownx.tilde
-  - pymdownx.tabbed:
-      alternate_style: true
-  - pymdownx.tasklist:
-      custom_checkbox: true
-  - attr_list
-  - def_list
-  - md_in_html
-  - toc
+    - admonition
+    - pymdownx.details
+    - pymdownx.superfences
+    - pymdownx.critic
+    - pymdownx.caret
+    - pymdownx.keys
+    - pymdownx.mark
+    - pymdownx.tilde
+    - pymdownx.tabbed:
+        alternate_style: true
+    - pymdownx.tasklist:
+        custom_checkbox: true
+    - attr_list
+    - def_list
+    - md_in_html
+    - footnotes
+    - toc
 
 extra_css:
   - stylesheets/extra.css
