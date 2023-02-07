@@ -56,6 +56,7 @@ nav:
           - "Crafting": "groovyscript/minecraft/crafting.md"
           - "Crafting with Builders": "groovyscript/minecraft/crafting_builders.md"
           - "Furnace": "groovyscript/minecraft/furnace.md"
+          - Ore Dictionary: groovyscript/minecraft/ore_dictionary.md
           - Events:
               - AdvancementEvent: groovyscript/minecraft/events/advancement_event.md
               - AnimalTameEvent: groovyscript/minecraft/events/animal_tame_event.md
