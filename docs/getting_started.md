@@ -17,29 +17,35 @@ Everything groovy related has its own log, and it generates its own file. If you
 The files directory is always `[Minecraft instance path]/groovy.log`
 
 ## Run config
-This file defines how each script file should be executed. It can also store some general info about the mod pack. The file will be generated if it doesn't exist. <br>
+This file defines how each script file should be executed. It can also store some general info about the mod pack. The file will be generated if it doesn't exist. 
+If you don't understand what this is or how it works you can skip this. All you need to know is that you put your scripts with recipes in `groovy/postInit`. 
+Scripts with stuff like Item Creation go in `groovy/preInit`.<br>
 Let's see what the file can look like.
 ````json
 {
-  "packName": "",
-  "version": "1.0.0",
-  "debug": false,
-  "loaders": {
-    "preInit": [
-      "preInit/"
-    ],
-    "postInit": [
-      "postInit2/"
-    ]
-  }
+   "packName": "",
+   "version": "1.0.0",
+   "debug": false,
+   "classes": [
+      "classes/"
+   ],
+   "loaders": {
+      "preInit": [
+         "preInit/"
+      ],
+      "postInit": [
+         "postInit2/"
+      ]
+   }
 }
 ````
 Let's go through it bit by bit: <br>
 `packName` is the name of the pack. It currently doesn't do anything special. <br>
 `version` is the version of the pack. It currently doesn't do anything special. <br>
 `debug`: If this is false all messages that logged to debug will not be logged. Great for debugging. <br>
+`classes`: (0.3.0+) Files that contain a single class should be specified here. It makes sure classes are loaded when scripts try to access them. <br>
 `loaders`: This defines at what stage what files should be loaded. By default, there are two stages: `preInit` and `postInit`. <br>
-`preInit` will be ran at an early stage. Do not register recipes here. Use it to register game objects like items and blocks. <br>
+`preInit` will run at an early stage. Do not register recipes here. Use it to register game objects like items and blocks. <br>
 `postInit` will run right before JEI loads. Use it to register recipes for example. When GroovyScript gets reloaded only this loader will run.<br>
 Inside the square brackets of the loader we define the files or path that will be run. You can NOT run a file in multiple loaders. 
 Elements higher in the list will be run first. Files can be put multiple times, but they will only get executed once. <br>

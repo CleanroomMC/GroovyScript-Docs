@@ -38,3 +38,16 @@ Checking if an item is in an ore dictionary
 item('minecraft:iron_ingot') in ore('ingotIron') // returns true
 ````
 
+Getting the first item from an ore dictionary
+````groovy
+ore('ingotIron').first
+ore('ingotIron')[0]
+````
+
+Iterating over all items in an ore dictionary
+````groovy
+for (def ironIngot : ore('ingotIron')) {
+    ...
+}
+````
+
