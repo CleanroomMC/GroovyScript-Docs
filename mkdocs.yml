@@ -16,6 +16,7 @@ nav:
       - "Builders": "groovy/builder.md"
   - "GroovyScript":
       - "Mods":
+          - JEI: groovyscript/mods/jei.md
           - 'Blood Magic: Alchemical Wizardry':
                 - 'Blood Altar': 'groovyscript/mods/bloodmagic/blood_altar.md'
                 - 'Alchemy Array': 'groovyscript/mods/bloodmagic/alchemy_array.md'
