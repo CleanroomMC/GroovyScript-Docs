@@ -58,8 +58,8 @@ Adding required aspects: (optional)
 
 1. Aspects specified here must be discovered before the category is revealed in the Thaumonomicon. May be called multiple times.
 
-Adding tab icon: (required)
-
+Adding tab icon: (required) <br>
+This is a [resource location](../../rl.md).
 ```groovy
 .icon(String)/*(1)!*/
 .icon(String mod, String path)/*(2)!*/
@@ -68,8 +68,8 @@ Adding tab icon: (required)
 1. Path to the new tab's icon in the Thaumcraft assets folder.
 2. Path to the new tab's icon in the "mod" assets folder.
 
-Adding background: (required)
-
+Adding background: (required) <br>
+This is a [resource location](../../rl.md).
 ```groovy
 .background(String)/*(1)!*/
 .background(String mod, String path)/*(2)!*/
@@ -78,8 +78,8 @@ Adding background: (required)
 1. Path to the new tab's background in the Thaumcraft assets folder.
 2. Path to the new tab's background in the "mod" assets folder.
 
-Adding background overlay: (optional)
-
+Adding background overlay: (optional) <br>
+This is a [resource location](../../rl.md).
 ```groovy
 .background2(String)/*(1)!*/
 .background2(String mod, String path)/*(2)!*/

@@ -41,8 +41,8 @@ Adding component aspects: (requires exactly 0 or exactly 2)
 
 1. Aspects which make up the new aspect.
 
-Adding sprite image: (required)
-
+Adding sprite image: (required) <br>
+This is a [resource location](../../rl.md).
 ```groovy
 .image(String)/*(1)!*/
 .image(String mod, String path)/*(2)!*/
