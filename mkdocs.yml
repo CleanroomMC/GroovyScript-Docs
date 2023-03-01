@@ -62,6 +62,7 @@ nav:
           - Items: groovyscript/minecraft/item.md
           - Ore Dictionary: groovyscript/minecraft/ore_dictionary.md
           - Events:
+              - groovyscript/minecraft/events/aa_events.md
               - AdvancementEvent: groovyscript/minecraft/events/advancement_event.md
               - AnimalTameEvent: groovyscript/minecraft/events/animal_tame_event.md
               - AnvilRepairEvent: groovyscript/minecraft/events/anvil_repair_event.md
