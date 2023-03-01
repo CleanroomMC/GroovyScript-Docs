@@ -14,6 +14,7 @@ nav:
       - "Maps": "groovy/maps.md"
       - "Loops": "groovy/loops.md"
       - "Builders": "groovy/builder.md"
+      - Closures: groovy/closure.md
   - "GroovyScript":
       - Resource Location for Dummies: groovyscript/rl.md
       - "Mods":
