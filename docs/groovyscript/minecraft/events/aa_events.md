@@ -4,7 +4,7 @@ GroovyScript allows you to listen to any event which uses the forge event system
 Here are listed all minecraft and forge events there are.
 
 !!! Note
-Events can be reloaded if they are registered in `postInit`
+    Events can be reloaded if they are registered in `postInit`
 
 Let's see an example:
 

@@ -20,13 +20,13 @@ nav:
       - "Mods":
           - JEI: groovyscript/mods/jei.md
           - 'Blood Magic: Alchemical Wizardry':
-                - 'Blood Altar': 'groovyscript/mods/bloodmagic/blood_altar.md'
-                - 'Alchemy Array': 'groovyscript/mods/bloodmagic/alchemy_array.md'
-                - 'Tartaric Forge': 'groovyscript/mods/bloodmagic/tartaric_forge.md'
-                - 'Alchemy Table': 'groovyscript/mods/bloodmagic/alchemy_table.md'
-                - 'Tranquility': 'groovyscript/mods/bloodmagic/tranquility.md'
-                - 'Sacrificial': 'groovyscript/mods/bloodmagic/sacrificial.md'
-                - 'Meteor': 'groovyscript/mods/bloodmagic/meteor.md'
+              - 'Blood Altar': 'groovyscript/mods/bloodmagic/blood_altar.md'
+              - 'Alchemy Array': 'groovyscript/mods/bloodmagic/alchemy_array.md'
+              - 'Tartaric Forge': 'groovyscript/mods/bloodmagic/tartaric_forge.md'
+              - 'Alchemy Table': 'groovyscript/mods/bloodmagic/alchemy_table.md'
+              - 'Tranquility': 'groovyscript/mods/bloodmagic/tranquility.md'
+              - 'Sacrificial': 'groovyscript/mods/bloodmagic/sacrificial.md'
+              - 'Meteor': 'groovyscript/mods/bloodmagic/meteor.md'
           - "EnderIO":
               - "Alloy Smelter": "groovyscript/mods/enderio/alloy_smelter.md"
               - "SAG Mill": "groovyscript/mods/enderio/sag_mill.md"
@@ -238,6 +238,9 @@ nav:
               - WorldTypeEvent.InitBiomeGens: groovyscript/minecraft/events/world_type_event._init_biome_gens.md
               - ZombieEvent: groovyscript/minecraft/events/zombie_event.md
               - ZombieEvent.SummonAidEvent: groovyscript/minecraft/events/zombie_event._summon_aid_event.md
+      - Content:
+          - groovyscript/content/content.md
+          - Items: groovyscript/content/item.md
 
 theme:
   name: material
@@ -261,24 +264,24 @@ theme:
     - toc.integrate
 
 markdown_extensions:
-    - admonition
-    - pymdownx.details
-    - pymdownx.superfences
-    - pymdownx.critic
-    - pymdownx.caret
-    - pymdownx.keys
-    - pymdownx.mark
-    - pymdownx.tilde
-    - pymdownx.tabbed:
-        alternate_style: true
-    - pymdownx.tasklist:
-        custom_checkbox: true
-    - attr_list
-    - def_list
-    - md_in_html
-    - footnotes
-    - tables
-    - toc
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.critic
+  - pymdownx.caret
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.tilde
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - attr_list
+  - def_list
+  - md_in_html
+  - footnotes
+  - tables
+  - toc
 
 extra_css:
   - stylesheets/extra.css
