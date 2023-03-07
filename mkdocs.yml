@@ -241,6 +241,8 @@ nav:
       - Content:
           - groovyscript/content/content.md
           - Items: groovyscript/content/item.md
+          - Blocks: groovyscript/content/block.md
+          - Creative Tabs: groovyscript/content/creative_tab.md
 
 theme:
   name: material
