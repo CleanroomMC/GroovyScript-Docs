@@ -1,9 +1,10 @@
 # Materials
 
-First of all, the best docs is the source itself: [Source](https://github.com/GregTechCEu/GregTech/blob/master/src/main/java/gregtech/api/unification/material/Material.java)
+First of all, the best docs is the source
+itself: [Source](https://github.com/GregTechCEu/GregTech/blob/master/src/main/java/gregtech/api/unification/material/Material.java)
 
 !!! Note
-    This docs goes of, of GroovyScript version 0.4.0 and GTCEu 2.5.4
+This docs goes of, of GroovyScript version 0.4.0 and GTCEu 2.5.4
 
 # Introduction
 
@@ -33,9 +34,8 @@ There are two good ways to do this: the simple way and the not simple way.
 ### The Simple Way
 
 This method requires the Material to first exist. This method goes off of the material's **Unlocalized Name**, which is
-the name used before it is translated in a lang file. You can use the trusty `/gt hand` command to retrieve this, which
-is listed after the word "Material" in the chat. It works almost exactly like `/ct hand`, but does extra things
-specifically for GregTech items.
+the name used before it is translated in a lang file. You can use the `/gs hand` command to retrieve the material of
+items.
 
 ```groovy
 // assigns the variable my_material to a Material called Steel.
@@ -85,13 +85,15 @@ special characters (@, %, etc).
 
 ```groovy
 import gregtech.api.GregTechAPI.MaterialEvent
-import gregtech.api.unification.material.Material // import the Material class for making new materials
+import gregtech.api.unification.material.Material
+
+// import the Material class for making new materials
 
 event_manager.listen { MaterialEvent event ->
-  /* 
-   * This does not do much on its own. 
-   * It assigns a variable to a new MaterialBuilder, with an id of 32000, and a name of "my_material".
-   */
+    /* 
+     * This does not do much on its own. 
+     * It assigns a variable to a new MaterialBuilder, with an id of 32000, and a name of "my_material".
+     */
     def my_material_builder = new Material.Builder(32000, "my_material")
 }
 ```
@@ -101,19 +103,20 @@ import gregtech.api.GregTechAPI.MaterialEvent
 import gregtech.api.unification.material.Material
 
 event_manager.listen { MaterialEvent event ->
-  /* 
-   * This will not work quite yet. Read on to learn what else this needs!
-   * It would assign a variable to a new Material, with an id of 32001, and a name of "my_real_material".
-   * 
-   * Use .build() to finish building a material. This is what actually creates it.
-   */
+    /* 
+     * This will not work quite yet. Read on to learn what else this needs!
+     * It would assign a variable to a new Material, with an id of 32001, and a name of "my_real_material".
+     * 
+     * Use .build() to finish building a material. This is what actually creates it.
+     */
     def my_material = new Material.Builder(32001, "my_real_material").build()
 }
 ```
 
 ## Adding Material Properties.
 
-This is where materials really start to take shape. All of the following methods are called on a `new Material.Builder()`.
+This is where materials really start to take shape. All of the following methods are called on
+a `new Material.Builder()`.
 Scroll down to the first example to see how to do this. Each method can be chained together, one after the other, until
 the desired material is all specified. It is then built and the end and returns a finished Material.
 
@@ -465,11 +468,11 @@ import gregtech.api.GregTechAPI.MaterialEvent
 import gregtech.api.unification.material.Material
 
 event_manager.listen { MaterialEvent event ->
-  def cursed_chemistry_material = new Material.Builder(32004, "cursed_chemistry_material")
-          .fluid()
-          .color(0x00FF00) // pure red
-          .components([material('silver') * 3, material('nitrogen') * 6, material('carbon') * 2]) // set the components
-          .build() // build the actual material
+    def cursed_chemistry_material = new Material.Builder(32004, "cursed_chemistry_material")
+            .fluid()
+            .color(0x00FF00) // pure red
+            .components([material('silver') * 3, material('nitrogen') * 6, material('carbon') * 2]) // set the components
+            .build() // build the actual material
 }
 ```
 
@@ -735,11 +738,11 @@ import gregtech.api.unification.Elements
 def CEu = Elements.add(999, 999, -1, null, "GTCEu", "CEu", false) // create a new element.
 
 event_manager.listen { MaterialEvent event ->
-  def element_material = new Material.Builder(32006, "element_material").element("GTCEu").build()
+    def element_material = new Material.Builder(32006, "element_material").element("GTCEu").build()
 
-  def Au = Elements.get("Gold") // get an existing element.
+    def Au = Elements.get("Gold") // get an existing element.
 
-  def element_material = new Material.Builder(32007, "element_material").element("Gold").build()
+    def element_material = new Material.Builder(32007, "element_material").element("Gold").build()
 }
 ```
 
@@ -752,50 +755,50 @@ import gregtech.api.GregTechAPI.MaterialEvent
 import gregtech.api.unification.material.Material
 
 event_manager.listen { MaterialEvent event ->
-  
-  new Material.Builder(32000, "red_iron")
-          .ingot().fluid()
-          .color(0xF7B29B)
-          .flags(["generate_plate", "generate_rod", "generate_gear", "decomposition_by_centrifuging"])
-          .components([material('iron') * 1, material('redstone') * 1])
-          .cableProperties(32, 2, 1)
-          .build()
 
-  new Material.Builder(32001, "glowing_redstone")
-          .dust()
-          .color(0x774D05).iconSet("bright")
-          .flags(["decomposition_by_centrifuging"])
-          .components([material('glowstone') * 1, material('redstone') * 1])
-          .build()
+    new Material.Builder(32000, "red_iron")
+            .ingot().fluid()
+            .color(0xF7B29B)
+            .flags(["generate_plate", "generate_rod", "generate_gear", "decomposition_by_centrifuging"])
+            .components([material('iron') * 1, material('redstone') * 1])
+            .cableProperties(32, 2, 1)
+            .build()
 
-  new Material.Builder(32002, "rare_iron")
-          .ingot().fluid()
-          .color(0x6AE26E).iconSet("bright")
-          .flags(["generate_plate", "generate_rod", "generate_gear", "disable_decomposition"])
-          .components([material('iron') * 1, material('rare_earth') * 1])
-          .cableProperties(8, 2, 1)
-          .build()
+    new Material.Builder(32001, "glowing_redstone")
+            .dust()
+            .color(0x774D05).iconSet("bright")
+            .flags(["decomposition_by_centrifuging"])
+            .components([material('glowstone') * 1, material('redstone') * 1])
+            .build()
 
-  new Material.Builder(32003, "obsidian_steel")
-          .ingot().fluid()
-          .color(0x414751).iconSet("metallic")
-          .flags(["generate_plate", "generate_rod", "disable_decomposition"])
-          .components([material('steel') * 1, material('obsidian') * 1])
-          .build()
+    new Material.Builder(32002, "rare_iron")
+            .ingot().fluid()
+            .color(0x6AE26E).iconSet("bright")
+            .flags(["generate_plate", "generate_rod", "generate_gear", "disable_decomposition"])
+            .components([material('iron') * 1, material('rare_earth') * 1])
+            .cableProperties(8, 2, 1)
+            .build()
 
-  new Material.Builder(32004, "silicon_steel")
-          .ingot().fluid()
-          .color(0xB2C0C1).iconSet("shiny")
-          .flags(["generate_plate", "generate_rod", "generate_gear", "decomposition_by_centrifuging"])
-          .components([material('steel') * 1, material('silicon') * 1])
-          .build()
+    new Material.Builder(32003, "obsidian_steel")
+            .ingot().fluid()
+            .color(0x414751).iconSet("metallic")
+            .flags(["generate_plate", "generate_rod", "disable_decomposition"])
+            .components([material('steel') * 1, material('obsidian') * 1])
+            .build()
 
-  new Material.Builder(32005, "rare_gold")
-          .ingot().fluid()
-          .color(0x755C40)
-          .flags(["generate_plate", "disable_decomposition"])
-          .components([material('gold') * 1, material('rare_earth') * 1])
-          .build()
+    new Material.Builder(32004, "silicon_steel")
+            .ingot().fluid()
+            .color(0xB2C0C1).iconSet("shiny")
+            .flags(["generate_plate", "generate_rod", "generate_gear", "decomposition_by_centrifuging"])
+            .components([material('steel') * 1, material('silicon') * 1])
+            .build()
+
+    new Material.Builder(32005, "rare_gold")
+            .ingot().fluid()
+            .color(0x755C40)
+            .flags(["generate_plate", "disable_decomposition"])
+            .components([material('gold') * 1, material('rare_earth') * 1])
+            .build()
 }
 ```
 
