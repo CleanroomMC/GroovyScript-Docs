@@ -61,6 +61,7 @@ nav:
           - "Furnace": "groovyscript/minecraft/furnace.md"
           - Items: groovyscript/minecraft/item.md
           - Ore Dictionary: groovyscript/minecraft/ore_dictionary.md
+          - Tooltips: groovyscript/minecraft/tooltip.md
           - Events:
               - groovyscript/minecraft/events/aa_events.md
               - AdvancementEvent: groovyscript/minecraft/events/advancement_event.md
