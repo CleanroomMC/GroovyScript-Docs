@@ -6,7 +6,7 @@ itself: [Source](https://github.com/GregTechCEu/GregTech/blob/master/src/main/ja
 !!! Note
 This docs goes of, of GroovyScript version 0.4.0 and GTCEu 2.5.4
 
-# Introduction
+## Introduction
 
 ### Firstly, you should know what a **Material** actually is.
 
@@ -27,11 +27,11 @@ complicated, and will be introduced in detail below.
 
 ***
 
-## Retrieving Existing Materials
+### Retrieving Existing Materials
 
 There are two good ways to do this: the simple way and the not simple way.
 
-### The Simple Way
+#### The Simple Way
 
 This method requires the Material to first exist. This method goes off of the material's **Unlocalized Name**, which is
 the name used before it is translated in a lang file. You can use the `/gs hand` command to retrieve the material of
@@ -42,7 +42,7 @@ items.
 def my_material = material('steel')
 ```
 
-### The Not Simple Way
+#### The Not Simple Way
 
 This method also works exactly the same as before, but the former is much easier and more convenient. It is **strongly**
 recommended to use the **Simple Way**.
@@ -57,7 +57,7 @@ var my_material = Materials.Steel
 
 ***
 
-# Creating a New Material
+## Creating a New Material
 
 GregTech materials must be created in the `preInit` loader. Additionaly they need to be registered (or modified) inside
 an event.
@@ -113,7 +113,7 @@ event_manager.listen { MaterialEvent event ->
 }
 ```
 
-## Adding Material Properties.
+### Adding Material Properties.
 
 This is where materials really start to take shape. All of the following methods are called on
 a `new Material.Builder()`.
@@ -185,16 +185,6 @@ of the following formats: the integer value, such as `16777215` or as `0xFFFFFF`
 **colorAverage**: _`colorAverage()`_
 
 The Material's Color will be a weighted average of all of the Components' colors in the Material.
-
-**toolStats**: _`toolStats(float speed, float damage, int durability, int harvestLevel, @Optional int enchantability)`_
-
-Set the stats for tools which are made from this Material.
-
-* `speed` - Mining Speed of the tools.
-* `damage` - Attack Damage dealt by the tools.
-* `durability` - Durability of the tools.
-* `harvestLevel` - Harvest Level of the tools.
-* `enchantability` - Enchantability of the tools.
 
 **rotorStats**: _`rotorStats(float speed, float damage, int durability)`_
 
@@ -331,14 +321,41 @@ Adds item pipes of this Material. Requires `IngotProperty` to be set.
 * `stacksPerSec` - Sets the maximum transfer rate in stacks of 64 items per second. This value is used for the Normal
   Pipe. Small Pipes have this value multiplied by `0.5`. Large Pipes have this value multiplied by `2`.
 
-**addDefaultEnchant**: _`addDefaultEnchant(IEnchantment enchantment)`_
+#### Tool stats
+Tool stats are slightly more complicated than in CT, but also more configurable. <br>
+**toolStats**: _`toolStats(ToolProperty property)`_ <br>
+As you can see there is only one method which accepts a ToolProperty. You can create it like this:
+````groovy
+import gregtech.api.unification.material.properties.ToolProperty
 
-Adds a Default Enchantment to this Material. Requires `ToolProperty` to be set.
+ToolProperty property = ToolProperty.Builder.of(float speed, float damage, int durability, int harvestLevel).build()
+````
+Before calling `build()` at the end you can call several other methods to further customize your tool stats
+````groovy
+ToolProperty property = ToolProperty.Builder.of(float speed, float damage, int durability, int harvestLevel)
+        .attackSpeed(float attackSpeed) // self explanatory
+        .ignoreCraftingTools() /*(1)*/
+        .unbreakable() // self explanatory
+        .enchantment(Enchantment enchantment, int level) /*(2)*/
+        .magnetic() /*(3)*/
+        .durabilityMultiplier(int multiplier) /*(4)*/
+        .build()
+````
 
-* enchantment - The enchantment to set. Uses
-  CraftTweaker's [IEnchantment](https://docs.blamejared.com/1.12/en/Vanilla/Enchantments/IEnchantment).
+1. There won't be any crafting tools like hammer, saw and wrench
+2. Default enchantment that every tool with this material has. `Enchantment` can be obtained with the `enchantment(String name)` method.
+3. All mined block will go straight to the players inventory.
+4. A multiplier for the property durability.
 
-### **Example Thus Far**
+Set the stats for tools which are made from this Material.
+
+* `speed` - Mining Speed of the tools.
+* `damage` - Attack Damage dealt by the tools.
+* `durability` - Durability of the tools.
+* `harvestLevel` - Harvest Level of the tools.
+
+
+#### **Example Thus Far**
 
 This is example of a material using everything mentioned so far.
 
@@ -360,7 +377,7 @@ event_manager.listen { MaterialEvent event ->
 }
 ```
 
-## Changing Material Appearances.
+### Changing Material Appearances.
 
 You may have noticed from testing the above example that the material's textures looks like the same style as many
 others. This is called the `MaterialIconSet`. This entire next section is dedicated to explaining this system and how to
@@ -411,7 +428,7 @@ Sets the `MaterialIconSet` of this Material. Defaults vary depending on if the M
 
 The default will be determined by the property found first in this order.
 
-### Example with a MaterialIconSet:
+#### Example with a MaterialIconSet:
 
 ```groovy
 import gregtech.api.GregTechAPI.MaterialEvent
@@ -432,19 +449,17 @@ event_manager.listen { MaterialEvent event ->
 }
 ```
 
-## Components
+### Components
 
 **Components** refers to composition of the Material.
 
 For example, the components of TungstenSteel is `1 Tungsten (W)` and `1 Steel (Fe)`. That makes its chemical formula:
 ![Screenshot_20211213_191326](https://user-images.githubusercontent.com/37029404/145909670-cfd0e024-ed32-4f4d-9c72-aee5c2e3b064.png)
 
-### MaterialStack
+#### MaterialStack
 
 Components are determined using something called a `MaterialStack`. This is the Material version of an ItemStack which
-is an Item with a Count. In our case, MaterialStack is a Material with a Count. Creating a MaterialStack is easy, but
-due to CraftTweaker's compiling system, you must ensure that you put spaces before and after the `*`, otherwise you may
-receive a script error.
+is an Item with a Count. In our case, MaterialStack is a Material with a Count.
 
 ```groovy
 // creates a MaterialStack of Material Tin with a Count of 3.
@@ -453,7 +468,7 @@ def my_material_stack = material('tin') * 3
 
 Simple, isn't it?
 
-### Setting the Components
+#### Setting the Components
 
 **components**: _`components(MaterialStack[] components)`_
 
@@ -461,7 +476,7 @@ Sets the components of the material.
 
 * `components` - an array of `MaterialStacks` representing the components of this Material.
 
-### The Next Example
+#### The Next Example
 
 ```groovy
 import gregtech.api.GregTechAPI.MaterialEvent
@@ -476,7 +491,7 @@ event_manager.listen { MaterialEvent event ->
 }
 ```
 
-## Material Flags
+### Material Flags
 
 `MaterialFlags` refers to additional mini-attributes about the material. There are a ton of them.
 
@@ -540,14 +555,14 @@ Available MaterialFlags for Materials with `OreProperty`:
 
 * `"high_sifter_output"`: If this material has a higher output when the Crushed Purified Ore is processed in the Sifter.
 
-### Adding Flags to a Material
+#### Adding Flags to a Material
 
 `flags`: _`flags(string[] names)`_
 Add MaterialFlags to this Material.
 
 * `names` - a string array of the names of specific MaterialFlags.
 
-### Example:
+#### Example:
 
 ```groovy
 import gregtech.api.GregTechAPI.MaterialEvent
@@ -569,7 +584,7 @@ event_manager.listen { MaterialEvent event ->
 }
 ```
 
-## Elements
+### Elements
 
 `Element` is used to specify a material as element. CEu has the periodic table, so you probably won't need it much.
 
@@ -727,7 +742,7 @@ Add a new element.
  850     | 900     | -1              | null    | "Vibranium"        | "Vb"     | false     
  550     | 670     | -1              | null    | "Taranium"         | "Tn"     | false     
 
-### Elemental Material Example
+#### Elemental Material Example
 
 ```groovy
 import gregtech.api.GregTechAPI.MaterialEvent
@@ -748,7 +763,7 @@ event_manager.listen { MaterialEvent event ->
 
 ***
 
-# Material Creation Full Examples
+## Material Creation Full Examples
 
 ```groovy
 import gregtech.api.GregTechAPI.MaterialEvent
@@ -802,7 +817,7 @@ event_manager.listen { MaterialEvent event ->
 }
 ```
 
-# Modifying existing Materials.
+## Modifying existing Materials.
 
 See the **Retrieving Existing Materials** section for information on retrieving existing materials.
 
@@ -898,7 +913,7 @@ Sets the color of this Material.
 
 * `materialRGB` - the int color to set. Accepts the raw int value or values in the `0x` format.
 
-## Example
+### Example
 
 ```groovy
 import gregtech.api.GregTechAPI.PostMaterialEvent
