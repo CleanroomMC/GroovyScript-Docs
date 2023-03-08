@@ -41,6 +41,7 @@ nav:
               - Materials: groovyscript/mods/gtceu/material.md
               - Heating Coils: groovyscript/mods/gtceu/heating_coils.md
               - Terminal: groovyscript/mods/gtceu/terminal.md
+              - Multiblocks: groovyscript/mods/gtceu/multiblock.md
           - "Mekanism":
               - "Crusher": "groovyscript/mods/mekanism/crusher.md"
           - Thaumcraft:
