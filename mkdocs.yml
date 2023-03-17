@@ -1,12 +1,14 @@
-site_name: GroovyScript
+site_name: GroovyScript Wiki
+site_url: https://groovyscript-docs.readthedocs.io
 
 repo_name: CleanroomMC/GroovyScript-Docs
 repo_url: https://github.com/CleanroomMC/GroovyScript-Docs
 
+docs_dir: docs
+
 nav:
-  - Introduction:
-      - index.md
-      - Getting Started: getting_started.md
+  - Introduction: index.md
+  - Getting Started: getting_started.md
   - "Groovy":
       - "Introduction": "groovy/introduction.md"
       - "Strings": "groovy/strings.md"
@@ -289,3 +291,27 @@ markdown_extensions:
 
 extra_css:
   - stylesheets/extra.css
+
+
+plugins:
+    - search
+    - i18n:
+          default_language: en
+          default_language_only: false
+          docs_structure: folder
+          languages:
+              default:
+                  name: Default (en)
+                  build: true
+              en:
+                  name: English
+                  build: true
+              de:
+                  name: Deutsch
+                  build: true
+                  site_name: "GroovyScript Wiki"
+          nav_translations:
+              de:
+                  Introduction: Einführung
+                  Getting Started: Erste Schritte
+
