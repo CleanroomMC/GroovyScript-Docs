@@ -26,6 +26,6 @@
 请查看Groovy标签，了解有关Groovy语言的信息。 <br>
 请查看GroovyScript文档。 <br>
 
-!!! Note 
-    This wiki is highly WIP. There is still a lot of info missing. We would appreciate any help to improve this place.
-    Get started by joining our [Discord](https://discord.com/invite/m53yxTjjKM)
+!!! 笔记 
+    这个维基是WIP阶段。仍然有很多信息缺失。我们将感谢任何帮助来改善这个地方。
+    通过加入我们的 [Discord](https://discord.com/invite/m53yxTjjKM)
