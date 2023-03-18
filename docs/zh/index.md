@@ -1,7 +1,7 @@
 # Welcome to GroovyScript
 
 A comprehensive scripting sandbox for Minecraft 1.12.2. <br>
-[Join our Discord](https://discord.com/invite/m53yxTjjKM). <br>
+[加入 Discord 社区(英语)](https://discord.com/invite/m53yxTjjKM). <br>
 
 Are you not seeing what other see on this wiki? Try reloading it.
 
