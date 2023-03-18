@@ -1,34 +1,32 @@
-# Getting started
+# 让我们开始
 
-Programming knowledge is not necessarily required, but it will help you a lot.<br>
-As text editor you can use [Notepad++](https://notepad-plus-plus.org/downloads/) just fine. (We will work on a better
-alternative in the future)
+哦不不, 读懂这不一定需要太多的编程知识, 但会对你有很大的帮助.  
+作为文本文件(.groovy), 你可以使用[VSCode](https://code.visualstudio.com/)来打开并且编写Groovy文件, 或者是一个更像样的IDE. (我们将在未来开发一个更好的替代品)
 
-1. Download Minecraft Forge 1.12.2 and install it
-2. Download the latest version of GroovyScript [here](https://www.curseforge.com/minecraft/mc-mods/groovyscript/files)
-   and drop it into the mods folder
-3. Also install [MixinBooter](https://www.curseforge.com/minecraft/mc-mods/mixin-booter/files) since GroovyScript
-   depends on it
-4. Launch minecraft without adding any files
-5. GroovyScript will create several files
-    - groovy.log (refer to [Groovy Log](#groovy-log))
-    - groovy/runConfig.json (refer to [Groovy Log](#run-config))
-    - groovy/postInit/main.groovy (default script file)
+1. 下载 Minecraft和Forge 1.12.2并且安装它. (我想你的启动器应该可以)
+2. 下载最新版的GroovyScript([点这里](https://www.curseforge.com/minecraft/mc-mods/groovyscript/files))
+   并且丢到你的mods文件夹里去. (HMCL等主流启动器支持直接从CurseForge下载模组)
+3. 另外, 你还需要安装一个[MixinBooter](https://www.curseforge.com/minecraft/mc-mods/mixin-booter/files), 因为GroovyScript依赖于它. 
+4. 启动游戏, 并且往groovy文件夹里丢一些脚本. 
+5. 第一次启动时, GroovyScript将生成以下文件
+    - groovy.log (即[Groovy Log](#groovy-log))
+    - groovy/runConfig.json (即[Groovy运行配置](#run-config))
+    - groovy/postInit/main.groovy (默认提供的脚本实例文件)
 
 ## Groovy log
 
-Everything groovy related has its own log, and it generates its own file. If you run into issues with your script you
-should look here first.
-The files directory is always `[Minecraft instance path]/groovy.log`
+所有与groovy有关的东西都有自己的日志, 而且会生成自己的文件.  
+如果你的脚本写出了问题, 你应该先看看Log. 文件位于[Minecraft实例路径]/groovy.log
 
-## Run config
-
-This file defines how each script file should be executed. It can also store some general info about the mod pack. The
-file will be generated if it doesn't exist.
-If you don't understand what this is or how it works you can skip this. All you need to know is that you put your
-scripts with recipes in `groovy/postInit`.
-Scripts with stuff like Item Creation go in `groovy/preInit`.<br>
-Let's see what the file can look like.
+## 运行配置
+这个文件定义了每个脚本文件应该如何执行, 在哪个加载阶段执行.  
+它也可以存储一些关于MOD包的一般信息.  
+如果该文件无法被查找到或不存在, 将重新生成一份.  
+如果你不明白这是什么或 "它是如何工作的" , 你可以跳过配置.  
+你所需要知道的是, 你把你的配方脚本放在groovy/postInit中.  
+诸如 "自定义物品" 之类的脚本则放在groovy/preInit中.  
+(类似KubeJS的start_scripts-preInit和server_scripts-postInit)  
+让我们看看这个文件是什么样子的.  
 
 ````json
 {
