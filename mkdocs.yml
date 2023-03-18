@@ -310,6 +310,10 @@ plugins:
                   name: Deutsch
                   build: true
                   site_name: "GroovyScript Wiki"
+              zh:
+                  name: Simplified Chinese
+                  bulid: true
+                  site_name: "GroovyScript 维基百科"
           nav_translations:
               de:
                   Introduction: Einführung
