@@ -314,8 +314,18 @@ plugins:
                   name: Simplified Chinese
                   bulid: true
                   site_name: "GroovyScript 维基百科"
+           zh-TW: 
+                  name: Traditional Chinese
+                  bulid: true
+                  site_name: "GroovyScript 維基百科"
           nav_translations:
               de:
                   Introduction: Einführung
                   Getting Started: Erste Schritte
+              zh: 
+                  Introduction: 简介
+                  Getting Started: 第一个步骤
+           zh-TW:    
+                  Introduction: 概括
+                  Getting Started: 第一個步驟
 
