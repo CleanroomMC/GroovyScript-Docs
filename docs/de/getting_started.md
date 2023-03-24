@@ -1,27 +1,28 @@
-# Getting started
+# Erste Schritte
 
-Programming knowledge is not necessarily required, but it will help you a lot.<br>
-As text editor you can use [Notepad++](https://notepad-plus-plus.org/downloads/) just fine. (We will work on a better
-alternative in the future)
+Programmierkenntnisse sind nicht unbedingt erforderlich, aber sie werden Ihnen sehr helfen.<br>
+Als Texteditor können Sie [Notepad++] (https://notepad-plus-plus.org/downloads/) gut verwenden. (Wir werden an einer besseren
+Alternative in der Zukunft arbeiten)
 
-1. Download Minecraft Forge 1.12.2 and install it
-2. Download the latest version of GroovyScript [here](https://www.curseforge.com/minecraft/mc-mods/groovyscript/files)
-   and drop it into the mods folder
-3. Also install [MixinBooter](https://www.curseforge.com/minecraft/mc-mods/mixin-booter/files) since GroovyScript
-   depends on it
-4. Launch minecraft without adding any files
-5. GroovyScript will create several files
-    - groovy.log (refer to [Groovy Log](#groovy-log))
-    - groovy/runConfig.json (refer to [Groovy Log](#run-config))
-    - groovy/postInit/main.groovy (default script file)
+
+1. Minecraft Forge 1.12.2 herunterladen und installieren
+2. Laden Sie die neueste Version von GroovyScript [hier](https://www.curseforge.com/minecraft/mc-mods/groovyscript/files)
+   und legen Sie es in den Mods-Ordner
+3. Installieren Sie auch [MixinBooter] (https://www.curseforge.com/minecraft/mc-mods/mixin-booter/files), da GroovyScript
+   davon abhängt
+4. Minecraft starten, ohne Dateien hinzuzufügen
+5. GroovyScript erstellt mehrere Dateien
+    - groovy.log (siehe [Groovy Log](#groovy-log))
+    - groovy/runConfig.json (siehe [Groovy Log](#run-config))
+    - groovy/postInit/main.groovy (Standard-Skriptdatei)
 
 ## Groovy log
 
-Everything groovy related has its own log, and it generates its own file. If you run into issues with your script you
-should look here first.
-The files directory is always `[Minecraft instance path]/groovy.log`
+Für alles, was mit Groovy zu tun hat, gibt es ein eigenes Protokoll, und es wird eine eigene Datei erzeugt. Wenn Sie auf Probleme mit Ihrem Skript stoßen, sollten Sie
+solltest du zuerst hier nachsehen.
+Das Dateiverzeichnis ist immer `[Minecraft-Instanzpfad]/groovy.log`.
 
-## Run config
+## Konfiguration ausführen
 
 This file defines how each script file should be executed. It can also store some general info about the mod pack. The
 file will be generated if it doesn't exist.
@@ -90,20 +91,20 @@ Another example:
 ]
 ````
 
-First everything in `postInit/` will be executed, but since `late_stuff.groovy` is specifically put later it will not be
-executed. After that only `late_stuff.groovy` will be executed.
+Zuerst wird alles in `postInit/` ausgeführt, aber da `late_stuff.groovy` speziell später eingefügt wird, wird es nicht
+ausgeführt. Danach wird nur noch `late_stuff.groovy` ausgeführt.
 
-### Pack name and id
+### Name und Kennung des Pakets
 
-The pack name can be anything. It's the name that will show up in JEI in tooltips on items you created. <br>
-The pack id is very important. It must only consist of lower case letters and `_`.
+Der Name des Pakets kann beliebig sein. Es ist der Name, der in JEI in den Tooltips der von Ihnen erstellten Gegenstände angezeigt wird.<br>
+Die Pack-ID ist sehr wichtig. Sie darf nur aus Kleinbuchstaben bestehen und `_`.
 
-!!! warning
-    Changing the pack id will result in created items being lost in existing worlds!
+!!! Warnung
+    Das Ändern der Pack-ID führt dazu, dass erstellte Gegenstände in bestehenden Welten verloren gehen!
 
-## Important infos
+## Wichtige Informationen
 
-1. Groovy scripts must end in `.groovy`
-2. Groovy scripts must be defined somehow in the [run config](#run-config) to be executed
-3. The scripts and folders can have any name
-4. All scripts and the [run config](#run-config) must be located in `[Minecraft instance path]/groovy/`
+1. Groovy-Skripte müssen mit `.groovy` enden.
+2. Groovy-Skripte müssen irgendwie in der [run-config](#run-config) definiert sein, um ausgeführt zu werden
+3. Die Skripte und Verzeichnisse können beliebige Namen haben
+4. Alle Skripte und die [run-config](#run-config) müssen sich in `[Minecraft-Instanzpfad]/groovy/` befinden
