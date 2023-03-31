@@ -23,39 +23,41 @@ item('minecraft:iron_ingot').withNbt([Name: 'Epic Ingot'])
 ````
 ### More
 - `.withNbt(null)` removes the nbt tag
-- `.withEmptyNbt()` adds an empty nbt tag
+- `.withEmptyNbt()` fügt ein leeres nbt-Tag hinzu
 
 ## Match Conditions
-This allows for dynamic item checking in recipes.
-!!! Note
-    At this moment (ver. 0.3.1) only crafting and Draconic Evolution fusion crafting is supported.
+Dies ermöglicht eine dynamische Überprüfung von Elementen in Rezepten.
+!!! Hinweis
+    Im Moment (Ver. 0.3.1) wird nur Crafting und Draconic Evolution fusion crafting unterstützt.
 
 ````groovy
 itemStack.when(Closure<Boolean> condition)
 ````
-!!! Example
+!!! Beispiel
     ````groovy
     item('minecraft:iron_axe:*').when({stack -> stack.getDamage() < 50})
     ````
-Let's see what this does. First `item('minecraft:iron_axe:*')` matches an iron axe with any damage.
-Then `.when({stack -> stack.getDamage() < 50})` only validates items that have taken less than 50 damage.
+Schauen wir uns an, was das bewirkt. Zuerst passt `item('minecraft:iron_axe:*')` auf eine Eisenaxt mit beliebigem Schaden.
+Dann prüft `.when({stack -> stack.getDamage() < 50})` nur Gegenstände, die weniger als 50 Schaden erlitten haben.
 
-## Transformer
-This transforms an item ingredient to a new item on craft. For example a water bucket returns an empty bucket after crafting.
-!!! Note
-    This only works for crafting.
+## Transformator
+Diese Funktion wandelt eine Gegenstandszutat in einen neuen Gegenstand beim Handwerk um. Zum Beispiel gibt ein Wassereimer nach dem Crafting einen leeren Eimer zurück.
+!!! Hinweis
+    Dies funktioniert nur beim Crafting.
 
 ````groovy
 itemStack.transform(Closure<ItemStack> transformer)
 ````
-!!! Example
+!!! Beispiel
     ````groovy
     def transformer = { stack -> stack.copyWithMeta(stack.getItemDamage() + 1)}
     item('minecraft:iron_axe:*').transform(transformer)
     ````
-First we create a transformer closure, so we can easier see what's going on. It simply creates a new item with one more damage.
-In the second line that transformer is applied to the item. So at the end when you craft a recipe with that iron axe it will get damaged by 1.
+Zuerst erstellen wir eine Transformator-Schließung, damit wir besser sehen können, was vor sich geht. Es wird einfach ein neuer Gegenstand mit einem weiteren Schaden erstellt.
+In der zweiten Zeile wird dieser Transformator auf den Gegenstand angewendet. Wenn du also am Ende ein Rezept mit dieser Eisenaxt herstellst, wird sie um 1 beschädigt.
 
-### Default Transformer
-- `.noreturn()` will not return anything. Useful when you want to consume a water bucket with the bucket for example.
-- `.reuse()` will return itself. That means the item will not be consumed.
+### Standard-Transformator
+- noreturn()` gibt nichts zurück. Nützlich, wenn man z.B. einen Wassereimer mit dem Eimer verbrauchen will.
+- `.reuse()` gibt sich selbst zurück. Das bedeutet, dass der Gegenstand nicht verbraucht wird.
+
+Übersetzt mit www.DeepL.com/Translator (kostenlose Version)
