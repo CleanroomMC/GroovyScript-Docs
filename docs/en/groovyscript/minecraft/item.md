@@ -50,7 +50,7 @@ itemStack.transform(Closure<ItemStack> transformer)
 ````
 !!! Example
     ````groovy
-    def transformer = { stack -> stack.copyWithDamage(stack.getDamage() + 1)}
+    def transformer = { stack -> stack.copyWithMeta(stack.getItemDamage() + 1)}
     item('minecraft:iron_axe:*').transform(transformer)
     ````
 First we create a transformer closure, so we can easier see what's going on. It simply creates a new item with one more damage.
