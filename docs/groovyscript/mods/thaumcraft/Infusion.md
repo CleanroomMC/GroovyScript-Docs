@@ -55,7 +55,7 @@ Register recipe: (returns nothing)
 .register()
 ```
 
-### Example
+!!! example
 
 ```groovy
 mods.thaumcraft.InfusionCrafting.recipeBuilder()
@@ -80,6 +80,7 @@ mods.thaumcraft.InfusionCrafting.removeByOutput(IIngredient)
 ```
 
 !!! example
+
     ```groovy
     mods.thaumcraft.InfusionCrafting.removeByOutput(item('thaumcraft:crystal_terra'))
     ```

@@ -34,26 +34,26 @@ class RecipeBuilder {
 
 ## Usage example
 Now let's create a new recipe using the builder
-````groovy
+```groovy
 def recipe = new RecipeBuilder()            // first create a recipe builder instance
         .input('<minecraft:iron_ingot>')    // add a input
         .input('<minecraft:clay_ball>' * 3) // add another input
         .output('<minecraft:nether_star>')  // add a output
         .build()                            // build and return a recipe instance
-````
+```
 
 Notice how each method call is chained together. This is because `input()` and `output()` return the same builder instance.<br>
 Since the `build()` method returns a `Recipe` instance, the `recipe` variable will also be of type `Recipe`.<br>
 The same code as above can also be put in a single line:
-````groovy
+```groovy
 def recipe = new RecipeBuilder().input('<minecraft:iron_ingot>').input('<minecraft:clay_ball>' * 3).output('<minecraft:nether_star>').build()
-````
+```
 This does exactly the same thing, but as you can see it is uglier and harder to read. The line breaks are purely aesthetically, but are highly recommended.
 
 Now lets see what the recipe could look like without a builder:
-````groovy
+```groovy
 def recipe = new Recipe(['<minecraft:iron_ingot>', '<minecraft:clay_ball>' * 3], ['<minecraft:nether_star>'])
-````
+```
 That doesn't look too bad right? Now imagine the recipe requires 5 inputs. Or 10. Or 20. And you need to specify energy requirement, duration and maybe fluids.<br>
 This is where Builders shine.
 

@@ -30,7 +30,7 @@ scripts with recipes in `groovy/postInit`.
 Scripts with stuff like Item Creation go in `groovy/preInit`.<br>
 Let's see what the file can look like.
 
-````json
+```json
 {
   "packName": "",
   "packId": "",
@@ -48,7 +48,7 @@ Let's see what the file can look like.
     ]
   }
 }
-````
+```
 
 Let's go through it bit by bit: <br>
 
@@ -72,23 +72,23 @@ Let's go through it bit by bit: <br>
   once. <br>
   For example:
 
-````json
+```json
 [
   "postInit/ore_dict.groovy",
   "postInit/"
 ]
-````
+```
 
 Here first `ore_dict.groovy` will be executed and then all files of `postInit/`, but since `ore_dict.groovy` was already
 executed, it will not run now. <br>
 Another example:
 
-````json
+```json
 [
   "postInit/",
   "postInit/late_stuff.groovy"
 ]
-````
+```
 
 First everything in `postInit/` will be executed, but since `late_stuff.groovy` is specifically put later it will not be
 executed. After that only `late_stuff.groovy` will be executed.
