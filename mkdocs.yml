@@ -260,6 +260,7 @@ theme:
         name: Switch to dark mode
 
   features:
+    - header.autohide
     - content.code.annotate
     - navigation.tracking
     - navigation.tabs
