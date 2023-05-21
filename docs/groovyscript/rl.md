@@ -68,5 +68,6 @@ It's similar for `"parent": "block/cube_all"` except it points to another model.
 Resource locations are also used as identifiers for game registry entries for example items. <br>
 When you use the item bracket handler you do something like `item('minecraft:iron_ingot')`. Yes `'minecraft:iron_ingot'` is a resource location, except it doesn't point to a resource.
 For game objects like items the resource location is also referred to as the registry name.
+
 !!! Note
     Note that you can't use `item('iron_ingot')`. This is disabled by GroovyScript. You must always input the full registry name.

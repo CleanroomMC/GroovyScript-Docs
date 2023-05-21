@@ -53,7 +53,7 @@ mods.thaumcraft.DustTrigger.removeByOutput(ItemStack)
 ```
 
 !!! example
-   
+
     ```groovy
     mods.thaumcraft.DustTrigger.removeByOutput(item('thaumcraft:arcane_workbench'))
     ```

@@ -6,14 +6,15 @@ Here are listed all minecraft and forge events there are.
 !!! Note
     Events can be reloaded if they are registered in `postInit`
 
-Let's see an example:
-```groovy
-import net.minecraftforge.event.world.BlockEvent.BreakEvent
+!!! example "Let's see an example:"
 
-event_manager.listen { BreakEvent event ->
-    log.info('Block broken: {}', event.getState())
-}
-```
+    ```groovy
+    import net.minecraftforge.event.world.BlockEvent.BreakEvent
+
+    event_manager.listen { BreakEvent event ->
+        log.info('Block broken: {}', event.getState())
+    }
+    ```
 
 What is happening?
 
@@ -24,6 +25,7 @@ What is happening?
 - Inside the closure you can do what you want. Here the broken block state is printed to the log.
 
 ## Other listen methods
+
 ```groovy
 event_manager.listen(EventPriority eventPriority, EventBusType eventBusType, Closure<?> eventListener)
 event_manager.listen(EventBusType eventPriority, EventPriority eventBusType, Closure<?> eventListener)
@@ -50,14 +52,15 @@ event_manager.listen(EventPriority eventPriority, Closure<?> eventListener)
 
 Normally you don't need to chane any of those values. <br>
 
-Let's see an example using `EventPriority`:
-```groovy
-import net.minecraftforge.event.world.BlockEvent.BreakEvent
+!!! example "Let's see an example using `EventPriority`:"
 
-event_manager.listen(EventPriority.HIGHEST) { BreakEvent event ->
-    log.info('Block broken: {}', event.getState())
-}
-```
+    ```groovy
+    import net.minecraftforge.event.world.BlockEvent.BreakEvent
+
+    event_manager.listen(EventPriority.HIGHEST) { BreakEvent event ->
+        log.info('Block broken: {}', event.getState())
+    }
+    ```
 
 Now it is very likely that our listener is executed before all other (not guaranteed).
 Note that we don't need to import `EventPriority`. It is auto imported.
