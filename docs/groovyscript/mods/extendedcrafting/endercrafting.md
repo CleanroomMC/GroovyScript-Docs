@@ -82,3 +82,14 @@ mods.extendedcrafting.endercrafting.shapedBuilder()
         .time(1) //Takes one second to craft
         .register()
 ```
+
+## Removing recipes
+```groovy
+mods.extendedcrafting.endercrafting.removeByOutput(ItemStack stack) //Removes all recipes having the item as an output
+mods.extendedcrafting.endercrafting.remove(IRecipe recipe) //Removes a recipe with that specific ID
+mods.extendedcrafting.endercrafting.removeAll() //Removes all ender crafting recipes
+```
+### Example
+```groovy
+mods.extendedcrafting.endercrafting.removeByOutput(item('extendedcrafting:material:40')) //Removes all recipes that gives the Ender Star from Extended Crafting as an output 
+```
