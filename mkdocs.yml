@@ -36,6 +36,11 @@ nav:
               - "Enchanter": "groovyscript/mods/enderio/enchanter.md"
               - "Vat": "groovyscript/mods/enderio/vat.md"
               - "Tank": "groovyscript/mods/enderio/tank.md"
+          - Extended Crafting:
+              - Combination Crafting: groovyscript/mods/extendedcrafting/combination_crafting.md
+              - Compression Crafting: groovyscript/mods/extendedcrafting/compression_crafting.md
+              - Ender Crafting: groovyscript/mods/extendedcrafting/ender_crafting.md
+              - Table Crafting: groovyscript/mods/extendedcrafting/table_crafting.md
           - GregTech:
               - Recipes: groovyscript/mods/gtceu/recipes.md
               - Materials: groovyscript/mods/gtceu/material.md
