@@ -68,6 +68,12 @@ Outputs can be added using `output`
 output(ItemStack)
 ```
 
+### Register recipe
+
+```groovy
+register()
+```
+
 !!! example
 
     ```groovy

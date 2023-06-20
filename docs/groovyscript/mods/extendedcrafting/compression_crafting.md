@@ -69,6 +69,12 @@ powerRate(int)
 !!! Note
     `powerCost` and `powerRate` cannot be negative
 
+### Register recipe
+
+```groovy
+register()
+```
+
 !!! example
 
     ```groovy

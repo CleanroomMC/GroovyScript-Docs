@@ -86,6 +86,19 @@ output(ItemStack)
 time(int)
 ```
 
+### Mirror recipe
+
+Allows you to craft the recipe when mirrored, similar to how iron axes can be crafted with a mirrored recipe in Vanilla
+```groovy
+mirrored()
+```
+
+### Register recipe
+
+```groovy
+register()
+```
+
 !!! example
         ```groovy
         mods.extendedcrafting.endercrafting.shapedBuilder()
