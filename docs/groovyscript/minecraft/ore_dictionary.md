@@ -4,6 +4,14 @@
     Requires version 0.3.0+
  GroovyScript also allows you to remove and add ore dictionaries to items and reload them.
 
+## Getting an ore dict ingredient
+Ore dict ingredients can be used in any recipe that accepts `IIngredient`.
+!!! example
+    ```groovy
+    ore('ingotCopper') // returns all copper ingots
+    ore('ingot*') // wildcards are also valid (returns all ingots)
+    ```
+
 ## Adding ore dicts
 
 All three methods are do exactly the same thing.
