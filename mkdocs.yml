@@ -19,6 +19,8 @@ nav:
       - Resource Location for Dummies: groovyscript/rl.md
       - "Mods":
           - JEI: groovyscript/mods/jei.md
+          - 'Actually Additions': groovyscript/mods/actually_additions/actually_additions.md
+          - 'Astral Sorcery': groovyscript/mods/astral_sorcery/astral_sorcery.md
           - 'Blood Magic: Alchemical Wizardry':
               - 'Blood Altar': 'groovyscript/mods/bloodmagic/blood_altar.md'
               - 'Alchemy Array': 'groovyscript/mods/bloodmagic/alchemy_array.md'
@@ -27,6 +29,9 @@ nav:
               - 'Tranquility': 'groovyscript/mods/bloodmagic/tranquility.md'
               - 'Sacrificial': 'groovyscript/mods/bloodmagic/sacrificial.md'
               - 'Meteor': 'groovyscript/mods/bloodmagic/meteor.md'
+          - 'Botania': groovyscript/mods/botania/botania.md
+          - 'Chisel': groovyscript/mods/chisel/chisel.md
+          - 'Draconic Evolution': groovyscript/mods/draconic_evolution/draconic_evolution.md
           - "EnderIO":
               - "Alloy Smelter": "groovyscript/mods/enderio/alloy_smelter.md"
               - "SAG Mill": "groovyscript/mods/enderio/sag_mill.md"
@@ -36,6 +41,9 @@ nav:
               - "Enchanter": "groovyscript/mods/enderio/enchanter.md"
               - "Vat": "groovyscript/mods/enderio/vat.md"
               - "Tank": "groovyscript/mods/enderio/tank.md"
+          - 'EvilCraft': groovyscript/mods/evilcraft/evilcraft.md
+          - 'Extended Crafting': groovyscript/mods/extendedcrafting/extendedcrafting.md
+          - 'Forestry': groovyscript/mods/forestry/forestry.md
           - GregTech:
               - Recipes: groovyscript/mods/gtceu/recipes.md
               - Materials: groovyscript/mods/gtceu/material.md
@@ -44,6 +52,7 @@ nav:
               - Multiblocks: groovyscript/mods/gtceu/multiblock.md
           - "Mekanism":
               - "Crusher": "groovyscript/mods/mekanism/crusher.md"
+          - 'Roots': groovyscript/mods/roots/roots.md
           - Thaumcraft:
               - Arcane Workbench: groovyscript/mods/thaumcraft/ArcaneWorkbench.md
               - Aspects: groovyscript/mods/thaumcraft/Aspects.md
@@ -240,6 +249,7 @@ nav:
               - WorldTypeEvent.InitBiomeGens: groovyscript/minecraft/events/world_type_event._init_biome_gens.md
               - ZombieEvent: groovyscript/minecraft/events/zombie_event.md
               - ZombieEvent.SummonAidEvent: groovyscript/minecraft/events/zombie_event._summon_aid_event.md
+          - 'Loot': groovyscript/minecraft/loot/loot.md
       - Content:
           - groovyscript/content/content.md
           - Items: groovyscript/content/item.md
