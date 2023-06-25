@@ -473,7 +473,7 @@ Simple, isn't it?
 
 #### Setting the Components
 
-**components**: _`components(MaterialStack[] components)`_
+**components**: _`components(MaterialStack... components)`_
 
 Sets the components of the material.
 
@@ -489,7 +489,7 @@ Sets the components of the material.
         def cursed_chemistry_material = new Material.Builder(32004, "cursed_chemistry_material")
                 .fluid()
                 .color(0x00FF00) // pure red
-                .components([material('silver') * 3, material('nitrogen') * 6, material('carbon') * 2]) // set the components
+                .components(material('silver') * 3, material('nitrogen') * 6, material('carbon') * 2) // set the components
                 .build() // build the actual material
     }
     ```
@@ -560,7 +560,7 @@ Available MaterialFlags for Materials with `OreProperty`:
 
 #### Adding Flags to a Material
 
-`flags`: _`flags(string[] names)`_
+`flags`: _`flags(String... names)`_
 Add MaterialFlags to this Material.
 
 * `names` - a string array of the names of specific MaterialFlags.
@@ -577,7 +577,7 @@ Add MaterialFlags to this Material.
                 .ingot() // has ingot (and therefore dust)
                 .color(0x0000FF) // pure blue
                 .iconSet("shiny") // iconset to the shiny type
-                .flags(["generate_plate", "generate_foil"]) // add flags
+                .flags("generate_plate", "generate_foil") // add flags
                 .toolStats(10, 3, 256, 21) // tool stats
                 .blastTemp(2900) // EBF temperature
                 .ore() // has ore blocks
@@ -777,8 +777,8 @@ Add a new element.
         new Material.Builder(32000, "red_iron")
                 .ingot().fluid()
                 .color(0xF7B29B)
-                .flags(["generate_plate", "generate_rod", "generate_gear", "decomposition_by_centrifuging"])
-                .components([material('iron') * 1, material('redstone') * 1])
+                .flags("generate_plate", "generate_rod", "generate_gear", "decomposition_by_centrifuging")
+                .components(material('iron') * 1, material('redstone') * 1)
                 .cableProperties(32, 2, 1)
                 .build()
 
@@ -792,30 +792,30 @@ Add a new element.
         new Material.Builder(32002, "rare_iron")
                 .ingot().fluid()
                 .color(0x6AE26E).iconSet("bright")
-                .flags(["generate_plate", "generate_rod", "generate_gear", "disable_decomposition"])
-                .components([material('iron') * 1, material('rare_earth') * 1])
+                .flags("generate_plate", "generate_rod", "generate_gear", "disable_decomposition")
+                .components(material('iron') * 1, material('rare_earth') * 1)
                 .cableProperties(8, 2, 1)
                 .build()
 
         new Material.Builder(32003, "obsidian_steel")
                 .ingot().fluid()
                 .color(0x414751).iconSet("metallic")
-                .flags(["generate_plate", "generate_rod", "disable_decomposition"])
-                .components([material('steel') * 1, material('obsidian') * 1])
+                .flags("generate_plate", "generate_rod", "disable_decomposition")
+                .components(material('steel') * 1, material('obsidian') * 1)
                 .build()
 
         new Material.Builder(32004, "silicon_steel")
                 .ingot().fluid()
                 .color(0xB2C0C1).iconSet("shiny")
-                .flags(["generate_plate", "generate_rod", "generate_gear", "decomposition_by_centrifuging"])
-                .components([material('steel') * 1, material('silicon') * 1])
+                .flags("generate_plate", "generate_rod", "generate_gear", "decomposition_by_centrifuging")
+                .components(material('steel') * 1, material('silicon') * 1)
                 .build()
 
         new Material.Builder(32005, "rare_gold")
                 .ingot().fluid()
                 .color(0x755C40)
-                .flags(["generate_plate", "disable_decomposition"])
-                .components([material('gold') * 1, material('rare_earth') * 1])
+                .flags("generate_plate", "disable_decomposition")
+                .components(material('gold') * 1, material('rare_earth') * 1)
                 .build()
     }
     ```
@@ -904,7 +904,7 @@ Sets the internal formula and thus tooltip of this Material.
 * `formula` - the string to set the formula to
 * `@Optional withFormatting` - whether to apply number formatting (subscripts, etc) to the formula and tooltip
 
-_`addFlags(String[] names)`_
+_`addFlags(String... names)`_
 
 Adds additional flags to this Material.
 
