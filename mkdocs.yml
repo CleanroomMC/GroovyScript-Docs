@@ -261,6 +261,7 @@ theme:
 
   features:
     - content.code.annotate
+    - content.code.copy
     - navigation.tracking
     - navigation.tabs
     - navigation.tabs.sticky

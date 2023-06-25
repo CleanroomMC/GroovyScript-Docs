@@ -1,6 +1,6 @@
 # Aspects
 
-### GroovyScript syntax
+## GroovyScript syntax
 
 To help with aspects in Thaumcraft the following bracket handlers have been added: <br>
 
@@ -43,6 +43,7 @@ Adding component aspects: (requires exactly 0 or exactly 2)
 
 Adding sprite image: (required) <br>
 This is a [resource location](../../rl.md).
+
 ```groovy
 .image(String)/*(1)!*/
 .image(String mod, String path)/*(2)!*/
@@ -65,17 +66,17 @@ Register aspect: (returns nothing)
 .register()
 ```
 
-### Example
+!!! example
 
-```groovy
-mods.thaumcraft.Aspect.aspectBuilder()
-        .tag('humor')
-        .chatColor(0xD5D4EC)
-        .component(aspect('cognito'))
-        .component(aspect('perditio'))
-        .image('textures/aspects/humor.png')
-        .register()
-```
+    ```groovy
+    mods.thaumcraft.Aspect.aspectBuilder()
+            .tag('humor')
+            .chatColor(0xD5D4EC)
+            .component(aspect('cognito'))
+            .component(aspect('perditio'))
+            .image('textures/aspects/humor.png')
+            .register()
+    ```
 
 ### Item/Entity Aspects
 
@@ -113,26 +114,26 @@ Register aspects: (returns nothing)
 .register()
 ```
 
-### Example
+!!! example
 
-```groovy
-// How to remove all aspects for an item
-mods.thaumcraft.AspectHelper.aspectBuilder()
-        .object(item('minecraft:dirt'))
-        .stripAspects()
-        .register()
+    ```groovy
+    // How to remove all aspects for an item
+    mods.thaumcraft.AspectHelper.aspectBuilder()
+            .object(item('minecraft:dirt'))
+            .stripAspects()
+            .register()
 
-// Set chickens to have 20 Bestia Essentia
-mods.thaumcraft.AspectHelper.aspectBuilder()
-        .entity(entity('minecraft:chicken'))
-        .stripAspects()
-        .aspect(aspect('bestia') * 20)
-        .register()
+    // Set chickens to have 20 Bestia Essentia
+    mods.thaumcraft.AspectHelper.aspectBuilder()
+            .entity(entity('minecraft:chicken'))
+            .stripAspects()
+            .aspect(aspect('bestia') * 20)
+            .register()
 
-// Set Stone blocks to have 20 Ignis Essentia
-mods.thaumcraft.AspectHelper.aspectBuilder()
-        .object(ore('stone'))
-        .stripAspects()
-        .aspect(aspect('ignis') * 20)
-        .register()
-```
+    // Set Stone blocks to have 20 Ignis Essentia
+    mods.thaumcraft.AspectHelper.aspectBuilder()
+            .object(ore('stone'))
+            .stripAspects()
+            .aspect(aspect('ignis') * 20)
+            .register()
+    ```

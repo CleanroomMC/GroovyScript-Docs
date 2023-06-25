@@ -48,14 +48,14 @@ We use `.minecraft/resources` as the root here.
 In model or blockstate json files you may also find resource locations. Lets
 take `assets/minecraft/models/block/andesite.json` for example (`assets` being the root folder). In there you will find
 
-````json
+```json
 {
   "parent": "block/cube_all",
   "textures": {
     "all": "blocks/stone_andesite"
   }
 }
-````
+```
 
 Here `"block/cube_all"` and `"blocks/stone_andesite"` are both resource locations. So you might think the texture is
 located in `assets/minecraft/blocks/stone_andesite`, but that is not the case.
@@ -64,8 +64,10 @@ minecraft knows it should point to a texture and prepends `textures/` and append
 It's similar for `"parent": "block/cube_all"` except it points to another model.
 
 ## Other uses
+
 Resource locations are also used as identifiers for game registry entries for example items. <br>
 When you use the item bracket handler you do something like `item('minecraft:iron_ingot')`. Yes `'minecraft:iron_ingot'` is a resource location, except it doesn't point to a resource.
 For game objects like items the resource location is also referred to as the registry name.
+
 !!! Note
     Note that you can't use `item('iron_ingot')`. This is disabled by GroovyScript. You must always input the full registry name.

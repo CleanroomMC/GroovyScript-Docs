@@ -30,7 +30,7 @@ scripts with recipes in `groovy/postInit`.
 Scripts with stuff like Item Creation go in `groovy/preInit`.<br>
 Let's see what the file can look like.
 
-````json
+```json
 {
   "packName": "",
   "packId": "",
@@ -48,7 +48,7 @@ Let's see what the file can look like.
     ]
   }
 }
-````
+```
 
 Let's go through it bit by bit: <br>
 
@@ -70,25 +70,27 @@ Let's go through it bit by bit: <br>
   multiple loaders.
   Elements higher in the list will be run first. Files can be put multiple times, but they will only get executed
   once. <br>
-  For example:
 
-````json
-[
-  "postInit/ore_dict.groovy",
-  "postInit/"
-]
-````
+!!! example "For example:"
 
-Here first `ore_dict.groovy` will be executed and then all files of `postInit/`, but since `ore_dict.groovy` was already
-executed, it will not run now. <br>
-Another example:
+    ```json
+    [
+    "postInit/ore_dict.groovy",
+    "postInit/"
+    ]
+    ```
 
-````json
-[
-  "postInit/",
-  "postInit/late_stuff.groovy"
-]
-````
+    Here first `ore_dict.groovy` will be executed and then all files of `postInit/`, but since `ore_dict.groovy` was already
+    executed, it will not run now. <br>
+
+!!! example "Another example:"
+
+    ```json
+    [
+    "postInit/",
+    "postInit/late_stuff.groovy"
+    ]
+    ```
 
 First everything in `postInit/` will be executed, but since `late_stuff.groovy` is specifically put later it will not be
 executed. After that only `late_stuff.groovy` will be executed.

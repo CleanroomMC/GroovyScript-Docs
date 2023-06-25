@@ -2,7 +2,7 @@
 
 The recipe builder for the Arcane Workbench works very similar to the vanilla [Crafting Table](../../minecraft/crafting_builders.md). Except that you can add a required Research, Vis and Aspects.
 
-### Adding Shapeless Recipes
+## Adding Shapeless Recipes
 
 Just like other recipe types, the Arcane Workbench also uses a recipe builder. <br>
 You don't know what a builder is? Check [this](https://groovyscript-docs.readthedocs.io/en/latest/groovy/builder/) out
@@ -55,18 +55,18 @@ Register recipe: (returns nothing)
 .register()
 ```
 
-### Example
+!!! example
 
-```groovy
-mods.thaumcraft.ArcaneWorkbench.shapelessBuilder()
-        .researchKey('UNLOCKALCHEMY@3')
-        .input(item('minecraft:pumpkin'))
-        .input(item('minecraft:stick'))
-        .input(item('minecraft:stick'))
-        .output(item('thaumcraft:void_hoe'))
-        .vis(0)
-        .register()
-```
+    ```groovy
+    mods.thaumcraft.ArcaneWorkbench.shapelessBuilder()
+            .researchKey('UNLOCKALCHEMY@3')
+            .input(item('minecraft:pumpkin'))
+            .input(item('minecraft:stick'))
+            .input(item('minecraft:stick'))
+            .output(item('thaumcraft:void_hoe'))
+            .vis(0)
+            .register()
+    ```
 
 ### Adding Shaped Recipes
 
@@ -142,31 +142,31 @@ Register recipe: (returns nothing)
 .register()
 ```
 
-### Example
+!!! example
 
-```groovy
-mods.thaumcraft.ArcaneWorkbench.shapedBuilder()
-        .researchKey('UNLOCKALCHEMY@3')
-        .output(item('minecraft:pumpkin'))
-        .row('SS ')
-        .row('   ')
-        .row('   ')
-        .key('S', item('minecraft:pumpkin_seeds'))
-        .aspect(aspect('terra'))
-        .vis(5)
-        .register()
+    ```groovy
+    mods.thaumcraft.ArcaneWorkbench.shapedBuilder()
+            .researchKey('UNLOCKALCHEMY@3')
+            .output(item('minecraft:pumpkin'))
+            .row('SS ')
+            .row('   ')
+            .row('   ')
+            .key('S', item('minecraft:pumpkin_seeds'))
+            .aspect(aspect('terra'))
+            .vis(5)
+            .register()
 
-mods.thaumcraft.ArcaneWorkbench.shapedBuilder()
-        .researchKey('UNLOCKALCHEMY@3')
-        .output(item('minecraft:pumpkin'))
-        .matrix('SS ',
-                '   ',
-                '   ')
-        .key('S', item('minecraft:pumpkin_seeds'))
-        .aspect(aspect('terra'))
-        .vis(5)
-        .register()
-```
+    mods.thaumcraft.ArcaneWorkbench.shapedBuilder()
+            .researchKey('UNLOCKALCHEMY@3')
+            .output(item('minecraft:pumpkin'))
+            .matrix('SS ',
+                    '   ',
+                    '   ')
+            .key('S', item('minecraft:pumpkin_seeds'))
+            .aspect(aspect('terra'))
+            .vis(5)
+            .register()
+    ```
 
 ### Removing Recipes
 
@@ -177,6 +177,7 @@ mods.thaumcraft.ArcaneWorkbench.removeByOutput(IIngredient)
 ```
 
 !!! example
+
     ```groovy
     mods.thaumcraft.ArcaneWorkbench.removeByOutput(item('thaumcraft:mechanism_simple'))
     ```

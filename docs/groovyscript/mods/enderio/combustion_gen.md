@@ -1,40 +1,51 @@
 # EnderIO Combustion Generator
+
 GroovyScript allows you to add and remove custom fuels and coolants for the Combustion Generator.
 
 ## Adding fuels
 
-````groovy
+```groovy
 mods.enderio.CombustionGen.addFuel(FluidStack fuel, int rfPerCycle, int burnTime)
-````
-Example
-````groovy
-mods.enderio.CombustionGen.addFuel(fluid('water'), 100, 100)
-````
+```
+
+!!! example
+
+    ```groovy
+    mods.enderio.CombustionGen.addFuel(fluid('water'), 100, 100)
+    ```
 
 ## Removing fuels
-````groovy
+
+```groovy
 mods.enderio.CombustionGen.removeFuel(FluidStack fuel)
-````
-Example
-````groovy
-mods.enderio.CombustionGen.removeFuel(fluid('rocket_fuel'))
-````
+```
+
+!!! example
+
+    ```groovy
+    mods.enderio.CombustionGen.removeFuel(fluid('rocket_fuel'))
+    ```
 
 ## Adding coolants
 
-````groovy
+```groovy
 mods.enderio.CombustionGen.addCoolant(FluidStack fuel, float degreesCoolingPerMb)
-````
-Example
-````groovy
-mods.enderio.CombustionGen.addCoolant(fluid('lava'), 20f)
-````
+```
+
+!!! example
+
+    ```groovy
+    mods.enderio.CombustionGen.addCoolant(fluid('lava'), 20f)
+    ```
 
 ## Removing coolants
-````groovy
+
+```groovy
 mods.enderio.CombustionGen.removeCoolant(FluidStack fuel)
-````
-Example
-````groovy
-mods.enderio.CombustionGen.removeCoolant(fluid('ender_distillation'))
-````
+```
+
+!!! example
+
+    ```groovy
+    mods.enderio.CombustionGen.removeCoolant(fluid('ender_distillation'))
+    ```
