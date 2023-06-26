@@ -15,9 +15,9 @@ mods.extendedcrafting.CompressionCrafting
 Works only for items and energy
 
 ```groovy
-mods.extendedcrafting.compression.recipeBuilder(ItemStack output, IIngredient input, int inputCount, IIngredient catalyst, boolean consumeCatalyst, int powerCost)
+mods.extendedcrafting.compression.add(ItemStack output, IIngredient input, int inputCount, IIngredient catalyst, boolean consumeCatalyst, int powerCost)
 
-mods.extendedcrafting.compression.recipeBuilder(ItemStack output, IIngredient input, int inputCount, IIngredient catalyst, boolean consumeCatalyst, int powerCost, int powerRate)
+mods.extendedcrafting.compression.add(ItemStack output, IIngredient input, int inputCount, IIngredient catalyst, boolean consumeCatalyst, int powerCost, int powerRate)
 ```
 
 ### Outputs
@@ -78,7 +78,7 @@ register()
 !!! example
 
     ```groovy
-    mods.extendedcrafting.compression.recipeBuilder()
+    mods.extendedcrafting.compression.add()
         .input(item('minecraft:clay') * 10) //Requires 10 clay as input
         .output(item('minecraft:diamond') * 2) //Outputs two diamonds
         .powerCost(1000) //Requires 1,000 FE total to run
@@ -86,7 +86,7 @@ register()
     ```
 
     ```groovy
-    mods.extendedcrafting.compressioncrafting.recipeBuilder()
+    mods.extendedcrafting.compressioncrafting.add()
         .input(item('minecraft:clay')) //Requires clay blocks
         .inputCount(100) //Requires 100 clay blocks
         .output(item('minecraft:gold_ingot') * 7) //Outputs 7 gold ingots

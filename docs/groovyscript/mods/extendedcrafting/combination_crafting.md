@@ -77,7 +77,7 @@ register()
 !!! example
 
     ```groovy
-    mods.extendedcrafting.combination.recipeBuilder()
+    mods.extendedcrafting.combination.add()
         .cost(100) //Requires 100FE total
         .perTick(100) //Requires 100FE/t to run
         .output(item('minecraft:diamond') * 2) //Outputs two diamonds
@@ -87,7 +87,7 @@ register()
     ```
 
     ```groovy
-    mods.extendedcrafting.combinationcrafting.recipeBuilder()
+    mods.extendedcrafting.combinationcrafting.add()
         .cost(10000) //Requires 10,000 FE
         .output(item('minecraft:gold_ingot') * 2) //Gives two gold ingots as output
         .input(item('minecraft:pumpkin')) //Requires a pumpkin as catalyst
