@@ -16,9 +16,9 @@ mods.extendedcrafting.CombinationCrafting
 Works only for items and energy
 
 ```groovy
-mods.extendedcrafting.combination.recipeBuilder(ItemStack output, long cost, Ingredient input, NonNullList<Ingredient> pedestals)
+mods.extendedcrafting.combination.add(ItemStack output, long cost, Ingredient input, NonNullList<Ingredient> pedestals)
 
-mods.extendedcrafting.combination.recipeBuilder(ItemStack output, long cost, int perTick, Ingredient input, NonNullList<Ingredient> pedestals)
+mods.extendedcrafting.combination.add(ItemStack output, long cost, int perTick, Ingredient input, NonNullList<Ingredient> pedestals)
 ```
 
 ### Input
@@ -103,19 +103,19 @@ register()
 This removes ALL recipes that match the given input:
 
 ```groovy
-mods.bloodmagic.CombinationCrafting.removeByInput(IIngredient)
+mods.extendedcrafting.CombinationCrafting.removeByInput(IIngredient)
 ```
 
 This removes ALL recipes that match the given output:
 
 ```groovy
-mods.bloodmagic.CombinationCrafting.removeByOutput(ItemStack)
+mods.extendedcrafting.CombinationCrafting.removeByOutput(ItemStack)
 ```
 
 Removes all registed Combination Crafting recipes:
 
 ```groovy
-mods.bloodmagic.CombinationCrafting.removeAll()
+mods.extendedcrafting.CombinationCrafting.removeAll()
 ```
 
 !!! example

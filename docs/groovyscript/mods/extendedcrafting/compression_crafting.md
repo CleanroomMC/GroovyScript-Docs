@@ -15,7 +15,7 @@ mods.extendedcrafting.CompressionCrafting
 Works only for items and energy
 
 ```groovy
-mods.extendedcrafting.combination.recipeBuilder(ItemStack output, IIngredient input, int inputCount, IIngredient catalyst, boolean consumeCatalyst, int powerCost)
+mods.extendedcrafting.compression.recipeBuilder(ItemStack output, IIngredient input, int inputCount, IIngredient catalyst, boolean consumeCatalyst, int powerCost)
 
 mods.extendedcrafting.compression.recipeBuilder(ItemStack output, IIngredient input, int inputCount, IIngredient catalyst, boolean consumeCatalyst, int powerCost, int powerRate)
 ```
