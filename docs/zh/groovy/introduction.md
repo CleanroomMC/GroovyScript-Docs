@@ -47,61 +47,61 @@ def num6 = 1.0d // double
 def bool = true // boolean
 ````
 
-### Complex types
+### 复数数据类型
 Complex types are all types that are not primitive. Every object falls under this category.
 Primitive types also have boxed complex types.
 As said before `def num = 1.5` will create a `BigDecimal` which is complex.<br>
 `def num = 10G` will create a `BigInteger` which has almost no value limit, but it can take a lot of memory, so try to not use to often.
 
-## Functions
-A function is a set of instructions that can be called with a single line.
+## 函数
+函数是一组指令，只需一行即可调用.
 
-### Defining Functions
+### 定义函数
 ```groovy
-// function which takes a single parameter and returns nothing
+// 这是一个只接受一个参数, 不返回任何内容的函数
 def f(x) {
     println(x)
 }
 
-// function which takes two parameters and returns their sum
+// 接收两个参数并返回其和的函数
 def sum(x, y) {
     return x + y
 }
 
-// specifying types is optional
-// if used, it will error if passed invalid types
+// 指定类型是可选的, 你可以省略它
+// 如果你指定了, 则在传递无效类型时会出错
 def sum2(int x, int y) {
     return x + y
 }
 ```
 
-### Calling functions
-We'll take the functions from above.
+### 调用函数
+我们将用到上面定义的函数.
 ````groovy
-f(10) // calls the function with the parameter 10
-f(sum(4, 16)) // calls f with the result of sum
+f(10) // 调用函数"f", 参数为10
+f(sum(4, 16)) // 用求和的结果作为参数, 调用函数"f"
 ````
 
-## Imports
-If you want to use any classes short name you need to import the full class name.
-Most of javas classes are imported by default.
+## 导入
+如果想要使用任何类的简短名称, 则需要先导入完整的类名.
+但需要注意的是大多数javas类都是默认导入的.
 ```groovy
-import my.package.MyClass // import a single class
-import my.other.package.* // import all classes from a package
+import my.package.MyClass // 导入一个类
+import my.other.package.* // 导入一个包内的所有类
 
-import static my.package.MyClass.FIELD // static field import
-import static my.package.MyClass.function // static function import
-import static my.other.package.MyOtherClass.* // import all static functions from the class
+import static my.package.MyClass.FIELD // 静态字段导入
+import static my.package.MyClass.function // 静态函数导入
+import static my.other.package.MyOtherClass.* // 导入该类的所有静态函数
 
 import my.package.MyClass as MC // import aliasing
 import static my.package.MyClass.function as f // static import aliasing
 ```
 
-## Further Reading
+## 更进一步
 
-If there's something more advanced you'd like to learn, take a look at the [Official Groovy Documentation](https://groovy-lang.org/documentation.html).
+如果你觉得这些满足不了你, 请参见 [Official Groovy Documentation](https://groovy-lang.org/documentation.html).
 
-Some useful Groovy Documentation pages:
+另一些可能对你有用的 Groovy 文档页面:
 
 * [Syntax](https://groovy-lang.org/syntax.html)
 * [Operators](https://groovy-lang.org/operators.html)
