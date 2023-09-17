@@ -15,7 +15,7 @@ tooltips for multiple items inside the event. You don't need to call listen for 
     import net.minecraftforge.event.entity.player.ItemTooltipEvent
 
     event_manager.listen { ItemTooltipEvent event ->
-        if (ItemStack.areItemsEqual(event.getItemStack(), item('minecraft:diamond'))) {
+        if (ItemStack.areItemStacksEqual(event.getItemStack(), item('minecraft:diamond'))) {
             event.getToolTip().add('Epic diamond tooltip')
         }
     }
