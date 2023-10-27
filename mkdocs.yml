@@ -45,11 +45,18 @@ nav:
           - 'Extended Crafting': groovyscript/mods/extendedcrafting/extendedcrafting.md
           - 'Forestry': groovyscript/mods/forestry/forestry.md
           - GregTech:
-              - Recipes: groovyscript/mods/gtceu/recipes.md
-              - Materials: groovyscript/mods/gtceu/material.md
-              - Heating Coils: groovyscript/mods/gtceu/heating_coils.md
-              - Terminal: groovyscript/mods/gtceu/terminal.md
-              - Multiblocks: groovyscript/mods/gtceu/multiblock.md
+              - Below 2.7:
+                  - Recipes: groovyscript/mods/gtceu/2_6_below/recipes.md
+                  - Materials: groovyscript/mods/gtceu/2_6_below/material.md
+                  - Heating Coils: groovyscript/mods/2_6_below/gtceu/heating_coils.md
+                  - Terminal: groovyscript/mods/gtceu/2_6_below/terminal.md
+                  - Multiblocks: groovyscript/mods/gtceu/2_6_below/multiblock.md
+              - Above 2.7: 
+                  - Recipes: groovyscript/mods/gtceu/2_7_plus/recipes.md
+                  - Materials: groovyscript/mods/gtceu/2_7_plus/material.md
+                  - Heating Coils: groovyscript/mods/gtceu/2_7_plus/heating_coils.md
+                  - Terminal: groovyscript/mods/gtceu/2_7_plus/terminal.md
+                  - Multiblocks: groovyscript/mods/gtceu/2_7_plus/multiblock.md
           - "Mekanism":
               - "Crusher": "groovyscript/mods/mekanism/crusher.md"
           - 'Roots': groovyscript/mods/roots/roots.md
