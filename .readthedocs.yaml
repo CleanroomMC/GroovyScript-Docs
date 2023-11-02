@@ -3,7 +3,7 @@ version: 2
 
 build:
   os: ubuntu-22.04
-  tools:
+  tools: python
     python: "3.12"
     nodejs: "18"
     rust: "1.64"
