@@ -12,12 +12,12 @@ for CraftTweaker, but for GroovyScript it doesn't require another mod.
 Currently, GroovyScript adds helpers to create
 
 - [items](item.md)
-- blocks
-- creative tabs
+- [blocks](block.md)
+- [creative tabs](creative_tab.md)
+- [fluids](fluid.md)
 
 Coming in the future:
 
-- fluids
 - Mekanism gases
 
 ## Creative tabs

@@ -254,6 +254,7 @@ nav:
           - groovyscript/content/content.md
           - Items: groovyscript/content/item.md
           - Blocks: groovyscript/content/block.md
+          - Fluids: groovyscript/content/fluid.md
           - Creative Tabs: groovyscript/content/creative_tab.md
       - External Mod Compat: groovyscript/external_compat.md
 
