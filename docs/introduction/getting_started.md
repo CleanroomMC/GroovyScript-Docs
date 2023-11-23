@@ -53,9 +53,9 @@ Let's see what the file can look like.
 Let's go through it bit by bit: <br>
 
 - `packName` is the name of the pack (See [pack name and id](#pack-name-and-id)). Important
-  for [content](groovyscript/content/content.md). <br>
+  for [content](../groovyscript/content/content.md). <br>
 - `packId` (0.4.0+) is the id of the pack (See [pack name and id](#pack-name-and-id)). Important
-  for [content](groovyscript/content/content.md). <br>
+  for [content](../groovyscript/content/content.md). <br>
 - `version` is the version of the pack. It currently doesn't do anything special. <br>
 - `debug`: If this is false all messages that logged to debug will not be logged. Great for debugging. <br>
 - `classes`: (0.3.0+) Files that contain a single class should be specified here. It makes sure classes are loaded when

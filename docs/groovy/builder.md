@@ -32,7 +32,7 @@ The Recipe Builders in GroovyScript and with a `.register()` call, because the r
     2. Usually the return keyword is not needed in groovy, but in this case it helps to understand the concept.
     3. Usually the return keyword is not needed in groovy, but in this case it helps to understand the concept.
 
-!!! example "Usage example"
+??? example "Usage example"
     Now let's create a new recipe using the builder
 
     ```groovy
