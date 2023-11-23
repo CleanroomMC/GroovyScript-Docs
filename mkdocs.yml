@@ -76,6 +76,8 @@ markdown_extensions:
   - footnotes
   - tables
   - toc
+  - toc:
+      permalink: "#"
 
 plugins:
   - search
