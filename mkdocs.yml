@@ -57,4 +57,13 @@ plugins:
 
 extra_css:
   - stylesheets/extra.css
+
+validation:
+  nav:
+    omitted_files: info
+    not_found: info
+    absolute_links: info
+  links:
+    absolute_links: info
+    not_found: info
     unrecognized_links: ignore
