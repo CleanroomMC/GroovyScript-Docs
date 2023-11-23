@@ -1,40 +1,181 @@
-# EnderIO Tank
+---
+title: "Tank"
+description: "Converts an input itemstack into an output fluidstack with an optional output itemstack in drain mode, or converts an input itemstack and fluidstack into an output itemstack in fill mode."
+source_code_link: "https://github.com/CleanroomMC/GroovyScript/blob/master/src/main/java/com/cleanroommc/groovyscript/compat/mods/enderio/Tank.java"
+---
 
-EnderIO Tanks can not only store fluids but also empty and fill fluid containers.
-You can add custom fill/drain recipes to get custom behaviour. For example you can add a `water + sponge = wet sponge` recipe.
+# Tank (Ender IO)
+
+## Description
+
+Converts an input itemstack into an output fluidstack with an optional output itemstack in drain mode, or converts an input itemstack and fluidstack into an output itemstack in fill mode.
+
+## Identifier
+
+Refer to this via any of the following:
+
+```groovy hl_lines="2"
+mods.enderio.Tank
+mods.enderio.tank/*(1)!*/
+mods.eio.Tank
+mods.eio.tank
+```
+
+1. This identifier will be used as the default for examples on this page
 
 ## Adding Recipes
 
-### Filling
+- Adds drain recipes in the format `recipeName`, `input`, `outputFluid`, `output`:
 
-Adds a recipe that will fill the input `IIngredient` with the input `FluidStack` and results in the output `ItemStack`.
+    ```groovy
+    mods.enderio.tank.addDrain(String, IIngredient, FluidStack, ItemStack)
+    ```
 
-```groovy
-mods.enderio.Tank.addFill(IIngredient input, FluidStack inputFluid, ItemStack output)
-```
+- Adds drain recipes in the format `input`, `outputFluid`, `output`, and autogenerates a recipe name:
 
-### Draining
+    ```groovy
+    mods.enderio.tank.addDrain(IIngredient, FluidStack, ItemStack)
+    ```
 
-Adds a recipe that will drain the output `FluidStack` from the input `IIngredient` and results in the output `ItemStack`.
+- Adds fill recipes in the format `recipeName`, `input`, `inputFluid`, `output`:
 
-```groovy
-mods.enderio.Tank.addDrain(IIngredient input, FluidStack outputFluid, ItemStack output)
-```
+    ```groovy
+    mods.enderio.tank.addFill(String, IIngredient, FluidStack, ItemStack)
+    ```
+
+- Adds fill recipes in the format `input`, `inputFluid`, `output`, and autogenerates a recipe name:
+
+    ```groovy
+    mods.enderio.tank.addFill(IIngredient, FluidStack, ItemStack)
+    ```
+
+
+### Recipe Builder
+
+Just like other recipe types, the Tank also uses a recipe builder.
+
+Don't know what a builder is? Check [the builder info page](../../../groovy/builder.md) out.
+
+???+ Abstract "mods.enderio.tank.recipeBuilder()"
+    - `#!groovy IngredientList<IIngredient>`. Sets the item inputs of the recipe. Requires exactly 1. (Default `null`).
+
+        ```groovy
+        input(IIngredient)
+        input(IIngredient...)
+        input(Collection<IIngredient>)
+        ```
+
+    - `#!groovy FluidStackList`. Sets the fluid inputs of the recipe. Requires greater than or equal to 0 and less than or equal to 1. (Default `null`).
+
+        ```groovy
+        fluidInput(FluidStack)
+        fluidInput(FluidStack...)
+        fluidInput(Collection<FluidStack>)
+        ```
+
+    - `#!groovy ItemStackList`. Sets the item outputs of the recipe. Requires greater than or equal to 0 and less than or equal to 1. (Default `null`).
+
+        ```groovy
+        output(ItemStack)
+        output(ItemStack...)
+        output(Collection<ItemStack>)
+        ```
+
+    - `#!groovy FluidStackList`. Sets the fluid outputs of the recipe. Requires greater than or equal to 0 and less than or equal to 1. (Default `null`).
+
+        ```groovy
+        fluidOutput(FluidStack)
+        fluidOutput(FluidStack...)
+        fluidOutput(Collection<FluidStack>)
+        ```
+
+    - `#!groovy boolean`. Sets if the recipe is filling or emptying.
+
+        ```groovy
+        fill()
+        drain()
+        ```
+
+    - First validates the builder, returning `null` and outputting errors to the log file if the validation failed, then registers the builder and returns the registered object. (returns `null` or `crazypants.enderio.base.recipe.tank.TankMachineRecipe`).
+
+        ```groovy
+        register()
+        ```
+
+    ???+ Example
+        ```groovy
+        mods.enderio.tank.recipeBuilder()
+            .drain()
+            .input(item('minecraft:clay'))
+            .output(item('minecraft:diamond'))
+            .fluidInput(fluid('water') * 500)
+            .register()
+
+        mods.enderio.tank.recipeBuilder()
+            .fill()
+            .input(item('minecraft:diamond'))
+            .output(item('minecraft:clay'))
+            .fluidOutput(fluid('water') * 500)
+            .register()
+
+        mods.enderio.tank.recipeBuilder()
+            .drain()
+            .input(item('minecraft:diamond'))
+            .fluidInput(fluid('fire_water') * 8000)
+            .register()
+
+        mods.enderio.tank.recipeBuilder()
+            .fill()
+            .input(item('minecraft:diamond'))
+            .fluidOutput(fluid('fire_water') * 8000)
+            .register()
+        ```
+
+
 
 ## Removing Recipes
 
-### Filling
+- Removes drain recipe by `fluid`, `output`:
 
-Removes a filling recipe:
+    ```groovy
+    mods.enderio.tank.removeDrain(FluidStack, ItemStack)
+    ```
 
-```groovy
-mods.enderio.Tank.removeFill(FluidStack inputFluid, ItemStack output)
-```
+- Removes drain recipe by `input`, `fluid`:
 
-### Draining
+    ```groovy
+    mods.enderio.tank.removeDrain(ItemStack, FluidStack)
+    ```
 
-Removes a filling recipe:
+- Removes fill recipe by `input`, `fluid`:
 
-```groovy
-mods.enderio.Tank.removeDrain(FluidStack outputFluid, ItemStack output)
-```
+    ```groovy
+    mods.enderio.tank.removeFill(ItemStack, FluidStack)
+    ```
+
+- Removes fill recipe by `fluid`, `output`:
+
+    ```groovy
+    mods.enderio.tank.removeFill(FluidStack, ItemStack)
+    ```
+
+- Removes all registered recipes:
+
+    ```groovy
+    mods.enderio.tank.removeAll()
+    ```
+
+???+ Example
+    ```groovy
+    mods.enderio.tank.removeDrain(item('minecraft:experience_bottle'), fluid('xpjuice'))
+    mods.enderio.tank.removeFill(item('minecraft:glass_bottle'), fluid('xpjuice'))
+    mods.enderio.tank.removeAll()
+    ```
+
+## Getting the value of recipes
+
+- Iterates through every entry in the registry, with the ability to call remove on any element to remove it:
+
+    ```groovy
+    mods.enderio.tank.streamRecipes()
+    ```

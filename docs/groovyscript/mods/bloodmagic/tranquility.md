@@ -1,102 +1,159 @@
-# Blood Magic Tranquility Amount
+---
+title: "Tranquility"
+description: "Blocks in the area around the Tranquility Altar provide tranquility up to the Altar's cap, with reduced effect the more of a particular type of Tranquility is provided."
+source_code_link: "https://github.com/CleanroomMC/GroovyScript/blob/master/src/main/java/com/cleanroommc/groovyscript/compat/mods/bloodmagic/Tranquility.java"
+---
 
-Package:
+# Tranquility (Blood Magic: Alchemical Wizardry)
 
-```groovy
+## Description
+
+Blocks in the area around the Tranquility Altar provide tranquility up to the Altar's cap, with reduced effect the more of a particular type of Tranquility is provided.
+
+## Identifier
+
+Refer to this via any of the following:
+
+```groovy hl_lines="4"
+mods.bm.Tranquility
+mods.bm.tranquility
 mods.bloodmagic.Tranquility
+mods.bloodmagic.tranquility/*(1)!*/
 ```
 
-!!! Note
-    Tranquility is used to improve the effect of an Incense Altar, which increases the amount of Life Essenced gained when using a Dagger of Self-Sacrifice.
-    The Incense Altar recives diminishing effects from additional sources of a type.
+1. This identifier will be used as the default for examples on this page
 
-## Adding Tranquility to blocks
+## Adding Recipes
 
-Just like other recipe types, Tranquility also uses a recipe builder. <br>
-You don't know what a builder is? Check [this](https://groovyscript-docs.readthedocs.io/en/latest/groovy/builder/) out
-
-```groovy
-mods.bloodmagic.Tranquility.recipeBuilder()
-```
-
-Setting the target block: (set either the exact blockstate, or all blockstates of a block)
-
-```groovy
-.blockstate(IBlockState)
-.block(Block)
-```
-
-Tranquility types are one of the following: PLANT, CROP, TREE, EARTHEN, WATER, FIRE, LAVA.
-
-Set the Tranquility type:
-
-```groovy
-.tranquility(EnumTranquilityType)
-.tranquility(String/*(1)!*/)
-```
-
-1. Must be one of the following: PLANT, CROP, TREE, EARTHEN, WATER, FIRE, LAVA.
-
-Set value provided to the given Tranquility type:
-
-```groovy
-.value(double)
-```
-
-Register recipe:
-
-```groovy
-.register()
-```
-
-!!! example
+- Adds recipes in the format `block`, `tranquility`:
 
     ```groovy
-    mods.bloodmagic.tranquility.recipeBuilder()
-        .block(blockstate("minecraft:obsidian").getBlock())
-        .tranquility("LAVA")
-        .value(10)
-        .register()
-
-    mods.bloodmagic.tranquility.recipeBuilder()
-        .block(blockstate("minecraft:obsidian").getBlock())
-        .tranquility("WATER")
-        .value(10)
-        .register()
-
-    mods.bloodmagic.tranquility.recipeBuilder()
-        .blockstate(blockstate("minecraft:obsidian"))
-        .tranquility("LAVA")
-        .value(500)
-        .register()
+    mods.bloodmagic.tranquility.add(Block, TranquilityStack)
     ```
+
+- Adds recipes in the format `blockstate`, `tranquility`, `value`:
+
+    ```groovy
+    mods.bloodmagic.tranquility.add(IBlockState, String, double)
+    ```
+
+- Adds recipes in the format `blockstate`, `tranquility`:
+
+    ```groovy
+    mods.bloodmagic.tranquility.add(IBlockState, TranquilityStack)
+    ```
+
+- Adds recipes in the format `block`, `tranquility`, `value`:
+
+    ```groovy
+    mods.bloodmagic.tranquility.add(Block, String, double)
+    ```
+
+
+### Recipe Builder
+
+Just like other recipe types, the Tranquility also uses a recipe builder.
+
+Don't know what a builder is? Check [the builder info page](../../../groovy/builder.md) out.
+
+???+ Abstract "mods.bloodmagic.tranquility.recipeBuilder()"
+    - `#!groovy Block`. Sets the target block. (Default `null`).
+
+        ```groovy
+        block(Block)
+        ```
+
+    - `#!groovy double`. Sets the amount of Tranquility provided. Requires greater than or equal to 0.
+
+        ```groovy
+        value(double)
+        ```
+
+    - `#!groovy IBlockState`. Sets the target blockstate. (Default `null`).
+
+        ```groovy
+        blockstate(IBlockState)
+        ```
+
+    - `#!groovy EnumTranquilityType`. Sets the type of Tranquility being modified. Requires not null. (Default `null`).
+
+        ```groovy
+        tranquility(String)
+        tranquility(EnumTranquilityType)
+        ```
+
+    - First validates the builder, returning `null` and outputting errors to the log file if the validation failed, then registers the builder and returns the registered object. (returns `null` or `java.lang.Object`).
+
+        ```groovy
+        register()
+        ```
+
+    ???+ Example
+        ```groovy
+        mods.bloodmagic.tranquility.recipeBuilder()
+            .block(block('minecraft:obsidian'))
+            .tranquility('LAVA')
+            .value(10)
+            .register()
+
+        mods.bloodmagic.tranquility.recipeBuilder()
+            .block(block('minecraft:obsidian'))
+            .tranquility('WATER')
+            .value(10)
+            .register()
+
+        mods.bloodmagic.tranquility.recipeBuilder()
+            .blockstate(blockstate('minecraft:obsidian'))
+            .tranquility('LAVA')
+            .value(500)
+            .register()
+        ```
+
+
 
 ## Removing Recipes
 
-Removes the given Blockstate or all blockstates of a given Block from the target Tranquility type:
-
-```groovy
-mods.bloodmagic.Tranquility.remove(Block, String/*(1)!*/)
-mods.bloodmagic.Tranquility.remove(IBlockState, String/*(2)!*/)
-mods.bloodmagic.Tranquility.remove(Block, EnumTranquilityType)
-mods.bloodmagic.Tranquility.remove(IBlockState, EnumTranquilityType)
-```
-
-1. Must be one of the following: PLANT, CROP, TREE, EARTHEN, WATER, FIRE, LAVA.
-2. Must be one of the following: PLANT, CROP, TREE, EARTHEN, WATER, FIRE, LAVA.
-
-Removes all registed Tranquility blockstates:
-
-```groovy
-mods.bloodmagic.Tranquility.removeAll()
-```
-
-!!! example
+- Removes any Tranquility entry that matches the given Block and EnumTranquilityType:
 
     ```groovy
-    // Removes the target blockstate of netherrack from the FIRE Tranquility type.
-    mods.bloodmagic.tranquility.remove(blockstate("minecraft:netherrack"), "FIRE")
+    mods.bloodmagic.tranquility.remove(Block, EnumTranquilityType)
+    ```
 
-    // Removes all blockstates of dirt from the EARTHEN Tranquility type.
-    mods.bloodmagic.tranquility.remove(blockstate("minecraft:dirt").getBlock(), "EARTHEN")
+- Removes any Tranquility entry that matches the given IBlockState and EnumTranquilityType:
+
+    ```groovy
+    mods.bloodmagic.tranquility.remove(IBlockState, EnumTranquilityType)
+    ```
+
+- Removes any Tranquility entry that matches the given IBlockState and Tranquility as String:
+
+    ```groovy
+    mods.bloodmagic.tranquility.remove(IBlockState, String)
+    ```
+
+- Removes any Tranquility entry that matches the given Block and Tranquility type as String:
+
+    ```groovy
+    mods.bloodmagic.tranquility.remove(Block, String)
+    ```
+
+- Removes all registered recipes:
+
+    ```groovy
+    mods.bloodmagic.tranquility.removeAll()
+    ```
+
+???+ Example
+    ```groovy
+    mods.bloodmagic.tranquility.remove(blockstate('minecraft:netherrack'), 'FIRE')
+    mods.bloodmagic.tranquility.remove(block('minecraft:dirt'), 'EARTHEN')
+    mods.bloodmagic.tranquility.removeAll()
+    ```
+
+## Getting the value of recipes
+
+- Iterates through every entry in the registry, with the ability to call remove on any element to remove it:
+
+    ```groovy
+    mods.bloodmagic.tranquility.streamRecipes()
     ```
