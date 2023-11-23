@@ -7,7 +7,7 @@ import net.minecraftforge.event.entity.player.SleepingTimeCheckEvent
 
 ## Sub-Classes
 This event extends the following events and can use all their methods and fields: <br>
-[PlayerEvent](player_event.md), [LivingEvent](living_event.md), [EntityEvent](entity_event.md)
+[PlayerEvent](player_event/player_event.md), [LivingEvent](living_event/living_event.md), [EntityEvent](entity_event/entity_event.md)
 
 ## Methods
 ```groovy
@@ -17,4 +17,3 @@ boolean hasResult()
 ```groovy
 net.minecraft.util.math.BlockPos getSleepingLocation()
 ```
-
