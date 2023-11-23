@@ -24,11 +24,22 @@ theme:
   features:
     - content.code.annotate
     - content.code.copy
+    - content.action.edit
+    - content.action.view
+
+    - navigation.instant
     - navigation.tracking
     - navigation.tabs
-    - navigation.tabs.sticky
     - navigation.top
-    - toc.integrate
+    - navigation.indexes
+    - navigation.prune
+    - navigation.footer
+
+    - search.suggest
+    - search.highlight
+
+    - announce.dismiss
+
 
 markdown_extensions:
   - admonition
