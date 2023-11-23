@@ -21,6 +21,8 @@ theme:
         icon: material/brightness-7
         name: Switch to dark mode
 
+  custom_dir: overrides
+
   features:
     - content.code.annotate
     - content.code.copy
@@ -40,6 +42,20 @@ theme:
 
     - announce.dismiss
 
+extra:
+  social:
+    - icon: fontawesome/solid/code
+      link: https://github.com/CleanroomMC/GroovyScript
+      name: GroovyScript Source Code
+    - icon: fontawesome/regular/file
+      link: https://github.com/CleanroomMC/GroovyScript-Docs
+      name: GroovyScript Docs Source Code
+    - icon: custom/curseforge
+      link: https://www.curseforge.com/minecraft/mc-mods/groovyscript
+      name: Download GroovyScript on Curseforge
+    - icon: fontawesome/brands/discord
+      link: https://discord.com/invite/m53yxTjjKM
+      name: Join the Cleanroom Discord
 
 markdown_extensions:
   - admonition
