@@ -7,16 +7,16 @@
 <div class="md-source-file">
     {# mkdocs-git-revision-date-localized-plugin #}
     {% if page.meta.git_revision_date_localized %}
-        <span class="md-source-file__part">
-            <span class="md-icon" title="{{ lang.t("source.file.date.updated") }}">
+        <span class="md-source-file__part" title="{{ lang.t("source.file.date.updated") ~ ": " ~ page.meta.git_revision_date_localized_raw_date }}">
+            <span class="md-icon">
                 {% include ".icons/material/clock-edit-outline.svg" %}
             </span>
             {{ page.meta.git_revision_date_localized }}
         </span>
     {% endif %}
     {% if page.meta.git_creation_date_localized %}
-        <span class="md-source-file__part">
-            <span class="md-icon" title="{{ lang.t("source.file.date.created") }}">
+        <span class="md-source-file__part" title="{{ lang.t("source.file.date.created") ~ ": " ~ page.meta.git_creation_date_localized_raw_date }}">
+            <span class="md-icon">
                 {% include ".icons/material/clock-plus-outline.svg" %}
             </span>
             {{ page.meta.git_creation_date_localized }}
