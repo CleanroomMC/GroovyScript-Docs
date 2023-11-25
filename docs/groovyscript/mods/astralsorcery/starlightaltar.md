@@ -328,16 +328,16 @@ Don't know what a builder is? Check [the builder info page](../../../groovy/buil
 
 ## Removing Recipes
 
-- Removes all recipes that match the given output in only the specified Altar tier, in the format `output`, `altarLevel`:
-
-    ```groovy
-    mods.astralsorcery.starlightaltar.removeByOutput(ItemStack, TileAltar.AltarLevel)
-    ```
-
 - Removes all recipes that match the given output in all Altar tiers:
 
     ```groovy
     mods.astralsorcery.starlightaltar.removeByOutput(ItemStack)
+    ```
+
+- Removes all recipes that match the given output in only the specified Altar tier, in the format `output`, `altarLevel`:
+
+    ```groovy
+    mods.astralsorcery.starlightaltar.removeByOutput(ItemStack, TileAltar.AltarLevel)
     ```
 
 - Removes all registered recipes:

@@ -75,13 +75,13 @@ Don't know what a builder is? Check [the builder info page](../../../groovy/buil
 - Removes all recipes that match the given ore:
 
     ```groovy
-    mods.actuallyadditions.stonemininglens.removeByOre(String)
+    mods.actuallyadditions.stonemininglens.removeByOre(OreDictIngredient)
     ```
 
 - Removes all recipes that match the given ore:
 
     ```groovy
-    mods.actuallyadditions.stonemininglens.removeByOre(OreDictIngredient)
+    mods.actuallyadditions.stonemininglens.removeByOre(String)
     ```
 
 - Removes all registered recipes:
@@ -92,8 +92,8 @@ Don't know what a builder is? Check [the builder info page](../../../groovy/buil
 
 ???+ Example
     ```groovy
-    mods.actuallyadditions.stonemininglens.removeByOre('oreLapis')
     mods.actuallyadditions.stonemininglens.removeByOre(ore('oreCoal'))
+    mods.actuallyadditions.stonemininglens.removeByOre('oreLapis')
     mods.actuallyadditions.stonemininglens.removeAll()
     ```
 

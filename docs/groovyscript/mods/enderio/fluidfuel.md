@@ -40,13 +40,13 @@ mods.eio.combustion_fuel
 - Adds recipes in the format `fluid`, `rfPerCycle`, `totalBurnTime`:
 
     ```groovy
-    mods.enderio.fluidfuel.addFuel(FluidStack, int, int)
+    mods.enderio.fluidfuel.addFuel(Fluid, int, int)
     ```
 
 - Adds recipes in the format `fluid`, `rfPerCycle`, `totalBurnTime`:
 
     ```groovy
-    mods.enderio.fluidfuel.addFuel(Fluid, int, int)
+    mods.enderio.fluidfuel.addFuel(FluidStack, int, int)
     ```
 
 ???+ Example
@@ -59,13 +59,13 @@ mods.eio.combustion_fuel
 - Removes recipes matching the target fluid:
 
     ```groovy
-    mods.enderio.fluidfuel.remove(FluidStack)
+    mods.enderio.fluidfuel.remove(Fluid)
     ```
 
 - Removes recipes matching the target fluid:
 
     ```groovy
-    mods.enderio.fluidfuel.remove(Fluid)
+    mods.enderio.fluidfuel.remove(FluidStack)
     ```
 
 - Removes all registered recipes:

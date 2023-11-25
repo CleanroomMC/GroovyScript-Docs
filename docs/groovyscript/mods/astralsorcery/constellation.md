@@ -32,12 +32,6 @@ mods.astralsorcery.constellation/*(1)!*/
 - Adds to the constellations signature items, which control the Constellation Paper and Mantle of Stars recipes. Only the first 4 will be used.:
 
     ```groovy
-    mods.astralsorcery.constellation.addSignatureItem(IConstellation, IIngredient...)
-    ```
-
-- Adds to the constellations signature items, which control the Constellation Paper and Mantle of Stars recipes. Only the first 4 will be used.:
-
-    ```groovy
     mods.astralsorcery.constellation.addSignatureItem(IConstellation, Collection<IIngredient>)
     ```
 
@@ -45,6 +39,12 @@ mods.astralsorcery.constellation/*(1)!*/
 
     ```groovy
     mods.astralsorcery.constellation.addSignatureItem(IConstellation, IIngredient)
+    ```
+
+- Adds to the constellations signature items, which control the Constellation Paper and Mantle of Stars recipes. Only the first 4 will be used.:
+
+    ```groovy
+    mods.astralsorcery.constellation.addSignatureItem(IConstellation, IIngredient...)
     ```
 
 

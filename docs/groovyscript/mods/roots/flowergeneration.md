@@ -64,6 +64,12 @@ Don't know what a builder is? Check [the builder info page](../../../groovy/buil
 
 ## Removing Entries
 
+- Removes all Flower Generation entries with the given Block:
+
+    ```groovy
+    mods.roots.flowergeneration.removeByFlower(Block)
+    ```
+
 - Removes the Flower Generation entry with the given Block and int metadata:
 
     ```groovy
@@ -82,12 +88,6 @@ Don't know what a builder is? Check [the builder info page](../../../groovy/buil
     mods.roots.flowergeneration.removeByFlower(ItemStack)
     ```
 
-- Removes all Flower Generation entries with the given Block:
-
-    ```groovy
-    mods.roots.flowergeneration.removeByFlower(Block)
-    ```
-
 - Removes the Flower Generation entry with the given name:
 
     ```groovy
@@ -102,10 +102,10 @@ Don't know what a builder is? Check [the builder info page](../../../groovy/buil
 
 ???+ Example
     ```groovy
+    mods.roots.flowergeneration.removeByFlower(block('minecraft:red_flower'))
     mods.roots.flowergeneration.removeByFlower(block('minecraft:red_flower'), 1)
     mods.roots.flowergeneration.removeByFlower(blockstate('minecraft:red_flower:2'))
     mods.roots.flowergeneration.removeByFlower(item('minecraft:red_flower:3'))
-    mods.roots.flowergeneration.removeByFlower(block('minecraft:red_flower'))
     mods.roots.flowergeneration.removeByName(resource('roots:dandelion'))
     mods.roots.flowergeneration.removeAll()
     ```

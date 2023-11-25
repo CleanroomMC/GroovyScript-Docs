@@ -71,7 +71,7 @@ Don't know what a builder is? Check [the builder info page](../../../groovy/buil
         chance(Collection<Integer>)
         ```
 
-    - First validates the builder, returning `null` and outputting errors to the log file if the validation failed, then registers the builder and returns the registered object. (returns `null` or `java.lang.Object`).
+    - First validates the builder, returning `null` and outputting errors to the log file if the validation failed, then registers the builder and returns the registered object. (returns `null` or `net.minecraft.item.ItemStack`).
 
         ```groovy
         register()
@@ -94,7 +94,7 @@ Don't know what a builder is? Check [the builder info page](../../../groovy/buil
 - Removes recipes matching the given entity:
 
     ```groovy
-    mods.woot.drops.removeByEntity(String, String)
+    mods.woot.drops.removeByEntity(EntityEntry)
     ```
 
 - Removes recipes matching the given entity:
@@ -106,7 +106,7 @@ Don't know what a builder is? Check [the builder info page](../../../groovy/buil
 - Removes recipes matching the given entity:
 
     ```groovy
-    mods.woot.drops.removeByEntity(EntityEntry)
+    mods.woot.drops.removeByEntity(String, String)
     ```
 
 - Removes recipes matching the given entity:
@@ -129,9 +129,9 @@ Don't know what a builder is? Check [the builder info page](../../../groovy/buil
 
 ???+ Example
     ```groovy
-    mods.woot.drops.removeByEntity('minecraft:ender_dragon', '')
-    mods.woot.drops.removeByEntity('minecraft:ender_dragon')
     mods.woot.drops.removeByEntity(entity('minecraft:ender_dragon'))
+    mods.woot.drops.removeByEntity('minecraft:ender_dragon')
+    mods.woot.drops.removeByEntity('minecraft:ender_dragon', '')
     mods.woot.drops.removeByEntity(new WootMobName('minecraft:ender_dragon'))
     mods.woot.drops.removeByOutput(item('minecraft:dragon_breath'))
     mods.woot.drops.removeAll()

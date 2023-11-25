@@ -100,13 +100,13 @@ Don't know what a builder is? Check [the builder info page](../../../groovy/buil
 - Removes the Runic Shear Entity recipe for the given Entity:
 
     ```groovy
-    mods.roots.runicshearentity.removeByEntity(EntityEntry)
+    mods.roots.runicshearentity.removeByEntity(Class<? extends EntityLivingBase>)
     ```
 
 - Removes the Runic Shear Entity recipe for the given Entity:
 
     ```groovy
-    mods.roots.runicshearentity.removeByEntity(Class<? extends EntityLivingBase>)
+    mods.roots.runicshearentity.removeByEntity(EntityEntry)
     ```
 
 - Removes the Runic Shear Entity recipe with the given name:

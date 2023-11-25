@@ -28,13 +28,13 @@ mods.botania.elven_trade
 - Adds recipes in the format `output`, `inputs`:
 
     ```groovy
-    mods.botania.elventrade.add(ItemStack[], IIngredient[])
+    mods.botania.elventrade.add(ItemStack, IIngredient[])
     ```
 
 - Adds recipes in the format `output`, `inputs`:
 
     ```groovy
-    mods.botania.elventrade.add(ItemStack, IIngredient[])
+    mods.botania.elventrade.add(ItemStack[], IIngredient[])
     ```
 
 

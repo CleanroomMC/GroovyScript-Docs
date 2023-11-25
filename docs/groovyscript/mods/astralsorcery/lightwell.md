@@ -29,16 +29,16 @@ mods.astralsorcery.lightwell/*(1)!*/
 
 ## Adding Recipes
 
-- Adds recipes in the format `catalyst`, `output`, `productionMultiplier`, `shatterMultiplier`, `color`:
-
-    ```groovy
-    mods.astralsorcery.lightwell.add(ItemStack, Fluid, float, float, Color)
-    ```
-
 - Adds recipes in the format `catalyst`, `output`, `productionMultiplier`, `shatterMultiplier`:
 
     ```groovy
     mods.astralsorcery.lightwell.add(ItemStack, Fluid, float, float)
+    ```
+
+- Adds recipes in the format `catalyst`, `output`, `productionMultiplier`, `shatterMultiplier`, `color`:
+
+    ```groovy
+    mods.astralsorcery.lightwell.add(ItemStack, Fluid, float, float, Color)
     ```
 
 

@@ -30,16 +30,16 @@ mods.extendedcrafting.combination
 
 ## Adding Recipes
 
-- Adds recipes in the format `output`, `cost`, `perTick`, `input`, `pedestals`:
-
-    ```groovy
-    mods.extendedcrafting.combinationcrafting.add(ItemStack, long, int, Ingredient, NonNullList<Ingredient>)
-    ```
-
 - Adds recipes in the format `output`, `cost`, `input`, `pedestals`:
 
     ```groovy
     mods.extendedcrafting.combinationcrafting.add(ItemStack, long, Ingredient, NonNullList<Ingredient>)
+    ```
+
+- Adds recipes in the format `output`, `cost`, `perTick`, `input`, `pedestals`:
+
+    ```groovy
+    mods.extendedcrafting.combinationcrafting.add(ItemStack, long, int, Ingredient, NonNullList<Ingredient>)
     ```
 
 
@@ -119,13 +119,13 @@ Don't know what a builder is? Check [the builder info page](../../../groovy/buil
 - Removes all recipes that match the given input:
 
     ```groovy
-    mods.extendedcrafting.combinationcrafting.removeByInput(ItemStack)
+    mods.extendedcrafting.combinationcrafting.removeByInput(IIngredient)
     ```
 
 - Removes all recipes that match the given input:
 
     ```groovy
-    mods.extendedcrafting.combinationcrafting.removeByInput(IIngredient)
+    mods.extendedcrafting.combinationcrafting.removeByInput(ItemStack)
     ```
 
 - Removes all recipes that match the given output:

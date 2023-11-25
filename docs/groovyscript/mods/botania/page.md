@@ -50,13 +50,13 @@ mods.botania.page/*(1)!*/
 - Returns a `PageEntity` for use in adding to a LexiconEntry:
 
     ```groovy
-    mods.botania.page.createEntityPage(String, int, String)
+    mods.botania.page.createEntityPage(String, int, EntityEntry)
     ```
 
 - Returns a `PageEntity` for use in adding to a LexiconEntry:
 
     ```groovy
-    mods.botania.page.createEntityPage(String, int, EntityEntry)
+    mods.botania.page.createEntityPage(String, int, String)
     ```
 
 - Returns a `PageImage` for use in adding to a LexiconEntry:
@@ -100,8 +100,8 @@ mods.botania.page/*(1)!*/
     mods.botania.page.createBrewingPage('groovy.exampleBrewingPage', 'bottomText', 'bottomText', mods.botania.brewrecipe.recipeBuilder().input(item('minecraft:clay'), ore('ingotGold'), ore('gemDiamond')).brew(brew('absorption')).register())
     mods.botania.page.createCraftingPage('groovy.exampleCraftingPage', 'minecraft:clay')
     mods.botania.page.createElvenTradePage('groovy.exampleElvenTradePage', mods.botania.elventrade.recipeBuilder().input(ore('ingotGold'), ore('ingotIron')).output(item('botania:manaresource:7')).register())
-    mods.botania.page.createEntityPage('groovy.exampleEntityPage', 100, 'minecraft:wither_skeleton')
     mods.botania.page.createEntityPage('groovy.exampleEntityPage', 5, entity('minecraft:wither_skeleton'))
+    mods.botania.page.createEntityPage('groovy.exampleEntityPage', 100, 'minecraft:wither_skeleton')
     mods.botania.page.createImagePage('groovy.exampleImagePage', 'minecraft:textures/items/apple.png')
     mods.botania.page.createInfusionPage('groovy.exampleInfusionPage', mods.botania.manainfusion.recipeBuilder().input(ore('ingotGold')).output(item('botania:manaresource', 1)).mana(500).catalyst(blockstate('minecraft:stone')).register())
     mods.botania.page.createLoreTextPage('groovy.exampleLoreTextPage')

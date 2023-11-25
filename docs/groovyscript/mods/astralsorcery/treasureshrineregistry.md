@@ -53,13 +53,13 @@ mods.astralsorcery.treasure_shrine_registry
 - Removes entries of the given ore:
 
     ```groovy
-    mods.astralsorcery.treasureshrineregistry.remove(String)
+    mods.astralsorcery.treasureshrineregistry.remove(OreDictIngredient)
     ```
 
 - Removes entries of the given ore:
 
     ```groovy
-    mods.astralsorcery.treasureshrineregistry.remove(OreDictIngredient)
+    mods.astralsorcery.treasureshrineregistry.remove(String)
     ```
 
 - Removes all registered recipes:

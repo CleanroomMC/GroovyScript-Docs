@@ -80,13 +80,13 @@ Don't know what a builder is? Check [the builder info page](../../../groovy/buil
 - Removes all recipes that match the given output:
 
     ```groovy
-    mods.botania.brewrecipe.removeByOutput(String)
+    mods.botania.brewrecipe.removeByOutput(Brew)
     ```
 
 - Removes all recipes that match the given output:
 
     ```groovy
-    mods.botania.brewrecipe.removeByOutput(Brew)
+    mods.botania.brewrecipe.removeByOutput(String)
     ```
 
 - Removes all registered recipes:
@@ -98,8 +98,8 @@ Don't know what a builder is? Check [the builder info page](../../../groovy/buil
 ???+ Example
     ```groovy
     mods.botania.brewrecipe.removeByInput(item('minecraft:iron_ingot'))
-    mods.botania.brewrecipe.removeByOutput('speed')
     mods.botania.brewrecipe.removeByOutput(brew('allure'))
+    mods.botania.brewrecipe.removeByOutput('speed')
     mods.botania.brewrecipe.removeAll()
     ```
 

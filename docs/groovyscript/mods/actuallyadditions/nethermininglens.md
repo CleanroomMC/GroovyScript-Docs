@@ -75,13 +75,13 @@ Don't know what a builder is? Check [the builder info page](../../../groovy/buil
 - Removes all recipes that match the given ore:
 
     ```groovy
-    mods.actuallyadditions.nethermininglens.removeByOre(String)
+    mods.actuallyadditions.nethermininglens.removeByOre(OreDictIngredient)
     ```
 
 - Removes all recipes that match the given ore:
 
     ```groovy
-    mods.actuallyadditions.nethermininglens.removeByOre(OreDictIngredient)
+    mods.actuallyadditions.nethermininglens.removeByOre(String)
     ```
 
 - Removes all registered recipes:
@@ -92,8 +92,8 @@ Don't know what a builder is? Check [the builder info page](../../../groovy/buil
 
 ???+ Example
     ```groovy
-    mods.actuallyadditions.nethermininglens.removeByOre('oreQuartz')
     mods.actuallyadditions.nethermininglens.removeByOre(ore('oreQuartz'))
+    mods.actuallyadditions.nethermininglens.removeByOre('oreQuartz')
     mods.actuallyadditions.nethermininglens.removeAll()
     ```
 

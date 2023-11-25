@@ -108,16 +108,16 @@ Don't know what a builder is? Check [the builder info page](../../../groovy/buil
     mods.roots.transmutation.removeByName(ResourceLocation)
     ```
 
-- Removes the Transmutation recipe for the given output itemstack:
-
-    ```groovy
-    mods.roots.transmutation.removeByOutput(ItemStack)
-    ```
-
 - Removes the Transmutation recipe for the given output IBlockState:
 
     ```groovy
     mods.roots.transmutation.removeByOutput(IBlockState)
+    ```
+
+- Removes the Transmutation recipe for the given output itemstack:
+
+    ```groovy
+    mods.roots.transmutation.removeByOutput(ItemStack)
     ```
 
 - Removes all registered recipes:
@@ -129,8 +129,8 @@ Don't know what a builder is? Check [the builder info page](../../../groovy/buil
 ???+ Example
     ```groovy
     mods.roots.transmutation.removeByName(resource('roots:redstone_block_to_glowstone'))
-    mods.roots.transmutation.removeByOutput(item('minecraft:dye:3'))
     mods.roots.transmutation.removeByOutput(blockstate('minecraft:log:variant=jungle'))
+    mods.roots.transmutation.removeByOutput(item('minecraft:dye:3'))
     mods.roots.transmutation.removeAll()
     ```
 

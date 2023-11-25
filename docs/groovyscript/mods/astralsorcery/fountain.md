@@ -100,12 +100,6 @@ Don't know what a builder is? Check [the builder info page](../../../groovy/buil
 
 ## Removing Recipes
 
-- Removes an entry matching the given `FluidStack`:
-
-    ```groovy
-    mods.astralsorcery.fountain.remove(FluidStack)
-    ```
-
 - Removes an entry matching the given `Fluid`:
 
     ```groovy
@@ -116,6 +110,12 @@ Don't know what a builder is? Check [the builder info page](../../../groovy/buil
 
     ```groovy
     mods.astralsorcery.fountain.remove(FluidRarityRegistry.FluidRarityEntry)
+    ```
+
+- Removes an entry matching the given `FluidStack`:
+
+    ```groovy
+    mods.astralsorcery.fountain.remove(FluidStack)
     ```
 
 - Removes all registered recipes:

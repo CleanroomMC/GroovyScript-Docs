@@ -90,13 +90,13 @@ Don't know what a builder is? Check [the builder info page](../../../groovy/buil
 - Removes all recipes that match the given input:
 
     ```groovy
-    mods.actuallyadditions.oilgen.removeByInput(String)
+    mods.actuallyadditions.oilgen.removeByInput(FluidStack)
     ```
 
 - Removes all recipes that match the given input:
 
     ```groovy
-    mods.actuallyadditions.oilgen.removeByInput(FluidStack)
+    mods.actuallyadditions.oilgen.removeByInput(String)
     ```
 
 - Removes all registered recipes:
@@ -108,8 +108,8 @@ Don't know what a builder is? Check [the builder info page](../../../groovy/buil
 ???+ Example
     ```groovy
     mods.actuallyadditions.oilgen.removeByInput(fluid('canolaoil').getFluid())
-    mods.actuallyadditions.oilgen.removeByInput('refinedcanolaoil')
     mods.actuallyadditions.oilgen.removeByInput(fluid('canolaoil'))
+    mods.actuallyadditions.oilgen.removeByInput('refinedcanolaoil')
     mods.actuallyadditions.oilgen.removeAll()
     ```
 

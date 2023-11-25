@@ -40,13 +40,13 @@ mods.eio.combustion_coolant
 - Adds recipes in the format `fluid`, `degreesPerMb`:
 
     ```groovy
-    mods.enderio.fluidcoolant.addCoolant(FluidStack, float)
+    mods.enderio.fluidcoolant.addCoolant(Fluid, float)
     ```
 
 - Adds recipes in the format `fluid`, `degreesPerMb`:
 
     ```groovy
-    mods.enderio.fluidcoolant.addCoolant(Fluid, float)
+    mods.enderio.fluidcoolant.addCoolant(FluidStack, float)
     ```
 
 ???+ Example
@@ -59,13 +59,13 @@ mods.eio.combustion_coolant
 - Removes recipes matching the target fluid:
 
     ```groovy
-    mods.enderio.fluidcoolant.remove(FluidStack)
+    mods.enderio.fluidcoolant.remove(Fluid)
     ```
 
 - Removes recipes matching the target fluid:
 
     ```groovy
-    mods.enderio.fluidcoolant.remove(Fluid)
+    mods.enderio.fluidcoolant.remove(FluidStack)
     ```
 
 - Removes all registered recipes:

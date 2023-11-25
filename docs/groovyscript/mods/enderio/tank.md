@@ -25,28 +25,28 @@ mods.eio.tank
 
 ## Adding Recipes
 
-- Adds drain recipes in the format `recipeName`, `input`, `outputFluid`, `output`:
-
-    ```groovy
-    mods.enderio.tank.addDrain(String, IIngredient, FluidStack, ItemStack)
-    ```
-
 - Adds drain recipes in the format `input`, `outputFluid`, `output`, and autogenerates a recipe name:
 
     ```groovy
     mods.enderio.tank.addDrain(IIngredient, FluidStack, ItemStack)
     ```
 
-- Adds fill recipes in the format `recipeName`, `input`, `inputFluid`, `output`:
+- Adds drain recipes in the format `recipeName`, `input`, `outputFluid`, `output`:
 
     ```groovy
-    mods.enderio.tank.addFill(String, IIngredient, FluidStack, ItemStack)
+    mods.enderio.tank.addDrain(String, IIngredient, FluidStack, ItemStack)
     ```
 
 - Adds fill recipes in the format `input`, `inputFluid`, `output`, and autogenerates a recipe name:
 
     ```groovy
     mods.enderio.tank.addFill(IIngredient, FluidStack, ItemStack)
+    ```
+
+- Adds fill recipes in the format `recipeName`, `input`, `inputFluid`, `output`:
+
+    ```groovy
+    mods.enderio.tank.addFill(String, IIngredient, FluidStack, ItemStack)
     ```
 
 
@@ -147,16 +147,16 @@ Don't know what a builder is? Check [the builder info page](../../../groovy/buil
     mods.enderio.tank.removeDrain(ItemStack, FluidStack)
     ```
 
-- Removes fill recipe by `input`, `fluid`:
-
-    ```groovy
-    mods.enderio.tank.removeFill(ItemStack, FluidStack)
-    ```
-
 - Removes fill recipe by `fluid`, `output`:
 
     ```groovy
     mods.enderio.tank.removeFill(FluidStack, ItemStack)
+    ```
+
+- Removes fill recipe by `input`, `fluid`:
+
+    ```groovy
+    mods.enderio.tank.removeFill(ItemStack, FluidStack)
     ```
 
 - Removes all registered recipes:

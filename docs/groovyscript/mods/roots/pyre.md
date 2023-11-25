@@ -67,7 +67,7 @@ Don't know what a builder is? Check [the builder info page](../../../groovy/buil
         burnTime(int)
         ```
 
-    - First validates the builder, returning `null` and outputting errors to the log file if the validation failed, then registers the builder and returns the registered object. (returns `null` or `java.lang.Object`).
+    - First validates the builder, returning `null` and outputting errors to the log file if the validation failed, then registers the builder and returns the registered object. (returns `null` or `epicsquid.roots.recipe.PyreCraftingRecipe`).
 
         ```groovy
         register()

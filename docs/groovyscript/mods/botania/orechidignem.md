@@ -28,13 +28,13 @@ mods.botania.orechid_ignem
 - Adds recipes in the format `output`, `weight`:
 
     ```groovy
-    mods.botania.orechidignem.add(String, int)
+    mods.botania.orechidignem.add(OreDictIngredient, int)
     ```
 
 - Adds recipes in the format `output`, `weight`:
 
     ```groovy
-    mods.botania.orechidignem.add(OreDictIngredient, int)
+    mods.botania.orechidignem.add(String, int)
     ```
 
 ???+ Example
@@ -48,13 +48,13 @@ mods.botania.orechid_ignem
 - Removes all recipes that match the given output:
 
     ```groovy
-    mods.botania.orechidignem.removeByOutput(String)
+    mods.botania.orechidignem.removeByOutput(OreDictIngredient)
     ```
 
 - Removes all recipes that match the given output:
 
     ```groovy
-    mods.botania.orechidignem.removeByOutput(OreDictIngredient)
+    mods.botania.orechidignem.removeByOutput(String)
     ```
 
 - Removes all registered recipes:
@@ -65,9 +65,9 @@ mods.botania.orechid_ignem
 
 ???+ Example
     ```groovy
-    mods.botania.orechidignem.removeByOutput('oreQuartz')
     mods.botania.orechidignem.removeByOutput(ore('oreEmerald'))
     mods.botania.orechidignem.removeByOutput(ore('oreQuartz'))
+    mods.botania.orechidignem.removeByOutput('oreQuartz')
     mods.botania.orechidignem.removeAll()
     ```
 

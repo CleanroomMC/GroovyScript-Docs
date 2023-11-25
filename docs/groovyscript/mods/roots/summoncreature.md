@@ -75,13 +75,13 @@ Don't know what a builder is? Check [the builder info page](../../../groovy/buil
 - Removes the Summon Creature recipe for the given Entity:
 
     ```groovy
-    mods.roots.summoncreature.removeByEntity(EntityEntry)
+    mods.roots.summoncreature.removeByEntity(Class<? extends EntityLivingBase>)
     ```
 
 - Removes the Summon Creature recipe for the given Entity:
 
     ```groovy
-    mods.roots.summoncreature.removeByEntity(Class<? extends EntityLivingBase>)
+    mods.roots.summoncreature.removeByEntity(EntityEntry)
     ```
 
 - Removes the Summon Creature recipe with the given name:

@@ -76,7 +76,7 @@ Don't know what a builder is? Check [the builder info page](../../../groovy/buil
         duration(int)
         ```
 
-    - First validates the builder, returning `null` and outputting errors to the log file if the validation failed, then registers the builder and returns the registered object. (returns `null` or `java.lang.Object`).
+    - First validates the builder, returning `null` and outputting errors to the log file if the validation failed, then registers the builder and returns the registered object. (returns `null` or `org.cyclops.cyclopscore.recipe.custom.api.IRecipe<org.cyclops.evilcraft.core.recipe.custom.IngredientFluidStackAndTierRecipeComponent, org.cyclops.cyclopscore.recipe.custom.component.IngredientRecipeComponent, org.cyclops.evilcraft.core.recipe.custom.DurationXpRecipeProperties>`).
 
         ```groovy
         register()

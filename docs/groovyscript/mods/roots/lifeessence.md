@@ -28,6 +28,12 @@ mods.roots.life_essence
 - Adds entries in the format `entity`:
 
     ```groovy
+    mods.roots.lifeessence.add(Class<? extends EntityLivingBase>)
+    ```
+
+- Adds entries in the format `entity`:
+
+    ```groovy
     mods.roots.lifeessence.add(EntityEntry)
     ```
 
@@ -35,12 +41,6 @@ mods.roots.life_essence
 
     ```groovy
     mods.roots.lifeessence.add(EntityLivingBase)
-    ```
-
-- Adds entries in the format `entity`:
-
-    ```groovy
-    mods.roots.lifeessence.add(Class<? extends EntityLivingBase>)
     ```
 
 ???+ Example
@@ -53,6 +53,12 @@ mods.roots.life_essence
 - Removes the Life Essence entry for the given Entity:
 
     ```groovy
+    mods.roots.lifeessence.remove(Class<? extends EntityLivingBase>)
+    ```
+
+- Removes the Life Essence entry for the given Entity:
+
+    ```groovy
     mods.roots.lifeessence.remove(EntityEntry)
     ```
 
@@ -60,12 +66,6 @@ mods.roots.life_essence
 
     ```groovy
     mods.roots.lifeessence.remove(EntityLivingBase)
-    ```
-
-- Removes the Life Essence entry for the given Entity:
-
-    ```groovy
-    mods.roots.lifeessence.remove(Class<? extends EntityLivingBase>)
     ```
 
 - Removes all registered recipes:

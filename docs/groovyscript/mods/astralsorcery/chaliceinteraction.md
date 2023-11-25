@@ -119,6 +119,12 @@ Don't know what a builder is? Check [the builder info page](../../../groovy/buil
 - Removes all recipes that match the given input:
 
     ```groovy
+    mods.astralsorcery.chaliceinteraction.removeByInput(Fluid, Fluid)
+    ```
+
+- Removes all recipes that match the given input:
+
+    ```groovy
     mods.astralsorcery.chaliceinteraction.removeByInput(FluidStack)
     ```
 
@@ -126,12 +132,6 @@ Don't know what a builder is? Check [the builder info page](../../../groovy/buil
 
     ```groovy
     mods.astralsorcery.chaliceinteraction.removeByInput(FluidStack, FluidStack)
-    ```
-
-- Removes all recipes that match the given input:
-
-    ```groovy
-    mods.astralsorcery.chaliceinteraction.removeByInput(Fluid, Fluid)
     ```
 
 - Removes all recipes that match the given output:

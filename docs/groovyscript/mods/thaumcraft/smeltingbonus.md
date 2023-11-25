@@ -33,16 +33,16 @@ mods.thaumcraft.smelting_bonus
 
 ## Adding Recipes
 
-- Adds recipes in the format `in`, `out`, `chance`:
-
-    ```groovy
-    mods.thaumcraft.smeltingbonus.add(IIngredient, ItemStack, float)
-    ```
-
 - Adds recipes in the format `in`, `out`, with chance having a default value of `0.33F`:
 
     ```groovy
     mods.thaumcraft.smeltingbonus.add(IIngredient, ItemStack)
+    ```
+
+- Adds recipes in the format `in`, `out`, `chance`:
+
+    ```groovy
+    mods.thaumcraft.smeltingbonus.add(IIngredient, ItemStack, float)
     ```
 
 

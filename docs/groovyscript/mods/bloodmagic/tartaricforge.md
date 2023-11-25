@@ -102,13 +102,13 @@ Don't know what a builder is? Check [the builder info page](../../../groovy/buil
 - Removes all recipes that match the given input:
 
     ```groovy
-    mods.bloodmagic.tartaricforge.removeByInput(NonNullList<IIngredient>)
+    mods.bloodmagic.tartaricforge.removeByInput(IIngredient...)
     ```
 
 - Removes all recipes that match the given input:
 
     ```groovy
-    mods.bloodmagic.tartaricforge.removeByInput(IIngredient...)
+    mods.bloodmagic.tartaricforge.removeByInput(NonNullList<IIngredient>)
     ```
 
 - Removes all recipes that match the given output:

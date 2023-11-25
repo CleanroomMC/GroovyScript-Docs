@@ -77,7 +77,7 @@ Don't know what a builder is? Check [the builder info page](../../../groovy/buil
         energy(int)
         ```
 
-    - First validates the builder, returning `null` and outputting errors to the log file if the validation failed, then registers the builder and returns the registered object. (returns `null` or `java.lang.Object`).
+    - First validates the builder, returning `null` and outputting errors to the log file if the validation failed, then registers the builder and returns the registered object. (returns `null` or `blusunrize.immersiveengineering.api.crafting.MixerRecipe`).
 
         ```groovy
         register()
@@ -97,16 +97,16 @@ Don't know what a builder is? Check [the builder info page](../../../groovy/buil
 
 ## Removing Recipes
 
-- Removes all recipes that match the given input:
-
-    ```groovy
-    mods.immersiveengineering.mixer.removeByInput(IIngredient...)
-    ```
-
 - Removes all recipes that match the given output:
 
     ```groovy
     mods.immersiveengineering.mixer.removeByInput(FluidStack, IIngredient...)
+    ```
+
+- Removes all recipes that match the given input:
+
+    ```groovy
+    mods.immersiveengineering.mixer.removeByInput(IIngredient...)
     ```
 
 - Removes all recipes that match the given output:
@@ -123,8 +123,8 @@ Don't know what a builder is? Check [the builder info page](../../../groovy/buil
 
 ???+ Example
     ```groovy
-    mods.immersiveengineering.mixer.removeByInput(item('minecraft:sand'), item('minecraft:sand'), item('minecraft:clay_ball'), item('minecraft:gravel'))
     mods.immersiveengineering.mixer.removeByInput(fluid('water'), item('minecraft:speckled_melon'))
+    mods.immersiveengineering.mixer.removeByInput(item('minecraft:sand'), item('minecraft:sand'), item('minecraft:clay_ball'), item('minecraft:gravel'))
     mods.immersiveengineering.mixer.removeByOutput(fluid('potion').withNbt([Potion:'minecraft:night_vision']))
     mods.immersiveengineering.mixer.removeAll()
     ```

@@ -26,13 +26,13 @@ mods.botania.orechid/*(1)!*/
 - Adds recipes in the format `output`, `weight`:
 
     ```groovy
-    mods.botania.orechid.add(String, int)
+    mods.botania.orechid.add(OreDictIngredient, int)
     ```
 
 - Adds recipes in the format `output`, `weight`:
 
     ```groovy
-    mods.botania.orechid.add(OreDictIngredient, int)
+    mods.botania.orechid.add(String, int)
     ```
 
 ???+ Example

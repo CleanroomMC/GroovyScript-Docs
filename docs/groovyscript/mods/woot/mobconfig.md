@@ -25,22 +25,16 @@ mods.woot.mob_config
 
 ## Adding Recipes
 
-- Adds configuration to the given entity:
-
-    ```groovy
-    mods.woot.mobconfig.add(WootMobName, String, int)
-    ```
-
-- Adds configuration to the given entity:
-
-    ```groovy
-    mods.woot.mobconfig.add(String, String, int)
-    ```
-
 - Adds configuration to the default map:
 
     ```groovy
     mods.woot.mobconfig.add(EnumConfigKey, int)
+    ```
+
+- Adds configuration to the given entity:
+
+    ```groovy
+    mods.woot.mobconfig.add(String, EnumConfigKey, int)
     ```
 
 - Adds configuration to the default map:
@@ -52,7 +46,7 @@ mods.woot.mob_config
 - Adds configuration to the given entity:
 
     ```groovy
-    mods.woot.mobconfig.add(String, EnumConfigKey, int)
+    mods.woot.mobconfig.add(String, String, int)
     ```
 
 - Adds configuration to the given entity:
@@ -61,31 +55,19 @@ mods.woot.mob_config
     mods.woot.mobconfig.add(WootMobName, EnumConfigKey, int)
     ```
 
+- Adds configuration to the given entity:
+
+    ```groovy
+    mods.woot.mobconfig.add(WootMobName, String, int)
+    ```
+
 ???+ Example
     ```groovy
-    mods.woot.mobconfig.add('minecraft:zombie', 'spawn_ticks', 1)
     mods.woot.mobconfig.add('spawn_ticks', 100)
+    mods.woot.mobconfig.add('minecraft:zombie', 'spawn_ticks', 1)
     ```
 
 ## Removing Recipes
-
-- Removes configuration from the given entity for the given config:
-
-    ```groovy
-    mods.woot.mobconfig.remove(String, String)
-    ```
-
-- Removes configuration from the given entity for the given config:
-
-    ```groovy
-    mods.woot.mobconfig.remove(WootMobName, String)
-    ```
-
-- Removes all configuration for the given entity:
-
-    ```groovy
-    mods.woot.mobconfig.remove(WootMobName)
-    ```
 
 - Removes all configuration for the given entity:
 
@@ -102,7 +84,25 @@ mods.woot.mob_config
 - Removes configuration from the given entity for the given config:
 
     ```groovy
+    mods.woot.mobconfig.remove(String, String)
+    ```
+
+- Removes all configuration for the given entity:
+
+    ```groovy
+    mods.woot.mobconfig.remove(WootMobName)
+    ```
+
+- Removes configuration from the given entity for the given config:
+
+    ```groovy
     mods.woot.mobconfig.remove(WootMobName, EnumConfigKey)
+    ```
+
+- Removes configuration from the given entity for the given config:
+
+    ```groovy
+    mods.woot.mobconfig.remove(WootMobName, String)
     ```
 
 - Removes all registered recipes:

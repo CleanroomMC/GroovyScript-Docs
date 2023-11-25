@@ -27,16 +27,16 @@ mods.extendedcrafting.compression
 
 ## Adding Recipes
 
-- Adds recipes in the format `output`, `input`, `inputCount`, `catalyst`, `consumeCatalyst`, `powerCost`, `powerRate`:
-
-    ```groovy
-    mods.extendedcrafting.compressioncrafting.add(ItemStack, IIngredient, int, IIngredient, boolean, int, int)
-    ```
-
 - Adds recipes in the format `output`, `input`, `inputCount`, `catalyst`, `consumeCatalyst`, `powerCost`:
 
     ```groovy
     mods.extendedcrafting.compressioncrafting.add(ItemStack, IIngredient, int, IIngredient, boolean, int)
+    ```
+
+- Adds recipes in the format `output`, `input`, `inputCount`, `catalyst`, `consumeCatalyst`, `powerCost`, `powerRate`:
+
+    ```groovy
+    mods.extendedcrafting.compressioncrafting.add(ItemStack, IIngredient, int, IIngredient, boolean, int, int)
     ```
 
 

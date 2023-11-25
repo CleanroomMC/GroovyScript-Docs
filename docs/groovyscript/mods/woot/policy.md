@@ -29,13 +29,13 @@ mods.woot.policy/*(1)!*/
 - Prevents the given entity from being captured and spawned:
 
     ```groovy
-    mods.woot.policy.addToEntityBlacklist(WootMobName)
+    mods.woot.policy.addToEntityBlacklist(String)
     ```
 
 - Prevents the given entity from being captured and spawned:
 
     ```groovy
-    mods.woot.policy.addToEntityBlacklist(String)
+    mods.woot.policy.addToEntityBlacklist(WootMobName)
     ```
 
 - Prevents entities from the given mod from being captured and spawned:
@@ -47,25 +47,25 @@ mods.woot.policy/*(1)!*/
 - Prevents all entities not on the list from being spawned, overriding EntityBlacklist and EntityModBlacklist:
 
     ```groovy
-    mods.woot.policy.addToEntityWhitelist(WootMobName)
+    mods.woot.policy.addToEntityWhitelist(String)
     ```
 
 - Prevents all entities not on the list from being spawned, overriding EntityBlacklist and EntityModBlacklist:
 
     ```groovy
-    mods.woot.policy.addToEntityWhitelist(String)
-    ```
-
-- Prevents entities from being captured via shard, but doesn't prevent spawning:
-
-    ```groovy
-    mods.woot.policy.addToGenerateOnlyList(WootMobName)
+    mods.woot.policy.addToEntityWhitelist(WootMobName)
     ```
 
 - Prevents entities from being captured via shard, but doesn't prevent spawning:
 
     ```groovy
     mods.woot.policy.addToGenerateOnlyList(String)
+    ```
+
+- Prevents entities from being captured via shard, but doesn't prevent spawning:
+
+    ```groovy
+    mods.woot.policy.addToGenerateOnlyList(WootMobName)
     ```
 
 - Prevents the given item from being dropped by any entity:
@@ -125,13 +125,13 @@ mods.woot.policy/*(1)!*/
 - Removes the given entity from the GenerateOnlyList:
 
     ```groovy
-    mods.woot.policy.removeFromGenerateOnlyList(WootMobName)
+    mods.woot.policy.removeFromGenerateOnlyList(String)
     ```
 
 - Removes the given entity from the GenerateOnlyList:
 
     ```groovy
-    mods.woot.policy.removeFromGenerateOnlyList(String)
+    mods.woot.policy.removeFromGenerateOnlyList(WootMobName)
     ```
 
 - Removes the given item from the ItemBlacklist:

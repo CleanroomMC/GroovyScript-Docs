@@ -29,10 +29,10 @@ mods.bloodmagic.alchemy_array
 
 ## Adding Recipes
 
-- Adds recipes in the format `input`, `catalyst`, `output`, optional `circleTexture`:
+- Adds recipes in the format `input`, `catalyst`, `output`, `circleTexture`:
 
     ```groovy
-    mods.bloodmagic.alchemyarray.add(Ingredient, Ingredient, ItemStack, String)
+    mods.bloodmagic.alchemyarray.add(Ingredient, Ingredient, ItemStack)
     ```
 
 - Adds recipes in the format `input`, `catalyst`, `output`, optional `circleTexture`:
@@ -41,10 +41,10 @@ mods.bloodmagic.alchemy_array
     mods.bloodmagic.alchemyarray.add(Ingredient, Ingredient, ItemStack, ResourceLocation)
     ```
 
-- Adds recipes in the format `input`, `catalyst`, `output`, `circleTexture`:
+- Adds recipes in the format `input`, `catalyst`, `output`, optional `circleTexture`:
 
     ```groovy
-    mods.bloodmagic.alchemyarray.add(Ingredient, Ingredient, ItemStack)
+    mods.bloodmagic.alchemyarray.add(Ingredient, Ingredient, ItemStack, String)
     ```
 
 

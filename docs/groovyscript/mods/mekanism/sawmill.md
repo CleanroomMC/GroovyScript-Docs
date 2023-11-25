@@ -86,16 +86,16 @@ Don't know what a builder is? Check [the builder info page](../../../groovy/buil
 
 ## Removing Recipes
 
-- Adds recipes in the format `ingredient`, `output`, `secondary`:
-
-    ```groovy
-    mods.mekanism.sawmill.add(IIngredient, ItemStack, ItemStack)
-    ```
-
 - Adds recipes in the format `ingredient`, `output`:
 
     ```groovy
     mods.mekanism.sawmill.add(IIngredient, ItemStack)
+    ```
+
+- Adds recipes in the format `ingredient`, `output`, `secondary`:
+
+    ```groovy
+    mods.mekanism.sawmill.add(IIngredient, ItemStack, ItemStack)
     ```
 
 - Removes all recipes that match the given input:

@@ -28,6 +28,12 @@ mods.bloodmagic.sacrificial/*(1)!*/
 - Adds recipes in the format `entity`, `value`:
 
     ```groovy
+    mods.bloodmagic.sacrificial.add(Entity, int)
+    ```
+
+- Adds recipes in the format `entity`, `value`:
+
+    ```groovy
     mods.bloodmagic.sacrificial.add(ResourceLocation, int)
     ```
 
@@ -35,12 +41,6 @@ mods.bloodmagic.sacrificial/*(1)!*/
 
     ```groovy
     mods.bloodmagic.sacrificial.add(String, int)
-    ```
-
-- Adds recipes in the format `entity`, `value`:
-
-    ```groovy
-    mods.bloodmagic.sacrificial.add(Entity, int)
     ```
 
 
@@ -95,16 +95,16 @@ Don't know what a builder is? Check [the builder info page](../../../groovy/buil
     mods.bloodmagic.sacrificial.remove(EntityEntry)
     ```
 
-- Removes any Sacrificial values entry with the given String as a ResourceLocation:
-
-    ```groovy
-    mods.bloodmagic.sacrificial.remove(String)
-    ```
-
 - Removes any Sacrificial values entry with the given ResourceLocation:
 
     ```groovy
     mods.bloodmagic.sacrificial.remove(ResourceLocation)
+    ```
+
+- Removes any Sacrificial values entry with the given String as a ResourceLocation:
+
+    ```groovy
+    mods.bloodmagic.sacrificial.remove(String)
     ```
 
 - Removes all registered recipes:
@@ -116,8 +116,8 @@ Don't know what a builder is? Check [the builder info page](../../../groovy/buil
 ???+ Example
     ```groovy
     mods.bloodmagic.sacrificial.remove(entity('minecraft:villager'))
-    mods.bloodmagic.sacrificial.remove('minecraft:villager')
     mods.bloodmagic.sacrificial.remove(resource('minecraft:villager'))
+    mods.bloodmagic.sacrificial.remove('minecraft:villager')
     mods.bloodmagic.sacrificial.removeAll()
     ```
 

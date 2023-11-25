@@ -53,13 +53,13 @@ mods.astralsorcery.trash_perk_registry
 - Removes entries of the given ore:
 
     ```groovy
-    mods.astralsorcery.trashperkregistry.remove(String)
+    mods.astralsorcery.trashperkregistry.remove(OreDictIngredient)
     ```
 
 - Removes entries of the given ore:
 
     ```groovy
-    mods.astralsorcery.trashperkregistry.remove(OreDictIngredient)
+    mods.astralsorcery.trashperkregistry.remove(String)
     ```
 
 - Removes all registered recipes:

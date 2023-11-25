@@ -33,6 +33,12 @@ mods.thaumcraft.aspect_helper
 
 ## Adding Recipes
 
+- Adds an Aspect to the given entity in the format `entity`, `aspect`:
+
+    ```groovy
+    mods.thaumcraft.aspecthelper.add(EntityEntry, AspectStack)
+    ```
+
 - Adds an Aspect to the given itemstack in the format `item`, `aspect`:
 
     ```groovy
@@ -43,12 +49,6 @@ mods.thaumcraft.aspect_helper
 
     ```groovy
     mods.thaumcraft.aspecthelper.add(OreDictIngredient, AspectStack)
-    ```
-
-- Adds an Aspect to the given entity in the format `entity`, `aspect`:
-
-    ```groovy
-    mods.thaumcraft.aspecthelper.add(EntityEntry, AspectStack)
     ```
 
 
@@ -122,16 +122,16 @@ Don't know what a builder is? Check [the builder info page](../../../groovy/buil
     mods.thaumcraft.aspecthelper.remove(EntityEntry, AspectStack)
     ```
 
-- Removes an Aspect from the given oredict in the format `oreDict`, `aspect`:
-
-    ```groovy
-    mods.thaumcraft.aspecthelper.remove(OreDictIngredient, AspectStack)
-    ```
-
 - Removes an Aspect from the given itemstack in the format `item`, `aspect`:
 
     ```groovy
     mods.thaumcraft.aspecthelper.remove(ItemStack, AspectStack)
+    ```
+
+- Removes an Aspect from the given oredict in the format `oreDict`, `aspect`:
+
+    ```groovy
+    mods.thaumcraft.aspecthelper.remove(OreDictIngredient, AspectStack)
     ```
 
 - Removes all Aspects from the given entity:
@@ -140,14 +140,14 @@ Don't know what a builder is? Check [the builder info page](../../../groovy/buil
     mods.thaumcraft.aspecthelper.removeAll(EntityEntry)
     ```
 
-- Removes all Aspects from the given oredict:
-
-    ```groovy
-    mods.thaumcraft.aspecthelper.removeAll(OreDictIngredient)
-    ```
-
 - Removes all Aspects from the given itemstack:
 
     ```groovy
     mods.thaumcraft.aspecthelper.removeAll(ItemStack)
+    ```
+
+- Removes all Aspects from the given oredict:
+
+    ```groovy
+    mods.thaumcraft.aspecthelper.removeAll(OreDictIngredient)
     ```

@@ -487,13 +487,13 @@ Don't know what a builder is? Check [the builder info page](../../../groovy/buil
 - Removes all recipes with the given fluid input:
 
     ```groovy
-    mods.inspirations.cauldron.removeByFluidInput(FluidStack)
+    mods.inspirations.cauldron.removeByFluidInput(Fluid)
     ```
 
 - Removes all recipes with the given fluid input:
 
     ```groovy
-    mods.inspirations.cauldron.removeByFluidInput(Fluid)
+    mods.inspirations.cauldron.removeByFluidInput(FluidStack)
     ```
 
 - Removes all recipes with the given fluid output:

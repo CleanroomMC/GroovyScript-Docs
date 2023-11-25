@@ -25,6 +25,12 @@ mods.bloodmagic.tranquility/*(1)!*/
 
 ## Adding Recipes
 
+- Adds recipes in the format `block`, `tranquility`, `value`:
+
+    ```groovy
+    mods.bloodmagic.tranquility.add(Block, String, double)
+    ```
+
 - Adds recipes in the format `block`, `tranquility`:
 
     ```groovy
@@ -41,12 +47,6 @@ mods.bloodmagic.tranquility/*(1)!*/
 
     ```groovy
     mods.bloodmagic.tranquility.add(IBlockState, TranquilityStack)
-    ```
-
-- Adds recipes in the format `block`, `tranquility`, `value`:
-
-    ```groovy
-    mods.bloodmagic.tranquility.add(Block, String, double)
     ```
 
 
@@ -119,6 +119,12 @@ Don't know what a builder is? Check [the builder info page](../../../groovy/buil
     mods.bloodmagic.tranquility.remove(Block, EnumTranquilityType)
     ```
 
+- Removes any Tranquility entry that matches the given Block and Tranquility type as String:
+
+    ```groovy
+    mods.bloodmagic.tranquility.remove(Block, String)
+    ```
+
 - Removes any Tranquility entry that matches the given IBlockState and EnumTranquilityType:
 
     ```groovy
@@ -131,12 +137,6 @@ Don't know what a builder is? Check [the builder info page](../../../groovy/buil
     mods.bloodmagic.tranquility.remove(IBlockState, String)
     ```
 
-- Removes any Tranquility entry that matches the given Block and Tranquility type as String:
-
-    ```groovy
-    mods.bloodmagic.tranquility.remove(Block, String)
-    ```
-
 - Removes all registered recipes:
 
     ```groovy
@@ -145,8 +145,8 @@ Don't know what a builder is? Check [the builder info page](../../../groovy/buil
 
 ???+ Example
     ```groovy
-    mods.bloodmagic.tranquility.remove(blockstate('minecraft:netherrack'), 'FIRE')
     mods.bloodmagic.tranquility.remove(block('minecraft:dirt'), 'EARTHEN')
+    mods.bloodmagic.tranquility.remove(blockstate('minecraft:netherrack'), 'FIRE')
     mods.bloodmagic.tranquility.removeAll()
     ```
 

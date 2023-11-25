@@ -57,7 +57,7 @@ Don't know what a builder is? Check [the builder info page](../../../groovy/buil
         time(int)
         ```
 
-    - First validates the builder, returning `null` and outputting errors to the log file if the validation failed, then registers the builder and returns the registered object. (returns `null` or `java.lang.Object`).
+    - First validates the builder, returning `null` and outputting errors to the log file if the validation failed, then registers the builder and returns the registered object. (returns `null` or `blusunrize.immersiveengineering.api.crafting.BlastFurnaceRecipe$BlastFurnaceFuel`).
 
         ```groovy
         register()

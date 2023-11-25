@@ -31,23 +31,23 @@ mods.ae2.attunement
     mods.appliedenergistics2.attunement.add(Capability<?>, TunnelType)
     ```
 
-- Adds tunnel attunement for all items in the given mod in the format `mod`, `tunnel`:
-
-    ```groovy
-    mods.appliedenergistics2.attunement.add(String, TunnelType)
-    ```
-
 - Adds tunnel attunement for the given item in the format `item`, `tunnel`:
 
     ```groovy
     mods.appliedenergistics2.attunement.add(ItemStack, TunnelType)
     ```
 
+- Adds tunnel attunement for all items in the given mod in the format `mod`, `tunnel`:
+
+    ```groovy
+    mods.appliedenergistics2.attunement.add(String, TunnelType)
+    ```
+
 ???+ Example
     ```groovy
     mods.appliedenergistics2.attunement.add(Capabilities.FORGE_ENERGY, tunnel('item'))
-    mods.appliedenergistics2.attunement.add('thermaldynamics', tunnel('redstone'))
     mods.appliedenergistics2.attunement.add(item('minecraft:clay'), tunnel('item'))
+    mods.appliedenergistics2.attunement.add('thermaldynamics', tunnel('redstone'))
     ```
 
 ## Removing Recipes
@@ -58,16 +58,16 @@ mods.ae2.attunement
     mods.appliedenergistics2.attunement.remove(Capability<?>, TunnelType)
     ```
 
-- Removes tunnel attunement for the given mod in the format `mod`, `tunnel`:
-
-    ```groovy
-    mods.appliedenergistics2.attunement.remove(String, TunnelType)
-    ```
-
 - Removes tunnel attunement for the given item in the format `item`, `tunnel`:
 
     ```groovy
     mods.appliedenergistics2.attunement.remove(ItemStack, TunnelType)
+    ```
+
+- Removes tunnel attunement for the given mod in the format `mod`, `tunnel`:
+
+    ```groovy
+    mods.appliedenergistics2.attunement.remove(String, TunnelType)
     ```
 
 - Removes the given Capability from creating any tunnel:
@@ -103,8 +103,8 @@ mods.ae2.attunement
 ???+ Example
     ```groovy
     mods.appliedenergistics2.attunement.remove(Capabilities.FORGE_ENERGY, tunnel('fe_power'))
-    mods.appliedenergistics2.attunement.remove('thermaldynamics', tunnel('fe_power'))
     mods.appliedenergistics2.attunement.remove(item('minecraft:lever'), tunnel('redstone'))
+    mods.appliedenergistics2.attunement.remove('thermaldynamics', tunnel('fe_power'))
     mods.appliedenergistics2.attunement.removeByTunnel(tunnel('item'))
     mods.appliedenergistics2.attunement.removeAll()
     ```

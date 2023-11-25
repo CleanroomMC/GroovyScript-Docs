@@ -118,25 +118,25 @@ Don't know what a builder is? Check [the builder info page](../../../groovy/buil
 - Removes all recipes that match the given input:
 
     ```groovy
-    mods.astralsorcery.lighttransmutation.removeByInput(IBlockState)
+    mods.astralsorcery.lighttransmutation.removeByInput(Block)
     ```
 
 - Removes all recipes that match the given input:
 
     ```groovy
-    mods.astralsorcery.lighttransmutation.removeByInput(Block)
-    ```
-
-- Removes all recipes that match the given output:
-
-    ```groovy
-    mods.astralsorcery.lighttransmutation.removeByOutput(IBlockState)
+    mods.astralsorcery.lighttransmutation.removeByInput(IBlockState)
     ```
 
 - Removes all recipes that match the given output:
 
     ```groovy
     mods.astralsorcery.lighttransmutation.removeByOutput(Block)
+    ```
+
+- Removes all recipes that match the given output:
+
+    ```groovy
+    mods.astralsorcery.lighttransmutation.removeByOutput(IBlockState)
     ```
 
 - Removes all registered recipes:
@@ -147,10 +147,10 @@ Don't know what a builder is? Check [the builder info page](../../../groovy/buil
 
 ???+ Example
     ```groovy
-    mods.astralsorcery.lighttransmutation.removeByInput(blockstate('minecraft:sandstone'))
     mods.astralsorcery.lighttransmutation.removeByInput(block('minecraft:netherrack'))
-    mods.astralsorcery.lighttransmutation.removeByOutput(blockstate('minecraft:cake'))
+    mods.astralsorcery.lighttransmutation.removeByInput(blockstate('minecraft:sandstone'))
     mods.astralsorcery.lighttransmutation.removeByOutput(block('minecraft:lapis_block'))
+    mods.astralsorcery.lighttransmutation.removeByOutput(blockstate('minecraft:cake'))
     mods.astralsorcery.lighttransmutation.removeAll()
     ```
 

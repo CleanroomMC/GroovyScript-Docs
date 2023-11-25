@@ -25,16 +25,16 @@ mods.botania.pure_daisy
 
 ## Adding Recipes
 
-- Adds recipes in the format `output`, `input`, `time`:
-
-    ```groovy
-    mods.botania.puredaisy.add(IBlockState, IBlockState, int)
-    ```
-
 - Adds recipes in the format `output`, `input`:
 
     ```groovy
     mods.botania.puredaisy.add(IBlockState, IBlockState)
+    ```
+
+- Adds recipes in the format `output`, `input`, `time`:
+
+    ```groovy
+    mods.botania.puredaisy.add(IBlockState, IBlockState, int)
     ```
 
 

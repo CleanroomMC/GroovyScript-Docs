@@ -53,13 +53,13 @@ mods.astralsorcery.aevitas_perk_registry
 - Removes entries of the given ore:
 
     ```groovy
-    mods.astralsorcery.aevitasperkregistry.remove(String)
+    mods.astralsorcery.aevitasperkregistry.remove(OreDictIngredient)
     ```
 
 - Removes entries of the given ore:
 
     ```groovy
-    mods.astralsorcery.aevitasperkregistry.remove(OreDictIngredient)
+    mods.astralsorcery.aevitasperkregistry.remove(String)
     ```
 
 - Removes all registered recipes:

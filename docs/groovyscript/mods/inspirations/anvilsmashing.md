@@ -89,10 +89,10 @@ Don't know what a builder is? Check [the builder info page](../../../groovy/buil
 
 ## Removing Recipes
 
-- Removes an Anvil Smashing recipe matching the given input material:
+- Removes an Anvil Smashing recipe in the format `input`, `output`:
 
     ```groovy
-    mods.inspirations.anvilsmashing.remove(Material)
+    mods.inspirations.anvilsmashing.remove(Block, IBlockState)
     ```
 
 - Removes an Anvil Smashing recipe in the format `input`, `output`:
@@ -101,10 +101,10 @@ Don't know what a builder is? Check [the builder info page](../../../groovy/buil
     mods.inspirations.anvilsmashing.remove(IBlockState, IBlockState)
     ```
 
-- Removes an Anvil Smashing recipe in the format `input`, `output`:
+- Removes an Anvil Smashing recipe matching the given input material:
 
     ```groovy
-    mods.inspirations.anvilsmashing.remove(Block, IBlockState)
+    mods.inspirations.anvilsmashing.remove(Material)
     ```
 
 - Removes an Anvil Smashing recipe with the given Block or IBlockState input:

@@ -42,13 +42,13 @@ mods.thaumcraft.research/*(1)!*/
 - Adds a new location to check for research:
 
     ```groovy
-    mods.thaumcraft.research.addResearchLocation(String)
+    mods.thaumcraft.research.addResearchLocation(ResourceLocation)
     ```
 
 - Adds a new location to check for research:
 
     ```groovy
-    mods.thaumcraft.research.addResearchLocation(ResourceLocation)
+    mods.thaumcraft.research.addResearchLocation(String)
     ```
 
 - Adds a new location to check for research:
@@ -57,10 +57,10 @@ mods.thaumcraft.research/*(1)!*/
     mods.thaumcraft.research.addResearchLocation(String, String)
     ```
 
-- Adds a new scannable material in the format `researchKey`, `material`:
+- Adds a new scannable block:
 
     ```groovy
-    mods.thaumcraft.research.addScannable(String, Material)
+    mods.thaumcraft.research.addScannable(Block)
     ```
 
 - Adds a new scannable enchantment:
@@ -69,34 +69,16 @@ mods.thaumcraft.research/*(1)!*/
     mods.thaumcraft.research.addScannable(Enchantment)
     ```
 
+- Adds a new scannable material:
+
+    ```groovy
+    mods.thaumcraft.research.addScannable(Material)
+    ```
+
 - Adds a new scannable potion:
 
     ```groovy
     mods.thaumcraft.research.addScannable(Potion)
-    ```
-
-- Adds a new scannable item in the format `researchKey`, `item`:
-
-    ```groovy
-    mods.thaumcraft.research.addScannable(String, ItemStack)
-    ```
-
-- Adds a new scannable entity in the format `researchKey`, `entityClass`, `inheritedClasses`, `tags`:
-
-    ```groovy
-    mods.thaumcraft.research.addScannable(String, Class<?>, boolean, ThaumcraftApi.EntityTagsNBT)
-    ```
-
-- Adds a new scannable entity in the format `researchKey`, `entityClass`, `inheritedClasses`:
-
-    ```groovy
-    mods.thaumcraft.research.addScannable(String, Class<?>, boolean)
-    ```
-
-- Adds a new scannable block:
-
-    ```groovy
-    mods.thaumcraft.research.addScannable(Block)
     ```
 
 - Adds a new scannable block in the format `researchKey`, `block`:
@@ -105,10 +87,28 @@ mods.thaumcraft.research/*(1)!*/
     mods.thaumcraft.research.addScannable(String, Block)
     ```
 
-- Adds a new scannable material:
+- Adds a new scannable entity in the format `researchKey`, `entityClass`, `inheritedClasses`:
 
     ```groovy
-    mods.thaumcraft.research.addScannable(Material)
+    mods.thaumcraft.research.addScannable(String, Class<?>, boolean)
+    ```
+
+- Adds a new scannable entity in the format `researchKey`, `entityClass`, `inheritedClasses`, `tags`:
+
+    ```groovy
+    mods.thaumcraft.research.addScannable(String, Class<?>, boolean, ThaumcraftApi.EntityTagsNBT)
+    ```
+
+- Adds a new scannable item in the format `researchKey`, `item`:
+
+    ```groovy
+    mods.thaumcraft.research.addScannable(String, ItemStack)
+    ```
+
+- Adds a new scannable material in the format `researchKey`, `material`:
+
+    ```groovy
+    mods.thaumcraft.research.addScannable(String, Material)
     ```
 
 ???+ Example

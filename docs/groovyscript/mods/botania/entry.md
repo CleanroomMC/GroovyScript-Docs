@@ -26,13 +26,13 @@ mods.botania.entry/*(1)!*/
 - Sets the Knowledge type of the given entry in the format `entry`, `type`:
 
     ```groovy
-    mods.botania.entry.setKnowledgeType(String, String)
+    mods.botania.entry.setKnowledgeType(String, KnowledgeType)
     ```
 
 - Sets the Knowledge type of the given entry in the format `entry`, `type`:
 
     ```groovy
-    mods.botania.entry.setKnowledgeType(String, KnowledgeType)
+    mods.botania.entry.setKnowledgeType(String, String)
     ```
 
 

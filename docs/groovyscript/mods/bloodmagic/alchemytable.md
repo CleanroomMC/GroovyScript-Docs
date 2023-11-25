@@ -115,13 +115,13 @@ Don't know what a builder is? Check [the builder info page](../../../groovy/buil
 - Removes all recipes that match the given input:
 
     ```groovy
-    mods.bloodmagic.alchemytable.removeByInput(NonNullList<IIngredient>)
+    mods.bloodmagic.alchemytable.removeByInput(IIngredient...)
     ```
 
 - Removes all recipes that match the given input:
 
     ```groovy
-    mods.bloodmagic.alchemytable.removeByInput(IIngredient...)
+    mods.bloodmagic.alchemytable.removeByInput(NonNullList<IIngredient>)
     ```
 
 - Removes all recipes that match the given output:

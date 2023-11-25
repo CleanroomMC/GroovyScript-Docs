@@ -41,7 +41,7 @@ mods.mekanism.infusion/*(1)!*/
 - Adds IIngredients to the provided Infusion Type:
 
     ```groovy
-    mods.mekanism.infusion.add(InfuseType, int, ItemStack)
+    mods.mekanism.infusion.add(InfuseType, int, Collection<IIngredient>)
     ```
 
 - Adds IIngredients to the provided Infusion Type:
@@ -53,19 +53,19 @@ mods.mekanism.infusion/*(1)!*/
 - Adds IIngredients to the provided Infusion Type:
 
     ```groovy
-    mods.mekanism.infusion.add(String, int, IIngredient...)
-    ```
-
-- Adds IIngredients to the provided Infusion Type:
-
-    ```groovy
-    mods.mekanism.infusion.add(InfuseType, int, Collection<IIngredient>)
+    mods.mekanism.infusion.add(InfuseType, int, ItemStack)
     ```
 
 - Adds IIngredients to the provided Infusion Type:
 
     ```groovy
     mods.mekanism.infusion.add(String, int, Collection<IIngredient>)
+    ```
+
+- Adds IIngredients to the provided Infusion Type:
+
+    ```groovy
+    mods.mekanism.infusion.add(String, int, IIngredient...)
     ```
 
 ???+ Example
@@ -82,12 +82,6 @@ mods.mekanism.infusion/*(1)!*/
 - Removes IIngredients from any Infusion Type:
 
     ```groovy
-    mods.mekanism.infusion.remove(IIngredient...)
-    ```
-
-- Removes IIngredients from any Infusion Type:
-
-    ```groovy
     mods.mekanism.infusion.remove(Collection<IIngredient>)
     ```
 
@@ -97,16 +91,22 @@ mods.mekanism.infusion/*(1)!*/
     mods.mekanism.infusion.remove(IIngredient)
     ```
 
-- Removes any Infusion Type that matches the given type:
+- Removes IIngredients from any Infusion Type:
 
     ```groovy
-    mods.mekanism.infusion.removeByType(String)
+    mods.mekanism.infusion.remove(IIngredient...)
     ```
 
 - Removes any Infusion Type that matches the given type:
 
     ```groovy
     mods.mekanism.infusion.removeByType(InfuseType)
+    ```
+
+- Removes any Infusion Type that matches the given type:
+
+    ```groovy
+    mods.mekanism.infusion.removeByType(String)
     ```
 
 - Removes an Infusion Type and all corresponding items:

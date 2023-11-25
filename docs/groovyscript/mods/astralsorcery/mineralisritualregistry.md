@@ -53,13 +53,13 @@ mods.astralsorcery.mineralis_ritual_registry
 - Removes entries of the given ore:
 
     ```groovy
-    mods.astralsorcery.mineralisritualregistry.remove(String)
+    mods.astralsorcery.mineralisritualregistry.remove(OreDictIngredient)
     ```
 
 - Removes entries of the given ore:
 
     ```groovy
-    mods.astralsorcery.mineralisritualregistry.remove(OreDictIngredient)
+    mods.astralsorcery.mineralisritualregistry.remove(String)
     ```
 
 - Removes all registered recipes:

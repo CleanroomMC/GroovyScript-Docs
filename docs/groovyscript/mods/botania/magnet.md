@@ -32,13 +32,13 @@ mods.botania.magnet/*(1)!*/
 - Adds the given Block, IBlockState, or IIngredient to the magnet blacklist:
 
     ```groovy
-    mods.botania.magnet.addToBlacklist(IIngredient)
+    mods.botania.magnet.addToBlacklist(IBlockState)
     ```
 
 - Adds the given Block, IBlockState, or IIngredient to the magnet blacklist:
 
     ```groovy
-    mods.botania.magnet.addToBlacklist(IBlockState)
+    mods.botania.magnet.addToBlacklist(IIngredient)
     ```
 
 ???+ Example
