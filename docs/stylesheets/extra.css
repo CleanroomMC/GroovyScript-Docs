@@ -14,6 +14,13 @@
   font-size: 0.80rem;
 }
 
+.md-source-file__part {
+  color: var(--md-default-fg-color--light);
+  display: inline-flex;
+  gap: 0.5rem;
+  margin-right: 0.5rem;
+}
+
 /*
  * By checking that the parent doesn't have `#fakeGivePriority`, we get a selector specificity of 1-1-1, which we need to beat a 0-5-0 applying specific margins.
  * Definitely better than just using `!important` four times, trust me.

@@ -1,0 +1,25 @@
+{# https://github.com/squidfunk/mkdocs-material/blob/master/src/templates/partials/source-file.html #}
+
+{% import "partials/language.html" as lang with context %}
+
+
+<hr />
+<div class="md-source-file">
+    {# mkdocs-git-revision-date-localized-plugin #}
+    {% if page.meta.git_revision_date_localized %}
+        <span class="md-source-file__part">
+            <span class="md-icon" title="{{ lang.t("source.file.date.updated") }}">
+                {% include ".icons/material/clock-edit-outline.svg" %}
+            </span>
+            {{ page.meta.git_revision_date_localized }}
+        </span>
+    {% endif %}
+    {% if page.meta.git_creation_date_localized %}
+        <span class="md-source-file__part">
+            <span class="md-icon" title="{{ lang.t("source.file.date.created") }}">
+                {% include ".icons/material/clock-plus-outline.svg" %}
+            </span>
+            {{ page.meta.git_creation_date_localized }}
+        </span>
+    {% endif %}
+</div>
