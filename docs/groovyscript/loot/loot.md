@@ -3,7 +3,7 @@
 This part of GroovyScript allows for the modification of LootTables. It's equivalent to LootTweaker for CraftTweaker, but for GroovyScript it doesn't require another mod.
 
 !!! Note
-    Requires version 0.6.5+. <br>
+    Requires at least version 0.7.0. <br>
     Works for all loot tables (including those added by mods).
 
 ## Visualizing LootTables

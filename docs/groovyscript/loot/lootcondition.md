@@ -28,14 +28,14 @@ You can pass a [groovy closure](../../../groovy/closure.md) to `loot.condition()
         .table('minecraft:entities/chicken')
         .name('main2')
         .entry(item('minecraft:diamond'))
-        .condition{ Random random, LootContext context -> random.nextFloat() < 0.05f } // (1)!
+        .condition{ random, context -> random.nextFloat() < 0.05f } // (1)!
         .register()
     ```
 
-    1. Don't forget to import java.util.Random and net.minecraft.world.storage.loot.LootContext
+    1. The parameters of the closure should be java.util.Random and net.minecraft.world.storage.loot.LootContext (in that order).
 
     ```groovy
-    def nat20Condition = loot.condition{ Random random, LootContext context -> random.nextFloat() < 0.05f }
+    def nat20Condition = loot.condition{ Random random, LootContext context -> random.nextFloat() < 0.05f } // (1)!
 
     loot.poolBuilder()
         .table('minecraft:entities/chicken')
@@ -44,3 +44,5 @@ You can pass a [groovy closure](../../../groovy/closure.md) to `loot.condition()
         .condition(nat20Condition)
         .register()
     ```
+
+    1. Don't forget to import the classes if specifying types.

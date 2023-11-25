@@ -67,22 +67,22 @@ You can pass a [groovy closure](../../../groovy/closure.md) to `loot.function()`
         .table('minecraft:entities/chicken')
         .pool('main')
         .item(item('minecraft:potato'))
-        .function({ ItemStack stack, Random random, LootContext context -> // (1)!
+        .function({ stack, random, context -> // (1)!
                 stack.setCount(10)
                 return stack
             },
-            loot.condition{ Random random, LootContext context -> random.nextFloat() < 0.05f } // (2)!
+            loot.condition{ random, context -> random.nextFloat() < 0.05f } // (2)!
         )
         .smelt()
         .register()
     ```
 
-    1. Don't forget to import the classes that functions/conditions take as parameters.
+    1. The parameters of the closure should be net.minecraft.item.ItemStack, java.util.Random, net.minecraft.world.storage.loot.LootContext (in that order).
     2. When writing a closure condition for any function, you must wrap the closure in a loot.condition() call.
 
     ```groovy
     def nat20Condition = loot.condition{ Random random, LootContext context -> random.nextFloat() < 0.05f }
-    def lootPinataFunction = loot.function({ ItemStack stack, Random random, LootContext context ->
+    def lootPinataFunction = loot.function({ ItemStack stack, Random random, LootContext context -> // (1)!
         stack.setCount(10)
         return stack
     }, nat20Condition)
@@ -95,3 +95,5 @@ You can pass a [groovy closure](../../../groovy/closure.md) to `loot.function()`
         .smelt()
         .register()
     ```
+
+    1. Don't forget to import the classes if specifying types.
