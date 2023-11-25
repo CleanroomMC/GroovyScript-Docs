@@ -249,13 +249,13 @@ nav:
               - WorldTypeEvent.InitBiomeGens: groovyscript/minecraft/events/world_type_event._init_biome_gens.md
               - ZombieEvent: groovyscript/minecraft/events/zombie_event.md
               - ZombieEvent.SummonAidEvent: groovyscript/minecraft/events/zombie_event._summon_aid_event.md
-      - Loot:
-          - groovyscript/loot/loot.md
-          - groovyscript/loot/loottable.md
-          - groovyscript/loot/lootpool.md
-          - groovyscript/loot/lootentry.md
-          - groovyscript/loot/lootcondition.md
-          - groovyscript/loot/lootfunction.md
+          - Loot:
+              - groovyscript/minecraft/loot/loot.md
+              - groovyscript/minecraft/loot/loottable.md
+              - groovyscript/minecraft/loot/lootpool.md
+              - groovyscript/minecraft/loot/lootentry.md
+              - groovyscript/minecraft/loot/lootcondition.md
+              - groovyscript/minecraft/loot/lootfunction.md
       - Content:
           - groovyscript/content/content.md
           - Items: groovyscript/content/item.md
