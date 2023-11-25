@@ -28,9 +28,11 @@ Loot functions are modifications to the item that a player rolls from a LootTabl
 .setMetaData(int, LootCondition...)
 .setMetaData(int, int, LootCondition...)
 .setNBT(String) // (16)!
-.setNBT(NBTTagCompount) // (17)!
+.setNBT(Map<String, Object>) // (17)!
+.setNBT(NBTTagCompound)
 .setNBT(String, LootCondition...)
-.setNBT(NBTTagCompount, LootCondition...)
+.setNBT(Map<String, Object>, LootCondition...)
+.setNBT(NBTTagCompound, LootCondition...)
 .smelt() // (18)!
 .smelt(LootConditions...)
 ```
@@ -51,7 +53,7 @@ Loot functions are modifications to the item that a player rolls from a LootTabl
 14. Set metadata of item recieved.
 15. Set minimum and maximum metadata of the item (uniformly distributed).
 16. Sets NBT data of the item (consumes an nbt json string).
-17. You can use the nbt(String) bracket handler to call this method.
+17. You can pass an nbt map to this method.
 18. Smelt's the item using the cooresponding furnace recipe.
 
 For use in LootEntry builders.
