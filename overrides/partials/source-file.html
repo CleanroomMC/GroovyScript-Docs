@@ -22,4 +22,10 @@
             {{ page.meta.git_creation_date_localized }}
         </span>
     {% endif %}
+
+    {# Include the source code actions partial #}
+    <span class="md-footer-actions">
+        {% include "partials/actions.html" %}
+    </span>
+
 </div>

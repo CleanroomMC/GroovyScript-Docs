@@ -21,6 +21,15 @@
   margin-right: 0.5rem;
 }
 
+.md-footer-actions {
+  float: right;
+  direction: rtl;
+}
+
+.md-footer-actions .md-content__button {
+  float: none
+}
+
 /*
  * By checking that the parent doesn't have `#fakeGivePriority`, we get a selector specificity of 1-1-1, which we need to beat a 0-5-0 applying specific margins.
  * Definitely better than just using `!important` four times, trust me.
