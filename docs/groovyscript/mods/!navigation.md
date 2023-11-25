@@ -20,7 +20,7 @@ search:
 * [GregTech](./gtceu/)
 * [Immersive Engineering](./immersiveengineering/)
 * [Inspirations](./inspirations/)
-* [Integarated Dyanamics](./integrateddynamics/)
+* [Integrated Dynamics](./integrateddynamics/)
 * [JEI](./jei/)
 * [Mekanism](./mekanism/)
 * [Roots](./roots/)
