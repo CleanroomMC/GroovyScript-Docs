@@ -1,22 +1,37 @@
 # Resource Location for Dummies
 
-Minecraft's resource location consists of two strings which usually marks the location of a file. For example model json
-files. <br>
-The minecraft class's name is `net.minecraft.util.ResourceLocation`. It is auto imported to any groovy script (version
-0.4.0+).
-Let's look at how it works. <br>
-As mentioned before it consists of two strings, a domain and a path. The domain is usually a mod id. If the domain is
-not specified it defaults to `minecraft`.
-A resource location can be written as:
+Minecraft's resource location is often used as an identifier for items but also for locations of asset files like models
+and textures. It consists of two strings: a domain and a path. The domain is usually a mod id. The path is a name
+(for items) or a path (for files). A Resource Location can be represented like this: `domain:path`.
+A Resource Location can not contain any characters. Upper case letters are not allowed. Numbers are allowed. Underscore
+is allowed.
 
-- `new ResourceLocation("modid:path")`
-- `new ResourceLocation("modid", "path")`
+## Creating a Resource Location
+There are two ways to do that:
 
-Both are equal. In GroovyScript there usually exist overrides where you can directly insert mod id and path without
+1. Using the `net.minecraft.util.ResourceLocation` constructor (this class is auto imported since version 0.4.0)
+    - `new ResourceLocation("domain:path")`
+    - `new ResourceLocation("domain", "path")`
+    - `new ResourceLocation("path")` (defaults to `minecraft` domain)
+2. Using the `resource()` game object handler (acts like a global method)
+    - `resource("domain:path")`
+    - `resource("domain", "path")`
+    - `resource("path")` (defaults to the pack id specified in the run config (see [here](../getting_started.md#run-config)))
+
+We can see that both methods are mostly the same except that the game object handler defaults to the pack id instead of
+minecraft. This way is the preferred way.
+
+???+ Example
+    ```groovy
+    // the following 2 lines are equal
+    def rl1 = resource("groovyscript", "path/to/file") // groovyscript:path/to/file
+    def rl2 = resource("groovyscript:path/to/file") // groovyscript:path/to/file
+    // the domain defaults to the pack id if not specified
+    def rl3 = resource("furnace") // packid:furnace
+    ```
+
+In GroovyScript there usually exist overrides where you can directly insert mod id and path without
 creating a `ResourceLocation`. <br>
-To clarify: `new ResourceLocation("thaumcraft", "research/SOME_RESEARCH.json")` is the same
-as `new ResourceLocation("thaumcraft:research/SOME_RESEARCH.json")`.
-In the following examples we would write `thaumcraft:research/SOME_RESEARCH.json` to keep it short.
 
 ## Converting to file path
 
