@@ -1,6 +1,6 @@
 # Content
 
-This part of GroovyScript allows the creation of game content like items and blocks. It's equivalent to ContentTweaker
+This part of GroovyScript allows for the creation of game content like items and blocks. It's equivalent to ContentTweaker
 for CraftTweaker, but for GroovyScript it doesn't require another mod.
 
 !!! Note
