@@ -62,7 +62,7 @@ Don't know what a builder is? Check [the builder info page](../../../groovy/buil
         ticks(int)
         ```
 
-    - `#!groovy Char2ObjectOpenHashMap<Miniaturization.RecipeBuilder.ReferenceValues>`. Sets the IBlockState, specific NBT, if the metadata is checked, and a representative itemstack for each `char` key. (Default `\` \` = air, \`_\` = air`).
+    - `#!groovy Char2ObjectOpenHashMap<Miniaturization.RecipeBuilder.ReferenceValues>`. Sets the IBlockState, specific NBT, if the metadata is checked, and a representative itemstack for each `char` key. (Default `' ' = air, '_' = air`).
 
         ```groovy
         key(String, IBlockState)

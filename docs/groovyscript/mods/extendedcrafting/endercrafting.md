@@ -64,7 +64,7 @@ Don't know what a builder is? Check [the builder info page](../../../groovy/buil
         name(ResourceLocation)
         ```
 
-    - `#!groovy Char2ObjectOpenHashMap<IIngredient>`. Sets the item the given char corresponds to. (Default `\` \` = IIngredient.EMPTY`).
+    - `#!groovy Char2ObjectOpenHashMap<IIngredient>`. Sets the item the given char corresponds to. (Default `' ' = IIngredient.EMPTY`).
 
         ```groovy
         key(char, IIngredient)
