@@ -40,13 +40,13 @@ Don't know what a builder is? Check [the builder info page](../../../groovy/buil
         tag(String)
         ```
 
-    - `#!groovy int`. Sets the blend value of the Aspect.
+    - `#!groovy int`. Sets the blend value of the Aspect. (Default `1`).
 
         ```groovy
         blend(int)
         ```
 
-    - `#!groovy ResourceLocation`. Sets the resource location of the image used to represent the Aspect. (Default `null`).
+    - `#!groovy ResourceLocation`. Sets the resource location of the image used to represent the Aspect.
 
         ```groovy
         image(String)
@@ -54,13 +54,13 @@ Don't know what a builder is? Check [the builder info page](../../../groovy/buil
         image(ResourceLocation)
         ```
 
-    - `#!groovy int`. Sets the color formatting code used.
+    - `#!groovy int`. Sets the color formatting code used. (Default `0`).
 
         ```groovy
         chatColor(int)
         ```
 
-    - `#!groovy AspectList`. Sets the other Aspects that make up this Aspect. Requires greater than or equal to 0 and less than or equal to 2. (Default `null`).
+    - `#!groovy AspectList`. Sets the other Aspects that make up this Aspect. Requires greater than or equal to 0 and less than or equal to 2.
 
         ```groovy
         component(String)

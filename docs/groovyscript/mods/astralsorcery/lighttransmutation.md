@@ -44,44 +44,44 @@ Just like other recipe types, the Light Transmutation also uses a recipe builder
 Don't know what a builder is? Check [the builder info page](../../../groovy/builder.md) out.
 
 ???+ Abstract "mods.astralsorcery.lighttransmutation.recipeBuilder()"
-    - `#!groovy double`. Sets the amount of starlight required to complete the craft. Requires greater than or equal to 0.
+    - `#!groovy double`. Sets the amount of starlight required to complete the craft. Requires greater than or equal to 0. (Default `0.0d`).
 
         ```groovy
         cost(double)
         ```
 
-    - `#!groovy IBlockState`. Sets the input IBlockState, recipe will convert only the given blockstate. Requires not null and not inBlock. (Default `null`).
+    - `#!groovy IBlockState`. Sets the input IBlockState, recipe will convert only the given blockstate. Requires not null and not inBlock.
 
         ```groovy
         input(IBlockState)
         ```
 
-    - `#!groovy IBlockState`. Sets the output IBlockState. Requires not null. (Default `null`).
+    - `#!groovy IBlockState`. Sets the output IBlockState. Requires not null.
 
         ```groovy
         output(Block)
         output(IBlockState)
         ```
 
-    - `#!groovy Block`. Sets the input Block, recipe will convert any blockstate of the provided block. Requires not null and not input. (Default `null`).
+    - `#!groovy Block`. Sets the input Block, recipe will convert any blockstate of the provided block. Requires not null and not input.
 
         ```groovy
         input(Block)
         ```
 
-    - `#!groovy ItemStack`. Sets the item representing the input Block or IBlockState in JEI. (Default `null`).
+    - `#!groovy ItemStack`. Sets the item representing the input Block or IBlockState in JEI.
 
         ```groovy
         inputDisplayStack(ItemStack)
         ```
 
-    - `#!groovy ItemStack`. Sets the item representing the output IBlockState in JEI. (Default `null`).
+    - `#!groovy ItemStack`. Sets the item representing the output IBlockState in JEI.
 
         ```groovy
         outputDisplayStack(ItemStack)
         ```
 
-    - `#!groovy IWeakConstellation`. Sets the required Constellation the starlight must be collected from. Must be either a Major or Weak Constellation. (Default `null`).
+    - `#!groovy IWeakConstellation`. Sets the required Constellation the starlight must be collected from. Must be either a Major or Weak Constellation.
 
         ```groovy
         constellation(IWeakConstellation)

@@ -36,7 +36,7 @@ Just like other recipe types, the Soulbinder also uses a recipe builder.
 Don't know what a builder is? Check [the builder info page](../../../groovy/builder.md) out.
 
 ???+ Abstract "mods.enderio.soulbinder.recipeBuilder()"
-    - `#!groovy IngredientList<IIngredient>`. Sets the item inputs of the recipe. Requires exactly 1. (Default `null`).
+    - `#!groovy IngredientList<IIngredient>`. Sets the item inputs of the recipe. Requires exactly 1.
 
         ```groovy
         input(IIngredient)
@@ -44,7 +44,7 @@ Don't know what a builder is? Check [the builder info page](../../../groovy/buil
         input(Collection<IIngredient>)
         ```
 
-    - `#!groovy ItemStackList`. Sets the item outputs of the recipe. Requires exactly 1. (Default `null`).
+    - `#!groovy ItemStackList`. Sets the item outputs of the recipe. Requires exactly 1.
 
         ```groovy
         output(ItemStack)
@@ -52,7 +52,7 @@ Don't know what a builder is? Check [the builder info page](../../../groovy/buil
         output(Collection<ItemStack>)
         ```
 
-    - `#!groovy int`. Sets the experience levels required to start the recipe. Requires greater than 0.
+    - `#!groovy int`. Sets the experience levels required to start the recipe. Requires greater than 0. (Default `0`).
 
         ```groovy
         xp(int)
@@ -64,13 +64,13 @@ Don't know what a builder is? Check [the builder info page](../../../groovy/buil
         name(String)
         ```
 
-    - `#!groovy int`. Sets the energy cost of the recipe. Requires greater than 0.
+    - `#!groovy int`. Sets the energy cost of the recipe. Requires greater than 0. (Default `0`).
 
         ```groovy
         energy(int)
         ```
 
-    - `#!groovy NNList<ResourceLocation>`. Sets the valid entities. Entities must be allowed in Soul Vials. Requires greater than or equal to 1. (Default `null`).
+    - `#!groovy NNList<ResourceLocation>`. Sets the valid entities. Entities must be allowed in Soul Vials. Requires greater than or equal to 1.
 
         ```groovy
         entity(EntityEntry)

@@ -45,7 +45,7 @@ Just like other recipe types, the Washer also uses a recipe builder.
 Don't know what a builder is? Check [the builder info page](../../../groovy/builder.md) out.
 
 ???+ Abstract "mods.mekanism.washer.recipeBuilder()"
-    - `#!groovy GasStackList`. Sets the gas inputs of the recipe. Requires exactly 1. (Default `null`).
+    - `#!groovy GasStackList`. Sets the gas inputs of the recipe. Requires exactly 1.
 
         ```groovy
         gasInput(GasStack)
@@ -53,7 +53,7 @@ Don't know what a builder is? Check [the builder info page](../../../groovy/buil
         gasInput(Collection<GasStack>)
         ```
 
-    - `#!groovy GasStackList`. Sets the gas outputs of the recipe. Requires exactly 1. (Default `null`).
+    - `#!groovy GasStackList`. Sets the gas outputs of the recipe. Requires exactly 1.
 
         ```groovy
         gasOutput(GasStack)

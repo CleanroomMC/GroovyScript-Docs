@@ -57,14 +57,14 @@ Just like other recipe types, the Table Crafting also uses a recipe builder.
 Don't know what a builder is? Check [the builder info page](../../../groovy/builder.md) out.
 
 ???+ Abstract "mods.extendedcrafting.tablecrafting.shapedBuilder()"
-    - `#!groovy ResourceLocation`. Sets the Resource Location of the recipe. (Default `null`).
+    - `#!groovy ResourceLocation`. Sets the Resource Location of the recipe.
 
         ```groovy
         name(String)
         name(ResourceLocation)
         ```
 
-    - `#!groovy Char2ObjectOpenHashMap<IIngredient>`. Sets the item the given char corresponds to.
+    - `#!groovy Char2ObjectOpenHashMap<IIngredient>`. Sets the item the given char corresponds to. (Default `\` \` = IIngredient.EMPTY`).
 
         ```groovy
         key(char, IIngredient)
@@ -72,7 +72,7 @@ Don't know what a builder is? Check [the builder info page](../../../groovy/buil
         key(Map<String, IIngredient>)
         ```
 
-    - `#!groovy String[]`. Sets the items required in each slot of the grid as char. Requires either the key-based matrix or the ingredient-based matrix can be defined, not both. (Default `null`).
+    - `#!groovy String[]`. Sets the items required in each slot of the grid as char. Requires either the key-based matrix or the ingredient-based matrix can be defined, not both.
 
         ```groovy
         row(String)
@@ -80,20 +80,20 @@ Don't know what a builder is? Check [the builder info page](../../../groovy/buil
         matrix(String...)
         ```
 
-    - `#!groovy List<List<IIngredient>>`. Sets the items required in each slot in the grid as IIngredients. Requires greater than or equal to 1 and less than or equal to 81. Requires either the key-based matrix or the ingredient-based matrix can be defined, not both. (Default `null`).
+    - `#!groovy List<List<IIngredient>>`. Sets the items required in each slot in the grid as IIngredients. Requires greater than or equal to 1 and less than or equal to 81. Requires either the key-based matrix or the ingredient-based matrix can be defined, not both.
 
         ```groovy
         shape(List<List<IIngredient>>)
         matrix(List<List<IIngredient>>)
         ```
 
-    - `#!groovy ItemStack`. Sets the item output. Requires not null. (Default `null`).
+    - `#!groovy ItemStack`. Sets the item output. Requires not null.
 
         ```groovy
         output(ItemStack)
         ```
 
-    - `#!groovy int`. Sets the tier of table required, with 0 indicating any table size that can fit the recipe. Requires greater than or equal to 0 and less than or equal to 4.
+    - `#!groovy int`. Sets the tier of table required, with 0 indicating any table size that can fit the recipe. Requires greater than or equal to 0 and less than or equal to 4. (Default `0`).
 
         ```groovy
         tier(int)
@@ -104,26 +104,26 @@ Don't know what a builder is? Check [the builder info page](../../../groovy/buil
         tierUltimate()
         ```
 
-    - `#!groovy byte`. Sets if the recipe is removed. A value of 1 removes by the output, and a value of 2 removes by the resource location.
+    - `#!groovy byte`. Sets if the recipe is removed. A value of 1 removes by the output, and a value of 2 removes by the resource location. (Default `0`).
 
         ```groovy
         replace()
         ```
 
-    - `#!groovy boolean`. Sets if the recipe is horizontally mirrored.
+    - `#!groovy boolean`. Sets if the recipe is horizontally mirrored. (Default `false`).
 
         ```groovy
         mirrored()
         mirrored(boolean)
         ```
 
-    - `#!groovy Closure<ItemStack>`. Sets an operation that modifies the input items or output item. (Default `null`).
+    - `#!groovy Closure<ItemStack>`. Sets an operation that modifies the input items or output item.
 
         ```groovy
         recipeFunction(Closure<ItemStack>)
         ```
 
-    - `#!groovy Closure<Void>`. Sets an operation that happens when the recipe is crafted. (Default `null`).
+    - `#!groovy Closure<Void>`. Sets an operation that happens when the recipe is crafted.
 
         ```groovy
         recipeAction(Closure<Void>)
@@ -190,14 +190,14 @@ Don't know what a builder is? Check [the builder info page](../../../groovy/buil
         ```
 
 ???+ Abstract "mods.extendedcrafting.tablecrafting.shapelessBuilder()"
-    - `#!groovy ResourceLocation`. Sets the Resource Location of the recipe. (Default `null`).
+    - `#!groovy ResourceLocation`. Sets the Resource Location of the recipe.
 
         ```groovy
         name(String)
         name(ResourceLocation)
         ```
 
-    - `#!groovy List<IIngredient>`. Sets the items required for the recipe. Requires greater than or equal to 1 and less than or equal to 81. (Default `null`).
+    - `#!groovy List<IIngredient>`. Sets the items required for the recipe. Requires greater than or equal to 1 and less than or equal to 81.
 
         ```groovy
         input(IIngredient)
@@ -205,13 +205,13 @@ Don't know what a builder is? Check [the builder info page](../../../groovy/buil
         input(Collection<IIngredient>)
         ```
 
-    - `#!groovy ItemStack`. Sets the item output. Requires not null. (Default `null`).
+    - `#!groovy ItemStack`. Sets the item output. Requires not null.
 
         ```groovy
         output(ItemStack)
         ```
 
-    - `#!groovy int`. Sets the tier of table required, with 0 indicating any table size that can fit the recipe. Requires greater than or equal to 0 and less than or equal to 4.
+    - `#!groovy int`. Sets the tier of table required, with 0 indicating any table size that can fit the recipe. Requires greater than or equal to 0 and less than or equal to 4. (Default `0`).
 
         ```groovy
         tier(int)
@@ -222,19 +222,19 @@ Don't know what a builder is? Check [the builder info page](../../../groovy/buil
         tierUltimate()
         ```
 
-    - `#!groovy byte`. Sets if the recipe is removed. A value of 1 removes by the output, and a value of 2 removes by the resource location.
+    - `#!groovy byte`. Sets if the recipe is removed. A value of 1 removes by the output, and a value of 2 removes by the resource location. (Default `0`).
 
         ```groovy
         replace()
         ```
 
-    - `#!groovy Closure<ItemStack>`. Sets an operation that modifies the input items or output item. (Default `null`).
+    - `#!groovy Closure<ItemStack>`. Sets an operation that modifies the input items or output item.
 
         ```groovy
         recipeFunction(Closure<ItemStack>)
         ```
 
-    - `#!groovy Closure<Void>`. Sets an operation that happens when the recipe is crafted. (Default `null`).
+    - `#!groovy Closure<Void>`. Sets an operation that happens when the recipe is crafted.
 
         ```groovy
         recipeAction(Closure<Void>)

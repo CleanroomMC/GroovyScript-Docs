@@ -30,14 +30,14 @@ Just like other recipe types, the Pyre also uses a recipe builder.
 Don't know what a builder is? Check [the builder info page](../../../groovy/builder.md) out.
 
 ???+ Abstract "mods.roots.pyre.recipeBuilder()"
-    - `#!groovy ResourceLocation`. Sets the Resource Location of the recipe. (Default `null`).
+    - `#!groovy ResourceLocation`. Sets the Resource Location of the recipe.
 
         ```groovy
         name(String)
         name(ResourceLocation)
         ```
 
-    - `#!groovy IngredientList<IIngredient>`. Sets the item inputs of the recipe. Requires exactly 5. (Default `null`).
+    - `#!groovy IngredientList<IIngredient>`. Sets the item inputs of the recipe. Requires exactly 5.
 
         ```groovy
         input(IIngredient)
@@ -45,7 +45,7 @@ Don't know what a builder is? Check [the builder info page](../../../groovy/buil
         input(Collection<IIngredient>)
         ```
 
-    - `#!groovy ItemStackList`. Sets the item outputs of the recipe. Requires exactly 1. (Default `null`).
+    - `#!groovy ItemStackList`. Sets the item outputs of the recipe. Requires exactly 1.
 
         ```groovy
         output(ItemStack)
@@ -53,14 +53,14 @@ Don't know what a builder is? Check [the builder info page](../../../groovy/buil
         output(Collection<ItemStack>)
         ```
 
-    - `#!groovy int`. Sets the XP given when the recipe finishes in levels. Requires greater than or equal to 0.
+    - `#!groovy int`. Sets the XP given when the recipe finishes in levels. Requires greater than or equal to 0. (Default `0`).
 
         ```groovy
         xp(int)
         levels(int)
         ```
 
-    - `#!groovy int`. Sets the time in ticks for the recipe to process.
+    - `#!groovy int`. Sets the time in ticks for the recipe to process. (Default `200`).
 
         ```groovy
         time(int)

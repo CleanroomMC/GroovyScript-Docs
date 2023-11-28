@@ -53,19 +53,19 @@ Just like other recipe types, the Smelting Bonus also uses a recipe builder.
 Don't know what a builder is? Check [the builder info page](../../../groovy/builder.md) out.
 
 ???+ Abstract "mods.thaumcraft.smeltingbonus.recipeBuilder()"
-    - `#!groovy IIngredient`. Sets the input of the smelting operation. Requires not null. (Default `null`).
+    - `#!groovy IIngredient`. Sets the input of the smelting operation. Requires not null.
 
         ```groovy
         input(IIngredient)
         ```
 
-    - `#!groovy ItemStack`. Sets the bonus item to be produced from the smelting operation. Requires not null. (Default `null`).
+    - `#!groovy ItemStack`. Sets the bonus item to be produced from the smelting operation. Requires not null.
 
         ```groovy
         output(ItemStack)
         ```
 
-    - `#!groovy float`. Sets the chance of `out` being produced from the smelting operation per attached Arcane Bellows + 1.
+    - `#!groovy float`. Sets the chance of `out` being produced from the smelting operation per attached Arcane Bellows + 1. (Default `0.33F`).
 
         ```groovy
         chance(float)

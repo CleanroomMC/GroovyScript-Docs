@@ -57,25 +57,25 @@ Just like other recipe types, the Tranquility also uses a recipe builder.
 Don't know what a builder is? Check [the builder info page](../../../groovy/builder.md) out.
 
 ???+ Abstract "mods.bloodmagic.tranquility.recipeBuilder()"
-    - `#!groovy Block`. Sets the target block. (Default `null`).
+    - `#!groovy Block`. Sets the target block.
 
         ```groovy
         block(Block)
         ```
 
-    - `#!groovy double`. Sets the amount of Tranquility provided. Requires greater than or equal to 0.
+    - `#!groovy double`. Sets the amount of Tranquility provided. Requires greater than or equal to 0. (Default `0.0d`).
 
         ```groovy
         value(double)
         ```
 
-    - `#!groovy IBlockState`. Sets the target blockstate. (Default `null`).
+    - `#!groovy IBlockState`. Sets the target blockstate.
 
         ```groovy
         blockstate(IBlockState)
         ```
 
-    - `#!groovy EnumTranquilityType`. Sets the type of Tranquility being modified. Requires not null. (Default `null`).
+    - `#!groovy EnumTranquilityType`. Sets the type of Tranquility being modified. Requires not null.
 
         ```groovy
         tranquility(String)

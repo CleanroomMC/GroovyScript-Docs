@@ -39,37 +39,37 @@ Just like other recipe types, the Enchanter also uses a recipe builder.
 Don't know what a builder is? Check [the builder info page](../../../groovy/builder.md) out.
 
 ???+ Abstract "mods.enderio.enchanter.recipeBuilder()"
-    - `#!groovy IIngredient`. Sets the item used in the book slot. Requires not null.
+    - `#!groovy IIngredient`. Sets the item used in the book slot. Requires not null. (Default `item('minecraft:writable_book')`).
 
         ```groovy
         customBook(IIngredient)
         ```
 
-    - `#!groovy IIngredient`. Sets the key item to create the enchantment. Requires not null. (Default `null`).
+    - `#!groovy IIngredient`. Sets the key item to create the enchantment. Requires not null.
 
         ```groovy
         input(IIngredient)
         ```
 
-    - `#!groovy IIngredient`. Sets the item used in the lapis slot. Requires not null.
+    - `#!groovy IIngredient`. Sets the item used in the lapis slot. Requires not null. (Default `ore('gemLapis')`).
 
         ```groovy
         customLapis(IIngredient)
         ```
 
-    - `#!groovy int`. Sets the amount of the input item used to create a single level of enchantment. Requires greater than 0.
+    - `#!groovy int`. Sets the amount of the input item used to create a single level of enchantment. Requires greater than 0. (Default `0`).
 
         ```groovy
         amountPerLevel(int)
         ```
 
-    - `#!groovy Enchantment`. Sets the enchantment applied to the output book. Requires not null. (Default `null`).
+    - `#!groovy Enchantment`. Sets the enchantment applied to the output book. Requires not null.
 
         ```groovy
         enchantment(Enchantment)
         ```
 
-    - `#!groovy double`. Sets the experience cost multiplier per enchantment level created.
+    - `#!groovy double`. Sets the experience cost multiplier per enchantment level created. (Default `1`).
 
         ```groovy
         xpCostMultiplier(double)

@@ -51,7 +51,7 @@ Just like other recipe types, the Slice N Splice also uses a recipe builder.
 Don't know what a builder is? Check [the builder info page](../../../groovy/builder.md) out.
 
 ???+ Abstract "mods.enderio.slicensplice.recipeBuilder()"
-    - `#!groovy IngredientList<IIngredient>`. Sets the item inputs of the recipe. Requires greater than or equal to 1 and less than or equal to 6. (Default `null`).
+    - `#!groovy IngredientList<IIngredient>`. Sets the item inputs of the recipe. Requires greater than or equal to 1 and less than or equal to 6.
 
         ```groovy
         input(IIngredient)
@@ -59,7 +59,7 @@ Don't know what a builder is? Check [the builder info page](../../../groovy/buil
         input(Collection<IIngredient>)
         ```
 
-    - `#!groovy ItemStackList`. Sets the item outputs of the recipe. Requires exactly 1. (Default `null`).
+    - `#!groovy ItemStackList`. Sets the item outputs of the recipe. Requires exactly 1.
 
         ```groovy
         output(ItemStack)
@@ -67,13 +67,13 @@ Don't know what a builder is? Check [the builder info page](../../../groovy/buil
         output(Collection<ItemStack>)
         ```
 
-    - `#!groovy float`. Sets the experience gained by taking the output item out of the Slice N Splice. Requires greater than or equal to 0.
+    - `#!groovy float`. Sets the experience gained by taking the output item out of the Slice N Splice. Requires greater than or equal to 0. (Default `0.0f`).
 
         ```groovy
         xp(float)
         ```
 
-    - `#!groovy int`. Sets the energy cost of the recipe. Requires greater than 0.
+    - `#!groovy int`. Sets the energy cost of the recipe. Requires greater than 0. (Default `0`).
 
         ```groovy
         energy(int)

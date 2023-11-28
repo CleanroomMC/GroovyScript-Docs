@@ -45,7 +45,7 @@ Just like other recipe types, the Anvil Smashing also uses a recipe builder.
 Don't know what a builder is? Check [the builder info page](../../../groovy/builder.md) out.
 
 ???+ Abstract "mods.inspirations.anvilsmashing.recipeBuilder()"
-    - `#!groovy IBlockState`. Sets the output IBlockState that replaces the input. Requires not null. (Default `null`).
+    - `#!groovy IBlockState`. Sets the output IBlockState that replaces the input. Requires not null.
 
         ```groovy
         output(ItemStack)
@@ -54,13 +54,13 @@ Don't know what a builder is? Check [the builder info page](../../../groovy/buil
         output(Collection<ItemStack>)
         ```
 
-    - `#!groovy Block`. Sets the input Block. Requires either `inputBlock` or `inputBlockState` to be non-null. (Default `null`).
+    - `#!groovy Block`. Sets the input Block. Requires either `inputBlock` or `inputBlockState` to be non-null.
 
         ```groovy
         input(Block)
         ```
 
-    - `#!groovy IBlockState`. Sets the input IBlockState. Requires either `inputBlock` or `inputBlockState` to be non-null. (Default `null`).
+    - `#!groovy IBlockState`. Sets the input IBlockState. Requires either `inputBlock` or `inputBlockState` to be non-null.
 
         ```groovy
         input(IBlockState)

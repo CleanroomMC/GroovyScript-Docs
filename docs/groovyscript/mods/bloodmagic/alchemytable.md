@@ -46,7 +46,7 @@ Just like other recipe types, the Alchemy Table also uses a recipe builder.
 Don't know what a builder is? Check [the builder info page](../../../groovy/builder.md) out.
 
 ???+ Abstract "mods.bloodmagic.alchemytable.recipeBuilder()"
-    - `#!groovy IngredientList<IIngredient>`. Sets the item inputs of the recipe. Requires greater than or equal to 1 and less than or equal to 6. (Default `null`).
+    - `#!groovy IngredientList<IIngredient>`. Sets the item inputs of the recipe. Requires greater than or equal to 1 and less than or equal to 6.
 
         ```groovy
         input(IIngredient)
@@ -54,7 +54,7 @@ Don't know what a builder is? Check [the builder info page](../../../groovy/buil
         input(Collection<IIngredient>)
         ```
 
-    - `#!groovy ItemStackList`. Sets the item outputs of the recipe. Requires exactly 1. (Default `null`).
+    - `#!groovy ItemStackList`. Sets the item outputs of the recipe. Requires exactly 1.
 
         ```groovy
         output(ItemStack)
@@ -62,21 +62,21 @@ Don't know what a builder is? Check [the builder info page](../../../groovy/buil
         output(Collection<ItemStack>)
         ```
 
-    - `#!groovy int`. Sets how long in ticks the recipe should take. Requires greater than 0.
+    - `#!groovy int`. Sets how long in ticks the recipe should take. Requires greater than 0. (Default `0`).
 
         ```groovy
         time(int)
         ticks(int)
         ```
 
-    - `#!groovy int`. Sets how much Life Essence is drained from the Blood Network. Requires greater than or equal to 0.
+    - `#!groovy int`. Sets how much Life Essence is drained from the Blood Network. Requires greater than or equal to 0. (Default `0`).
 
         ```groovy
         drain(int)
         syphon(int)
         ```
 
-    - `#!groovy int`. Sets the minimum tier the Blood Orb inside the table must be. Requires greater than or equal to 0 and less than AltarTier.MAXTIERS.
+    - `#!groovy int`. Sets the minimum tier the Blood Orb inside the table must be. Requires greater than or equal to 0 and less than AltarTier.MAXTIERS. (Default `0`).
 
         ```groovy
         tier(int)

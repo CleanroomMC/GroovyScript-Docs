@@ -32,7 +32,7 @@ Just like other recipe types, the Brew Recipe also uses a recipe builder.
 Don't know what a builder is? Check [the builder info page](../../../groovy/builder.md) out.
 
 ???+ Abstract "mods.botania.brewrecipe.recipeBuilder()"
-    - `#!groovy IngredientList<IIngredient>`. Sets the item inputs of the recipe. Requires greater than or equal to 1 and less than or equal to 6. (Default `null`).
+    - `#!groovy IngredientList<IIngredient>`. Sets the item inputs of the recipe. Requires greater than or equal to 1 and less than or equal to 6.
 
         ```groovy
         input(IIngredient)
@@ -40,7 +40,7 @@ Don't know what a builder is? Check [the builder info page](../../../groovy/buil
         input(Collection<IIngredient>)
         ```
 
-    - `#!groovy Brew`. Sets the brew the recipe is being created for. Requires not null. (Default `null`).
+    - `#!groovy Brew`. Sets the brew the recipe is being created for. Requires not null.
 
         ```groovy
         brew(Brew)

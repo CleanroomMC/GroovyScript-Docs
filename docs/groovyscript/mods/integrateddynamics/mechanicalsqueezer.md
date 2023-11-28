@@ -36,7 +36,7 @@ Just like other recipe types, the Mechanical Squeezer also uses a recipe builder
 Don't know what a builder is? Check [the builder info page](../../../groovy/builder.md) out.
 
 ???+ Abstract "mods.integrateddynamics.mechanicalsqueezer.recipeBuilder()"
-    - `#!groovy IngredientList<IIngredient>`. Sets the item inputs of the recipe. Requires exactly 1. (Default `null`).
+    - `#!groovy IngredientList<IIngredient>`. Sets the item inputs of the recipe. Requires exactly 1.
 
         ```groovy
         input(IIngredient)
@@ -44,7 +44,7 @@ Don't know what a builder is? Check [the builder info page](../../../groovy/buil
         input(Collection<IIngredient>)
         ```
 
-    - `#!groovy FluidStackList`. Sets the fluid outputs of the recipe. Requires greater than or equal to 0 and less than or equal to 1. (Default `null`).
+    - `#!groovy FluidStackList`. Sets the fluid outputs of the recipe. Requires greater than or equal to 0 and less than or equal to 1.
 
         ```groovy
         fluidOutput(FluidStack)
@@ -52,27 +52,27 @@ Don't know what a builder is? Check [the builder info page](../../../groovy/buil
         fluidOutput(Collection<FluidStack>)
         ```
 
-    - `#!groovy boolean`. Sets if the recipe is added to the basic (Squeezer) machine.
+    - `#!groovy boolean`. Sets if the recipe is added to the basic (Squeezer) machine. (Default `false`).
 
         ```groovy
         basic()
         basic(boolean)
         ```
 
-    - `#!groovy List<IngredientRecipeComponent>`. Sets the possible item outputs and chance of those outputs being dropped. Requires greater than or equal to 0 and less than or equal to 3. (Default `null`).
+    - `#!groovy List<IngredientRecipeComponent>`. Sets the possible item outputs and chance of those outputs being dropped. Requires greater than or equal to 0 and less than or equal to 3.
 
         ```groovy
         output(ItemStack)
         output(ItemStack, float)
         ```
 
-    - `#!groovy int`. Sets the time in ticks the recipe takes to process in the Mechanical Squeezer, has no effect on the Squeezer.
+    - `#!groovy int`. Sets the time in ticks the recipe takes to process in the Mechanical Squeezer, has no effect on the Squeezer. (Default `10`).
 
         ```groovy
         duration(int)
         ```
 
-    - `#!groovy boolean`. Sets if the recipe is added to the mechanical (Mechanical Squeezer) machine.
+    - `#!groovy boolean`. Sets if the recipe is added to the mechanical (Mechanical Squeezer) machine. (Default `true`).
 
         ```groovy
         mechanical()

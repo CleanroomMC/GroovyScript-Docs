@@ -49,7 +49,7 @@ Just like other recipe types, the Mortar also uses a recipe builder.
 Don't know what a builder is? Check [the builder info page](../../../groovy/builder.md) out.
 
 ???+ Abstract "mods.advancedmortars.mortar.recipeBuilder()"
-    - `#!groovy IngredientList<IIngredient>`. Sets the item inputs of the recipe. Requires greater than or equal to 0 and less than or equal to 8. (Default `null`).
+    - `#!groovy IngredientList<IIngredient>`. Sets the item inputs of the recipe. Requires greater than or equal to 0 and less than or equal to 8.
 
         ```groovy
         input(IIngredient)
@@ -57,7 +57,7 @@ Don't know what a builder is? Check [the builder info page](../../../groovy/buil
         input(Collection<IIngredient>)
         ```
 
-    - `#!groovy ItemStackList`. Sets the item outputs of the recipe. Requires exactly 1. (Default `null`).
+    - `#!groovy ItemStackList`. Sets the item outputs of the recipe. Requires exactly 1.
 
         ```groovy
         output(ItemStack)
@@ -65,7 +65,7 @@ Don't know what a builder is? Check [the builder info page](../../../groovy/buil
         output(Collection<ItemStack>)
         ```
 
-    - `#!groovy List<String>`. Sets what types of Mortar are allowed to craft the recipe. Requires a list of Strings that are `EnumMortarType` entries. (Default `null`).
+    - `#!groovy List<String>`. Sets what types of Mortar are allowed to craft the recipe. Requires a list of Strings that are `EnumMortarType` entries.
 
         ```groovy
         gold()
@@ -79,20 +79,20 @@ Don't know what a builder is? Check [the builder info page](../../../groovy/buil
         obsidian()
         ```
 
-    - `#!groovy int`. Sets how many interactions are required to process the recipe.
+    - `#!groovy int`. Sets how many interactions are required to process the recipe. (Default `0`).
 
         ```groovy
         duration(int)
         ```
 
-    - `#!groovy ItemStack`. Sets the additional output itemstack.
+    - `#!groovy ItemStack`. Sets the additional output itemstack. (Default `ItemStack.EMPTY`).
 
         ```groovy
         secondaryOutput(ItemStack)
         secondaryOutput(ItemStack, float)
         ```
 
-    - `#!groovy float`. Sets the chance of the additional output itemstack being output.
+    - `#!groovy float`. Sets the chance of the additional output itemstack being output. (Default `1.0f`).
 
         ```groovy
         secondaryOutput(ItemStack, float)

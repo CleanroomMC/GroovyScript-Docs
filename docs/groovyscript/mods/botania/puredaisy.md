@@ -45,13 +45,13 @@ Just like other recipe types, the Pure Daisy also uses a recipe builder.
 Don't know what a builder is? Check [the builder info page](../../../groovy/builder.md) out.
 
 ???+ Abstract "mods.botania.puredaisy.recipeBuilder()"
-    - `#!groovy int`. Sets the duration the recipe takes to complete. Requires greater than or equal to 0.
+    - `#!groovy int`. Sets the duration the recipe takes to complete. Requires greater than or equal to 0. (Default `RecipePureDaisy.DEFAULT_TIME (150)`).
 
         ```groovy
         time(int)
         ```
 
-    - `#!groovy Object`. Sets the valid input states. Requires not null. Requires either an IBlockState or String. (Default `null`).
+    - `#!groovy Object`. Sets the valid input states. Requires not null. Requires either an IBlockState or String.
 
         ```groovy
         input(Block)
@@ -60,7 +60,7 @@ Don't know what a builder is? Check [the builder info page](../../../groovy/buil
         input(OreDictIngredient)
         ```
 
-    - `#!groovy IBlockState`. Sets the output IBlockState. Requires not null. (Default `null`).
+    - `#!groovy IBlockState`. Sets the output IBlockState. Requires not null.
 
         ```groovy
         output(IBlockState)

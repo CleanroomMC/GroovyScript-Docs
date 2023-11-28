@@ -42,20 +42,20 @@ Don't know what a builder is? Check [the builder info page](../../../groovy/buil
         name(String)
         ```
 
-    - `#!groovy int`. Sets the base mana cost to make the brew. The Tainted Blood Pendant and Incense Stick recipes will cost 10 times as much mana. Requires greater than or equal to 1.
+    - `#!groovy int`. Sets the base mana cost to make the brew. The Tainted Blood Pendant and Incense Stick recipes will cost 10 times as much mana. Requires greater than or equal to 1. (Default `0`).
 
         ```groovy
         cost(int)
         mana(int)
         ```
 
-    - `#!groovy int`. Sets the color of effect. Requires not null.
+    - `#!groovy int`. Sets the color of effect. Requires not null. (Default `0xFFFFFF`).
 
         ```groovy
         color(int)
         ```
 
-    - `#!groovy List<PotionEffect>`. Sets the potion effects, quantity, and duration of each when consuming the potion. Requires greater than or equal to 1. (Default `null`).
+    - `#!groovy List<PotionEffect>`. Sets the potion effects, quantity, and duration of each when consuming the potion. Requires greater than or equal to 1.
 
         ```groovy
         effect(PotionEffect)
@@ -63,14 +63,14 @@ Don't know what a builder is? Check [the builder info page](../../../groovy/buil
         effect(Collection<PotionEffect>)
         ```
 
-    - `#!groovy boolean`. Sets if the brew can be infused on a Incense Stick, making it apply the effect persistently in a long-lasting AOE.
+    - `#!groovy boolean`. Sets if the brew can be infused on a Incense Stick, making it apply the effect persistently in a long-lasting AOE. (Default `true`).
 
         ```groovy
         incense()
         incense(boolean)
         ```
 
-    - `#!groovy boolean`. Sets if the custom brew can be infused on a Tainted Blood Pendant, making it a persistent effect at the cost of mana.
+    - `#!groovy boolean`. Sets if the custom brew can be infused on a Tainted Blood Pendant, making it a persistent effect at the cost of mana. (Default `true`).
 
         ```groovy
         bloodPendant()

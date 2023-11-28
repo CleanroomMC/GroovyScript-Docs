@@ -45,7 +45,7 @@ Just like other recipe types, the Dissolution Chamber also uses a recipe builder
 Don't know what a builder is? Check [the builder info page](../../../groovy/builder.md) out.
 
 ???+ Abstract "mods.mekanism.dissolutionchamber.recipeBuilder()"
-    - `#!groovy IngredientList<IIngredient>`. Sets the item inputs of the recipe. Requires exactly 1. (Default `null`).
+    - `#!groovy IngredientList<IIngredient>`. Sets the item inputs of the recipe. Requires exactly 1.
 
         ```groovy
         input(IIngredient)
@@ -53,7 +53,7 @@ Don't know what a builder is? Check [the builder info page](../../../groovy/buil
         input(Collection<IIngredient>)
         ```
 
-    - `#!groovy GasStackList`. Sets the gas outputs of the recipe. Requires exactly 1. (Default `null`).
+    - `#!groovy GasStackList`. Sets the gas outputs of the recipe. Requires exactly 1.
 
         ```groovy
         gasOutput(GasStack)

@@ -51,7 +51,7 @@ Just like other recipe types, the Chalice Interaction also uses a recipe builder
 Don't know what a builder is? Check [the builder info page](../../../groovy/builder.md) out.
 
 ???+ Abstract "mods.astralsorcery.chaliceinteraction.recipeBuilder()"
-    - `#!groovy FluidStackList`. Sets the fluid inputs of the recipe. Requires exactly 2. (Default `null`).
+    - `#!groovy FluidStackList`. Sets the fluid inputs of the recipe. Requires exactly 2.
 
         ```groovy
         component(FluidStack)
@@ -62,7 +62,7 @@ Don't know what a builder is? Check [the builder info page](../../../groovy/buil
         fluidInput(Collection<FluidStack>)
         ```
 
-    - `#!groovy ItemStackList`. Sets the item outputs of the recipe. Requires greater than or equal to 0. (Default `null`).
+    - `#!groovy ItemStackList`. Sets the item outputs of the recipe. Requires greater than or equal to 0.
 
         ```groovy
         output(ItemStack)
@@ -73,7 +73,7 @@ Don't know what a builder is? Check [the builder info page](../../../groovy/buil
         result(ItemStack, int)
         ```
 
-    - `#!groovy FloatArrayList`. Sets the chance to consume fluids from the Chalices. Requires exactly 2. (Default `null`).
+    - `#!groovy FloatArrayList`. Sets the chance to consume fluids from the Chalices. Requires exactly 2.
 
         ```groovy
         component(FluidStack)
@@ -82,7 +82,7 @@ Don't know what a builder is? Check [the builder info page](../../../groovy/buil
         fluidInput(FluidStack, float)
         ```
 
-    - `#!groovy IntArrayList`. Sets the chance a given output will occur among all possible combinations of the fluid.. Requires greater than 0. (Default `null`).
+    - `#!groovy IntArrayList`. Sets the chance a given output will occur among all possible combinations of the fluid.. Requires greater than 0.
 
         ```groovy
         output(ItemStack)

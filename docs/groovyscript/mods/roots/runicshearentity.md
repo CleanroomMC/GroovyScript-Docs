@@ -32,14 +32,14 @@ Just like other recipe types, the Runic Shear Entity also uses a recipe builder.
 Don't know what a builder is? Check [the builder info page](../../../groovy/builder.md) out.
 
 ???+ Abstract "mods.roots.runicshearentity.recipeBuilder()"
-    - `#!groovy ResourceLocation`. Sets the Resource Location of the recipe. (Default `null`).
+    - `#!groovy ResourceLocation`. Sets the Resource Location of the recipe.
 
         ```groovy
         name(String)
         name(ResourceLocation)
         ```
 
-    - `#!groovy ItemStackList`. Sets the item outputs of the recipe. Requires greater than or equal to 1. (Default `null`).
+    - `#!groovy ItemStackList`. Sets the item outputs of the recipe. Requires greater than or equal to 1.
 
         ```groovy
         output(ItemStack)
@@ -47,19 +47,19 @@ Don't know what a builder is? Check [the builder info page](../../../groovy/buil
         output(Collection<ItemStack>)
         ```
 
-    - `#!groovy Class<? extends EntityLivingBase>`. Sets the target entity. Requires not null. (Default `null`).
+    - `#!groovy Class<? extends EntityLivingBase>`. Sets the target entity. Requires not null.
 
         ```groovy
         entity(EntityEntry)
         ```
 
-    - `#!groovy int`. Sets the time in ticks before the entity can be sheared again. Requires not null.
+    - `#!groovy int`. Sets the time in ticks before the entity can be sheared again. Requires not null. (Default `0`).
 
         ```groovy
         cooldown(int)
         ```
 
-    - `#!groovy Function<EntityLivingBase, ItemStack>`. Sets a function that takes an EntityLivingBase and returns an itemstack drop based on the entities properties. (Default `null`).
+    - `#!groovy Function<EntityLivingBase, ItemStack>`. Sets a function that takes an EntityLivingBase and returns an itemstack drop based on the entities properties.
 
         ```groovy
         functionMap(Function<EntityLivingBase, ItemStack>)

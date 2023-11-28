@@ -34,14 +34,14 @@ Just like other recipe types, the Mortar And Pestle also uses a recipe builder.
 Don't know what a builder is? Check [the builder info page](../../../groovy/builder.md) out.
 
 ???+ Abstract "mods.roots.mortar.recipeBuilder()"
-    - `#!groovy ResourceLocation`. Sets the Resource Location of the recipe. (Default `null`).
+    - `#!groovy ResourceLocation`. Sets the Resource Location of the recipe.
 
         ```groovy
         name(String)
         name(ResourceLocation)
         ```
 
-    - `#!groovy IngredientList<IIngredient>`. Sets the item inputs of the recipe. Requires greater than or equal to 1 and less than or equal to 5. (Default `null`).
+    - `#!groovy IngredientList<IIngredient>`. Sets the item inputs of the recipe. Requires greater than or equal to 1 and less than or equal to 5.
 
         ```groovy
         input(IIngredient)
@@ -49,7 +49,7 @@ Don't know what a builder is? Check [the builder info page](../../../groovy/buil
         input(Collection<IIngredient>)
         ```
 
-    - `#!groovy ItemStackList`. Sets the item outputs of the recipe. Requires exactly 1. (Default `null`).
+    - `#!groovy ItemStackList`. Sets the item outputs of the recipe. Requires exactly 1.
 
         ```groovy
         output(ItemStack)
@@ -57,7 +57,7 @@ Don't know what a builder is? Check [the builder info page](../../../groovy/buil
         output(Collection<ItemStack>)
         ```
 
-    - `#!groovy float`. Sets the red color value of the first version of the particle spawned. Requires greater than or equal to 0 and less than or equal to 1.
+    - `#!groovy float`. Sets the red color value of the first version of the particle spawned. Requires greater than or equal to 0 and less than or equal to 1. (Default `1.0f`).
 
         ```groovy
         red(float)
@@ -67,7 +67,7 @@ Don't know what a builder is? Check [the builder info page](../../../groovy/buil
         color(float, float, float, float, float, float)
         ```
 
-    - `#!groovy float`. Sets the red color value of the second version of the particle spawned. Requires greater than or equal to 0 and less than or equal to 1.
+    - `#!groovy float`. Sets the red color value of the second version of the particle spawned. Requires greater than or equal to 0 and less than or equal to 1. (Default `1.0f`).
 
         ```groovy
         red(float)
@@ -77,7 +77,7 @@ Don't know what a builder is? Check [the builder info page](../../../groovy/buil
         color(float, float, float, float, float, float)
         ```
 
-    - `#!groovy float`. Sets the blue color value of the first version of the particle spawned. Requires greater than or equal to 0 and less than or equal to 1.
+    - `#!groovy float`. Sets the blue color value of the first version of the particle spawned. Requires greater than or equal to 0 and less than or equal to 1. (Default `1.0f`).
 
         ```groovy
         blue(float)
@@ -87,7 +87,7 @@ Don't know what a builder is? Check [the builder info page](../../../groovy/buil
         color(float, float, float, float, float, float)
         ```
 
-    - `#!groovy float`. Sets the blue color value of the second version of the particle spawned. Requires greater than or equal to 0 and less than or equal to 1.
+    - `#!groovy float`. Sets the blue color value of the second version of the particle spawned. Requires greater than or equal to 0 and less than or equal to 1. (Default `1.0f`).
 
         ```groovy
         blue(float)
@@ -97,7 +97,7 @@ Don't know what a builder is? Check [the builder info page](../../../groovy/buil
         color(float, float, float, float, float, float)
         ```
 
-    - `#!groovy float`. Sets the green color value of the first version of the particle spawned. Requires greater than or equal to 0 and less than or equal to 1.
+    - `#!groovy float`. Sets the green color value of the first version of the particle spawned. Requires greater than or equal to 0 and less than or equal to 1. (Default `1.0f`).
 
         ```groovy
         color(float, float, float)
@@ -107,7 +107,7 @@ Don't know what a builder is? Check [the builder info page](../../../groovy/buil
         green1(float)
         ```
 
-    - `#!groovy float`. Sets the green color value of the second version of the particle spawned. Requires greater than or equal to 0 and less than or equal to 1.
+    - `#!groovy float`. Sets the green color value of the second version of the particle spawned. Requires greater than or equal to 0 and less than or equal to 1. (Default `1.0f`).
 
         ```groovy
         color(float, float, float)
@@ -117,7 +117,7 @@ Don't know what a builder is? Check [the builder info page](../../../groovy/buil
         green2(float)
         ```
 
-    - `#!groovy boolean`. Sets if, when input has a single IIngredient, a recipe will be generated for each input amount.
+    - `#!groovy boolean`. Sets if, when input has a single IIngredient, a recipe will be generated for each input amount. (Default `true`).
 
         ```groovy
         generate()

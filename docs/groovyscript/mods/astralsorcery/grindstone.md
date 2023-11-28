@@ -49,7 +49,7 @@ Just like other recipe types, the Grindstone also uses a recipe builder.
 Don't know what a builder is? Check [the builder info page](../../../groovy/builder.md) out.
 
 ???+ Abstract "mods.astralsorcery.grindstone.recipeBuilder()"
-    - `#!groovy IngredientList<IIngredient>`. Sets the item inputs of the recipe. Requires exactly 1. (Default `null`).
+    - `#!groovy IngredientList<IIngredient>`. Sets the item inputs of the recipe. Requires exactly 1.
 
         ```groovy
         input(IIngredient)
@@ -57,7 +57,7 @@ Don't know what a builder is? Check [the builder info page](../../../groovy/buil
         input(Collection<IIngredient>)
         ```
 
-    - `#!groovy ItemStackList`. Sets the item outputs of the recipe. Requires exactly 1. (Default `null`).
+    - `#!groovy ItemStackList`. Sets the item outputs of the recipe. Requires exactly 1.
 
         ```groovy
         output(ItemStack)
@@ -65,13 +65,13 @@ Don't know what a builder is? Check [the builder info page](../../../groovy/buil
         output(Collection<ItemStack>)
         ```
 
-    - `#!groovy int`. Sets how many interactions it takes to process the recipe. Requires greater than or equal to 0.
+    - `#!groovy int`. Sets how many interactions it takes to process the recipe. Requires greater than or equal to 0. (Default `0`).
 
         ```groovy
         weight(int)
         ```
 
-    - `#!groovy float`. Sets the chance of an additional output. Requires greater than or equal to 0 and less than or equal to 1.
+    - `#!groovy float`. Sets the chance of an additional output. Requires greater than or equal to 0 and less than or equal to 1. (Default `0.0f`).
 
         ```groovy
         secondaryChance(float)

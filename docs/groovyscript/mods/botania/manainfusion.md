@@ -42,7 +42,7 @@ Just like other recipe types, the Mana Infusion also uses a recipe builder.
 Don't know what a builder is? Check [the builder info page](../../../groovy/builder.md) out.
 
 ???+ Abstract "mods.botania.manainfusion.recipeBuilder()"
-    - `#!groovy IngredientList<IIngredient>`. Sets the item inputs of the recipe. Requires exactly 1. (Default `null`).
+    - `#!groovy IngredientList<IIngredient>`. Sets the item inputs of the recipe. Requires exactly 1.
 
         ```groovy
         input(IIngredient)
@@ -50,7 +50,7 @@ Don't know what a builder is? Check [the builder info page](../../../groovy/buil
         input(Collection<IIngredient>)
         ```
 
-    - `#!groovy ItemStackList`. Sets the item outputs of the recipe. Requires exactly 1. (Default `null`).
+    - `#!groovy ItemStackList`. Sets the item outputs of the recipe. Requires exactly 1.
 
         ```groovy
         output(ItemStack)
@@ -58,13 +58,13 @@ Don't know what a builder is? Check [the builder info page](../../../groovy/buil
         output(Collection<ItemStack>)
         ```
 
-    - `#!groovy int`. Sets the mana cost of converting the item. Requires greater than or equal to 1.
+    - `#!groovy int`. Sets the mana cost of converting the item. Requires greater than or equal to 1. (Default `100`).
 
         ```groovy
         mana(int)
         ```
 
-    - `#!groovy IBlockState`. Sets the IBlockState required below the mana pool. (Default `null`).
+    - `#!groovy IBlockState`. Sets the IBlockState required below the mana pool.
 
         ```groovy
         catalyst(IBlockState)

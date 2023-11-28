@@ -57,7 +57,7 @@ Just like other recipe types, the Tank also uses a recipe builder.
 Don't know what a builder is? Check [the builder info page](../../../groovy/builder.md) out.
 
 ???+ Abstract "mods.enderio.tank.recipeBuilder()"
-    - `#!groovy IngredientList<IIngredient>`. Sets the item inputs of the recipe. Requires exactly 1. (Default `null`).
+    - `#!groovy IngredientList<IIngredient>`. Sets the item inputs of the recipe. Requires exactly 1.
 
         ```groovy
         input(IIngredient)
@@ -65,7 +65,7 @@ Don't know what a builder is? Check [the builder info page](../../../groovy/buil
         input(Collection<IIngredient>)
         ```
 
-    - `#!groovy FluidStackList`. Sets the fluid inputs of the recipe. Requires greater than or equal to 0 and less than or equal to 1. (Default `null`).
+    - `#!groovy FluidStackList`. Sets the fluid inputs of the recipe. Requires greater than or equal to 0 and less than or equal to 1.
 
         ```groovy
         fluidInput(FluidStack)
@@ -73,7 +73,7 @@ Don't know what a builder is? Check [the builder info page](../../../groovy/buil
         fluidInput(Collection<FluidStack>)
         ```
 
-    - `#!groovy ItemStackList`. Sets the item outputs of the recipe. Requires greater than or equal to 0 and less than or equal to 1. (Default `null`).
+    - `#!groovy ItemStackList`. Sets the item outputs of the recipe. Requires greater than or equal to 0 and less than or equal to 1.
 
         ```groovy
         output(ItemStack)
@@ -81,7 +81,7 @@ Don't know what a builder is? Check [the builder info page](../../../groovy/buil
         output(Collection<ItemStack>)
         ```
 
-    - `#!groovy FluidStackList`. Sets the fluid outputs of the recipe. Requires greater than or equal to 0 and less than or equal to 1. (Default `null`).
+    - `#!groovy FluidStackList`. Sets the fluid outputs of the recipe. Requires greater than or equal to 0 and less than or equal to 1.
 
         ```groovy
         fluidOutput(FluidStack)
@@ -89,7 +89,7 @@ Don't know what a builder is? Check [the builder info page](../../../groovy/buil
         fluidOutput(Collection<FluidStack>)
         ```
 
-    - `#!groovy boolean`. Sets if the recipe is filling or emptying.
+    - `#!groovy boolean`. Sets if the recipe is filling or emptying. (Default `false`).
 
         ```groovy
         fill()

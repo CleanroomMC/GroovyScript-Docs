@@ -36,7 +36,7 @@ Just like other recipe types, the Oil Gen also uses a recipe builder.
 Don't know what a builder is? Check [the builder info page](../../../groovy/builder.md) out.
 
 ???+ Abstract "mods.actuallyadditions.oilgen.recipeBuilder()"
-    - `#!groovy FluidStackList`. Sets the fluid inputs of the recipe. Requires exactly 1. (Default `null`).
+    - `#!groovy FluidStackList`. Sets the fluid inputs of the recipe. Requires exactly 1.
 
         ```groovy
         fluidInput(FluidStack)
@@ -44,13 +44,13 @@ Don't know what a builder is? Check [the builder info page](../../../groovy/buil
         fluidInput(Collection<FluidStack>)
         ```
 
-    - `#!groovy int`. Sets how long the fluid burns for. Requires greater than or equal to 0.
+    - `#!groovy int`. Sets how long the fluid burns for. Requires greater than or equal to 0. (Default `0`).
 
         ```groovy
         time(int)
         ```
 
-    - `#!groovy int`. Sets how much power is generated per tick while fluid is being consumed. Requires greater than or equal to 0.
+    - `#!groovy int`. Sets how much power is generated per tick while fluid is being consumed. Requires greater than or equal to 0. (Default `0`).
 
         ```groovy
         amount(int)

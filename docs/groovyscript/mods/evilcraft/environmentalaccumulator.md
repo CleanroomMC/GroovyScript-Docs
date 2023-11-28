@@ -32,7 +32,7 @@ Just like other recipe types, the Environmental Accumulator also uses a recipe b
 Don't know what a builder is? Check [the builder info page](../../../groovy/builder.md) out.
 
 ???+ Abstract "mods.evilcraft.environmentalaccumulator.recipeBuilder()"
-    - `#!groovy IngredientList<IIngredient>`. Sets the item inputs of the recipe. Requires exactly 1. (Default `null`).
+    - `#!groovy IngredientList<IIngredient>`. Sets the item inputs of the recipe. Requires exactly 1.
 
         ```groovy
         input(IIngredient)
@@ -40,7 +40,7 @@ Don't know what a builder is? Check [the builder info page](../../../groovy/buil
         input(Collection<IIngredient>)
         ```
 
-    - `#!groovy ItemStackList`. Sets the item outputs of the recipe. Requires exactly 1. (Default `null`).
+    - `#!groovy ItemStackList`. Sets the item outputs of the recipe. Requires exactly 1.
 
         ```groovy
         output(ItemStack)
@@ -48,34 +48,34 @@ Don't know what a builder is? Check [the builder info page](../../../groovy/buil
         output(Collection<ItemStack>)
         ```
 
-    - `#!groovy int`. Sets the base time in ticks the recipe takes to process. Requires greater than or equal to 0.
+    - `#!groovy int`. Sets the base time in ticks the recipe takes to process. Requires greater than or equal to 0. (Default `EnvironmentalAccumulatorConfig.defaultProcessItemTickCount`).
 
         ```groovy
         duration(int)
         ```
 
-    - `#!groovy int`. Sets the time in ticks required before another recipe can be run in this Environmental Accumulator. Also controls the amount of `fluid('evilcraftblood')` consumed by the Sanguinary Environmental Accumulator. Requires greater than or equal to 0.
+    - `#!groovy int`. Sets the time in ticks required before another recipe can be run in this Environmental Accumulator. Also controls the amount of `fluid('evilcraftblood')` consumed by the Sanguinary Environmental Accumulator. Requires greater than or equal to 0. (Default `EnvironmentalAccumulatorConfig.defaultTickCooldown`).
 
         ```groovy
         cooldown(int)
         cooldowntime(int)
         ```
 
-    - `#!groovy WeatherType`. Sets the weather type required to start the recipe. Requires not null. (Default `null`).
+    - `#!groovy WeatherType`. Sets the weather type required to start the recipe. Requires not null.
 
         ```groovy
         inputWeather(String)
         inputWeather(WeatherType)
         ```
 
-    - `#!groovy WeatherType`. Sets the weather type the world is changed to when the recipe is completed. Requires not null. (Default `null`).
+    - `#!groovy WeatherType`. Sets the weather type the world is changed to when the recipe is completed. Requires not null.
 
         ```groovy
         outputWeather(String)
         outputWeather(WeatherType)
         ```
 
-    - `#!groovy double`. Sets how fast the item visually rotates while crafting. Requires greater than or equal to 0.
+    - `#!groovy double`. Sets how fast the item visually rotates while crafting. Requires greater than or equal to 0. (Default `EnvironmentalAccumulatorConfig.defaultProcessItemSpeed`).
 
         ```groovy
         speed(double)

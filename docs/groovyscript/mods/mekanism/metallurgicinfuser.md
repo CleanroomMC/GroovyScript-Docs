@@ -43,7 +43,7 @@ Just like other recipe types, the Metallurgic Infuser also uses a recipe builder
 Don't know what a builder is? Check [the builder info page](../../../groovy/builder.md) out.
 
 ???+ Abstract "mods.mekanism.metallurgicinfuser.recipeBuilder()"
-    - `#!groovy IngredientList<IIngredient>`. Sets the item inputs of the recipe. Requires exactly 1. (Default `null`).
+    - `#!groovy IngredientList<IIngredient>`. Sets the item inputs of the recipe. Requires exactly 1.
 
         ```groovy
         input(IIngredient)
@@ -51,7 +51,7 @@ Don't know what a builder is? Check [the builder info page](../../../groovy/buil
         input(Collection<IIngredient>)
         ```
 
-    - `#!groovy ItemStackList`. Sets the item outputs of the recipe. Requires exactly 1. (Default `null`).
+    - `#!groovy ItemStackList`. Sets the item outputs of the recipe. Requires exactly 1.
 
         ```groovy
         output(ItemStack)
@@ -59,12 +59,12 @@ Don't know what a builder is? Check [the builder info page](../../../groovy/buil
         output(Collection<ItemStack>)
         ```
 
-    - `#!groovy int`. Sets the amount of the provided Infusion type consumed. Requires greater than 0.
+    - `#!groovy int`. Sets the amount of the provided Infusion type consumed. Requires greater than 0. (Default `0`).
 
         ```groovy
         ```
 
-    - `#!groovy InfuseType`. Sets the Infusion type the recipe uses. Requires not null. (Default `null`).
+    - `#!groovy InfuseType`. Sets the Infusion type the recipe uses. Requires not null.
 
         ```groovy
         ```

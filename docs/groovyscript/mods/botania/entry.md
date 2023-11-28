@@ -58,7 +58,7 @@ Just like other recipe types, the Lexicon Entry also uses a recipe builder.
 Don't know what a builder is? Check [the builder info page](../../../groovy/builder.md) out.
 
 ???+ Abstract "mods.botania.entry.entryBuilder()"
-    - `#!groovy ItemStack`. Sets the default icon of the Entry.
+    - `#!groovy ItemStack`. Sets the default icon of the Entry. (Default `ItemStack.EMPTY`).
 
         ```groovy
         icon(IIngredient)
@@ -70,13 +70,13 @@ Don't know what a builder is? Check [the builder info page](../../../groovy/buil
         name(String)
         ```
 
-    - `#!groovy KnowledgeType`. Sets the Knowledge Type required to view the Entry. Also determines the color.
+    - `#!groovy KnowledgeType`. Sets the Knowledge Type required to view the Entry. Also determines the color. (Default `BotaniaAPI.basicKnowledge`).
 
         ```groovy
         knowledgeType(KnowledgeType)
         ```
 
-    - `#!groovy List<LexiconPage>`. Sets the Pages attached to the Entry. Requires greater than or equal to 1. (Default `null`).
+    - `#!groovy List<LexiconPage>`. Sets the Pages attached to the Entry. Requires greater than or equal to 1.
 
         ```groovy
         page(LexiconPage)
@@ -84,20 +84,20 @@ Don't know what a builder is? Check [the builder info page](../../../groovy/buil
         page(Collection<LexiconPage>)
         ```
 
-    - `#!groovy LexiconCategory`. Sets the Category the Entry is attached to. Requires not null. (Default `null`).
+    - `#!groovy LexiconCategory`. Sets the Category the Entry is attached to. Requires not null.
 
         ```groovy
         category(String)
         category(LexiconCategory)
         ```
 
-    - `#!groovy boolean`. Sets if the Entry always appears at the top of the list in a Category.
+    - `#!groovy boolean`. Sets if the Entry always appears at the top of the list in a Category. (Default `false`).
 
         ```groovy
         isPriority()
         ```
 
-    - `#!groovy List<ItemStack>`. Sets additional items displayed as if they were crafted by a page within the Entry. (Default `null`).
+    - `#!groovy List<ItemStack>`. Sets additional items displayed as if they were crafted by a page within the Entry.
 
         ```groovy
         extraRecipe(IIngredient)

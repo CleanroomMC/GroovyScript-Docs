@@ -59,26 +59,26 @@ Just like other recipe types, the Entity/Block Aspects also uses a recipe builde
 Don't know what a builder is? Check [the builder info page](../../../groovy/builder.md) out.
 
 ???+ Abstract "mods.thaumcraft.aspecthelper.aspectBuilder()"
-    - `#!groovy EntityEntry`. Sets the entity being modified. Requires either entity or object must be defined, but not both. (Default `null`).
+    - `#!groovy EntityEntry`. Sets the entity being modified. Requires either entity or object must be defined, but not both.
 
         ```groovy
         entity(EntityEntry)
         ```
 
-    - `#!groovy IIngredient`. Sets the item being modified. Requires either entity or object must be defined, but not both. (Default `null`).
+    - `#!groovy IIngredient`. Sets the item being modified. Requires either entity or object must be defined, but not both.
 
         ```groovy
         object(IIngredient)
         ```
 
-    - `#!groovy ArrayList<AspectStack>`. Sets the Aspects of the entity or item. (Default `null`).
+    - `#!groovy ArrayList<AspectStack>`. Sets the Aspects of the entity or item.
 
         ```groovy
         aspect(AspectStack)
         aspect(String, int)
         ```
 
-    - `#!groovy boolean`. Sets if all pre-existing Aspects should be removed from the entity or item before adding Aspects, if any are added.
+    - `#!groovy boolean`. Sets if all pre-existing Aspects should be removed from the entity or item before adding Aspects, if any are added. (Default `false`).
 
         ```groovy
         stripAspects()

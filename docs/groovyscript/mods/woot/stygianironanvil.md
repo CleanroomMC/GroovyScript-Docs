@@ -40,7 +40,7 @@ Just like other recipe types, the Stygian Iron Anvil also uses a recipe builder.
 Don't know what a builder is? Check [the builder info page](../../../groovy/builder.md) out.
 
 ???+ Abstract "mods.woot.stygianironanvil.recipeBuilder()"
-    - `#!groovy IngredientList<IIngredient>`. Sets the item inputs of the recipe. Requires greater than or equal to 1 and less than or equal to Integer.MAX_VALUE. (Default `null`).
+    - `#!groovy IngredientList<IIngredient>`. Sets the item inputs of the recipe. Requires greater than or equal to 1 and less than or equal to Integer.MAX_VALUE.
 
         ```groovy
         input(IIngredient)
@@ -48,7 +48,7 @@ Don't know what a builder is? Check [the builder info page](../../../groovy/buil
         input(Collection<IIngredient>)
         ```
 
-    - `#!groovy ItemStackList`. Sets the item outputs of the recipe. Requires exactly 1. (Default `null`).
+    - `#!groovy ItemStackList`. Sets the item outputs of the recipe. Requires exactly 1.
 
         ```groovy
         output(ItemStack)
@@ -56,13 +56,13 @@ Don't know what a builder is? Check [the builder info page](../../../groovy/buil
         output(Collection<ItemStack>)
         ```
 
-    - `#!groovy ItemStack`. Sets the itemstack used for the base. Requires not isEmpty.
+    - `#!groovy ItemStack`. Sets the itemstack used for the base. Requires not isEmpty. (Default `ItemStack.EMPTY`).
 
         ```groovy
         base(ItemStack)
         ```
 
-    - `#!groovy boolean`. Sets if the base is used as a catalyst and not consumed.
+    - `#!groovy boolean`. Sets if the base is used as a catalyst and not consumed. (Default `false`).
 
         ```groovy
         preserveBase()

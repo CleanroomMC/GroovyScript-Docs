@@ -36,7 +36,7 @@ Just like other recipe types, the Ball of Fur also uses a recipe builder.
 Don't know what a builder is? Check [the builder info page](../../../groovy/builder.md) out.
 
 ???+ Abstract "mods.actuallyadditions.balloffur.recipeBuilder()"
-    - `#!groovy ItemStackList`. Sets the item outputs of the recipe. Requires exactly 1. (Default `null`).
+    - `#!groovy ItemStackList`. Sets the item outputs of the recipe. Requires exactly 1.
 
         ```groovy
         output(ItemStack)
@@ -44,7 +44,7 @@ Don't know what a builder is? Check [the builder info page](../../../groovy/buil
         output(Collection<ItemStack>)
         ```
 
-    - `#!groovy int`. Sets how likely this entry is to be rolled. Requires greater than or equal to 0.
+    - `#!groovy int`. Sets how likely this entry is to be rolled. Requires greater than or equal to 0. (Default `0`).
 
         ```groovy
         weight(int)

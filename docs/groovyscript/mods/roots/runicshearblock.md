@@ -32,14 +32,14 @@ Just like other recipe types, the Runic Shear Block also uses a recipe builder.
 Don't know what a builder is? Check [the builder info page](../../../groovy/builder.md) out.
 
 ???+ Abstract "mods.roots.runicshearblock.recipeBuilder()"
-    - `#!groovy ResourceLocation`. Sets the Resource Location of the recipe. (Default `null`).
+    - `#!groovy ResourceLocation`. Sets the Resource Location of the recipe.
 
         ```groovy
         name(String)
         name(ResourceLocation)
         ```
 
-    - `#!groovy ItemStackList`. Sets the item outputs of the recipe. Requires exactly 1. (Default `null`).
+    - `#!groovy ItemStackList`. Sets the item outputs of the recipe. Requires exactly 1.
 
         ```groovy
         output(ItemStack)
@@ -47,20 +47,20 @@ Don't know what a builder is? Check [the builder info page](../../../groovy/buil
         output(Collection<ItemStack>)
         ```
 
-    - `#!groovy BlockStatePredicate`. Sets the target input blockstate. Requires not null. (Default `null`).
+    - `#!groovy BlockStatePredicate`. Sets the target input blockstate. Requires not null.
 
         ```groovy
         state(IBlockState)
         state(BlockStatePredicate)
         ```
 
-    - `#!groovy ItemStack`. Sets the item representing the target input blockstate. (Default `null`).
+    - `#!groovy ItemStack`. Sets the item representing the target input blockstate.
 
         ```groovy
         displayItem(ItemStack)
         ```
 
-    - `#!groovy IBlockState`. Sets the blockstate replacing the input block. Requires not null. (Default `null`).
+    - `#!groovy IBlockState`. Sets the blockstate replacing the input block. Requires not null.
 
         ```groovy
         replacementState(IBlockState)

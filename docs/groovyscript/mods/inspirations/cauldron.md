@@ -33,7 +33,7 @@ Just like other recipe types, the Cauldron also uses a recipe builder.
 Don't know what a builder is? Check [the builder info page](../../../groovy/builder.md) out.
 
 ???+ Abstract "mods.inspirations.cauldron.recipeBuilder()"
-    - `#!groovy IngredientList<IIngredient>`. Sets the item inputs of the recipe. Requires exactly 1. (Default `null`).
+    - `#!groovy IngredientList<IIngredient>`. Sets the item inputs of the recipe. Requires exactly 1.
 
         ```groovy
         input(IIngredient)
@@ -41,7 +41,7 @@ Don't know what a builder is? Check [the builder info page](../../../groovy/buil
         input(Collection<IIngredient>)
         ```
 
-    - `#!groovy FluidStackList`. Sets the fluid inputs of the recipe. Requires exactly 1. (Default `null`).
+    - `#!groovy FluidStackList`. Sets the fluid inputs of the recipe. Requires exactly 1.
 
         ```groovy
         fluidInput(FluidStack)
@@ -49,7 +49,7 @@ Don't know what a builder is? Check [the builder info page](../../../groovy/buil
         fluidInput(Collection<FluidStack>)
         ```
 
-    - `#!groovy ItemStackList`. Sets the item outputs of the recipe. Requires exactly 1. (Default `null`).
+    - `#!groovy ItemStackList`. Sets the item outputs of the recipe. Requires exactly 1.
 
         ```groovy
         output(ItemStack)
@@ -57,7 +57,7 @@ Don't know what a builder is? Check [the builder info page](../../../groovy/buil
         output(Collection<ItemStack>)
         ```
 
-    - `#!groovy FluidStackList`. Sets the fluid outputs of the recipe. Requires exactly 1. (Default `null`).
+    - `#!groovy FluidStackList`. Sets the fluid outputs of the recipe. Requires exactly 1.
 
         ```groovy
         fluidOutput(FluidStack)
@@ -65,14 +65,14 @@ Don't know what a builder is? Check [the builder info page](../../../groovy/buil
         fluidOutput(Collection<FluidStack>)
         ```
 
-    - `#!groovy EnumDyeColor`. Sets the dye color fluid required for the input. Requires not null. (Default `null`).
+    - `#!groovy EnumDyeColor`. Sets the dye color fluid required for the input. Requires not null.
 
         ```groovy
         dye(String)
         dye(EnumDyeColor)
         ```
 
-    - `#!groovy Cauldron.RecipeBuilder.RecipeType`. Sets what type of recipe is being processed. (Default `null`).
+    - `#!groovy Cauldron.RecipeBuilder.RecipeType`. Sets what type of recipe is being processed.
 
         ```groovy
         dye()
@@ -86,33 +86,33 @@ Don't know what a builder is? Check [the builder info page](../../../groovy/buil
         transform()
         ```
 
-    - `#!groovy SoundEvent`. Sets the sound played when the recipe is crafted. Requires not null. (Default `null`).
+    - `#!groovy SoundEvent`. Sets the sound played when the recipe is crafted. Requires not null.
 
         ```groovy
         sound(String)
         sound(SoundEvent)
         ```
 
-    - `#!groovy int`. Sets the level of fluid in the cauldron, where each bottle is a single level. Requires greater than or equal to 0 and less than or equal to `InspirationsRegistry.getCauldronMax()`.
+    - `#!groovy int`. Sets the level of fluid in the cauldron, where each bottle is a single level. Requires greater than or equal to 0 and less than or equal to `InspirationsRegistry.getCauldronMax()`. (Default `0`).
 
         ```groovy
         levels(int)
         ```
 
-    - `#!groovy Boolean`. Sets if the cauldon must be boiling, requiring fire or another heat source beneath.
+    - `#!groovy Boolean`. Sets if the cauldon must be boiling, requiring fire or another heat source beneath. (Default `false`).
 
         ```groovy
         boiling()
         boiling(Boolean)
         ```
 
-    - `#!groovy PotionType`. Sets the input potion type. Requires not null. (Default `null`).
+    - `#!groovy PotionType`. Sets the input potion type. Requires not null.
 
         ```groovy
         inputPotion(PotionType)
         ```
 
-    - `#!groovy PotionType`. Sets the output potion type. Requires not null. (Default `null`).
+    - `#!groovy PotionType`. Sets the output potion type. Requires not null.
 
         ```groovy
         outputPotion(PotionType)
@@ -138,7 +138,7 @@ Don't know what a builder is? Check [the builder info page](../../../groovy/buil
         ```
 
 ???+ Abstract "mods.inspirations.cauldron.recipeBuilderBrewing()"
-    - `#!groovy IngredientList<IIngredient>`. Sets the item inputs of the recipe. Requires exactly 1. (Default `null`).
+    - `#!groovy IngredientList<IIngredient>`. Sets the item inputs of the recipe. Requires exactly 1.
 
         ```groovy
         input(IIngredient)
@@ -146,13 +146,13 @@ Don't know what a builder is? Check [the builder info page](../../../groovy/buil
         input(Collection<IIngredient>)
         ```
 
-    - `#!groovy PotionType`. Sets the input potion type. Requires not null. (Default `null`).
+    - `#!groovy PotionType`. Sets the input potion type. Requires not null.
 
         ```groovy
         inputPotion(PotionType)
         ```
 
-    - `#!groovy PotionType`. Sets the output potion type. Requires not null. (Default `null`).
+    - `#!groovy PotionType`. Sets the output potion type. Requires not null.
 
         ```groovy
         outputPotion(PotionType)
@@ -174,7 +174,7 @@ Don't know what a builder is? Check [the builder info page](../../../groovy/buil
         ```
 
 ???+ Abstract "mods.inspirations.cauldron.recipeBuilderDye()"
-    - `#!groovy IngredientList<IIngredient>`. Sets the item inputs of the recipe. Requires exactly 1. (Default `null`).
+    - `#!groovy IngredientList<IIngredient>`. Sets the item inputs of the recipe. Requires exactly 1.
 
         ```groovy
         input(IIngredient)
@@ -182,7 +182,7 @@ Don't know what a builder is? Check [the builder info page](../../../groovy/buil
         input(Collection<IIngredient>)
         ```
 
-    - `#!groovy ItemStackList`. Sets the item outputs of the recipe. Requires exactly 1. (Default `null`).
+    - `#!groovy ItemStackList`. Sets the item outputs of the recipe. Requires exactly 1.
 
         ```groovy
         output(ItemStack)
@@ -190,14 +190,14 @@ Don't know what a builder is? Check [the builder info page](../../../groovy/buil
         output(Collection<ItemStack>)
         ```
 
-    - `#!groovy EnumDyeColor`. Sets the dye color fluid required for the input. Requires not null. (Default `null`).
+    - `#!groovy EnumDyeColor`. Sets the dye color fluid required for the input. Requires not null.
 
         ```groovy
         dye(String)
         dye(EnumDyeColor)
         ```
 
-    - `#!groovy int`. Sets the level of fluid in the cauldron, where each bottle is a single level. Requires greater than or equal to 0 and less than or equal to `InspirationsRegistry.getCauldronMax()`.
+    - `#!groovy int`. Sets the level of fluid in the cauldron, where each bottle is a single level. Requires greater than or equal to 0 and less than or equal to `InspirationsRegistry.getCauldronMax()`. (Default `0`).
 
         ```groovy
         levels(int)
@@ -220,7 +220,7 @@ Don't know what a builder is? Check [the builder info page](../../../groovy/buil
         ```
 
 ???+ Abstract "mods.inspirations.cauldron.recipeBuilderFill()"
-    - `#!groovy IngredientList<IIngredient>`. Sets the item inputs of the recipe. Requires exactly 1. (Default `null`).
+    - `#!groovy IngredientList<IIngredient>`. Sets the item inputs of the recipe. Requires exactly 1.
 
         ```groovy
         input(IIngredient)
@@ -228,7 +228,7 @@ Don't know what a builder is? Check [the builder info page](../../../groovy/buil
         input(Collection<IIngredient>)
         ```
 
-    - `#!groovy FluidStackList`. Sets the fluid inputs of the recipe. Requires exactly 1. (Default `null`).
+    - `#!groovy FluidStackList`. Sets the fluid inputs of the recipe. Requires exactly 1.
 
         ```groovy
         fluidInput(FluidStack)
@@ -236,7 +236,7 @@ Don't know what a builder is? Check [the builder info page](../../../groovy/buil
         fluidInput(Collection<FluidStack>)
         ```
 
-    - `#!groovy ItemStackList`. Sets the item outputs of the recipe. Requires exactly 1. (Default `null`).
+    - `#!groovy ItemStackList`. Sets the item outputs of the recipe. Requires exactly 1.
 
         ```groovy
         output(ItemStack)
@@ -244,14 +244,14 @@ Don't know what a builder is? Check [the builder info page](../../../groovy/buil
         output(Collection<ItemStack>)
         ```
 
-    - `#!groovy SoundEvent`. Sets the sound played when the recipe is crafted. Requires not null. (Default `null`).
+    - `#!groovy SoundEvent`. Sets the sound played when the recipe is crafted. Requires not null.
 
         ```groovy
         sound(String)
         sound(SoundEvent)
         ```
 
-    - `#!groovy Boolean`. Sets if the cauldon must be boiling, requiring fire or another heat source beneath.
+    - `#!groovy Boolean`. Sets if the cauldon must be boiling, requiring fire or another heat source beneath. (Default `false`).
 
         ```groovy
         boiling()
@@ -275,7 +275,7 @@ Don't know what a builder is? Check [the builder info page](../../../groovy/buil
         ```
 
 ???+ Abstract "mods.inspirations.cauldron.recipeBuilderMix()"
-    - `#!groovy FluidStackList`. Sets the fluid inputs of the recipe. Requires exactly 2. (Default `null`).
+    - `#!groovy FluidStackList`. Sets the fluid inputs of the recipe. Requires exactly 2.
 
         ```groovy
         fluidInput(FluidStack)
@@ -283,7 +283,7 @@ Don't know what a builder is? Check [the builder info page](../../../groovy/buil
         fluidInput(Collection<FluidStack>)
         ```
 
-    - `#!groovy ItemStackList`. Sets the item outputs of the recipe. Requires exactly 1. (Default `null`).
+    - `#!groovy ItemStackList`. Sets the item outputs of the recipe. Requires exactly 1.
 
         ```groovy
         output(ItemStack)
@@ -306,7 +306,7 @@ Don't know what a builder is? Check [the builder info page](../../../groovy/buil
         ```
 
 ???+ Abstract "mods.inspirations.cauldron.recipeBuilderPotion()"
-    - `#!groovy IngredientList<IIngredient>`. Sets the item inputs of the recipe. Requires exactly 1. (Default `null`).
+    - `#!groovy IngredientList<IIngredient>`. Sets the item inputs of the recipe. Requires exactly 1.
 
         ```groovy
         input(IIngredient)
@@ -314,7 +314,7 @@ Don't know what a builder is? Check [the builder info page](../../../groovy/buil
         input(Collection<IIngredient>)
         ```
 
-    - `#!groovy ItemStackList`. Sets the item outputs of the recipe. Requires exactly 1. (Default `null`).
+    - `#!groovy ItemStackList`. Sets the item outputs of the recipe. Requires exactly 1.
 
         ```groovy
         output(ItemStack)
@@ -322,20 +322,20 @@ Don't know what a builder is? Check [the builder info page](../../../groovy/buil
         output(Collection<ItemStack>)
         ```
 
-    - `#!groovy int`. Sets the level of fluid in the cauldron, where each bottle is a single level. Requires greater than or equal to 0 and less than or equal to `InspirationsRegistry.getCauldronMax()`.
+    - `#!groovy int`. Sets the level of fluid in the cauldron, where each bottle is a single level. Requires greater than or equal to 0 and less than or equal to `InspirationsRegistry.getCauldronMax()`. (Default `0`).
 
         ```groovy
         levels(int)
         ```
 
-    - `#!groovy Boolean`. Sets if the cauldon must be boiling, requiring fire or another heat source beneath.
+    - `#!groovy Boolean`. Sets if the cauldon must be boiling, requiring fire or another heat source beneath. (Default `false`).
 
         ```groovy
         boiling()
         boiling(Boolean)
         ```
 
-    - `#!groovy PotionType`. Sets the input potion type. Requires exactly 0 and exactly 1. (Default `null`).
+    - `#!groovy PotionType`. Sets the input potion type. Requires exactly 0 and exactly 1.
 
         ```groovy
         inputPotion(PotionType)
@@ -358,7 +358,7 @@ Don't know what a builder is? Check [the builder info page](../../../groovy/buil
         ```
 
 ???+ Abstract "mods.inspirations.cauldron.recipeBuilderStandard()"
-    - `#!groovy IngredientList<IIngredient>`. Sets the item inputs of the recipe. Requires exactly 1. (Default `null`).
+    - `#!groovy IngredientList<IIngredient>`. Sets the item inputs of the recipe. Requires exactly 1.
 
         ```groovy
         input(IIngredient)
@@ -366,7 +366,7 @@ Don't know what a builder is? Check [the builder info page](../../../groovy/buil
         input(Collection<IIngredient>)
         ```
 
-    - `#!groovy FluidStackList`. Sets the fluid inputs of the recipe. Requires exactly 1. (Default `null`).
+    - `#!groovy FluidStackList`. Sets the fluid inputs of the recipe. Requires exactly 1.
 
         ```groovy
         fluidInput(FluidStack)
@@ -374,7 +374,7 @@ Don't know what a builder is? Check [the builder info page](../../../groovy/buil
         fluidInput(Collection<FluidStack>)
         ```
 
-    - `#!groovy ItemStackList`. Sets the item outputs of the recipe. Requires exactly 1. (Default `null`).
+    - `#!groovy ItemStackList`. Sets the item outputs of the recipe. Requires exactly 1.
 
         ```groovy
         output(ItemStack)
@@ -382,20 +382,20 @@ Don't know what a builder is? Check [the builder info page](../../../groovy/buil
         output(Collection<ItemStack>)
         ```
 
-    - `#!groovy SoundEvent`. Sets the sound played when the recipe is crafted. Requires not null. (Default `null`).
+    - `#!groovy SoundEvent`. Sets the sound played when the recipe is crafted. Requires not null.
 
         ```groovy
         sound(String)
         sound(SoundEvent)
         ```
 
-    - `#!groovy int`. Sets the level of fluid in the cauldron, where each bottle is a single level. Requires greater than or equal to 0 and less than or equal to `InspirationsRegistry.getCauldronMax()`.
+    - `#!groovy int`. Sets the level of fluid in the cauldron, where each bottle is a single level. Requires greater than or equal to 0 and less than or equal to `InspirationsRegistry.getCauldronMax()`. (Default `0`).
 
         ```groovy
         levels(int)
         ```
 
-    - `#!groovy Boolean`. Sets if the cauldon must be boiling, requiring fire or another heat source beneath.
+    - `#!groovy Boolean`. Sets if the cauldon must be boiling, requiring fire or another heat source beneath. (Default `false`).
 
         ```groovy
         boiling()
@@ -420,7 +420,7 @@ Don't know what a builder is? Check [the builder info page](../../../groovy/buil
         ```
 
 ???+ Abstract "mods.inspirations.cauldron.recipeBuilderTransform()"
-    - `#!groovy IngredientList<IIngredient>`. Sets the item inputs of the recipe. Requires exactly 1. (Default `null`).
+    - `#!groovy IngredientList<IIngredient>`. Sets the item inputs of the recipe. Requires exactly 1.
 
         ```groovy
         input(IIngredient)
@@ -428,7 +428,7 @@ Don't know what a builder is? Check [the builder info page](../../../groovy/buil
         input(Collection<IIngredient>)
         ```
 
-    - `#!groovy FluidStackList`. Sets the fluid inputs of the recipe. Requires exactly 1. (Default `null`).
+    - `#!groovy FluidStackList`. Sets the fluid inputs of the recipe. Requires exactly 1.
 
         ```groovy
         fluidInput(FluidStack)
@@ -436,7 +436,7 @@ Don't know what a builder is? Check [the builder info page](../../../groovy/buil
         fluidInput(Collection<FluidStack>)
         ```
 
-    - `#!groovy FluidStackList`. Sets the fluid outputs of the recipe. Requires exactly 1. (Default `null`).
+    - `#!groovy FluidStackList`. Sets the fluid outputs of the recipe. Requires exactly 1.
 
         ```groovy
         fluidOutput(FluidStack)
@@ -444,20 +444,20 @@ Don't know what a builder is? Check [the builder info page](../../../groovy/buil
         fluidOutput(Collection<FluidStack>)
         ```
 
-    - `#!groovy SoundEvent`. Sets the sound played when the recipe is crafted. Requires not null. (Default `null`).
+    - `#!groovy SoundEvent`. Sets the sound played when the recipe is crafted. Requires not null.
 
         ```groovy
         sound(String)
         sound(SoundEvent)
         ```
 
-    - `#!groovy int`. Sets the level of fluid in the cauldron, where each bottle is a single level. Requires greater than or equal to 0 and less than or equal to `InspirationsRegistry.getCauldronMax()`.
+    - `#!groovy int`. Sets the level of fluid in the cauldron, where each bottle is a single level. Requires greater than or equal to 0 and less than or equal to `InspirationsRegistry.getCauldronMax()`. (Default `0`).
 
         ```groovy
         levels(int)
         ```
 
-    - `#!groovy Boolean`. Sets if the cauldon must be boiling, requiring fire or another heat source beneath.
+    - `#!groovy Boolean`. Sets if the cauldon must be boiling, requiring fire or another heat source beneath. (Default `false`).
 
         ```groovy
         boiling()

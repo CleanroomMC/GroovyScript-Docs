@@ -51,13 +51,13 @@ Just like other recipe types, the Sacrificial also uses a recipe builder.
 Don't know what a builder is? Check [the builder info page](../../../groovy/builder.md) out.
 
 ???+ Abstract "mods.bloodmagic.sacrificial.recipeBuilder()"
-    - `#!groovy int`. Sets how much Life Essence the entity gives. Requires greater than or equal to 0.
+    - `#!groovy int`. Sets how much Life Essence the entity gives. Requires greater than or equal to 0. (Default `0`).
 
         ```groovy
         value(int)
         ```
 
-    - `#!groovy ResourceLocation`. Sets the target entity. Requires not null. (Default `null`).
+    - `#!groovy ResourceLocation`. Sets the target entity. Requires not null.
 
         ```groovy
         entity(Entity)

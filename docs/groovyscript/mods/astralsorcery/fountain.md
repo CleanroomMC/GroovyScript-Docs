@@ -55,26 +55,26 @@ Just like other recipe types, the Fountain also uses a recipe builder.
 Don't know what a builder is? Check [the builder info page](../../../groovy/builder.md) out.
 
 ???+ Abstract "mods.astralsorcery.fountain.chanceHelper()"
-    - `#!groovy Fluid`. Sets the fluid being generated. Requires not null. (Default `null`).
+    - `#!groovy Fluid`. Sets the fluid being generated. Requires not null.
 
         ```groovy
         fluid(Fluid)
         fluid(FluidStack)
         ```
 
-    - `#!groovy int`. Sets the frequency the fluid generates in a chunk. Requires greater than or equal to 0.
+    - `#!groovy int`. Sets the frequency the fluid generates in a chunk. Requires greater than or equal to 0. (Default `0`).
 
         ```groovy
         rarity(int)
         ```
 
-    - `#!groovy int`. Sets the maximum amount of additional fluid that can be generated in a chunk. Requires greater than or equal to 0.
+    - `#!groovy int`. Sets the maximum amount of additional fluid that can be generated in a chunk. Requires greater than or equal to 0. (Default `0`).
 
         ```groovy
         variance(int)
         ```
 
-    - `#!groovy int`. Sets the minimum amount of fluid in a chunk. Requires greater than or equal to 0.
+    - `#!groovy int`. Sets the minimum amount of fluid in a chunk. Requires greater than or equal to 0. (Default `0`).
 
         ```groovy
         minimumAmount(int)

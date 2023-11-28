@@ -32,7 +32,7 @@ Just like other recipe types, the Fusion also uses a recipe builder.
 Don't know what a builder is? Check [the builder info page](../../../groovy/builder.md) out.
 
 ???+ Abstract "mods.draconicevolution.fusion.recipeBuilder()"
-    - `#!groovy IngredientList<IIngredient>`. Sets the item inputs of the recipe. Requires greater than or equal to 1 and less than or equal to 54. (Default `null`).
+    - `#!groovy IngredientList<IIngredient>`. Sets the item inputs of the recipe. Requires greater than or equal to 1 and less than or equal to 54.
 
         ```groovy
         input(IIngredient)
@@ -40,7 +40,7 @@ Don't know what a builder is? Check [the builder info page](../../../groovy/buil
         input(Collection<IIngredient>)
         ```
 
-    - `#!groovy ItemStackList`. Sets the item outputs of the recipe. Requires exactly 1. (Default `null`).
+    - `#!groovy ItemStackList`. Sets the item outputs of the recipe. Requires exactly 1.
 
         ```groovy
         output(ItemStack)
@@ -48,7 +48,7 @@ Don't know what a builder is? Check [the builder info page](../../../groovy/buil
         output(Collection<ItemStack>)
         ```
 
-    - `#!groovy int`. Sets the minimum tier of Fusion Crafting Injector. Requires greater than or equal to 0 and less than or equal to 3.
+    - `#!groovy int`. Sets the minimum tier of Fusion Crafting Injector. Requires greater than or equal to 0 and less than or equal to 3. (Default `0`).
 
         ```groovy
         tier(int)
@@ -59,13 +59,13 @@ Don't know what a builder is? Check [the builder info page](../../../groovy/buil
         tierDraconic()
         ```
 
-    - `#!groovy long`. Sets the power required per item input. Requires greater than 0.
+    - `#!groovy long`. Sets the power required per item input. Requires greater than 0. (Default `1000000`).
 
         ```groovy
         energy(long)
         ```
 
-    - `#!groovy ItemStack`. Sets the item used in the center Fusion Crafting Controller block. Requires not null. (Default `null`).
+    - `#!groovy ItemStack`. Sets the item used in the center Fusion Crafting Controller block. Requires not null.
 
         ```groovy
         catalyst(ItemStack)

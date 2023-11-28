@@ -32,7 +32,7 @@ Just like other recipe types, the Blood Infuser also uses a recipe builder.
 Don't know what a builder is? Check [the builder info page](../../../groovy/builder.md) out.
 
 ???+ Abstract "mods.evilcraft.bloodinfuser.recipeBuilder()"
-    - `#!groovy IngredientList<IIngredient>`. Sets the item inputs of the recipe. Requires exactly 1. (Default `null`).
+    - `#!groovy IngredientList<IIngredient>`. Sets the item inputs of the recipe. Requires exactly 1.
 
         ```groovy
         input(IIngredient)
@@ -40,7 +40,7 @@ Don't know what a builder is? Check [the builder info page](../../../groovy/buil
         input(Collection<IIngredient>)
         ```
 
-    - `#!groovy FluidStackList`. Sets the fluid inputs of the recipe. Requires exactly 1. (Default `null`).
+    - `#!groovy FluidStackList`. Sets the fluid inputs of the recipe. Requires exactly 1.
 
         ```groovy
         blood(int)
@@ -50,7 +50,7 @@ Don't know what a builder is? Check [the builder info page](../../../groovy/buil
         fluidInput(Collection<FluidStack>)
         ```
 
-    - `#!groovy ItemStackList`. Sets the item outputs of the recipe. Requires exactly 1. (Default `null`).
+    - `#!groovy ItemStackList`. Sets the item outputs of the recipe. Requires exactly 1.
 
         ```groovy
         output(ItemStack)
@@ -58,19 +58,19 @@ Don't know what a builder is? Check [the builder info page](../../../groovy/buil
         output(Collection<ItemStack>)
         ```
 
-    - `#!groovy float`. Sets the experience gained by taking the output item out of the Blood Infuser. Requires greater than or equal to 0.
+    - `#!groovy float`. Sets the experience gained by taking the output item out of the Blood Infuser. Requires greater than or equal to 0. (Default `0.0f`).
 
         ```groovy
         xp(float)
         ```
 
-    - `#!groovy int`. Sets the tier of the recipe, determined by the Promise of Tenacity contained within the upgrade slots of the machine. Requires greater than or equal to 0 and less than or equal to 3.
+    - `#!groovy int`. Sets the tier of the recipe, determined by the Promise of Tenacity contained within the upgrade slots of the machine. Requires greater than or equal to 0 and less than or equal to 3. (Default `0`).
 
         ```groovy
         tier(int)
         ```
 
-    - `#!groovy int`. Sets the base time in ticks the recipe takes to process. Requires greater than or equal to 0.
+    - `#!groovy int`. Sets the base time in ticks the recipe takes to process. Requires greater than or equal to 0. (Default `0`).
 
         ```groovy
         duration(int)

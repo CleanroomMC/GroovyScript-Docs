@@ -49,7 +49,7 @@ Just like other recipe types, the Lightwell also uses a recipe builder.
 Don't know what a builder is? Check [the builder info page](../../../groovy/builder.md) out.
 
 ???+ Abstract "mods.astralsorcery.lightwell.recipeBuilder()"
-    - `#!groovy Color`. Sets the color of the produced particles. (Default `null`).
+    - `#!groovy Color`. Sets the color of the produced particles.
 
         ```groovy
         catalystColor(int)
@@ -58,25 +58,25 @@ Don't know what a builder is? Check [the builder info page](../../../groovy/buil
         catalystColor(int, int, int, int)
         ```
 
-    - `#!groovy Fluid`. Sets the output fluid. Requires not null. (Default `null`).
+    - `#!groovy Fluid`. Sets the output fluid. Requires not null.
 
         ```groovy
         output(FluidStack)
         ```
 
-    - `#!groovy ItemStack`. Sets the input item. Requires not null. (Default `null`).
+    - `#!groovy ItemStack`. Sets the input item. Requires not null.
 
         ```groovy
         catalyst(ItemStack)
         ```
 
-    - `#!groovy float`. Sets how likely the catalyst is to shatter when producing fluid, with higher being less likely but never 0. Requires greater than or equal to 0.
+    - `#!groovy float`. Sets how likely the catalyst is to shatter when producing fluid, with higher being less likely but never 0. Requires greater than or equal to 0. (Default `0.0f`).
 
         ```groovy
         shatterMultiplier(float)
         ```
 
-    - `#!groovy float`. Sets the base amount of fluid produced per tick. Requires greater than or equal to 0.
+    - `#!groovy float`. Sets the base amount of fluid produced per tick. Requires greater than or equal to 0. (Default `0.0f`).
 
         ```groovy
         productionMultiplier(float)

@@ -30,26 +30,26 @@ Just like other recipe types, the Predicates also uses a recipe builder.
 Don't know what a builder is? Check [the builder info page](../../../groovy/builder.md) out.
 
 ???+ Abstract "mods.roots.predicates.stateBuilder()"
-    - `#!groovy boolean`. Sets if the predicate checks the block above for validation. Requires that only at most one of either `above` or `below` may be true.
+    - `#!groovy boolean`. Sets if the predicate checks the block above for validation. Requires that only at most one of either `above` or `below` may be true. (Default `false`).
 
         ```groovy
         above()
         ```
 
-    - `#!groovy boolean`. Sets if the predicate checks the block below for validation. Requires that only at most one of either `above` or `below` may be true.
+    - `#!groovy boolean`. Sets if the predicate checks the block below for validation. Requires that only at most one of either `above` or `below` may be true. (Default `false`).
 
         ```groovy
         below()
         ```
 
-    - `#!groovy IBlockState`. Sets the IBlockState compared against. Requires not null. (Default `null`).
+    - `#!groovy IBlockState`. Sets the IBlockState compared against. Requires not null.
 
         ```groovy
         block(Block)
         blockstate(IBlockState)
         ```
 
-    - `#!groovy Collection<String>`. Sets what properties of the blockstate are checked, where any properties not checked are. Requires that each property must be a valid property of the provided `blockstate`. (Default `null`).
+    - `#!groovy Collection<String>`. Sets what properties of the blockstate are checked, where any properties not checked are. Requires that each property must be a valid property of the provided `blockstate`.
 
         ```groovy
         properties(String...)

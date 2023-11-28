@@ -66,19 +66,19 @@ Don't know what a builder is? Check [the builder info page](../../../groovy/buil
         name(String)
         ```
 
-    - `#!groovy ItemStack`. Sets the itemstack representing the node in the category. Requires not null. (Default `null`).
+    - `#!groovy ItemStack`. Sets the itemstack representing the node in the category. Requires not null.
 
         ```groovy
         icon(ItemStack)
         ```
 
-    - `#!groovy ArrayList<IJournalPage>`. Sets the pages visible within the node. (Default `null`).
+    - `#!groovy ArrayList<IJournalPage>`. Sets the pages visible within the node.
 
         ```groovy
         page(IJournalPage)
         ```
 
-    - `#!groovy ResearchProgression`. Sets the page the node is located on. Requires not null. (Default `null`).
+    - `#!groovy ResearchProgression`. Sets the page the node is located on. Requires not null.
 
         ```groovy
         radiance()
@@ -89,13 +89,13 @@ Don't know what a builder is? Check [the builder info page](../../../groovy/buil
         constellation()
         ```
 
-    - `#!groovy Point`. Sets the location of the node. Requires not null. (Default `null`).
+    - `#!groovy Point`. Sets the location of the node. Requires not null.
 
         ```groovy
         point(int, int)
         ```
 
-    - `#!groovy ArrayList<ResearchNode>`. Sets what other nodes this node is connected to. (Default `null`).
+    - `#!groovy ArrayList<ResearchNode>`. Sets what other nodes this node is connected to.
 
         ```groovy
         connectionFrom(String)

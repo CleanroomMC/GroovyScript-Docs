@@ -41,14 +41,14 @@ Just like other recipe types, the Crucible also uses a recipe builder.
 Don't know what a builder is? Check [the builder info page](../../../groovy/builder.md) out.
 
 ???+ Abstract "mods.thaumcraft.crucible.recipeBuilder()"
-    - `#!groovy AspectList`. Sets the Aspects and amounts required to convert. Requires greater than 0. (Default `null`).
+    - `#!groovy AspectList`. Sets the Aspects and amounts required to convert. Requires greater than 0.
 
         ```groovy
         aspect(AspectStack)
         aspect(String, int)
         ```
 
-    - `#!groovy IIngredient`. Sets the input item. Requires not null. (Default `null`).
+    - `#!groovy IIngredient`. Sets the input item. Requires not null.
 
         ```groovy
         catalyst(IIngredient)

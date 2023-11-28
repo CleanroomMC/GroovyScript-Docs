@@ -36,20 +36,20 @@ Just like other recipe types, the Drying Basin also uses a recipe builder.
 Don't know what a builder is? Check [the builder info page](../../../groovy/builder.md) out.
 
 ???+ Abstract "mods.integrateddynamics.dryingbasin.recipeBuilder()"
-    - `#!groovy boolean`. Sets if the recipe is added to the basic (Drying Basin) machine.
+    - `#!groovy boolean`. Sets if the recipe is added to the basic (Drying Basin) machine. (Default `true`).
 
         ```groovy
         basic()
         basic(boolean)
         ```
 
-    - `#!groovy int`. Sets the time in ticks the recipe takes to process.
+    - `#!groovy int`. Sets the time in ticks the recipe takes to process. (Default `10`).
 
         ```groovy
         duration(int)
         ```
 
-    - `#!groovy boolean`. Sets if the recipe is added to the mechanical (Mechanical Drying Basin) machine.
+    - `#!groovy boolean`. Sets if the recipe is added to the mechanical (Mechanical Drying Basin) machine. (Default `false`).
 
         ```groovy
         mechanical()

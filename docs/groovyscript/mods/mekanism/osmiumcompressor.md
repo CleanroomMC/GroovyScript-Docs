@@ -43,7 +43,7 @@ Just like other recipe types, the Osmium Compressor also uses a recipe builder.
 Don't know what a builder is? Check [the builder info page](../../../groovy/builder.md) out.
 
 ???+ Abstract "mods.mekanism.osmiumcompressor.recipeBuilder()"
-    - `#!groovy IngredientList<IIngredient>`. Sets the item inputs of the recipe. Requires exactly 1. (Default `null`).
+    - `#!groovy IngredientList<IIngredient>`. Sets the item inputs of the recipe. Requires exactly 1.
 
         ```groovy
         input(IIngredient)
@@ -51,7 +51,7 @@ Don't know what a builder is? Check [the builder info page](../../../groovy/buil
         input(Collection<IIngredient>)
         ```
 
-    - `#!groovy GasStackList`. Sets the gas inputs of the recipe. Requires greater than or equal to 0 and less than or equal to 1.
+    - `#!groovy GasStackList`. Sets the gas inputs of the recipe. Requires greater than or equal to 0 and less than or equal to 1. (Default `MekanismFluids.LiquidOsmium`).
 
         ```groovy
         gasInput(GasStack)
@@ -59,7 +59,7 @@ Don't know what a builder is? Check [the builder info page](../../../groovy/buil
         gasInput(Collection<GasStack>)
         ```
 
-    - `#!groovy ItemStackList`. Sets the item outputs of the recipe. Requires exactly 1. (Default `null`).
+    - `#!groovy ItemStackList`. Sets the item outputs of the recipe. Requires exactly 1.
 
         ```groovy
         output(ItemStack)

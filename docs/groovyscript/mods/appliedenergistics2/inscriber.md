@@ -32,7 +32,7 @@ Just like other recipe types, the Inscriber also uses a recipe builder.
 Don't know what a builder is? Check [the builder info page](../../../groovy/builder.md) out.
 
 ???+ Abstract "mods.appliedenergistics2.inscriber.recipeBuilder()"
-    - `#!groovy IngredientList<IIngredient>`. Sets the item inputs of the recipe. Requires exactly 1. (Default `null`).
+    - `#!groovy IngredientList<IIngredient>`. Sets the item inputs of the recipe. Requires exactly 1.
 
         ```groovy
         input(IIngredient)
@@ -40,7 +40,7 @@ Don't know what a builder is? Check [the builder info page](../../../groovy/buil
         input(Collection<IIngredient>)
         ```
 
-    - `#!groovy ItemStackList`. Sets the item outputs of the recipe. Requires exactly 1. (Default `null`).
+    - `#!groovy ItemStackList`. Sets the item outputs of the recipe. Requires exactly 1.
 
         ```groovy
         output(ItemStack)
@@ -48,13 +48,13 @@ Don't know what a builder is? Check [the builder info page](../../../groovy/buil
         output(Collection<ItemStack>)
         ```
 
-    - `#!groovy ItemStack`. Sets the top item of the inscriber recipe. Requires either top or bottom to be non-empty.
+    - `#!groovy ItemStack`. Sets the top item of the inscriber recipe. Requires either top or bottom to be non-empty. (Default `ItemStack.EMPTY`).
 
         ```groovy
         top(ItemStack)
         ```
 
-    - `#!groovy InscriberProcessType`. Sets the type of recipe, determining if the top/bottom items function as catalysts. Requires not null.
+    - `#!groovy InscriberProcessType`. Sets the type of recipe, determining if the top/bottom items function as catalysts. Requires not null. (Default `InscriberProcessType.PRESS`).
 
         ```groovy
         type(String)
@@ -63,7 +63,7 @@ Don't know what a builder is? Check [the builder info page](../../../groovy/buil
         inscribe()
         ```
 
-    - `#!groovy ItemStack`. Sets the bottom item of the inscriber recipe. Requires either top or bottom to be non-empty.
+    - `#!groovy ItemStack`. Sets the bottom item of the inscriber recipe. Requires either top or bottom to be non-empty. (Default `ItemStack.EMPTY`).
 
         ```groovy
         bottom(ItemStack)

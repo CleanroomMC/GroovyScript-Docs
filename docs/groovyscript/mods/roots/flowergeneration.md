@@ -32,14 +32,14 @@ Just like other recipe types, the Flower Generation also uses a recipe builder.
 Don't know what a builder is? Check [the builder info page](../../../groovy/builder.md) out.
 
 ???+ Abstract "mods.roots.flowergeneration.recipeBuilder()"
-    - `#!groovy ResourceLocation`. Sets the Resource Location of the recipe. (Default `null`).
+    - `#!groovy ResourceLocation`. Sets the Resource Location of the recipe.
 
         ```groovy
         name(String)
         name(ResourceLocation)
         ```
 
-    - `#!groovy IBlockState`. Sets the flower blockstate. Requires not null. (Default `null`).
+    - `#!groovy IBlockState`. Sets the flower blockstate. Requires not null.
 
         ```groovy
         flower(Block, int)

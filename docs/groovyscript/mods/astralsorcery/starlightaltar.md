@@ -44,7 +44,7 @@ Just like other recipe types, the Starlight Altar also uses a recipe builder.
 Don't know what a builder is? Check [the builder info page](../../../groovy/builder.md) out.
 
 ???+ Abstract "mods.astralsorcery.starlightaltar.discoveryRecipeBuilder()"
-    - `#!groovy String[]`. Sets the items required in each slot of the grid as char. Requires either the key-based matrix or the ingredient-based matrix can be defined, not both. (Default `null`).
+    - `#!groovy String[]`. Sets the items required in each slot of the grid as char. Requires either the key-based matrix or the ingredient-based matrix can be defined, not both.
 
         ```groovy
         row(String)
@@ -54,7 +54,7 @@ Don't know what a builder is? Check [the builder info page](../../../groovy/buil
         matrix(String...)
         ```
 
-    - `#!groovy List<List<IIngredient>>`. Sets the items required in each slot in the grid as IIngredients. Requires greater than or equal to 1 and less than or equal to 9. Requires either the key-based matrix or the ingredient-based matrix can be defined, not both. (Default `null`).
+    - `#!groovy List<List<IIngredient>>`. Sets the items required in each slot in the grid as IIngredients. Requires greater than or equal to 1 and less than or equal to 9. Requires either the key-based matrix or the ingredient-based matrix can be defined, not both.
 
         ```groovy
         shape(List)
@@ -63,7 +63,7 @@ Don't know what a builder is? Check [the builder info page](../../../groovy/buil
         matrix(List<List<IIngredient>>)
         ```
 
-    - `#!groovy Char2ObjectOpenHashMap<IIngredient>`. Sets the item the given char corresponds to.
+    - `#!groovy Char2ObjectOpenHashMap<IIngredient>`. Sets the item the given char corresponds to. (Default `\` \` = IIngredient.EMPTY`).
 
         ```groovy
         key(char, IIngredient)
@@ -71,7 +71,7 @@ Don't know what a builder is? Check [the builder info page](../../../groovy/buil
         key(Map<String, IIngredient>)
         ```
 
-    - `#!groovy ItemStack`. Sets the item output. Requires not null. (Default `null`).
+    - `#!groovy ItemStack`. Sets the item output. Requires not null.
 
         ```groovy
         output(ItemStack)
@@ -83,13 +83,13 @@ Don't know what a builder is? Check [the builder info page](../../../groovy/buil
         name(String)
         ```
 
-    - `#!groovy int`. Sets how long the craft will take to complete in ticks. Requires greater than 0.
+    - `#!groovy int`. Sets how long the craft will take to complete in ticks. Requires greater than 0. (Default `0`).
 
         ```groovy
         craftTime(int)
         ```
 
-    - `#!groovy IConstellation`. Sets the required Constellation for the Rock Crystal to be attuned to. Only applies to Iridescent Altars. (Default `null`).
+    - `#!groovy IConstellation`. Sets the required Constellation for the Rock Crystal to be attuned to. Only applies to Iridescent Altars.
 
         ```groovy
         constellation(IConstellation)
@@ -115,7 +115,7 @@ Don't know what a builder is? Check [the builder info page](../../../groovy/buil
         ```
 
 ???+ Abstract "mods.astralsorcery.starlightaltar.attunementRecipeBuilder()"
-    - `#!groovy String[]`. Sets the items required in each slot of the grid as char. Requires either the key-based matrix or the ingredient-based matrix can be defined, not both. (Default `null`).
+    - `#!groovy String[]`. Sets the items required in each slot of the grid as char. Requires either the key-based matrix or the ingredient-based matrix can be defined, not both.
 
         ```groovy
         row(String)
@@ -125,7 +125,7 @@ Don't know what a builder is? Check [the builder info page](../../../groovy/buil
         matrix(String...)
         ```
 
-    - `#!groovy List<List<IIngredient>>`. Sets the items required in each slot in the grid as IIngredients. Requires greater than or equal to 1 and less than or equal to 9. Requires either the key-based matrix or the ingredient-based matrix can be defined, not both. (Default `null`).
+    - `#!groovy List<List<IIngredient>>`. Sets the items required in each slot in the grid as IIngredients. Requires greater than or equal to 1 and less than or equal to 9. Requires either the key-based matrix or the ingredient-based matrix can be defined, not both.
 
         ```groovy
         shape(List)
@@ -134,7 +134,7 @@ Don't know what a builder is? Check [the builder info page](../../../groovy/buil
         matrix(List<List<IIngredient>>)
         ```
 
-    - `#!groovy Char2ObjectOpenHashMap<IIngredient>`. Sets the item the given char corresponds to.
+    - `#!groovy Char2ObjectOpenHashMap<IIngredient>`. Sets the item the given char corresponds to. (Default `\` \` = IIngredient.EMPTY`).
 
         ```groovy
         key(char, IIngredient)
@@ -142,7 +142,7 @@ Don't know what a builder is? Check [the builder info page](../../../groovy/buil
         key(Map<String, IIngredient>)
         ```
 
-    - `#!groovy ItemStack`. Sets the item output. Requires not null. (Default `null`).
+    - `#!groovy ItemStack`. Sets the item output. Requires not null.
 
         ```groovy
         output(ItemStack)
@@ -154,13 +154,13 @@ Don't know what a builder is? Check [the builder info page](../../../groovy/buil
         name(String)
         ```
 
-    - `#!groovy int`. Sets how long the craft will take to complete in ticks. Requires greater than 0.
+    - `#!groovy int`. Sets how long the craft will take to complete in ticks. Requires greater than 0. (Default `0`).
 
         ```groovy
         craftTime(int)
         ```
 
-    - `#!groovy IConstellation`. Sets the required Constellation for the Rock Crystal to be attuned to. Only applies to Iridescent Altars. (Default `null`).
+    - `#!groovy IConstellation`. Sets the required Constellation for the Rock Crystal to be attuned to. Only applies to Iridescent Altars.
 
         ```groovy
         constellation(IConstellation)
@@ -175,7 +175,7 @@ Don't know what a builder is? Check [the builder info page](../../../groovy/buil
 
 
 ???+ Abstract "mods.astralsorcery.starlightaltar.constellationRecipeBuilder()"
-    - `#!groovy String[]`. Sets the items required in each slot of the grid as char. Requires either the key-based matrix or the ingredient-based matrix can be defined, not both. (Default `null`).
+    - `#!groovy String[]`. Sets the items required in each slot of the grid as char. Requires either the key-based matrix or the ingredient-based matrix can be defined, not both.
 
         ```groovy
         row(String)
@@ -185,7 +185,7 @@ Don't know what a builder is? Check [the builder info page](../../../groovy/buil
         matrix(String...)
         ```
 
-    - `#!groovy List<List<IIngredient>>`. Sets the items required in each slot in the grid as IIngredients. Requires greater than or equal to 1 and less than or equal to 9. Requires either the key-based matrix or the ingredient-based matrix can be defined, not both. (Default `null`).
+    - `#!groovy List<List<IIngredient>>`. Sets the items required in each slot in the grid as IIngredients. Requires greater than or equal to 1 and less than or equal to 9. Requires either the key-based matrix or the ingredient-based matrix can be defined, not both.
 
         ```groovy
         shape(List)
@@ -194,7 +194,7 @@ Don't know what a builder is? Check [the builder info page](../../../groovy/buil
         matrix(List<List<IIngredient>>)
         ```
 
-    - `#!groovy Char2ObjectOpenHashMap<IIngredient>`. Sets the item the given char corresponds to.
+    - `#!groovy Char2ObjectOpenHashMap<IIngredient>`. Sets the item the given char corresponds to. (Default `\` \` = IIngredient.EMPTY`).
 
         ```groovy
         key(char, IIngredient)
@@ -202,7 +202,7 @@ Don't know what a builder is? Check [the builder info page](../../../groovy/buil
         key(Map<String, IIngredient>)
         ```
 
-    - `#!groovy ItemStack`. Sets the item output. Requires not null. (Default `null`).
+    - `#!groovy ItemStack`. Sets the item output. Requires not null.
 
         ```groovy
         output(ItemStack)
@@ -214,13 +214,13 @@ Don't know what a builder is? Check [the builder info page](../../../groovy/buil
         name(String)
         ```
 
-    - `#!groovy int`. Sets how long the craft will take to complete in ticks. Requires greater than 0.
+    - `#!groovy int`. Sets how long the craft will take to complete in ticks. Requires greater than 0. (Default `0`).
 
         ```groovy
         craftTime(int)
         ```
 
-    - `#!groovy IConstellation`. Sets the required Constellation for the Rock Crystal to be attuned to. Only applies to Iridescent Altars. (Default `null`).
+    - `#!groovy IConstellation`. Sets the required Constellation for the Rock Crystal to be attuned to. Only applies to Iridescent Altars.
 
         ```groovy
         constellation(IConstellation)
@@ -247,7 +247,7 @@ Don't know what a builder is? Check [the builder info page](../../../groovy/buil
         ```
 
 ???+ Abstract "mods.astralsorcery.starlightaltar.traitRecipeBuilder()"
-    - `#!groovy String[]`. Sets the items required in each slot of the grid as char. Requires either the key-based matrix or the ingredient-based matrix can be defined, not both. (Default `null`).
+    - `#!groovy String[]`. Sets the items required in each slot of the grid as char. Requires either the key-based matrix or the ingredient-based matrix can be defined, not both.
 
         ```groovy
         row(String)
@@ -257,7 +257,7 @@ Don't know what a builder is? Check [the builder info page](../../../groovy/buil
         matrix(String...)
         ```
 
-    - `#!groovy List<List<IIngredient>>`. Sets the items required in each slot in the grid as IIngredients. Requires greater than or equal to 1 and less than or equal to 9. Requires either the key-based matrix or the ingredient-based matrix can be defined, not both. (Default `null`).
+    - `#!groovy List<List<IIngredient>>`. Sets the items required in each slot in the grid as IIngredients. Requires greater than or equal to 1 and less than or equal to 9. Requires either the key-based matrix or the ingredient-based matrix can be defined, not both.
 
         ```groovy
         shape(List)
@@ -266,7 +266,7 @@ Don't know what a builder is? Check [the builder info page](../../../groovy/buil
         matrix(List<List<IIngredient>>)
         ```
 
-    - `#!groovy Char2ObjectOpenHashMap<IIngredient>`. Sets the item the given char corresponds to.
+    - `#!groovy Char2ObjectOpenHashMap<IIngredient>`. Sets the item the given char corresponds to. (Default `\` \` = IIngredient.EMPTY`).
 
         ```groovy
         key(char, IIngredient)
@@ -274,7 +274,7 @@ Don't know what a builder is? Check [the builder info page](../../../groovy/buil
         key(Map<String, IIngredient>)
         ```
 
-    - `#!groovy ItemStack`. Sets the item output. Requires not null. (Default `null`).
+    - `#!groovy ItemStack`. Sets the item output. Requires not null.
 
         ```groovy
         output(ItemStack)
@@ -286,13 +286,13 @@ Don't know what a builder is? Check [the builder info page](../../../groovy/buil
         name(String)
         ```
 
-    - `#!groovy int`. Sets how long the craft will take to complete in ticks. Requires greater than 0.
+    - `#!groovy int`. Sets how long the craft will take to complete in ticks. Requires greater than 0. (Default `0`).
 
         ```groovy
         craftTime(int)
         ```
 
-    - `#!groovy IConstellation`. Sets the required Constellation for the Rock Crystal to be attuned to. Only applies to Iridescent Altars. (Default `null`).
+    - `#!groovy IConstellation`. Sets the required Constellation for the Rock Crystal to be attuned to. Only applies to Iridescent Altars.
 
         ```groovy
         constellation(IConstellation)

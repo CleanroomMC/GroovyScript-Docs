@@ -47,7 +47,7 @@ Just like other recipe types, the Compression Crafting also uses a recipe builde
 Don't know what a builder is? Check [the builder info page](../../../groovy/builder.md) out.
 
 ???+ Abstract "mods.extendedcrafting.compressioncrafting.recipeBuilder()"
-    - `#!groovy IngredientList<IIngredient>`. Sets the item inputs of the recipe. Requires not null. (Default `null`).
+    - `#!groovy IngredientList<IIngredient>`. Sets the item inputs of the recipe. Requires not null.
 
         ```groovy
         input(IIngredient)
@@ -55,7 +55,7 @@ Don't know what a builder is? Check [the builder info page](../../../groovy/buil
         input(Collection<IIngredient>)
         ```
 
-    - `#!groovy ItemStackList`. Sets the item outputs of the recipe. Requires exactly 1. (Default `null`).
+    - `#!groovy ItemStackList`. Sets the item outputs of the recipe. Requires exactly 1.
 
         ```groovy
         output(ItemStack)
@@ -63,31 +63,31 @@ Don't know what a builder is? Check [the builder info page](../../../groovy/buil
         output(Collection<ItemStack>)
         ```
 
-    - `#!groovy IIngredient`. Sets the catalyst item for the recipe. Requires not null.
+    - `#!groovy IIngredient`. Sets the catalyst item for the recipe. Requires not null. (Default `IngredientHelper.toIIngredient(ItemSingularity.getCatalystStack())`).
 
         ```groovy
         catalyst(IIngredient)
         ```
 
-    - `#!groovy int`. Sets the amount of RF required to complete the craft. Requires greater than or equal to 0.
+    - `#!groovy int`. Sets the amount of RF required to complete the craft. Requires greater than or equal to 0. (Default `0`).
 
         ```groovy
         powerCost(int)
         ```
 
-    - `#!groovy int`. Sets the maximum amount of RF consumed per tick until the entire cost is paid. Requires greater than or equal to 0.
+    - `#!groovy int`. Sets the maximum amount of RF consumed per tick until the entire cost is paid. Requires greater than or equal to 0. (Default `ModConfig.confCompressorRFRate`).
 
         ```groovy
         powerRate(int)
         ```
 
-    - `#!groovy int`. Sets the quantity of input items required. Requires greater than or equal to 0.
+    - `#!groovy int`. Sets the quantity of input items required. Requires greater than or equal to 0. (Default `0`).
 
         ```groovy
         inputCount(int)
         ```
 
-    - `#!groovy boolean`. Sets if the catalyst item is consumed when the recipe completes.
+    - `#!groovy boolean`. Sets if the catalyst item is consumed when the recipe completes. (Default `false`).
 
         ```groovy
         consumeCatalyst(boolean)

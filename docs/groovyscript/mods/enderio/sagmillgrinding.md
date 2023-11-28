@@ -40,7 +40,7 @@ Just like other recipe types, the Sag Mill Grinding also uses a recipe builder.
 Don't know what a builder is? Check [the builder info page](../../../groovy/builder.md) out.
 
 ???+ Abstract "mods.enderio.sagmillgrinding.recipeBuilder()"
-    - `#!groovy IngredientList<IIngredient>`. Sets the item inputs of the recipe. Requires exactly 1. (Default `null`).
+    - `#!groovy IngredientList<IIngredient>`. Sets the item inputs of the recipe. Requires exactly 1.
 
         ```groovy
         input(IIngredient)
@@ -48,25 +48,25 @@ Don't know what a builder is? Check [the builder info page](../../../groovy/buil
         input(Collection<IIngredient>)
         ```
 
-    - `#!groovy float`. Sets the power multiplier to recipes processed with the grinding ball. Requires greater than 0.
+    - `#!groovy float`. Sets the power multiplier to recipes processed with the grinding ball. Requires greater than 0. (Default `1`).
 
         ```groovy
         power(float)
         ```
 
-    - `#!groovy float`. Sets the chance to double all outputs in recipes with an applicable bonusType. Requires greater than 0.
+    - `#!groovy float`. Sets the chance to double all outputs in recipes with an applicable bonusType. Requires greater than 0. (Default `1`).
 
         ```groovy
         chance(float)
         ```
 
-    - `#!groovy int`. Sets the amount of power used in recipes before the grinding ball is consumed. Requires greater than 0.
+    - `#!groovy int`. Sets the amount of power used in recipes before the grinding ball is consumed. Requires greater than 0. (Default `0`).
 
         ```groovy
         duration(int)
         ```
 
-    - `#!groovy float`. Format error: Sets the chance to increase outputs up to 100% with an applicable bonusType. Requires greater than 0.
+    - `#!groovy float`. Format error: Sets the chance to increase outputs up to 100% with an applicable bonusType. Requires greater than 0. (Default `1`).
 
         ```groovy
         grinding(float)

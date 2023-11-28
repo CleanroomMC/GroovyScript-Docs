@@ -43,7 +43,7 @@ Just like other recipe types, the Spawning also uses a recipe builder.
 Don't know what a builder is? Check [the builder info page](../../../groovy/builder.md) out.
 
 ???+ Abstract "mods.woot.spawning.recipeBuilder()"
-    - `#!groovy IngredientList<IIngredient>`. Sets the item inputs of the recipe. Requires greater than or equal to 0 and less than or equal to 6. (Default `null`).
+    - `#!groovy IngredientList<IIngredient>`. Sets the item inputs of the recipe. Requires greater than or equal to 0 and less than or equal to 6.
 
         ```groovy
         input(IIngredient)
@@ -51,7 +51,7 @@ Don't know what a builder is? Check [the builder info page](../../../groovy/buil
         input(Collection<IIngredient>)
         ```
 
-    - `#!groovy FluidStackList`. Sets the fluid inputs of the recipe. Requires greater than or equal to 0 and less than or equal to 6. (Default `null`).
+    - `#!groovy FluidStackList`. Sets the fluid inputs of the recipe. Requires greater than or equal to 0 and less than or equal to 6.
 
         ```groovy
         fluidInput(FluidStack)
@@ -59,7 +59,7 @@ Don't know what a builder is? Check [the builder info page](../../../groovy/buil
         fluidInput(Collection<FluidStack>)
         ```
 
-    - `#!groovy WootMobName`. Sets the entity being targeted. Requires either `name` to be defined and a valid name or `defaultSpawnRecipe` to be true. (Default `null`).
+    - `#!groovy WootMobName`. Sets the entity being targeted. Requires either `name` to be defined and a valid name or `defaultSpawnRecipe` to be true.
 
         ```groovy
         name(String)
@@ -68,7 +68,7 @@ Don't know what a builder is? Check [the builder info page](../../../groovy/buil
         name(ResourceLocation)
         ```
 
-    - `#!groovy boolean`. Sets if the default recipes are being targeted instead of a specific entity name. Requires either `name` to be defined and a valid name or `defaultSpawnRecipe` to be true.
+    - `#!groovy boolean`. Sets if the default recipes are being targeted instead of a specific entity name. Requires either `name` to be defined and a valid name or `defaultSpawnRecipe` to be true. (Default `false`).
 
         ```groovy
         defaultSpawnRecipe()

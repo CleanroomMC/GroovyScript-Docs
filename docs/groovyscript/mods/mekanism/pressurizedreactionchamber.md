@@ -34,7 +34,7 @@ Just like other recipe types, the Pressurized Reaction Chamber also uses a recip
 Don't know what a builder is? Check [the builder info page](../../../groovy/builder.md) out.
 
 ???+ Abstract "mods.mekanism.pressurizedreactionchamber.recipeBuilder()"
-    - `#!groovy IngredientList<IIngredient>`. Sets the item inputs of the recipe. Requires greater than or equal to 0 and less than or equal to 1. (Default `null`).
+    - `#!groovy IngredientList<IIngredient>`. Sets the item inputs of the recipe. Requires greater than or equal to 0 and less than or equal to 1.
 
         ```groovy
         input(IIngredient)
@@ -42,7 +42,7 @@ Don't know what a builder is? Check [the builder info page](../../../groovy/buil
         input(Collection<IIngredient>)
         ```
 
-    - `#!groovy FluidStackList`. Sets the fluid inputs of the recipe. Requires exactly 1. (Default `null`).
+    - `#!groovy FluidStackList`. Sets the fluid inputs of the recipe. Requires exactly 1.
 
         ```groovy
         fluidInput(FluidStack)
@@ -50,7 +50,7 @@ Don't know what a builder is? Check [the builder info page](../../../groovy/buil
         fluidInput(Collection<FluidStack>)
         ```
 
-    - `#!groovy GasStackList`. Sets the gas inputs of the recipe. Requires exactly 1. (Default `null`).
+    - `#!groovy GasStackList`. Sets the gas inputs of the recipe. Requires exactly 1.
 
         ```groovy
         gasInput(GasStack)
@@ -58,7 +58,7 @@ Don't know what a builder is? Check [the builder info page](../../../groovy/buil
         gasInput(Collection<GasStack>)
         ```
 
-    - `#!groovy ItemStackList`. Sets the item outputs of the recipe. Requires greater than or equal to 0 and less than or equal to 1. (Default `null`).
+    - `#!groovy ItemStackList`. Sets the item outputs of the recipe. Requires greater than or equal to 0 and less than or equal to 1.
 
         ```groovy
         output(ItemStack)
@@ -66,7 +66,7 @@ Don't know what a builder is? Check [the builder info page](../../../groovy/buil
         output(Collection<ItemStack>)
         ```
 
-    - `#!groovy GasStackList`. Sets the gas outputs of the recipe. Requires exactly 1. (Default `null`).
+    - `#!groovy GasStackList`. Sets the gas outputs of the recipe. Requires exactly 1.
 
         ```groovy
         gasOutput(GasStack)
@@ -74,12 +74,12 @@ Don't know what a builder is? Check [the builder info page](../../../groovy/buil
         gasOutput(Collection<GasStack>)
         ```
 
-    - `#!groovy double`. Sets the energy cost of the recipe. Requires greater than 0.
+    - `#!groovy double`. Sets the energy cost of the recipe. Requires greater than 0. (Default `0.0d`).
 
         ```groovy
         ```
 
-    - `#!groovy int`. Sets the time in ticks for the recipe to process. Requires greater than 0.
+    - `#!groovy int`. Sets the time in ticks for the recipe to process. Requires greater than 0. (Default `0`).
 
         ```groovy
         ```

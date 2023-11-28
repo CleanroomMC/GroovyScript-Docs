@@ -43,7 +43,7 @@ Don't know what a builder is? Check [the builder info page](../../../groovy/buil
         ore(OreDictIngredient)
         ```
 
-    - `#!groovy int`. Sets how likely this ore is to be rolled. Requires greater than or equal to 0.
+    - `#!groovy int`. Sets how likely this ore is to be rolled. Requires greater than or equal to 0. (Default `0`).
 
         ```groovy
         weight(int)

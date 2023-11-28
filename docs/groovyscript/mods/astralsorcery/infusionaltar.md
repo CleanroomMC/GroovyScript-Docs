@@ -44,7 +44,7 @@ Just like other recipe types, the Infusion Altar also uses a recipe builder.
 Don't know what a builder is? Check [the builder info page](../../../groovy/builder.md) out.
 
 ???+ Abstract "mods.astralsorcery.infusionaltar.recipeBuilder()"
-    - `#!groovy IngredientList<IIngredient>`. Sets the item inputs of the recipe. Requires exactly 1. (Default `null`).
+    - `#!groovy IngredientList<IIngredient>`. Sets the item inputs of the recipe. Requires exactly 1.
 
         ```groovy
         input(IIngredient)
@@ -52,7 +52,7 @@ Don't know what a builder is? Check [the builder info page](../../../groovy/buil
         input(Collection<IIngredient>)
         ```
 
-    - `#!groovy ItemStackList`. Sets the item outputs of the recipe. Requires exactly 1. (Default `null`).
+    - `#!groovy ItemStackList`. Sets the item outputs of the recipe. Requires exactly 1.
 
         ```groovy
         output(ItemStack)
@@ -60,26 +60,26 @@ Don't know what a builder is? Check [the builder info page](../../../groovy/buil
         output(Collection<ItemStack>)
         ```
 
-    - `#!groovy int`. Sets the time the recipe takes to complete. Requires greater than 0.
+    - `#!groovy int`. Sets the time the recipe takes to complete. Requires greater than 0. (Default `0`).
 
         ```groovy
         time(int)
         ```
 
-    - `#!groovy boolean`. Sets if using a chalice speeds up the recipe time.
+    - `#!groovy boolean`. Sets if using a chalice speeds up the recipe time. (Default `false`).
 
         ```groovy
         chalice()
         chalice(boolean)
         ```
 
-    - `#!groovy float`. Sets the chance of consuming a bucket of Starlight. Requires greater than or equal to 0 and less than or equal to 1.
+    - `#!groovy float`. Sets the chance of consuming a bucket of Starlight. Requires greater than or equal to 0 and less than or equal to 1. (Default `0.0f`).
 
         ```groovy
         consumption(float)
         ```
 
-    - `#!groovy boolean`. Sets if the recipe consumes all 12 buckets of Starlight surrounding the Infusion Altar instead of just one.
+    - `#!groovy boolean`. Sets if the recipe consumes all 12 buckets of Starlight surrounding the Infusion Altar instead of just one. (Default `false`).
 
         ```groovy
         consumeMultiple()

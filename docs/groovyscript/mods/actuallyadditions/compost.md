@@ -32,7 +32,7 @@ Just like other recipe types, the Compost also uses a recipe builder.
 Don't know what a builder is? Check [the builder info page](../../../groovy/builder.md) out.
 
 ???+ Abstract "mods.actuallyadditions.compost.recipeBuilder()"
-    - `#!groovy IngredientList<IIngredient>`. Sets the item inputs of the recipe. Requires exactly 1. (Default `null`).
+    - `#!groovy IngredientList<IIngredient>`. Sets the item inputs of the recipe. Requires exactly 1.
 
         ```groovy
         input(IIngredient)
@@ -40,7 +40,7 @@ Don't know what a builder is? Check [the builder info page](../../../groovy/buil
         input(Collection<IIngredient>)
         ```
 
-    - `#!groovy ItemStackList`. Sets the item outputs of the recipe. Requires exactly 1. (Default `null`).
+    - `#!groovy ItemStackList`. Sets the item outputs of the recipe. Requires exactly 1.
 
         ```groovy
         output(ItemStack)
@@ -48,13 +48,13 @@ Don't know what a builder is? Check [the builder info page](../../../groovy/buil
         output(Collection<ItemStack>)
         ```
 
-    - `#!groovy IBlockState`. Sets the texture rendering inside the Compost Bin in-world while the given recipe is being processed. Requires not null. (Default `null`).
+    - `#!groovy IBlockState`. Sets the texture rendering inside the Compost Bin in-world while the given recipe is being processed. Requires not null.
 
         ```groovy
         inputDisplay(IBlockState)
         ```
 
-    - `#!groovy IBlockState`. Sets the texture rendering inside the Compost Bin in-world while the given recipe has been completed but has not yet been extracted. Requires not null. (Default `null`).
+    - `#!groovy IBlockState`. Sets the texture rendering inside the Compost Bin in-world while the given recipe has been completed but has not yet been extracted. Requires not null.
 
         ```groovy
         outputDisplay(IBlockState)

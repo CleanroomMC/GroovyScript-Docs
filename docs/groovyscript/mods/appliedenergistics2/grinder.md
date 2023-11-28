@@ -32,7 +32,7 @@ Just like other recipe types, the Grinder also uses a recipe builder.
 Don't know what a builder is? Check [the builder info page](../../../groovy/builder.md) out.
 
 ???+ Abstract "mods.appliedenergistics2.grinder.recipeBuilder()"
-    - `#!groovy IngredientList<IIngredient>`. Sets the item inputs of the recipe. Requires exactly 1. (Default `null`).
+    - `#!groovy IngredientList<IIngredient>`. Sets the item inputs of the recipe. Requires exactly 1.
 
         ```groovy
         input(IIngredient)
@@ -40,7 +40,7 @@ Don't know what a builder is? Check [the builder info page](../../../groovy/buil
         input(Collection<IIngredient>)
         ```
 
-    - `#!groovy ItemStackList`. Sets the item outputs of the recipe. Requires greater than or equal to 1 and less than or equal to 3. (Default `null`).
+    - `#!groovy ItemStackList`. Sets the item outputs of the recipe. Requires greater than or equal to 1 and less than or equal to 3.
 
         ```groovy
         output(ItemStack)
@@ -48,20 +48,20 @@ Don't know what a builder is? Check [the builder info page](../../../groovy/buil
         output(Collection<ItemStack>)
         ```
 
-    - `#!groovy int`. Sets the number of turns of the Hand Crank are required. Requires greater than 0.
+    - `#!groovy int`. Sets the number of turns of the Hand Crank are required. Requires greater than 0. (Default `0`).
 
         ```groovy
         turns(int)
         ```
 
-    - `#!groovy float`. Sets the chance of the second output item being output. Requires greater than or equal to 0 and less than or equal to 1.
+    - `#!groovy float`. Sets the chance of the second output item being output. Requires greater than or equal to 0 and less than or equal to 1. (Default `1.0f`).
 
         ```groovy
         chance(float, float)
         chance1(float)
         ```
 
-    - `#!groovy float`. Sets the chance of the third output item being output. Requires greater than or equal to 0 and less than or equal to 1.
+    - `#!groovy float`. Sets the chance of the third output item being output. Requires greater than or equal to 0 and less than or equal to 1. (Default `1.0f`).
 
         ```groovy
         chance(float, float)

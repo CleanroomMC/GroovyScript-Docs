@@ -47,20 +47,20 @@ Just like other recipe types, the Infusion Crafting also uses a recipe builder.
 Don't know what a builder is? Check [the builder info page](../../../groovy/builder.md) out.
 
 ???+ Abstract "mods.thaumcraft.infusioncrafting.recipeBuilder()"
-    - `#!groovy AspectList`. Sets the Aspects and amounts required to complete the craft. (Default `null`).
+    - `#!groovy AspectList`. Sets the Aspects and amounts required to complete the craft.
 
         ```groovy
         aspect(AspectStack)
         aspect(String, int)
         ```
 
-    - `#!groovy IIngredient`. Sets the item on the center pedestal. Requires not null. (Default `null`).
+    - `#!groovy IIngredient`. Sets the item on the center pedestal. Requires not null.
 
         ```groovy
         mainInput(IIngredient)
         ```
 
-    - `#!groovy int`. Sets the instability of the recipe.
+    - `#!groovy int`. Sets the instability of the recipe. (Default `0`).
 
         ```groovy
         instability(int)

@@ -55,7 +55,7 @@ Just like other recipe types, the Alchemy Array also uses a recipe builder.
 Don't know what a builder is? Check [the builder info page](../../../groovy/builder.md) out.
 
 ???+ Abstract "mods.bloodmagic.alchemyarray.recipeBuilder()"
-    - `#!groovy IngredientList<IIngredient>`. Sets the item inputs of the recipe. Requires exactly 1. (Default `null`).
+    - `#!groovy IngredientList<IIngredient>`. Sets the item inputs of the recipe. Requires exactly 1.
 
         ```groovy
         input(IIngredient)
@@ -63,7 +63,7 @@ Don't know what a builder is? Check [the builder info page](../../../groovy/buil
         input(Collection<IIngredient>)
         ```
 
-    - `#!groovy ItemStackList`. Sets the item outputs of the recipe. Requires exactly 1. (Default `null`).
+    - `#!groovy ItemStackList`. Sets the item outputs of the recipe. Requires exactly 1.
 
         ```groovy
         output(ItemStack)
@@ -71,14 +71,14 @@ Don't know what a builder is? Check [the builder info page](../../../groovy/buil
         output(Collection<ItemStack>)
         ```
 
-    - `#!groovy ResourceLocation`. Sets the animation texture. (Default `null`).
+    - `#!groovy ResourceLocation`. Sets the animation texture.
 
         ```groovy
         texture(String)
         texture(ResourceLocation)
         ```
 
-    - `#!groovy IIngredient`. Sets the catalyst. (Default `null`).
+    - `#!groovy IIngredient`. Sets the catalyst.
 
         ```groovy
         catalyst(IIngredient)

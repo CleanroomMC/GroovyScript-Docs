@@ -42,7 +42,7 @@ Just like other recipe types, the Sag Mill also uses a recipe builder.
 Don't know what a builder is? Check [the builder info page](../../../groovy/builder.md) out.
 
 ???+ Abstract "mods.enderio.sagmill.recipeBuilder()"
-    - `#!groovy IngredientList<IIngredient>`. Sets the item inputs of the recipe. Requires exactly 1. (Default `null`).
+    - `#!groovy IngredientList<IIngredient>`. Sets the item inputs of the recipe. Requires exactly 1.
 
         ```groovy
         input(IIngredient)
@@ -50,7 +50,7 @@ Don't know what a builder is? Check [the builder info page](../../../groovy/buil
         input(Collection<IIngredient>)
         ```
 
-    - `#!groovy ItemStackList`. Sets the item outputs of the recipe. Requires greater than or equal to 1 and less than or equal to 4. (Default `null`).
+    - `#!groovy ItemStackList`. Sets the item outputs of the recipe. Requires greater than or equal to 1 and less than or equal to 4.
 
         ```groovy
         output(ItemStack)
@@ -59,7 +59,7 @@ Don't know what a builder is? Check [the builder info page](../../../groovy/buil
         output(Collection<ItemStack>)
         ```
 
-    - `#!groovy RecipeLevel`. Sets the minimum required machine tier of the recipe.
+    - `#!groovy RecipeLevel`. Sets the minimum required machine tier of the recipe. (Default `RecipeLevel.IGNORE`).
 
         ```groovy
         tierAny()
@@ -68,20 +68,20 @@ Don't know what a builder is? Check [the builder info page](../../../groovy/buil
         tierEnhanced()
         ```
 
-    - `#!groovy int`. Sets the energy cost of the recipe. Requires greater than 0.
+    - `#!groovy int`. Sets the energy cost of the recipe. Requires greater than 0. (Default `0`).
 
         ```groovy
         energy(int)
         ```
 
-    - `#!groovy FloatList`. Sets the chance the given output of each output slot. (Default `null`).
+    - `#!groovy FloatList`. Sets the chance the given output of each output slot.
 
         ```groovy
         output(ItemStack)
         output(ItemStack, float)
         ```
 
-    - `#!groovy RecipeBonusType`. Sets the type of bonus a Grinding Ball can apply.
+    - `#!groovy RecipeBonusType`. Sets the type of bonus a Grinding Ball can apply. (Default `RecipeBonusType.NONE`).
 
         ```groovy
         bonusTypeNone()

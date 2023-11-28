@@ -32,13 +32,13 @@ Just like other recipe types, the Vat also uses a recipe builder.
 Don't know what a builder is? Check [the builder info page](../../../groovy/builder.md) out.
 
 ???+ Abstract "mods.enderio.vat.recipeBuilder()"
-    - `#!groovy FluidStack`. Sets the input fluid. Requires not null. (Default `null`).
+    - `#!groovy FluidStack`. Sets the input fluid. Requires not null.
 
         ```groovy
         input(FluidStack)
         ```
 
-    - `#!groovy RecipeLevel`. Sets the minimum required machine tier of the recipe.
+    - `#!groovy RecipeLevel`. Sets the minimum required machine tier of the recipe. (Default `RecipeLevel.IGNORE`).
 
         ```groovy
         tierAny()
@@ -46,43 +46,43 @@ Don't know what a builder is? Check [the builder info page](../../../groovy/buil
         tierEnhanced()
         ```
 
-    - `#!groovy int`. Sets the energy cost of the recipe. Requires greater than 0.
+    - `#!groovy int`. Sets the energy cost of the recipe. Requires greater than 0. (Default `0`).
 
         ```groovy
         energy(int)
         ```
 
-    - `#!groovy FluidStack`. Sets the output fluid. Requires not null. (Default `null`).
+    - `#!groovy FluidStack`. Sets the output fluid. Requires not null.
 
         ```groovy
         output(FluidStack)
         ```
 
-    - `#!groovy IngredientList<IIngredient>`. Sets the valid input items for the left side. (Default `null`).
+    - `#!groovy IngredientList<IIngredient>`. Sets the valid input items for the left side.
 
         ```groovy
         itemInputLeft(IIngredient, float)
         ```
 
-    - `#!groovy IngredientList<IIngredient>`. Sets the valid input items for the right side. (Default `null`).
+    - `#!groovy IngredientList<IIngredient>`. Sets the valid input items for the right side.
 
         ```groovy
         itemInputRight(IIngredient, float)
         ```
 
-    - `#!groovy FloatList`. Sets the multiplier applied to the respective input item on the left side. (Default `null`).
+    - `#!groovy FloatList`. Sets the multiplier applied to the respective input item on the left side.
 
         ```groovy
         itemInputLeft(IIngredient, float)
         ```
 
-    - `#!groovy FloatList`. Sets the multiplier applied to the respective input item on the right side. (Default `null`).
+    - `#!groovy FloatList`. Sets the multiplier applied to the respective input item on the right side.
 
         ```groovy
         itemInputRight(IIngredient, float)
         ```
 
-    - `#!groovy float`. Sets the base amount of fluid output. Requires greater than 0.
+    - `#!groovy float`. Sets the base amount of fluid output. Requires greater than 0. (Default `1`).
 
         ```groovy
         baseMultiplier(float)

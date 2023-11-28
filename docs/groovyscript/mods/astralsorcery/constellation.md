@@ -61,7 +61,7 @@ Don't know what a builder is? Check [the builder info page](../../../groovy/buil
         name(String)
         ```
 
-    - `#!groovy Constellation.ConstellationBuilder.Type`. Sets the type of Constellation. (Default `null`).
+    - `#!groovy Constellation.ConstellationBuilder.Type`. Sets the type of Constellation.
 
         ```groovy
         weak()
@@ -69,13 +69,13 @@ Don't know what a builder is? Check [the builder info page](../../../groovy/buil
         minor()
         ```
 
-    - `#!groovy Color`. Sets the color of the Constellation.
+    - `#!groovy Color`. Sets the color of the Constellation. (Default `Major: #2843CC, Weak: #432CB0, Minor: #5D197F`).
 
         ```groovy
         color(int)
         ```
 
-    - `#!groovy ArrayList<MoonPhase>`. Sets what phase of the moon the Constellation appears in. Only applies if the Constellation type is Minor. Requires greater than or equal to 0. (Default `null`).
+    - `#!groovy ArrayList<MoonPhase>`. Sets what phase of the moon the Constellation appears in. Only applies if the Constellation type is Minor. Requires greater than or equal to 0.
 
         ```groovy
         phase(MoonPhase)
@@ -83,7 +83,7 @@ Don't know what a builder is? Check [the builder info page](../../../groovy/buil
         phase(Collection<MoonPhase>)
         ```
 
-    - `#!groovy ArrayList<Constellation.Point2PointConnection>`. Sets the stars and connections between stars that map the Constellation. Requires greater than or equal to 0. (Default `null`).
+    - `#!groovy ArrayList<Constellation.Point2PointConnection>`. Sets the stars and connections between stars that map the Constellation. Requires greater than or equal to 0.
 
         ```groovy
         connection(int, int, int, int)
@@ -118,19 +118,19 @@ Don't know what a builder is? Check [the builder info page](../../../groovy/buil
         ```
 
 ???+ Abstract "mods.astralsorcery.constellation.constellationMapEffectBuilder()"
-    - `#!groovy List<ConstellationMapEffectRegistry.PotionMapEffect>`. Sets the potion effects and strength available via the Stellar Refraction Table. Requires greater than or equal to 0. (Default `null`).
+    - `#!groovy List<ConstellationMapEffectRegistry.PotionMapEffect>`. Sets the potion effects and strength available via the Stellar Refraction Table. Requires greater than or equal to 0.
 
         ```groovy
         potionEffect(Potion, int, int)
         ```
 
-    - `#!groovy IConstellation`. Sets the Constellation being modified. Requires not null. (Default `null`).
+    - `#!groovy IConstellation`. Sets the Constellation being modified. Requires not null.
 
         ```groovy
         constellation(IConstellation)
         ```
 
-    - `#!groovy List<ConstellationMapEffectRegistry.EnchantmentMapEffect>`. Sets the enchantments and enchantment levels available via the Stellar Refraction Table. Requires greater than or equal to 0. (Default `null`).
+    - `#!groovy List<ConstellationMapEffectRegistry.EnchantmentMapEffect>`. Sets the enchantments and enchantment levels available via the Stellar Refraction Table. Requires greater than or equal to 0.
 
         ```groovy
         enchantmentEffect(Enchantment, int, int)
@@ -152,19 +152,19 @@ Don't know what a builder is? Check [the builder info page](../../../groovy/buil
         ```
 
 ???+ Abstract "mods.astralsorcery.constellation.signatureItems()"
-    - `#!groovy ArrayList<IIngredient>`. Sets the signature items of the Constellation. (Default `null`).
+    - `#!groovy ArrayList<IIngredient>`. Sets the signature items of the Constellation.
 
         ```groovy
         addItem(IIngredient)
         ```
 
-    - `#!groovy boolean`. Sets if the default signature items of the Constellation will be removed before adding new ones.
+    - `#!groovy boolean`. Sets if the default signature items of the Constellation will be removed before adding new ones. (Default `false`).
 
         ```groovy
         stripItems()
         ```
 
-    - `#!groovy IConstellation`. Sets the Constellation being modified. Requires not null. (Default `null`).
+    - `#!groovy IConstellation`. Sets the Constellation being modified. Requires not null.
 
         ```groovy
         constellation(IConstellation)

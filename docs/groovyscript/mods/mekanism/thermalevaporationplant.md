@@ -49,7 +49,7 @@ Just like other recipe types, the Thermal Evaporation Plant also uses a recipe b
 Don't know what a builder is? Check [the builder info page](../../../groovy/builder.md) out.
 
 ???+ Abstract "mods.mekanism.thermalevaporationplant.recipeBuilder()"
-    - `#!groovy FluidStackList`. Sets the fluid inputs of the recipe. Requires exactly 1. (Default `null`).
+    - `#!groovy FluidStackList`. Sets the fluid inputs of the recipe. Requires exactly 1.
 
         ```groovy
         fluidInput(FluidStack)
@@ -57,7 +57,7 @@ Don't know what a builder is? Check [the builder info page](../../../groovy/buil
         fluidInput(Collection<FluidStack>)
         ```
 
-    - `#!groovy FluidStackList`. Sets the fluid outputs of the recipe. Requires exactly 1. (Default `null`).
+    - `#!groovy FluidStackList`. Sets the fluid outputs of the recipe. Requires exactly 1.
 
         ```groovy
         fluidOutput(FluidStack)

@@ -43,7 +43,7 @@ Just like other recipe types, the Arc Furnace also uses a recipe builder.
 Don't know what a builder is? Check [the builder info page](../../../groovy/builder.md) out.
 
 ???+ Abstract "mods.immersiveengineering.arcfurnace.recipeBuilder()"
-    - `#!groovy IngredientList<IIngredient>`. Sets the item inputs of the recipe. Requires greater than or equal to 0 and less than or equal to 5. (Default `null`).
+    - `#!groovy IngredientList<IIngredient>`. Sets the item inputs of the recipe. Requires greater than or equal to 0 and less than or equal to 5.
 
         ```groovy
         input(IIngredient)
@@ -51,7 +51,7 @@ Don't know what a builder is? Check [the builder info page](../../../groovy/buil
         input(Collection<IIngredient>)
         ```
 
-    - `#!groovy ItemStackList`. Sets the item outputs of the recipe. Requires exactly 1. (Default `null`).
+    - `#!groovy ItemStackList`. Sets the item outputs of the recipe. Requires exactly 1.
 
         ```groovy
         output(ItemStack)
@@ -59,25 +59,25 @@ Don't know what a builder is? Check [the builder info page](../../../groovy/buil
         output(Collection<ItemStack>)
         ```
 
-    - `#!groovy ItemStack`. Sets the item output as slag. Requires not null. (Default `null`).
+    - `#!groovy ItemStack`. Sets the item output as slag. Requires not null.
 
         ```groovy
         slag(ItemStack)
         ```
 
-    - `#!groovy int`. Sets the time in ticks the recipe takes to process. Requires greater than 0.
+    - `#!groovy int`. Sets the time in ticks the recipe takes to process. Requires greater than 0. (Default `0`).
 
         ```groovy
         time(int)
         ```
 
-    - `#!groovy IIngredient`. Sets the item input. Requires not null. (Default `null`).
+    - `#!groovy IIngredient`. Sets the item input. Requires not null.
 
         ```groovy
         mainInput(IIngredient)
         ```
 
-    - `#!groovy int`. Sets the amount of power consumed per tick. Requires greater than 0.
+    - `#!groovy int`. Sets the amount of power consumed per tick. Requires greater than 0. (Default `0`).
 
         ```groovy
         energyPerTick(int)

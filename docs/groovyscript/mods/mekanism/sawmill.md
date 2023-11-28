@@ -41,7 +41,7 @@ Just like other recipe types, the Sawmill also uses a recipe builder.
 Don't know what a builder is? Check [the builder info page](../../../groovy/builder.md) out.
 
 ???+ Abstract "mods.mekanism.sawmill.recipeBuilder()"
-    - `#!groovy IngredientList<IIngredient>`. Sets the item inputs of the recipe. Requires exactly 1. (Default `null`).
+    - `#!groovy IngredientList<IIngredient>`. Sets the item inputs of the recipe. Requires exactly 1.
 
         ```groovy
         input(IIngredient)
@@ -49,7 +49,7 @@ Don't know what a builder is? Check [the builder info page](../../../groovy/buil
         input(Collection<IIngredient>)
         ```
 
-    - `#!groovy ItemStackList`. Sets the item outputs of the recipe. Requires exactly 1. (Default `null`).
+    - `#!groovy ItemStackList`. Sets the item outputs of the recipe. Requires exactly 1.
 
         ```groovy
         output(ItemStack)
@@ -57,12 +57,12 @@ Don't know what a builder is? Check [the builder info page](../../../groovy/buil
         output(Collection<ItemStack>)
         ```
 
-    - `#!groovy ItemStack`. Sets the extra itemstack produced by the recipe.
+    - `#!groovy ItemStack`. Sets the extra itemstack produced by the recipe. (Default `ItemStack.EMPTY`).
 
         ```groovy
         ```
 
-    - `#!groovy double`. Sets the chance the extra itemstack has to be produced. Requires greater than or equal to 0 and less than or equal to 1.
+    - `#!groovy double`. Sets the chance the extra itemstack has to be produced. Requires greater than or equal to 0 and less than or equal to 1. (Default `1.0`).
 
         ```groovy
         ```

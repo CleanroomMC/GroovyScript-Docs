@@ -33,7 +33,7 @@ Just like other recipe types, the Spells also uses a recipe builder.
 Don't know what a builder is? Check [the builder info page](../../../groovy/builder.md) out.
 
 ???+ Abstract "mods.roots.spells.costBuilder()"
-    - `#!groovy List<IModifierCost>`. Sets a list of all cost types used to construct a complex Cost object. (Default `null`).
+    - `#!groovy List<IModifierCost>`. Sets a list of all cost types used to construct a complex Cost object.
 
         ```groovy
         cost(CostType)
@@ -65,14 +65,14 @@ Don't know what a builder is? Check [the builder info page](../../../groovy/buil
         ```
 
 ???+ Abstract "mods.roots.spells.recipeBuilder()"
-    - `#!groovy ResourceLocation`. Sets the Resource Location of the recipe. (Default `null`).
+    - `#!groovy ResourceLocation`. Sets the Resource Location of the recipe.
 
         ```groovy
         name(String)
         name(ResourceLocation)
         ```
 
-    - `#!groovy IngredientList<IIngredient>`. Sets the item inputs of the recipe. Requires greater than or equal to 1 and less than or equal to 5. (Default `null`).
+    - `#!groovy IngredientList<IIngredient>`. Sets the item inputs of the recipe. Requires greater than or equal to 1 and less than or equal to 5.
 
         ```groovy
         input(IIngredient)
@@ -80,7 +80,7 @@ Don't know what a builder is? Check [the builder info page](../../../groovy/buil
         input(Collection<IIngredient>)
         ```
 
-    - `#!groovy SpellBase`. Sets the spell being modified. Requires not null. (Default `null`).
+    - `#!groovy SpellBase`. Sets the spell being modified. Requires not null.
 
         ```groovy
         spell(SpellBase)

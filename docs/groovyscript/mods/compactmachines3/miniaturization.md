@@ -32,7 +32,7 @@ Just like other recipe types, the Miniaturization also uses a recipe builder.
 Don't know what a builder is? Check [the builder info page](../../../groovy/builder.md) out.
 
 ???+ Abstract "mods.compactmachines3.miniaturization.recipeBuilder()"
-    - `#!groovy IngredientList<IIngredient>`. Sets the item inputs of the recipe. Requires exactly 1. (Default `null`).
+    - `#!groovy IngredientList<IIngredient>`. Sets the item inputs of the recipe. Requires exactly 1.
 
         ```groovy
         input(IIngredient)
@@ -40,7 +40,7 @@ Don't know what a builder is? Check [the builder info page](../../../groovy/buil
         input(Collection<IIngredient>)
         ```
 
-    - `#!groovy ItemStackList`. Sets the item outputs of the recipe. Requires exactly 1. (Default `null`).
+    - `#!groovy ItemStackList`. Sets the item outputs of the recipe. Requires exactly 1.
 
         ```groovy
         output(ItemStack)
@@ -48,7 +48,7 @@ Don't know what a builder is? Check [the builder info page](../../../groovy/buil
         output(Collection<ItemStack>)
         ```
 
-    - `#!groovy List<List<String>>`. Sets the structure in order of a descending Y-axis. (Default `null`).
+    - `#!groovy List<List<String>>`. Sets the structure in order of a descending Y-axis.
 
         ```groovy
         layer(String...)
@@ -56,13 +56,13 @@ Don't know what a builder is? Check [the builder info page](../../../groovy/buil
         shape(List<List<String>>)
         ```
 
-    - `#!groovy int`. Sets the time in ticks the recipe takes to process before dropping the output item.
+    - `#!groovy int`. Sets the time in ticks the recipe takes to process before dropping the output item. (Default `100`).
 
         ```groovy
         ticks(int)
         ```
 
-    - `#!groovy Char2ObjectOpenHashMap<Miniaturization.RecipeBuilder.ReferenceValues>`. Sets the IBlockState, specific NBT, if the metadata is checked, and a representative itemstack for each `char` key.
+    - `#!groovy Char2ObjectOpenHashMap<Miniaturization.RecipeBuilder.ReferenceValues>`. Sets the IBlockState, specific NBT, if the metadata is checked, and a representative itemstack for each `char` key. (Default `\` \` = air, \`_\` = air`).
 
         ```groovy
         key(String, IBlockState)
@@ -72,7 +72,7 @@ Don't know what a builder is? Check [the builder info page](../../../groovy/buil
         key(String, IBlockState, NBTTagCompound, boolean, ItemStack)
         ```
 
-    - `#!groovy boolean`. Sets if the recipe does not have to test all 4 rotations to determine if the multiblock is valid.
+    - `#!groovy boolean`. Sets if the recipe does not have to test all 4 rotations to determine if the multiblock is valid. (Default `false`).
 
         ```groovy
         symmetrical()

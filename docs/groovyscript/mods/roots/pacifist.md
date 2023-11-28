@@ -30,14 +30,14 @@ Just like other recipe types, the Pacifist also uses a recipe builder.
 Don't know what a builder is? Check [the builder info page](../../../groovy/builder.md) out.
 
 ???+ Abstract "mods.roots.pacifist.recipeBuilder()"
-    - `#!groovy ResourceLocation`. Sets the Resource Location of the recipe. (Default `null`).
+    - `#!groovy ResourceLocation`. Sets the Resource Location of the recipe.
 
         ```groovy
         name(String)
         name(ResourceLocation)
         ```
 
-    - `#!groovy Class<? extends Entity>`. Sets the target entity. Requires not null. (Default `null`).
+    - `#!groovy Class<? extends Entity>`. Sets the target entity. Requires not null.
 
         ```groovy
         entity(EntityEntry)

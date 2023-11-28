@@ -43,7 +43,7 @@ Just like other recipe types, the Tartaric Forge also uses a recipe builder.
 Don't know what a builder is? Check [the builder info page](../../../groovy/builder.md) out.
 
 ???+ Abstract "mods.bloodmagic.tartaricforge.recipeBuilder()"
-    - `#!groovy IngredientList<IIngredient>`. Sets the item inputs of the recipe. Requires greater than or equal to 1 and less than or equal to 4. (Default `null`).
+    - `#!groovy IngredientList<IIngredient>`. Sets the item inputs of the recipe. Requires greater than or equal to 1 and less than or equal to 4.
 
         ```groovy
         input(IIngredient)
@@ -51,7 +51,7 @@ Don't know what a builder is? Check [the builder info page](../../../groovy/buil
         input(Collection<IIngredient>)
         ```
 
-    - `#!groovy ItemStackList`. Sets the item outputs of the recipe. Requires exactly 1. (Default `null`).
+    - `#!groovy ItemStackList`. Sets the item outputs of the recipe. Requires exactly 1.
 
         ```groovy
         output(ItemStack)
@@ -59,14 +59,14 @@ Don't know what a builder is? Check [the builder info page](../../../groovy/buil
         output(Collection<ItemStack>)
         ```
 
-    - `#!groovy double`. Sets how much Demonic Will is drained from the Tartaric Gem when the craft is completed. Requires greater than or equal to 0.
+    - `#!groovy double`. Sets how much Demonic Will is drained from the Tartaric Gem when the craft is completed. Requires greater than or equal to 0. (Default `0.0d`).
 
         ```groovy
         drain(int)
         soulDrain(double)
         ```
 
-    - `#!groovy double`. Sets how much Demonic Will is required in the Tartaric Gem to start the craft. Requires greater than or equal to 0.
+    - `#!groovy double`. Sets how much Demonic Will is required in the Tartaric Gem to start the craft. Requires greater than or equal to 0. (Default `0.0d`).
 
         ```groovy
         minimumSouls(double)

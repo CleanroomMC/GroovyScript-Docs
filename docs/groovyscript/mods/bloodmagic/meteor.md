@@ -39,26 +39,26 @@ Just like other recipe types, the Meteor also uses a recipe builder.
 Don't know what a builder is? Check [the builder info page](../../../groovy/builder.md) out.
 
 ???+ Abstract "mods.bloodmagic.meteor.recipeBuilder()"
-    - `#!groovy int`. Sets the amount of Life Essence drained from the Blood Network to spawn the meteor. Requires greater than or equal to 0.
+    - `#!groovy int`. Sets the amount of Life Essence drained from the Blood Network to spawn the meteor. Requires greater than or equal to 0. (Default `1000000`).
 
         ```groovy
         cost(int)
         ```
 
-    - `#!groovy int`. Sets the radius of the meteor. Requires greater than 0.
+    - `#!groovy int`. Sets the radius of the meteor. Requires greater than 0. (Default `0`).
 
         ```groovy
         radius(int)
         ```
 
-    - `#!groovy ItemStack`. Sets the catalyst that must be thrown atop the Master Ritual Stone to spawn the meteor. (Default `null`).
+    - `#!groovy ItemStack`. Sets the catalyst that must be thrown atop the Master Ritual Stone to spawn the meteor.
 
         ```groovy
         catalyst(ItemStack)
         catalystStack(ItemStack)
         ```
 
-    - `#!groovy List<MeteorComponent>`. Sets the blocks that make up the meteor, and what weight each block has to generate. (Default `null`).
+    - `#!groovy List<MeteorComponent>`. Sets the blocks that make up the meteor, and what weight each block has to generate.
 
         ```groovy
         component(int, String)
@@ -67,7 +67,7 @@ Don't know what a builder is? Check [the builder info page](../../../groovy/buil
         component(OreDictIngredient, int)
         ```
 
-    - `#!groovy float`. Sets the strength of the explosion caused when the meteor is spawned. Requires greater than or equal to 0.
+    - `#!groovy float`. Sets the strength of the explosion caused when the meteor is spawned. Requires greater than or equal to 0. (Default `0.0f`).
 
         ```groovy
         explosionStrength(float)

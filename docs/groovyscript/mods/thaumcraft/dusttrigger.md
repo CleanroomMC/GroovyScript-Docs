@@ -47,13 +47,13 @@ Don't know what a builder is? Check [the builder info page](../../../groovy/buil
         target(OreDictIngredient)
         ```
 
-    - `#!groovy ItemStack`. Sets the output item, which will be dropped on the ground. (Default `null`).
+    - `#!groovy ItemStack`. Sets the output item, which will be dropped on the ground.
 
         ```groovy
         output(ItemStack)
         ```
 
-    - `#!groovy Block`. Sets the input as a block. Requires either ore or target must be defined, but not both. (Default `null`).
+    - `#!groovy Block`. Sets the input as a block. Requires either ore or target must be defined, but not both.
 
         ```groovy
         target(Block)

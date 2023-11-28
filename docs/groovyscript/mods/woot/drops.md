@@ -37,7 +37,7 @@ Just like other recipe types, the Drops also uses a recipe builder.
 Don't know what a builder is? Check [the builder info page](../../../groovy/builder.md) out.
 
 ???+ Abstract "mods.woot.drops.recipeBuilder()"
-    - `#!groovy ItemStackList`. Sets the item outputs of the recipe. Requires exactly 1. (Default `null`).
+    - `#!groovy ItemStackList`. Sets the item outputs of the recipe. Requires exactly 1.
 
         ```groovy
         output(ItemStack)
@@ -45,7 +45,7 @@ Don't know what a builder is? Check [the builder info page](../../../groovy/buil
         output(Collection<ItemStack>)
         ```
 
-    - `#!groovy WootMobName`. Sets the entity and nbt tags. Requires not null. (Default `null`).
+    - `#!groovy WootMobName`. Sets the entity and nbt tags. Requires not null.
 
         ```groovy
         name(String)
@@ -55,7 +55,7 @@ Don't know what a builder is? Check [the builder info page](../../../groovy/buil
         name(ResourceLocation)
         ```
 
-    - `#!groovy List<Integer>`. Sets the quantity of the drop for each level of Looting. Requires exactly 4. (Default `null`).
+    - `#!groovy List<Integer>`. Sets the quantity of the drop for each level of Looting. Requires exactly 4.
 
         ```groovy
         size(int)
@@ -63,7 +63,7 @@ Don't know what a builder is? Check [the builder info page](../../../groovy/buil
         size(Collection<Integer>)
         ```
 
-    - `#!groovy List<Integer>`. Sets the chance of the drop for each level of Looting. Requires exactly 4. (Default `null`).
+    - `#!groovy List<Integer>`. Sets the chance of the drop for each level of Looting. Requires exactly 4.
 
         ```groovy
         chance(int)

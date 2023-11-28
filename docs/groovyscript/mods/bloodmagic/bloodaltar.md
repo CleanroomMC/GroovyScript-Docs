@@ -49,7 +49,7 @@ Just like other recipe types, the Blood Altar also uses a recipe builder.
 Don't know what a builder is? Check [the builder info page](../../../groovy/builder.md) out.
 
 ???+ Abstract "mods.bloodmagic.bloodaltar.recipeBuilder()"
-    - `#!groovy IngredientList<IIngredient>`. Sets the item inputs of the recipe. Requires exactly 1. (Default `null`).
+    - `#!groovy IngredientList<IIngredient>`. Sets the item inputs of the recipe. Requires exactly 1.
 
         ```groovy
         input(IIngredient)
@@ -57,7 +57,7 @@ Don't know what a builder is? Check [the builder info page](../../../groovy/buil
         input(Collection<IIngredient>)
         ```
 
-    - `#!groovy ItemStackList`. Sets the item outputs of the recipe. Requires exactly 1. (Default `null`).
+    - `#!groovy ItemStackList`. Sets the item outputs of the recipe. Requires exactly 1.
 
         ```groovy
         output(ItemStack)
@@ -65,25 +65,25 @@ Don't know what a builder is? Check [the builder info page](../../../groovy/buil
         output(Collection<ItemStack>)
         ```
 
-    - `#!groovy int`. Sets how much Life Essence in total is required. Requires greater than or equal to 0.
+    - `#!groovy int`. Sets how much Life Essence in total is required. Requires greater than or equal to 0. (Default `0`).
 
         ```groovy
         syphon(int)
         ```
 
-    - `#!groovy int`. Sets how much Life Essence the recipe looses per tick when the recipe cannot consume Life Essence. Requires greater than or equal to 0.
+    - `#!groovy int`. Sets how much Life Essence the recipe looses per tick when the recipe cannot consume Life Essence. Requires greater than or equal to 0. (Default `0`).
 
         ```groovy
         drainRate(int)
         ```
 
-    - `#!groovy int`. Sets how much Life Essence the Blood Altar can consume per tick for this recipe. Requires greater than or equal to 0.
+    - `#!groovy int`. Sets how much Life Essence the Blood Altar can consume per tick for this recipe. Requires greater than or equal to 0. (Default `0`).
 
         ```groovy
         consumeRate(int)
         ```
 
-    - `#!groovy int`. Sets the minimum tier required from the altar. Requires greater than or equal to 0 and less than AltarTier.MAXTIERS.
+    - `#!groovy int`. Sets the minimum tier required from the altar. Requires greater than or equal to 0 and less than AltarTier.MAXTIERS. (Default `0`).
 
         ```groovy
         tier(int)

@@ -42,7 +42,7 @@ Just like other recipe types, the Excavator also uses a recipe builder.
 Don't know what a builder is? Check [the builder info page](../../../groovy/builder.md) out.
 
 ???+ Abstract "mods.immersiveengineering.excavator.recipeBuilder()"
-    - `#!groovy float`. Sets the chance that a given mining attempt with output nothing instead of an ore. Requires greater than or equal to 0 and less than or equal to 1.
+    - `#!groovy float`. Sets the chance that a given mining attempt with output nothing instead of an ore. Requires greater than or equal to 0 and less than or equal to 1. (Default `0.0f`).
 
         ```groovy
         fail(float)
@@ -54,34 +54,34 @@ Don't know what a builder is? Check [the builder info page](../../../groovy/buil
         name(String)
         ```
 
-    - `#!groovy List<String>`. Sets the valid oredicts output. Requires exactly chances. (Default `null`).
+    - `#!groovy List<String>`. Sets the valid oredicts output. Requires exactly chances.
 
         ```groovy
         ore(String, float)
         ore(OreDictIngredient, float)
         ```
 
-    - `#!groovy int`. Sets the weight the Mineral Mix has to spawn in its allowed dimensions.
+    - `#!groovy int`. Sets the weight the Mineral Mix has to spawn in its allowed dimensions. (Default `0`).
 
         ```groovy
         weight(int)
         ```
 
-    - `#!groovy List<Float>`. Sets the chance a given block output will contain the corresponding entry in ores. Requires exactly ores. (Default `null`).
+    - `#!groovy List<Float>`. Sets the chance a given block output will contain the corresponding entry in ores. Requires exactly ores.
 
         ```groovy
         ore(String, float)
         ore(OreDictIngredient, float)
         ```
 
-    - `#!groovy boolean`. Sets if the `dimensions` property indicates allowed dimensions (false) or blocked dimensions (true).
+    - `#!groovy boolean`. Sets if the `dimensions` property indicates allowed dimensions (false) or blocked dimensions (true). (Default `false`).
 
         ```groovy
         blacklist()
         blacklist(boolean)
         ```
 
-    - `#!groovy List<Integer>`. Sets the list of dimension ids the vein can generate in (if `blacklist` is false) or are prevented from generating in (if `blacklist` is true). (Default `null`).
+    - `#!groovy List<Integer>`. Sets the list of dimension ids the vein can generate in (if `blacklist` is false) or are prevented from generating in (if `blacklist` is true).
 
         ```groovy
         dimension(int)

@@ -30,14 +30,14 @@ Just like other recipe types, the Transmutation also uses a recipe builder.
 Don't know what a builder is? Check [the builder info page](../../../groovy/builder.md) out.
 
 ???+ Abstract "mods.roots.transmutation.recipeBuilder()"
-    - `#!groovy ResourceLocation`. Sets the Resource Location of the recipe. (Default `null`).
+    - `#!groovy ResourceLocation`. Sets the Resource Location of the recipe.
 
         ```groovy
         name(String)
         name(ResourceLocation)
         ```
 
-    - `#!groovy ItemStackList`. Sets the item outputs of the recipe. Requires greater than or equal to 0 and less than or equal to 1. (Default `null`).
+    - `#!groovy ItemStackList`. Sets the item outputs of the recipe. Requires greater than or equal to 0 and less than or equal to 1.
 
         ```groovy
         output(ItemStack)
@@ -45,21 +45,21 @@ Don't know what a builder is? Check [the builder info page](../../../groovy/buil
         output(Collection<ItemStack>)
         ```
 
-    - `#!groovy BlockStatePredicate`. Sets the starting blockstate. Requires not null. (Default `null`).
+    - `#!groovy BlockStatePredicate`. Sets the starting blockstate. Requires not null.
 
         ```groovy
         start(IBlockState)
         start(BlockStatePredicate)
         ```
 
-    - `#!groovy IBlockState`. Sets the output iblockstate. (Default `null`).
+    - `#!groovy IBlockState`. Sets the output iblockstate.
 
         ```groovy
         state(IBlockState)
         output(IBlockState)
         ```
 
-    - `#!groovy WorldBlockStatePredicate`. Sets a condition for the input to be converted, typically indicating a specific block above or below.
+    - `#!groovy WorldBlockStatePredicate`. Sets a condition for the input to be converted, typically indicating a specific block above or below. (Default `WorldBlockStatePredicate.TRUE`).
 
         ```groovy
         condition(WorldBlockStatePredicate)

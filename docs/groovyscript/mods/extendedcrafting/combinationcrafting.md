@@ -50,7 +50,7 @@ Just like other recipe types, the Combination Crafting also uses a recipe builde
 Don't know what a builder is? Check [the builder info page](../../../groovy/builder.md) out.
 
 ???+ Abstract "mods.extendedcrafting.combinationcrafting.recipeBuilder()"
-    - `#!groovy IngredientList<IIngredient>`. Sets the item inputs of the recipe. Requires exactly 1. (Default `null`).
+    - `#!groovy IngredientList<IIngredient>`. Sets the item inputs of the recipe. Requires exactly 1.
 
         ```groovy
         input(IIngredient)
@@ -58,7 +58,7 @@ Don't know what a builder is? Check [the builder info page](../../../groovy/buil
         input(Collection<IIngredient>)
         ```
 
-    - `#!groovy ItemStackList`. Sets the item outputs of the recipe. Requires exactly 1. (Default `null`).
+    - `#!groovy ItemStackList`. Sets the item outputs of the recipe. Requires exactly 1.
 
         ```groovy
         output(ItemStack)
@@ -66,21 +66,21 @@ Don't know what a builder is? Check [the builder info page](../../../groovy/buil
         output(Collection<ItemStack>)
         ```
 
-    - `#!groovy long`. Sets the amount of RF required to complete the craft. Requires greater than or equal to 0.
+    - `#!groovy long`. Sets the amount of RF required to complete the craft. Requires greater than or equal to 0. (Default `0`).
 
         ```groovy
         cost(long)
         totalCost(long)
         ```
 
-    - `#!groovy int`. Sets the maximum amount of RF consumed per tick until the entire cost is paid. Requires greater than or equal to 0.
+    - `#!groovy int`. Sets the maximum amount of RF consumed per tick until the entire cost is paid. Requires greater than or equal to 0. (Default `ModConfig.confCraftingCoreRFRate`).
 
         ```groovy
         perTick(int)
         costPerTick(int)
         ```
 
-    - `#!groovy NonNullList<IIngredient>`. Sets the required items on nearby pedestals. (Default `null`).
+    - `#!groovy NonNullList<IIngredient>`. Sets the required items on nearby pedestals.
 
         ```groovy
         pedestals(IIngredient)

@@ -130,7 +130,7 @@ Don't know what a builder is? Check [the builder info page](../../../groovy/buil
         key(String)
         ```
 
-    - `#!groovy ResourceLocation`. Sets the icon to be used for the research category tab. (Default `null`).
+    - `#!groovy ResourceLocation`. Sets the icon to be used for the research category tab.
 
         ```groovy
         icon(String)
@@ -138,14 +138,14 @@ Don't know what a builder is? Check [the builder info page](../../../groovy/buil
         icon(ResourceLocation)
         ```
 
-    - `#!groovy AspectList`. Sets the aspects required to gain knowledge in this category. (Default `null`).
+    - `#!groovy AspectList`. Sets the aspects required to gain knowledge in this category.
 
         ```groovy
         formulaAspect(AspectStack)
         formulaAspect(String, int)
         ```
 
-    - `#!groovy ResourceLocation`. Sets the resource location of the background image to use for this category. (Default `null`).
+    - `#!groovy ResourceLocation`. Sets the resource location of the background image to use for this category.
 
         ```groovy
         background(String)
@@ -153,7 +153,7 @@ Don't know what a builder is? Check [the builder info page](../../../groovy/buil
         background(ResourceLocation)
         ```
 
-    - `#!groovy ResourceLocation`. Sets the resource location of the foreground image that lies between the background and icons. (Default `null`).
+    - `#!groovy ResourceLocation`. Sets the resource location of the foreground image that lies between the background and icons.
 
         ```groovy
         background2(String)
