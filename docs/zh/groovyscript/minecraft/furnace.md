@@ -1,26 +1,30 @@
-# Minecraft Furnace
+# Minecraft 熔炉
 
-## Adding Recipes
-Unlike other recipe types, furnace smelting does not use a recipe builder.
+## 添加配方
+
+与其他类型的配方不同，熔炉熔炼不使用配方生成器。
 
 ```groovy
-furnace.add(IIngredient input, ItemStack output) // applies a default exp of 0.1
+furnace.add(IIngredient input, ItemStack output) // 应用默认的经验值 0.1
 furnace.add(IIngredient input, ItemStack output, float exp)
 ```
 
-### Example
-```groovy
-// smelt 1 dirt to produce one cobblestone and 0.5 exp
-furnace.add(item('minecraft:dirt'), item('minecraft:cobblestone'), 0.5f)
-```
+!!! 例子
 
-## Removing Recipes:
+    ```groovy
+    // 将 1 块泥土熔炼成一块圆石并获得 0.5 经验值
+    furnace.add(item('minecraft:dirt'), item('minecraft:cobblestone'), 0.5f)
+    ```
+
+## 移除配方
+
 ```groovy
 furnace.removeByInput(ItemStack input)
 ```
 
-### Example
-```groovy
-// removes all recipes that input iron ore
-furnace.removeByInput(item('minecraft:iron_ore'))
-```
+!!! 例子
+
+    ```groovy
+    // 移除所有熔炉中输入铁矿石的配方
+    furnace.removeByInput(item('minecraft:iron_ore'))
+    ```

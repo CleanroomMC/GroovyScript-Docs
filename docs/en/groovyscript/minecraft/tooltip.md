@@ -9,15 +9,17 @@ See [ItemTooltipEvent](events/item_tooltip_event.md).
 This is the simplest way to add tooltips to a specific item. Note that this would ignore nbt data. Also, you can add
 tooltips for multiple items inside the event. You don't need to call listen for the same event multiple times.
 
-````groovy
-import net.minecraftforge.event.entity.player.ItemTooltipEvent
+!!! example
 
-event_manager.listen { ItemTooltipEvent event ->
-    if (ItemStack.areItemsEqual(event.getItemStack(), item('minecraft:diamond'))) {
-        event.getToolTip().add('Epic diamond tooltip')
+    ```groovy
+    import net.minecraftforge.event.entity.player.ItemTooltipEvent
+
+    event_manager.listen { ItemTooltipEvent event ->
+        if (ItemStack.areItemsEqual(event.getItemStack(), item('minecraft:diamond'))) {
+            event.getToolTip().add('Epic diamond tooltip')
+        }
     }
-}
-````
+    ```
 
-If your familiar with [lists](../../groovy/lists.md) you can modify the tooltip lines as you like
+If you are familiar with [lists](../../groovy/lists.md), you can modify the tooltip lines as you like
 since `event.getToolTip()` returns a `List<String>`.

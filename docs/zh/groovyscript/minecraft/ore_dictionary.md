@@ -1,53 +1,80 @@
-# Ore Dictionary
-!!! Note
-    Requires version 0.3.0+
- GroovyScript also allows you to remove and add ore dictionaries to items and reload them.
- 
-## Adding ore dicts
+# 矿石词典
 
-All three methods are do exactly the same thing.
-```groovy
-oreDict.add("amogus", item('minecraft:iron_ingot'))
+!!! 注意
+    需要版本 0.3.0+
+ GroovyScript 还允许您删除和添加矿石词典到物品并重新加载它们。
 
-item('minecraft:iron_ingot').addOreDict(ore('amogus'))
+## 获取矿石词典成分
+矿石词典成分可用于任何接受 `IIngredient` 的配方。
+!!! 例子
+    ```groovy
+    ore('ingotCopper') // 返回所有铜锭
+    ore('ingot*') // 通配符也是有效的（返回所有锭）
+    ```
 
-ore('amogus').add(item('minecraft:iron_ingot'))
-```
+## 添加矿石词典
 
-## Removing ore dicts
+这三种方法都是完全相同的。
 
-All three methods are do exactly the same thing.
-````groovy
-oreDict.remove("ingotIron", item('minecraft:iron_ingot'))
+!!! 例子
 
-item('minecraft:iron_ingot').removeOreDict(ore('ingotIron'))
+    ```groovy
+    oreDict.add("amogus", item('minecraft:iron_ingot'))
 
-ore('ingotIron').remove(item('minecraft:iron_ingot'))
-````
+    item('minecraft:iron_ingot').addOreDict(ore('amogus'))
 
-## Other
-You can get all items from an ore dict.
-Both ways do the same thing.
-````groovy
-oreDict.getItems('ingotIron')
-oreDict['ingotIron']
-````
+    ore('amogus').add(item('minecraft:iron_ingot'))
+    ```
 
-Checking if an item is in an ore dictionary
-````groovy
-item('minecraft:iron_ingot') in ore('ingotIron') // returns true
-````
+## 删除矿石词典
 
-Getting the first item from an ore dictionary
-````groovy
-ore('ingotIron').first
-ore('ingotIron')[0]
-````
+这三种方法都是完全相同的。
 
-Iterating over all items in an ore dictionary
-````groovy
-for (def ironIngot : ore('ingotIron')) {
-    ...
-}
-````
+!!! 例子
 
+    ```groovy
+    oreDict.remove("ingotIron", item('minecraft:iron_ingot'))
+
+    item('minecraft:iron_ingot').removeOreDict(ore('ingotIron'))
+
+    ore('ingotIron').remove(item('minecraft:iron_ingot'))
+    ```
+
+## 其他
+
+您可以从矿石词典获取所有物品。
+两种方式都是相同的。
+
+!!! 例子
+
+    ```groovy
+    oreDict.getItems('ingotIron')
+    oreDict['ingotIron']
+    ```
+
+检查物品是否在矿石词典中
+
+!!! 例子
+
+    ```groovy
+    item('minecraft:iron_ingot') in ore('ingotIron') // 返回 true
+    ```
+
+从矿石词典获取第一个物品
+
+!!! 例子
+
+    ```groovy
+    ore('ingotIron').first
+    ore('ingotIron')[0]
+    ```
+
+遍历矿石词典中的所有物品
+
+!!! 例子
+
+    ```groovy
+    for (def ironIngot : ore('ingotIron')) {
+        ...
+    }
+    ```

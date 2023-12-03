@@ -1,34 +1,32 @@
-# 让我们开始
+# 入门指南
 
-哦不不, 读懂这不一定需要太多的编程知识, 但会对你有很大的帮助.  
-作为文本文件(.groovy), 你可以使用[VSCode](https://code.visualstudio.com/)来打开并且编写Groovy文件, 或者是一个更像样的IDE. (我们将在未来开发一个更好的替代品)
+虽然不一定需要编程知识，但拥有这方面的知识将对你有很大帮助。<br>
+作为文本编辑器，你可以很好地使用[Notepad++](https://notepad-plus-plus.org/downloads/)。（我们将来会致力于提供更好的替代品）
 
-1. 下载 Minecraft和Forge 1.12.2并且安装它. (我想你的启动器应该可以)
-2. 下载最新版的GroovyScript([点这里](https://www.curseforge.com/minecraft/mc-mods/groovyscript/files))
-   并且丢到你的mods文件夹里去. (HMCL等主流启动器支持直接从CurseForge下载模组)
-3. 另外, 你还需要安装一个[MixinBooter](https://www.curseforge.com/minecraft/mc-mods/mixin-booter/files), 因为GroovyScript依赖于它. 
-4. 启动游戏, 并且往groovy文件夹里丢一些脚本. 
-5. 第一次启动时, GroovyScript将生成以下文件
-    - groovy.log (即[Groovy Log](#groovy-log))
-    - groovy/runConfig.json (即[Groovy运行配置](#run-config))
-    - groovy/postInit/main.groovy (默认提供的脚本实例文件)
+1. 下载并安装Minecraft Forge 1.12.2
+2. 下载GroovyScript的最新版本[在这里](https://www.curseforge.com/minecraft/mc-mods/groovyscript/files)
+   并将其放入mods文件夹
+3. 同样安装[MixinBooter](https://www.curseforge.com/minecraft/mc-mods/mixin-booter/files)，因为GroovyScript
+   依赖于它
+4. 在没有添加任何文件的情况下启动Minecraft
+5. GroovyScript将创建几个文件
+    - groovy.log (参见[Groovy 日志](#groovy-log))
+    - groovy/runConfig.json (参见[运行配置](#run-config))
+    - groovy/postInit/main.groovy (默认脚本文件)
 
-## Groovy log
+## Groovy 日志
 
-所有与groovy有关的东西都有自己的日志, 而且会生成自己的文件.  
-如果你的脚本写出了问题, 你应该先看看Log. 文件位于[Minecraft实例路径]/groovy.log
+与Groovy相关的所有内容都有其自己的日志，并生成自己的文件。如果在脚本中遇到问题，你应该首先查看这里。
+文件目录始终为`[Minecraft实例路径]/groovy.log`
 
 ## 运行配置
-这个文件定义了每个脚本文件应该如何执行, 在哪个加载阶段执行.  
-它也可以存储一些关于MOD包的一般信息.  
-如果该文件无法被查找到或不存在, 将重新生成一份.  
-如果你不明白这是什么或 "它是如何工作的" , 你可以跳过配置.  
-你所需要知道的是, 你把你的配方脚本放在groovy/postInit中.  
-诸如 "自定义物品" 之类的脚本则放在groovy/preInit中.  
-(类似KubeJS的start_scripts-preInit和server_scripts-postInit)  
-让我们看看这个文件是什么样子的.  
 
-````json
+此文件定义了每个脚本文件应该如何执行。它还可以存储有关Mod包的一些一般信息。如果该文件不存在，将会生成它。
+如果你不理解这是什么或者如何工作，你可以跳过这一部分。你只需要知道将你的带有配方的脚本放在 `groovy/postInit`，
+而带有像物品创建之类的内容的脚本放在 `groovy/preInit`。<br>
+让我们看看文件可能是什么样子。
+
+```json
 {
   "packName": "",
   "packId": "",
@@ -46,62 +44,56 @@
     ]
   }
 }
-````
+```
 
-Let's go through it bit by bit: <br>
+让我们逐个部分来看：<br>
 
-- `packName` is the name of the pack (See [pack name and id](#pack-name-and-id)). Important
-  for [content](groovyscript/content/content.md). <br>
-- `packId` (0.4.0+) is the id of the pack (See [pack name and id](#pack-name-and-id)). Important
-  for [content](groovyscript/content/content.md). <br>
-- `version` is the version of the pack. It currently doesn't do anything special. <br>
-- `debug`: If this is false all messages that logged to debug will not be logged. Great for debugging. <br>
-- `classes`: (0.3.0+) Files that contain a single class should be specified here. It makes sure classes are loaded when
-  scripts try to access them. <br>
-- `loaders`: This defines at what stage what files should be loaded. By default, there are two stages: `preInit`
-  and `postInit`. <br>
-- `preInit` will run at an early stage. Do not register recipes here. Use it to register game objects like items and
-  blocks. <br>
-- `postInit` will run right before JEI loads. Use it to register recipes for example. When GroovyScript gets reloaded
-  only this loader will run.<br>
-  Inside the square brackets of the loader we define the files or path that will be run. You can NOT run a file in
-  multiple loaders.
-  Elements higher in the list will be run first. Files can be put multiple times, but they will only get executed
-  once. <br>
-  For example:
+- `packName` 是包的名称（参见[包名和ID](#pack-name-and-id)）。对于[内容](groovyscript/content/content.md)很重要。<br>
+- `packId` (0.4.0+) 是包的ID（参见[包名和ID](#pack-name-and-id)）。对于[内容](groovyscript/content/content.md)很重要。<br>
+- `version` 是包的版本。目前它并没有特殊用途。<br>
+- `debug`：如果为false，则所有记录到调试的消息都不会被记录。用于调试非常方便。<br>
+- `classes`：(0.3.0+) 此处应指定包含单个类的文件。它确保在脚本尝试访问它们时加载类。<br>
+- `loaders`：这定义了在什么阶段加载什么文件。默认情况下，有两个阶段：`preInit` 和 `postInit`。<br>
+- `preInit` 将在早期阶段运行。不要在这里注册配方。使用它来注册游戏对象，如物品和方块。<br>
+- `postInit` 将在JEI加载之前运行。例如，用于注册配方。当GroovyScript重新加载时，只有这个加载器会运行。<br>
+  在加载器的方括号内，我们定义将要运行的文件或路径。你不能在多个加载器中运行一个文件。
+  列表中较高的元素将首先运行。文件可以多次放置，但它们只会执行一次。<br>
 
-````json
-[
-  "postInit/ore_dict.groovy",
-  "postInit/"
-]
-````
+!!! 例子 "例如："
 
-Here first `ore_dict.groovy` will be executed and then all files of `postInit/`, but since `ore_dict.groovy` was already
-executed, it will not run now. <br>
-Another example:
+    ```json
+    [
+    "postInit/ore_dict.groovy",
+    "postInit/"
+    ]
+    ```
 
-````json
-[
-  "postInit/",
-  "postInit/late_stuff.groovy"
-]
-````
+    这里首先会执行 `ore_dict.groovy`，然后执行所有位于 `postInit/` 的文件，但由于 `ore_dict.groovy` 已经被执行，
+    所以它现在不会再运行。<br>
 
-First everything in `postInit/` will be executed, but since `late_stuff.groovy` is specifically put later it will not be
-executed. After that only `late_stuff.groovy` will be executed.
+!!! 例子 "另一个例子："
 
-### Pack name and id
+    ```json
+    [
+    "postInit/",
+    "postInit/late_stuff.groovy"
+    ]
+    ```
 
-The pack name can be anything. It's the name that will show up in JEI in tooltips on items you created. <br>
-The pack id is very important. It must only consist of lower case letters and `_`.
+首先会执行 `postInit/` 中的所有内容，但由于 `late_stuff.groovy` 具体放在后面，它将不会被执行。
+之后只有 `late_stuff.groovy` 会被执行。
 
-!!! warning
-    Changing the pack id will result in created items being lost in existing worlds!
+### 包名和ID
 
-## Important infos
+包名可以是任何内容。这是将显示在JEI中，你所创建的物品的工具提示中的名称。<br>
+包ID非常重要。它只能由小写字母和 `_` 组成。
 
-1. Groovy scripts must end in `.groovy`
-2. Groovy scripts must be defined somehow in the [run config](#run-config) to be executed
-3. The scripts and folders can have any name
-4. All scripts and the [run config](#run-config) must be located in `[Minecraft instance path]/groovy/`
+!!! 警告
+    更改包ID将导致在现有世界中创建的物品丢失！
+
+## 重要信息
+
+1. Groovy脚本必须以`.groovy`结尾
+2. Groovy脚本必须以某种方式在[运行配置](#run-config)中定义以执行
+3. 脚本和文件夹可以使用任何名称
+4. 所有脚本和[运行配置](#run-config)必须位于`[Minecraft实例路径]/groovy/`

@@ -1,74 +1,72 @@
-# Loops
-Loops are useful if you want to do the operation multiple times or if you want to do a operation for each element in a list.
+# 循环结构
+循环结构在您希望多次执行操作或者对列表中的每个元素执行操作时非常有用。
 
-## While loop
-A simple while loop looks like this:
-````groovy
+## While 循环
+一个简单的 while 循环如下所示：
+```groovy
 while (condition) {
     operation
 }
-````
-The condition is a boolean. As long as that condition evaluates to true, the operation will be executed.
-### Example:
-This will print `0, 1, 2, 3, 4, 5, 6, 7, 8, 9`.
-````groovy
+```
+条件是一个布尔值。只要该条件求值为 true，操作就会执行。
+!!! 例子：
+这将打印 `0, 1, 2, 3, 4, 5, 6, 7, 8, 9`。
+```groovy
 int i = 0;
 while (i < 10) {
     print("${i++}, ")
 }
-````
+```
 
-There is also a `do while` loop which ignores the condition on its first run.
-````groovy
+还有一个 `do while` 循环，它在第一次运行时忽略条件。
+```groovy
 do {
     operation
 } while (condition)
-````
+```
 
-## For loop
-For loops are similar to while loops.
-````groovy
+## For 循环
+for 循环与 while 循环类似。
+```groovy
 for(init; condition; incrementor) {
     operation
 }
-````
-`init` is called before the loop. `condition` is checked before each run and `incrementor` is called after each run.
+```
+`init` 在循环之前调用。在每次运行之前检查 `condition`，并在每次运行之后调用 `incrementor`。
 
-### Example
-This will print `0, 1, 2, 3, 4, 5, 6, 7, 8, 9`.
-````groovy
+!!! 例子
+这将打印 `0, 1, 2, 3, 4, 5, 6, 7, 8, 9`。
+```groovy
 for(int i = 0; i < 10; i++) {
     print("${i++}, ")
 }
-````
+```
 
-## Enhanced for loop
-Those are very useful for lists and maps.
-This will print `Hello world!`
-````groovy
+## 增强型 for 循环
+对于列表和映射非常有用。
+这将打印 `Hello world!`
+```groovy
 def list = ['He', 'llo', ' w', 'or', 'ld!']
 for(part in list) {
     print(part)
 }
-````
-`part` creates a new variable on each run for the current element in the list `lists`.
+```
+`part` 在每次运行时为 `lists` 中当前元素创建一个新变量。
 
-For maps it looks like this
-````groovy
+对于映射，它看起来像这样
+```groovy
 def elements = [
         'Au': 'Gold',
         'Ag': 'Silver',
         'Pb': 'Lead',
         'H' : 'Hydrogen'
 ]
-// prints al elements
+// 打印所有元素
 for (entry in elements) {
     println("${entry.key}: ${entry.value}")
 }
-````
+```
 
-## Control flow in loops
-`break` can be used at any time inside a loop to abort the current and all following runs.
-`continue` will only abort the current run and *continues* with the next run (if the condition is still true)
-
-
+## 循环中的控制流
+`break` 可以随时在循环内部使用，以中止当前及所有后续运行。
+`continue` 仅中止当前运行，并*继续*下一运行（如果条件仍为 true）。

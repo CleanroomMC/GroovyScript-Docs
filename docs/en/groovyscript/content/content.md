@@ -12,23 +12,24 @@ for CraftTweaker, but for GroovyScript it doesn't require another mod.
 Currently, GroovyScript adds helpers to create
 
 - [items](item.md)
-- blocks
-- creative tabs
+- [blocks](block.md)
+- [creative tabs](creative_tab.md)
+- [fluids](fluid.md)
 
 Coming in the future:
 
-- fluids
 - Mekanism gases
 
 ## Creative tabs
 You can set a default creative tab which registered items and blocks will use if not specified otherwise
-````groovy
+```groovy
 content.setDefaultCreativeTab(CreativeTabs tab)
-````
+```
 
-### Example
-With [that](creative_tab.md) we can do this
-````groovy
-def creativeTab = content.createCreativeTab("nomifactory.creative_tab", item("nomifactory:heart_of_the_universe"))
-content.setDefaultCreativeTab(creativeTab)
-````
+!!! example
+
+    With [that](creative_tab.md) we can do this
+    ```groovy
+    def creativeTab = content.createCreativeTab("nomifactory.creative_tab", item("nomifactory:heart_of_the_universe"))
+    content.setDefaultCreativeTab(creativeTab)
+    ```

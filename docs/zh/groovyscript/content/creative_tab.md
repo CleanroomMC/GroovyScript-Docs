@@ -1,17 +1,21 @@
-# Creating creative tabs
+# 创建创造模式标签
 
-````groovy
-content.createCreativeTab(String name, ItemStack icon) // returns the creative tab
-````
+```groovy
+content.createCreativeTab(String name, ItemStack icon) // 返回创造模式标签
+```
 
-## Example
-````groovy
-def creativeTab = content.createCreativeTab("nomifactory.creative_tab", item("nomifactory:heart_of_the_universe"))
-````
+!!! 示例
 
-## Other
-You can get a creative tab by using 
-````groovy
+    ```groovy
+    def creativeTab = content.createCreativeTab("nomifactory.creative_tab", item("nomifactory:heart_of_the_universe"))
+    ```
+
+## 其他
+
+您可以通过以下方式获取创造模式标签
+
+```groovy
 creativeTab(String tabName)
-````
-A list of existing creative tab names can be obtained by running the `/gs creativeTabs` command.
+```
+
+可以通过运行 `/gs creativeTabs` 命令获取现有创造模式标签名称列表。

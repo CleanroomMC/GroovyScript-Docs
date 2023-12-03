@@ -1,34 +1,33 @@
-# Content
+# 内容
 
-This part of GroovyScript allows the creation of game content like items and blocks. It's equivalent to ContentTweaker
-for CraftTweaker, but for GroovyScript it doesn't require another mod.
+GroovyScript 的这一部分允许创建游戏内容，如物品和方块。它相当于 CraftTweaker 的 ContentTweaker，但对于 GroovyScript，它不需要另一个模组。
 
-!!! Note
-    Requires version 0.4.0+. <br>
-    Before you start adding content make sure to specify the pack name and id in
-    your [runConfig](../../getting_started.md#run-config). <br>
-    Also make sure to read [pack name and id](../../getting_started.md#pack-name-and-id)
+!!! 注意
+    需要版本 0.4.0+。<br>
+    在开始添加内容之前，请确保在 [runConfig](../../getting_started.md#run-config) 中指定包的名称和 id。<br>
+    还要确保阅读 [pack name and id](../../getting_started.md#pack-name-and-id)。
 
-Currently, GroovyScript adds helpers to create
+目前，GroovyScript 添加了创建以下辅助函数：
 
-- [items](item.md)
-- blocks
-- creative tabs
+- [物品](item.md)
+- [方块](block.md)
+- [创造模式标签](creative_tab.md)
+- [流体](fluid.md)
 
-Coming in the future:
+将来将推出：
 
-- fluids
-- Mekanism gases
+- Mekanism 气体
 
-## Creative tabs
-You can set a default creative tab which registered items and blocks will use if not specified otherwise
-````groovy
+## 创造模式标签
+您可以设置一个默认的创造模式标签，如果没有另行指定，注册的物品和方块将使用该标签。
+```groovy
 content.setDefaultCreativeTab(CreativeTabs tab)
-````
+```
 
-### Example
-With [that](creative_tab.md) we can do this
-````groovy
-def creativeTab = content.createCreativeTab("nomifactory.creative_tab", item("nomifactory:heart_of_the_universe"))
-content.setDefaultCreativeTab(creativeTab)
-````
+!!! 示例
+
+    使用 [这个](creative_tab.md)，我们可以这样做
+    ```groovy
+    def creativeTab = content.createCreativeTab("nomifactory.creative_tab", item("nomifactory:heart_of_the_universe"))
+    content.setDefaultCreativeTab(creativeTab)
+    ```

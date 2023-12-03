@@ -3,7 +3,7 @@
 The following builder is for creating new Dust Triggers. <br>
 You don't know what a builder is? Check [this](https://groovyscript-docs.readthedocs.io/en/latest/groovy/builder/) out
 
-### Add a trigger
+## Add a trigger
 
 ```groovy
 mods.thaumcraft.DustTrigger.triggerBuilder()
@@ -36,15 +36,15 @@ Register recipe: (returns nothing)
 .register()
 ```
 
-### Example
+!!! example
 
-```groovy
-mods.thaumcraft.DustTrigger.triggerBuilder()
-        .researchKey('UNLOCKALCHEMY@3')
-        .target(block('minecraft:obsidian'))
-        .output(item('minecraft:enchanting_table'))
-        .register()
-```
+    ```groovy
+    mods.thaumcraft.DustTrigger.triggerBuilder()
+            .researchKey('UNLOCKALCHEMY@3')
+            .target(block('minecraft:obsidian'))
+            .output(item('minecraft:enchanting_table'))
+            .register()
+    ```
 
 ### Remove a trigger
 
@@ -53,6 +53,7 @@ mods.thaumcraft.DustTrigger.removeByOutput(ItemStack)
 ```
 
 !!! example
+
     ```groovy
     mods.thaumcraft.DustTrigger.removeByOutput(item('thaumcraft:arcane_workbench'))
     ```

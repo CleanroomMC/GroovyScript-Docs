@@ -19,6 +19,7 @@ Removes all items from the specified rarity of lootbag.
 ```
 
 !!! example
+
     ```groovy
     mods.thaumcraft.LootBag.getCommon().removeAll()
     ```
@@ -35,6 +36,7 @@ Removes chance for an item from the specified rarity of lootbag.
 ```
 
 !!! example
+
     ```groovy
     mods.thaumcraft.LootBag.getRare().removeItem(item('minecraft:ender_pearl'))
     ```
@@ -50,6 +52,7 @@ Adds chance for an item in the given rarity of lootbag.
 1. a non-negative weight (higher number = more likely)
 
 !!! example
+
     ```groovy
     mods.thaumcraft.LootBag.getRare().addItem(item('minecraft:diamond_block'), 10)
     ```

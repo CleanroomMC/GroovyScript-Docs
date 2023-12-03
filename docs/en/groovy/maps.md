@@ -9,8 +9,7 @@ It doesn't keep the elements order causing the elements to be seemingly random.
 Groovy uses `Object2ObjectLinkedOpenHashMap` by default. It is slightly more memory efficient and keeps the element order.
 
 The key and value can be of different types. If the key is a string you can leave out the `'` or `"`.
-
-````groovy
+```groovy
 def simpleMap = [:] // a empty ordered hash map
 def hashMap = new HashMap() // a empty unordered hash map
 
@@ -21,19 +20,19 @@ def elements = [
         Pb: 'Lead',
         H: 'Hydrogen'
 ]
-````
+```
 
 ## Getting values
 We are using the map we created above here.
-````groovy
+```groovy
 println(elements['Pb']) // Lead
 println(elements['Ag']) // Silver
 println(elements['B']) // null since there is no key 'B'
-````
+```
 
 ## Modifying maps
 We are using the map we created above here.
-````groovy
+```groovy
 elements['Au'] = 'Copper' // Au is know mapped to copper
 elements.remove('H') // removes H: Hydrogen
-````
+```
