@@ -1,33 +1,33 @@
-# Welcome to GroovyScript
+# 欢迎使用GroovyScript
 
-A comprehensive scripting sandbox for Minecraft 1.12.2. <br>
-[Join our Discord](https://discord.com/invite/m53yxTjjKM). <br>
+一款针对Minecraft 1.12.2的综合性脚本沙盒。 <br>
+[加入我们的Discord](https://discord.com/invite/m53yxTjjKM)。 <br>
 
-Are you not seeing what other see on this wiki? Try reloading it.
+在本维基上看不到其他人看到的内容吗？尝试重新加载它。
 
-## Features
+## 特性
 
-1. Groovy: a powerful and tested scripting language
-    - Java-compatible syntax + interoperable code
-    - Static compilation
-    - Optional dynamic typing
-    - Metaprogramming
-2. Sandboxed: scripts are effectively ran in a sandbox, with sensitive operations blacklisted from being called or referenced
-3. Reloading: able to test script changes within the game without restarting
-    - Most if not all Forge Registry objects can be reloaded on the fly
-    - Most mod registries are supported natively
-4. Events: Easily listen to Forge's EventBuses with Groovy Closures
-5. Familiarity: Bracket handlers for those that are familiar with CraftTweaker (currently implemented, may be removed in the near future)
-6. Informational: commands to display rich information for the item in your hand and more
-7. Optimized: Making sure no compromises are being made while delivering features with efficient code
-8. API: Great catalogue of code for other mod authors to make their mods compatible with GroovyScript such as package/class/method/field blacklists
+1. Groovy：一种强大而经过测试的脚本语言
+    - 兼容Java语法 + 可互操作的代码
+    - 静态编译
+    - 可选的动态类型
+    - 元编程
+2. 沙盒环境：脚本在沙盒中有效运行，敏感操作被列入黑名单，无法被调用或引用
+3. 重新加载：能够在游戏中测试脚本更改而无需重新启动
+    - 大多数，如果不是所有的Forge Registry对象都可以即时重新加载
+    - 大多数Mod注册表本地支持
+4. 事件：轻松监听Forge的EventBuses与Groovy闭包
+5. 熟悉性：对于熟悉CraftTweaker的人，提供方括号处理程序（当前已实现，可能在不久的将来被移除）
+6. 信息：命令可显示手持物品等丰富信息
+7. 优化：确保在提供具有高效代码的功能时不会做出妥协
+8. API：为其他Mod作者提供丰富的代码目录，以使其Mod与GroovyScript兼容，如软件包/类/方法/字段的黑名单
 
-### Where to go?
+### 如何开始？
 
-Check [this](getting_started.md) out to get started. <br>
-Check out the Groovy tab for infos about the Groovy language. <br>
-Check out the GroovyScript for the GroovyScript documentation. <br>
+查看[这里](getting_started.md)以开始使用。 <br>
+查看Groovy选项卡以获取有关Groovy语言的信息。 <br>
+查看GroovyScript以获取GroovyScript文档。 <br>
 
-!!! Note
-    This wiki is highly WIP. There is still a lot of info missing. We would appreciate any help to improve this place.
-    Get started by joining our [Discord](https://discord.com/invite/m53yxTjjKM)
+!!! 注意
+    本维基仍在积极开发中。仍然缺少很多信息。我们将感激任何帮助来改善这个地方。
+    通过加入我们的[Discord](https://discord.com/invite/m53yxTjjKM)开始。

@@ -1,45 +1,45 @@
 # Groovy
-Groovy is a powerful scripting language based on java.
+Groovy是一种基于Java的强大脚本语言。
 
-In this tab you can find some information about the scripting language itself.
-For GroovyScript specific stuff refer to the GroovyScript tab.
+在此选项卡中，您可以找到有关脚本语言本身的一些信息。
+有关GroovyScript特定的内容，请参阅GroovyScript选项卡。
 
-The syntax is very similar to java, but with some conveniences from other scripting languages.
-The most noticeable is that you don't need `;` at the end of a line.
+语法与Java非常相似，但具有其他脚本语言的一些便利之处。
+最显着的是，您不需要在行尾使用 `;`。
 
-## Comments
-Comments can be made inside scripts that will be ignored by the compiler like this:
+## 注释
+可以在脚本内添加将被编译器忽略的注释，如下所示：
 ```groovy
-// single line comment
+// 单行注释
 
 /*
-Multi line comment
+多行注释
  */
 ```
 
-## Variables
-Variables can hold data with a specific type. They can be created with the keyword `def` or by using the desired type directly.
-After that comes the name. It usually starts with a lower case letter.
-At the end is the value. If you used `def` then the value will define the type.
+## 变量
+变量可以保存具有特定类型的数据。可以使用关键字 `def` 或直接使用所需的类型创建它们。
+然后是变量名。通常以小写字母开头。
+最后是值。如果使用了 `def`，则值将定义类型。
 ```groovy
-def num = 10   // dynamically typed
-int num2 = 100 // strongly typed
+def num = 10   // 动态类型
+int num2 = 100 // 强类型
 ```
 
-## Datatypes
-There are differnt kinds of datatypes: primitive and complex.
+## 数据类型
+有不同类型的数据：基本类型和复杂类型。
 
-### Primitive types
-Primitive types can never be null. They always have a value. A whole number is by default a `int`<br>
-Decimals like `1.5` have by default the type `BigDecimal`. Which is most likely not what you want.
-I highly recommend to use the `d` or `f` suffix for `double` or `float`.<br>
-`int`: any whole number from -2^31 to 2^31 - 1<br>
-`long`: any whole number from -2^63 to 2^63 - 1 <br>
-`byte`: any whole number from -2^7 to 2^7 - 1 (-256 - 255)<br>
-`short`: any whole number from -2^15 to 2^15 - 1 (-32768 - 32767)<br>
-`float` a decimal number stored in 32 bits<br>
-`double` a decimal number stored in 64 bits<br>
-`boolean` true or false (nothing else)
+### 基本类型
+基本类型永远不能为null。它们总是有一个值。默认情况下，整数是 `int`<br>
+例如 `1.5` 这样的小数默认为 `BigDecimal` 类型。这可能不是您想要的类型。
+我强烈建议为 `double` 或 `float` 使用 `d` 或 `f` 后缀。<br>
+`int`：范围从 -2^31 到 2^31 - 1 的任意整数<br>
+`long`：范围从 -2^63 到 2^63 - 1 的任意整数<br>
+`byte`：范围从 -2^7 到 2^7 - 1 的任意整数（-256 - 255）<br>
+`short`：范围从 -2^15 到 2^15 - 1 的任意整数（-32768 - 32767）<br>
+`float` 32位存储的十进制数<br>
+`double` 64位存储的十进制数<br>
+`boolean` true 或 false（没有其他值）
 ```groovy
 def num1 = 10 // int
 def num2 = 10l // long
@@ -50,63 +50,63 @@ def num6 = 1.0d // double
 def bool = true // boolean
 ```
 
-### Complex types
-Complex types are all types that are not primitive. Every object falls under this category.
-Primitive types also have boxed complex types.
-As said before `def num = 1.5` will create a `BigDecimal` which is complex.<br>
-`def num = 10G` will create a `BigInteger` which has almost no value limit, but it can take a lot of memory, so try to not use to often.
+### 复杂类型
+复杂类型是所有不是基本类型的类型。每个对象都属于此类别。
+基本类型也有封箱的复杂类型。
+如前所述，`def num = 1.5` 将创建一个 `BigDecimal`，它是复杂类型。<br>
+`def num = 10G` 将创建一个 `BigInteger`，它几乎没有值限制，但可能占用大量内存，因此请尽量不要经常使用。
 
-## Functions
-A function is a set of instructions that can be called with a single line.
+## 函数
+函数是一组可以通过一行调用的指令。
 
-### Defining Functions
+### 定义函数
 ```groovy
-// function which takes a single parameter and returns nothing
+// 接受单个参数并返回无结果的函数
 def f(x) {
     println(x)
 }
 
-// function which takes two parameters and returns their sum
+// 接受两个参数并返回它们的和的函数
 def sum(x, y) {
     return x + y
 }
 
-// specifying types is optional
-// if used, it will error if passed invalid types
+// 指定类型是可选的
+// 如果使用，如果传递了无效类型，将引发错误
 def sum2(int x, int y) {
     return x + y
 }
 ```
 
-### Calling functions
-We'll take the functions from above.
+### 调用函数
+我们将使用上面的函数。
 ```groovy
-f(10) // calls the function with the parameter 10
-f(sum(4, 16)) // calls f with the result of sum
+f(10) // 使用参数 10 调用函数
+f(sum(4, 16)) // 使用 sum 的结果调用 f
 ```
 
-## Imports
-If you want to use any classes short name you need to import the full class name.
-Most of javas classes are imported by default.
+## 导入
+如果要使用任何类的短名称，您需要导入完整的类名。
+大多数Java类默认已导入。
 ```groovy
-import my.package.MyClass // import a single class
-import my.other.package.* // import all classes from a package
+import my.package.MyClass // 导入单个类
+import my.other.package.* // 导入包中的所有类
 
-import static my.package.MyClass.FIELD // static field import
-import static my.package.MyClass.function // static function import
-import static my.other.package.MyOtherClass.* // import all static functions from the class
+import static my.package.MyClass.FIELD // 静态字段导入
+import static my.package.MyClass.function // 静态函数导入
+import static my.other.package.MyOtherClass.* // 导入类中的所有静态函数
 
-import my.package.MyClass as MC // import aliasing
-import static my.package.MyClass.function as f // static import aliasing
+import my.package.MyClass as MC // 导入别名
+import static my.package.MyClass.function as f // 静态导入别名
 ```
 
-## Further Reading
+## 进一步阅读
 
-If there's something more advanced you'd like to learn, take a look at the [Official Groovy Documentation](https://groovy-lang.org/documentation.html).
+如果您想学习更高级的内容，请查看[官方Groovy文档](https://groovy-lang.org/documentation.html)。
 
-Some useful Groovy Documentation pages:
+一些有用的Groovy文档页面：
 
-* [Syntax](https://groovy-lang.org/syntax.html)
-* [Operators](https://groovy-lang.org/operators.html)
-* [Closures](https://groovy-lang.org/closures.html)
-* [Semantics](https://groovy-lang.org/semantics.html)
+* [语法](https://groovy-lang.org/syntax.html)
+* [运算符](https://groovy-lang.org/operators.html)
+* [闭包](https://groovy-lang.org/closures.html)
+* [语义](https://groovy-lang.org/semantics.html)

@@ -1,10 +1,10 @@
-# Closures
+# 闭包
 
-Closures are like lambdas in java, but slightly different.
+闭包类似于Java中的Lambda表达式，但略有不同。
 
-# For beginners
+# 对于初学者
 
-You may know what a method is. A method is a set order of instructions you can call. For example:
+你可能知道什么是方法。方法是一组可以调用的指令。例如：
 ```groovy
 def print_numbers(int n) {
     for (def i : 0..n) {
@@ -13,12 +13,12 @@ def print_numbers(int n) {
 }
 ```
 
-This method prints numbers from 0 to a given number to the log.
+这个方法将从0打印到给定数字到日志。
 ```groovy
 print_numbers(5)
 ```
 
-This will now output
+这将输出：
 
 ```
 0
@@ -28,9 +28,9 @@ This will now output
 4
 ```
 
-You can call that method as often as you want with any number input.
+你可以随时调用该方法，并传入任何数字作为输入。
 
-Now closures are methods, but you can carry them around. Example:
+现在，闭包就像方法，但你可以携带它们。例如：
 ```groovy
 def print_numbers = { int n -> /*(1)!*/
     for (def i : 0..n) {
@@ -39,11 +39,10 @@ def print_numbers = { int n -> /*(1)!*/
 }
 ```
 
-1. Most of the time the type is optional, so here it would become `{ n -> ...`
+1. 大多数情况下，类型是可选的，因此这里可以变成 `{ n -> ...}`
 
-This closure does the same thing as the method above, but it's a variable instead of a method. Just like any other
-variable you can pass it to other methods. (See [Events](../groovyscript/minecraft/events/aa_events.md)).
-You can invoke this closure the same way you do with a method:
+这个闭包做的事情与上面的方法相同，但它是一个变量而不是一个方法。就像任何其他变量一样，你可以将它传递给其他方法（参见[事件](../groovyscript/minecraft/events/aa_events.md)）。
+你可以像调用方法一样调用这个闭包：
 
 ```groovy
 print_numbers(3)

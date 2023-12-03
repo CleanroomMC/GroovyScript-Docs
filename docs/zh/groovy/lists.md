@@ -1,52 +1,52 @@
-# Lists
-Lists are data types that can hold multiple values of a certain type.
+# 列表
+列表是可以容纳特定类型的多个值的数据类型。
 
-Lists are dynamically sized. So that means if we create a list of 0 length, we can still add elements to it.
-There are multiple ways to create lists. The elements of a list are ordered, so the order wont change randomly.
+列表的大小是动态的。这意味着如果我们创建一个长度为0的列表，我们仍然可以向其添加元素。
+有多种创建列表的方法。列表的元素是有序的，因此顺序不会随机更改。
 ```groovy
-// most simple list, size = 0
-// the type is always ArrayList
+// 最简单的列表，大小为0
+// 类型总是ArrayList
 def simpleList = []
-def list = new ArrayList() // this is the same as above
+def list = new ArrayList() // 这与上面的方法相同
 
-def anotherList = ['He', 'llo', ' w', 'or', 'ld!'] // we can put values into the list, all of the same type
+def anotherList = ['He', 'llo', ' w', 'or', 'ld!'] // 我们可以将值放入列表，所有值的类型都相同
 ```
 
-## Getting values
-Elements of a list can bee accessed via `get` or the `[]` operator.
-Lists index start at 0.
+## 获取值
+可以通过 `get` 或 `[]` 运算符访问列表的元素。
+列表的索引从0开始。
 ```groovy
 def list = [9, 8, 7, 6, 5, 4, 3, 2, 1]
 println(list[0]) // 9
 println(list.get(0)) // 9
-println(list[3]) // prints the 4th element: 6
-println(list[-1]) // prints the last element: 1
-println(list[-2]) // prints the 2nd last element: 2
+println(list[3]) // 打印第4个元素：6
+println(list[-1]) // 打印最后一个元素：1
+println(list[-2]) // 打印倒数第二个元素：2
 ```
 
-You can also get a range of elements by using the `..` operator.
+您还可以使用 `..` 运算符获取一系列元素。
 ```groovy
 def list = [9, 8, 7, 6, 5, 4, 3, 2, 1]
 def subList = list[2..5] // [7, 6, 5, 4]
-// reversing the indexes results in a reversed list
+// 反转索引会导致反转的列表
 def subLis2 = list[5..2] // [4, 5, 6, 7]
-// -1 is greater because it refers to the last elements, so its not reversed
+// -1 大于 2，因为它指的是最后的元素，因此它不是反转的
 def subList3 = list[2..-1] // [7, 6, 5, 4, 3, 2, 1]
 ```
 
-## Modifying lists
-Lists can modified by using `set()`, `add()` and `remove()`.
-We can also use the `[]` operators
+## 修改列表
+可以使用 `set()`、`add()` 和 `remove()` 来修改列表。
+我们也可以使用 `[]` 运算符
 ```groovy
 def list = []
-list.add(1) // adds 1 to the lest
-// list is now [1]
+list.add(1) // 将1添加到列表
+// 列表现在是[1]
 list.add(3)
 list.add(9)
 // [1, 3, 9]
-list.set(1, 5) // sets the element at index 1 to 5
-list[1] = 5 // same thing as above
+list.set(1, 5) // 将索引为1的元素设置为5
+list[1] = 5 // 与上述相同
 // [1, 5, 9]
-list.remove(0) // removes the first element
+list.remove(0) // 删除第一个元素
 // [5, 9]
 ```

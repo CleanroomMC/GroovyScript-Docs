@@ -1,21 +1,18 @@
-Here you'll learn about adding external mod compat for GroovyScript.
+在这里，您将学习如何为GroovyScript添加外部模组兼容性。
 
-!!! Note
-    You need at least version 0.7.0.
+!!! 注意
+    您至少需要版本0.7.0。
 
-!!! Note
-    Please read the javadoc for the interface and methods.
+!!! 注意
+    请阅读接口和方法的javadoc。
 
-The plugin must implement `GroovyPlugin`. GroovyScript will automatically find the class and instantiate it. If the 
-instance field is non-null the class will not be instantiated by GroovyScript, but instead the value of the field will 
-be used.
+插件必须实现 `GroovyPlugin` 接口。GroovyScript将自动找到该类并实例化它。如果 `instance` 字段非空，则GroovyScript将不会实例化该类，而是使用字段的值。
 
-The field `TestReg test` represents a machine that can have recipes.
+字段 `TestReg test` 表示一个可以有配方的机器。
 
-In `onCompatLoaded()` the compat can be initialised. `container.getVirtualizedRegistrar().addFieldsOf(this)` 
-automatically register fields of this class which are `VirtualRegistries` including the `TestReg test` field.
+在 `onCompatLoaded()` 中，可以初始化兼容性。`container.getVirtualizedRegistrar().addFieldsOf(this)` 会自动注册该类的 `VirtualRegistries` 字段，包括 `TestReg test` 字段。
 
-````java
+```java
 public class ExampleModGroovyPlugin implements GroovyPlugin {
 
     public final TestReg test = new TestReg();
@@ -32,9 +29,9 @@ public class ExampleModGroovyPlugin implements GroovyPlugin {
 
     @Override
     public void onCompatLoaded(GroovyContainer<?> container) {
-        GroovyScript.LOGGER.info("ExampleMod container loaded");
+        GroovyScript.LOGGER.info("ExampleMod容器已加载");
         container.getVirtualizedRegistrar().addRegistry(VanillaModule.furnace);
         container.getVirtualizedRegistrar().addFieldsOf(this);
     }
 }
-````
+```
