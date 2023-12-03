@@ -1,22 +1,22 @@
-# Ore Dictionary
+# 矿石词典
 
-!!! Note
-    Requires version 0.3.0+
- GroovyScript also allows you to remove and add ore dictionaries to items and reload them.
+!!! 注意
+    需要版本 0.3.0+
+ GroovyScript 还允许您删除和添加矿石词典到物品并重新加载它们。
 
-## Getting an ore dict ingredient
-Ore dict ingredients can be used in any recipe that accepts `IIngredient`.
-!!! example
+## 获取矿石词典成分
+矿石词典成分可用于任何接受 `IIngredient` 的配方。
+!!! 例子
     ```groovy
-    ore('ingotCopper') // returns all copper ingots
-    ore('ingot*') // wildcards are also valid (returns all ingots)
+    ore('ingotCopper') // 返回所有铜锭
+    ore('ingot*') // 通配符也是有效的（返回所有锭）
     ```
 
-## Adding ore dicts
+## 添加矿石词典
 
-All three methods are do exactly the same thing.
+这三种方法都是完全相同的。
 
-!!! example
+!!! 例子
 
     ```groovy
     oreDict.add("amogus", item('minecraft:iron_ingot'))
@@ -26,11 +26,11 @@ All three methods are do exactly the same thing.
     ore('amogus').add(item('minecraft:iron_ingot'))
     ```
 
-## Removing ore dicts
+## 删除矿石词典
 
-All three methods are do exactly the same thing.
+这三种方法都是完全相同的。
 
-!!! example
+!!! 例子
 
     ```groovy
     oreDict.remove("ingotIron", item('minecraft:iron_ingot'))
@@ -40,38 +40,38 @@ All three methods are do exactly the same thing.
     ore('ingotIron').remove(item('minecraft:iron_ingot'))
     ```
 
-## Other
+## 其他
 
-You can get all items from an ore dict.
-Both ways do the same thing.
+您可以从矿石词典获取所有物品。
+两种方式都是相同的。
 
-!!! example
+!!! 例子
 
     ```groovy
     oreDict.getItems('ingotIron')
     oreDict['ingotIron']
     ```
 
-Checking if an item is in an ore dictionary
+检查物品是否在矿石词典中
 
-!!! example
+!!! 例子
 
     ```groovy
-    item('minecraft:iron_ingot') in ore('ingotIron') // returns true
+    item('minecraft:iron_ingot') in ore('ingotIron') // 返回 true
     ```
 
-Getting the first item from an ore dictionary
+从矿石词典获取第一个物品
 
-!!! example
+!!! 例子
 
     ```groovy
     ore('ingotIron').first
     ore('ingotIron')[0]
     ```
 
-Iterating over all items in an ore dictionary
+遍历矿石词典中的所有物品
 
-!!! example
+!!! 例子
 
     ```groovy
     for (def ironIngot : ore('ingotIron')) {

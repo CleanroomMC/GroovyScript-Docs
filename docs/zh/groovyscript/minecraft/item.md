@@ -1,14 +1,14 @@
-# Items
+# 物品
 
-Item stacks can be obtained with the item bracket handler.
+物品堆栈可以通过物品括号处理器获得。
 
 ```groovy
 def iron_ingot = item('minecraft:iron_ingot', 4) * 6
 ```
 
-The 4 inside the () is the metadata. Iron ingot doesn't have any sub items so it will result in an item that doesn't actually exist.
-The `* 6` at the end marks the amount. The item id `'minecraft:iron_ingot'` is a string and can be replaced by anything that makes a string. <br>
-The following also returns a iron ingot.
+括号中的 4 是元数据。铁锭没有任何子物品，因此将导致一个实际上不存在的物品。
+末尾的 `* 6` 表示数量。物品ID `'minecraft:iron_ingot'` 是一个字符串，可以用任何生成字符串的内容替换。<br>
+以下也会返回一个铁锭。
 
 ```groovy
 def iron_ingot = 'iron_ingot'
@@ -17,62 +17,62 @@ item("minecraft:$iron_ingot")
 
 ## NBT
 
-Nbt data is minecraft data format used for items and world saving. Adding a nbt tag is easy.
+NBT 数据是用于物品和世界保存的 Minecraft 数据格式。添加一个 NBT 标签很容易。
 
 ```groovy
 itemStack.withNbt(Map<String, Object> map)
 ```
 
-Now this looks complicated, but it isn't.
+现在这看起来复杂，但实际上并不复杂。
 
 ```groovy
 item('minecraft:iron_ingot').withNbt([Name: 'Epic Ingot'])
 ```
 
-### More
+### 更多
 
-- `.withNbt(null)` removes the nbt tag
-- `.withEmptyNbt()` adds an empty nbt tag
+- `.withNbt(null)` 移除 NBT 标签
+- `.withEmptyNbt()` 添加一个空的 NBT 标签
 
-## Match Conditions
+## 匹配条件
 
-This allows for dynamic item checking in recipes.
-!!! Note
-    At this moment (ver. 0.3.1) only crafting and Draconic Evolution fusion crafting is supported.
+这允许在配方中进行动态物品检查。
+!!! 注意
+    目前（版本 0.3.1），仅支持合成和龙之进化融合合成。
 
 ```groovy
 itemStack.when(Closure<Boolean> condition)
 ```
 
-!!! Example
+!!! 示例
     ```groovy
     item('minecraft:iron_axe:*').when({stack -> stack.getDamage() < 50})
     ```
 
-Let's see what this does. First `item('minecraft:iron_axe:*')` matches an iron axe with any damage.
-Then `.when({stack -> stack.getDamage() < 50})` only validates items that have taken less than 50 damage.
+让我们看看这是做什么的。首先 `item('minecraft:iron_axe:*')` 匹配任何损伤的铁斧。
+然后 `.when({stack -> stack.getDamage() < 50})` 只验证已受损伤少于 50 的物品。
 
-## Transformer
+## 转换器
 
-This transforms an item ingredient to a new item on craft. For example a water bucket returns an empty bucket after crafting.
+这将物品配料转换为合成时的新物品。例如，一个水桶在合成后返回一个空桶。
 
-!!! Note
-    This only works for crafting.
+!!! 注意
+    这仅适用于合成。
 
 ```groovy
 itemStack.transform(Closure<ItemStack> transformer)
 ```
 
-!!! Example
+!!! 示例
     ```groovy
     def transformer = { stack -> stack.copyWithMeta(stack.getItemDamage() + 1)}
     item('minecraft:iron_axe:*').transform(transformer)
     ```
 
-First we create a transformer closure, so we can easier see what's going on. It simply creates a new item with one more damage.
-In the second line that transformer is applied to the item. So at the end when you craft a recipe with that iron axe it will get damaged by 1.
+首先我们创建一个转换器闭包，以便更容易看到发生了什么。它简单地创建一个新的带有更多损伤的物品。
+在第二行，该转换器被应用于物品。因此，在合成带有该铁斧的配方时，它的损伤将增加 1。
 
-### Default Transformer
+### 默认转换器
 
-- `.noreturn()` will not return anything. Useful when you want to consume a water bucket with the bucket for example.
-- `.reuse()` will return itself. That means the item will not be consumed.
+- `.noreturn()` 将不返回任何东西。在你想要消耗一个水桶和桶的情况下很有用。
+- `.reuse()` 将返回自身。这意味着物品不会被消耗。
