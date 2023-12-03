@@ -1,6 +1,6 @@
 # Research
 
-### Thaumometer Scanning
+## Thaumometer Scanning
 
 The following methods allow for scanning a specified Object with a Thaumometer to discover the Object's component aspects.
 
@@ -20,6 +20,7 @@ mods.thaumcraft.Research.addScannable(String, Material)
 ```
 
 !!! example
+
     ```groovy
     mods.thaumcraft.Research.addScannable('UNLOCKAUROMANCY', item('minecraft:pumpkin'))
     ```
@@ -60,6 +61,7 @@ Adding required aspects: (optional)
 
 Adding tab icon: (required) <br>
 This is a [resource location](../../rl.md).
+
 ```groovy
 .icon(String)/*(1)!*/
 .icon(String mod, String path)/*(2)!*/
@@ -70,6 +72,7 @@ This is a [resource location](../../rl.md).
 
 Adding background: (required) <br>
 This is a [resource location](../../rl.md).
+
 ```groovy
 .background(String)/*(1)!*/
 .background(String mod, String path)/*(2)!*/
@@ -80,6 +83,7 @@ This is a [resource location](../../rl.md).
 
 Adding background overlay: (optional) <br>
 This is a [resource location](../../rl.md).
+
 ```groovy
 .background2(String)/*(1)!*/
 .background2(String mod, String path)/*(2)!*/
@@ -94,24 +98,24 @@ Register recipe: (returns nothing)
 .register()
 ```
 
-### Example
+!!! example
 
-```groovy
-mods.thaumcraft.Research.researchCategoryBuilder()
-    .key('BASICS2')
-    .researchKey('UNLOCKAUROMANCY')
-    .formulaAspect(aspect('herba') * 5)
-    .formulaAspect(aspect('ordo') * 5)
-    .formulaAspect(aspect('perditio') * 5)
-    .formulaAspect(aspect('aer') * 5)
-    .formulaAspect(aspect('ignis') * 5)
-    .formulaAspect(aspect('terra') * 5)
-    .formulaAspect(aspect('aqua') * 5)
-    .icon('textures/aspects/humor.png')
-    .background('textures/gui/gui_research_back_1.jpg')
-    .background2('textures/gui/gui_research_back_over.png')
-    .register()
-```
+    ```groovy
+    mods.thaumcraft.Research.researchCategoryBuilder()
+        .key('BASICS2')
+        .researchKey('UNLOCKAUROMANCY')
+        .formulaAspect(aspect('herba') * 5)
+        .formulaAspect(aspect('ordo') * 5)
+        .formulaAspect(aspect('perditio') * 5)
+        .formulaAspect(aspect('aer') * 5)
+        .formulaAspect(aspect('ignis') * 5)
+        .formulaAspect(aspect('terra') * 5)
+        .formulaAspect(aspect('aqua') * 5)
+        .icon('textures/aspects/humor.png')
+        .background('textures/gui/gui_research_back_1.jpg')
+        .background2('textures/gui/gui_research_back_over.png')
+        .register()
+    ```
 
 ### Remove Category (research tab)
 
@@ -122,6 +126,7 @@ mods.thaumcraft.Research.removeCategory(String/*(1)!*/)
 1. Target tab name.
 
 !!! example
+
     ```groovy
     mods.thaumcraft.Research.removeCategory('BASICS')
     ```
@@ -141,35 +146,37 @@ mods.thaumcraft.Research.addResearchLocation(String mod, String path)/*(2)!*/
 2. Path to the additional research JSON in the "mod" assets folder.
 
 !!! example
+
     ```groovy
     mods.thaumcraft.Research.addResearchLocation('thaumcraft', 'research/new.json')
     ```
+
     ```json
     {
         "entries" :[
             {
-                "key": "FIRSTSTEPS",    
+                "key": "FIRSTSTEPS",
                 "name": "research.FIRSTSTEPS.title",
                 "icons": [ "thaumcraft:textures/items/thaumonomicon.png" ],
                 "category": "BASICS",
-                "location": [ 0,0 ], 
+                "location": [ 0,0 ],
                 "parents": [ "!gotthaumonomicon" ],
                 "siblings": [ "KNOWLEDGETYPES", "!gotdream" ],
-                "meta": [ "ROUND","SPIKY" ],        
+                "meta": [ "ROUND","SPIKY" ],
                 "stages": [
-                    {   
-                        "text": "research.FIRSTSTEPS.stage.1", 
-                        "required_craft":["thaumcraft:arcane_workbench"], 
+                    {
+                        "text": "research.FIRSTSTEPS.stage.1",
+                        "required_craft":["thaumcraft:arcane_workbench"],
                         "recipes": ["thaumcraft:salismundusfake"]
                     },
                     {
-                        "text": "research.FIRSTSTEPS.stage.2",            
-                        "required_craft":["thaumcraft:thaumometer"], 
-                        "required_knowledge":["OBSERVATION;BASICS;1"], 
+                        "text": "research.FIRSTSTEPS.stage.2",
+                        "required_craft":["thaumcraft:thaumometer"],
+                        "required_knowledge":["OBSERVATION;BASICS;1"],
                         "recipes": ["thaumcraft:thaumometer","thaumcraft:salismundusfake"]
                     },
                     {
-                        "text": "research.FIRSTSTEPS.stage.3", 
+                        "text": "research.FIRSTSTEPS.stage.3",
                         "recipes": ["thaumcraft:thaumometer","thaumcraft:salismundusfake","thaumcraft:StoneArcane","thaumcraft:BrickArcane"]
                     }
                 ]

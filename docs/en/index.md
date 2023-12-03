@@ -5,7 +5,7 @@ A comprehensive scripting sandbox for Minecraft 1.12.2. <br>
 
 Are you not seeing what other see on this wiki? Try reloading it.
 
-#### Features:
+## Features
 
 1. Groovy: a powerful and tested scripting language
     - Java-compatible syntax + interoperable code
@@ -23,10 +23,11 @@ Are you not seeing what other see on this wiki? Try reloading it.
 8. API: Great catalogue of code for other mod authors to make their mods compatible with GroovyScript such as package/class/method/field blacklists
 
 ### Where to go?
+
 Check [this](getting_started.md) out to get started. <br>
 Check out the Groovy tab for infos about the Groovy language. <br>
 Check out the GroovyScript for the GroovyScript documentation. <br>
 
-!!! Note 
+!!! Note
     This wiki is highly WIP. There is still a lot of info missing. We would appreciate any help to improve this place.
     Get started by joining our [Discord](https://discord.com/invite/m53yxTjjKM)

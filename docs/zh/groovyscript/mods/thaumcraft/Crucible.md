@@ -1,6 +1,6 @@
 # Crucible
 
-### Adding Recipes
+## Adding Recipes
 
 Just like other recipe types, the Crucible also uses a recipe builder. <br>
 You don't know what a builder is? Check [this](https://groovyscript-docs.readthedocs.io/en/latest/groovy/builder/) out
@@ -41,16 +41,16 @@ Register recipe: (returns nothing)
 .register()
 ```
 
-### Example
+!!! example
 
-```groovy
-mods.thaumcraft.Crucible.recipeBuilder()
-        .researchKey('UNLOCKALCHEMY@3')
-        .catalyst(item('minecraft:rotten_flesh'))
-        .output(item('minecraft:gold_ingot'))
-        .aspect(aspect('metallum') * 10)
-        .register()
-```
+    ```groovy
+    mods.thaumcraft.Crucible.recipeBuilder()
+            .researchKey('UNLOCKALCHEMY@3')
+            .catalyst(item('minecraft:rotten_flesh'))
+            .output(item('minecraft:gold_ingot'))
+            .aspect(aspect('metallum') * 10)
+            .register()
+    ```
 
 ### Removing Recipes
 
@@ -59,6 +59,7 @@ mods.thaumcraft.Crucible.removeByOutput(IIngredient)
 ```
 
 !!! example
+
     ```groovy
     mods.thaumcraft.Crucible.removeByOutput(item('minecraft:gunpowder'))
     ```

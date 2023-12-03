@@ -9,13 +9,13 @@ The most noticeable is that you don't need `;` at the end of a line.
 
 ## Comments
 Comments can be made inside scripts that will be ignored by the compiler like this:
-````groovy
+```groovy
 // single line comment
 
 /*
 Multi line comment
  */
-````
+```
 
 ## Variables
 Variables can hold data with a specific type. They can be created with the keyword `def` or by using the desired type directly.
@@ -40,8 +40,7 @@ I highly recommend to use the `d` or `f` suffix for `double` or `float`.<br>
 `float` a decimal number stored in 32 bits<br>
 `double` a decimal number stored in 64 bits<br>
 `boolean` true or false (nothing else)
-
-````groovy
+```groovy
 def num1 = 10 // int
 def num2 = 10l // long
 def num3 = 10 as byte // byte
@@ -49,7 +48,7 @@ def num4 = 10 as short // byte
 def num5 = 1.0f // float
 def num6 = 1.0d // double
 def bool = true // boolean
-````
+```
 
 ### Complex types
 Complex types are all types that are not primitive. Every object falls under this category.
@@ -81,10 +80,10 @@ def sum2(int x, int y) {
 
 ### Calling functions
 We'll take the functions from above.
-````groovy
+```groovy
 f(10) // calls the function with the parameter 10
 f(sum(4, 16)) // calls f with the result of sum
-````
+```
 
 ## Imports
 If you want to use any classes short name you need to import the full class name.

@@ -1,6 +1,7 @@
 # Blood Magic Entity Sacrifice Amount
 
 Package:
+
 ```groovy
 mods.bloodmagic.Sacrificial
 ```
@@ -11,13 +12,16 @@ mods.bloodmagic.Sacrificial
     and configurable via config with a default value of `25` for the Well of Suffering Ritual.
 
 ## Setting the Sacrificial value of Entities
+
 Just like other recipe types, Sacrificial also uses a recipe builder. <br>
 You don't know what a builder is? Check [this](https://groovyscript-docs.readthedocs.io/en/latest/groovy/builder/) out
+
 ```groovy
 mods.bloodmagic.Sacrificial.recipeBuilder()
 ```
 
 Set the target Entity.
+
 ```groovy
 .entity(String)
 .entity(ResourceLocation)
@@ -25,29 +29,34 @@ Set the target Entity.
 ```
 
 Set the Blood amount per HP when Sacrificed:
+
 ```groovy
 .value(int)
 ```
 
 Register recipe:
+
 ```groovy
 .register()
 ```
 
-### Example
-```groovy
-mods.bloodmagic.Sacrificial.recipeBuilder()
-    .entity("minecraft:enderman") // If the Entity is already registered, overrides the prior value.
-    .value(1000)
-    .register()
-```
+!!! example
+
+    ```groovy
+    mods.bloodmagic.Sacrificial.recipeBuilder()
+        .entity("minecraft:enderman") // If the Entity is already registered, overrides the prior value.
+        .value(1000)
+        .register()
+    ```
 
 ## Removing Recipes
+
 !!! Danger "Warning"
     Some Entities are set to 0 by default to prevent exploits - for example, Vanilla's Armor Stand.
     Removing these Sacrificial values may introduce unintentional exploits.
 
 Removes the recipe that matches the given catalyst item:
+
 ```groovy
 mods.bloodmagic.Sacrificial.remove(String)
 mods.bloodmagic.Sacrificial.remove(ResourceLocation)
@@ -55,12 +64,14 @@ mods.bloodmagic.Sacrificial.remove(Entity)
 ```
 
 Removes all registed Entities, resetting them to the default value:
+
 ```groovy
 mods.bloodmagic.Sacrificial.removeAll()
 ```
 
-### Example
-```groovy
-// Removes the default Sacrificial value of a Villager.
-mods.bloodmagic.Sacrificial.remove("minecraft:villager")
-```
+!!! example
+
+    ```groovy
+    // Removes the default Sacrificial value of a Villager.
+    mods.bloodmagic.Sacrificial.remove("minecraft:villager")
+    ```
