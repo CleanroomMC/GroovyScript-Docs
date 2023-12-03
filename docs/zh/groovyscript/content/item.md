@@ -1,55 +1,53 @@
-# Creating items
+# 创建物品
 
-## The simplest way
+## 最简单的方式
 
 ```groovy
 content.createItem(String name).register()
 ```
 
-Simple right?
-Let's break it up:
+简单吧？
+我们来分解一下：
 
-- `content` is a global variable.
-- `createItem(String name)` creates an item and returns it. The name is the registry name and must only consist of lower
-  case letters and `_`.
-- `register()` registers the item. Without this the item will not appear in game.
+- `content` 是一个全局变量。
+- `createItem(String name)` 创建一个物品并返回它。名称是注册名称，只能包含小写字母和 `_`。
+- `register()` 注册这个物品。如果没有这个，物品将不会出现在游戏中。
 
-## Registering an item
+## 注册物品
 
-The example above creates a simple item for you, but you can also create items yourself (to create custom behaviour).
-Use the following methods to register custom items.
+上面的例子为您创建了一个简单的物品，但您也可以自己创建物品（以创建自定义行为）。
+使用以下方法注册自定义物品。
 
 ```groovy
 content.registerItem(String name, Item item)
 ```
 
-## Texture
+## 纹理
 
-Minecraft's items need a texture (or multiple) and a model file which describes how the textures are rendered. If groovy
-can't find a model file it will generate a default file
-at `.minecraft/groovy/assets/[pack id]/models/item/[item name].json`.
-It will point to a texture you will need to place
-at `.minecraft/groovy/assets/[pack id]/textures/items/[item name].png`.
+Minecraft 的物品需要一个纹理（或多个纹理）和一个描述纹理如何渲染的模型文件。如果 GroovyScript 找不到模型文件，它将生成一个默认文件
+在 `.minecraft/groovy/assets/[pack id]/models/item/[item name].json`。
+它将指向一个您需要放置的纹理
+在 `.minecraft/groovy/assets/[pack id]/textures/items/[item name].png`。
 
-## Translating the items name
+## 翻译物品名称
 
-By default, the items name will show up as `item.[pack id].[item name].name`. To change that you need add an entry to
-the lang file. GroovyScript generates a default lang file at `.minecraft/groovy/assets/[pack id]/lang/en_us.lang`.
+默认情况下，物品名称将显示为 `item.[pack id].[item name].name`。要更改它，您需要在 lang 文件中添加一个条目。
+GroovyScript 会在 `.minecraft/groovy/assets/[pack id]/lang/en_us.lang` 生成一个默认 lang 文件。
 
-!!! example
+!!! 示例
 
-    First create an item
+    首先创建一个物品
 
     ```groovy
     content.createItem('heart_of_the_universe')
     ```
 
-    Let's assume that the pack id is `nomifactory` so that the item id will be `nomifactory:heart_of_the_universe`.
-    Insert this line into the lang file.
+    假设包 id 是 `nomifactory`，以便物品 id 将是 `nomifactory:heart_of_the_universe`。
+    将此行插入 lang 文件。
 
     ```mclang
     item.nomifactory.heart_of_the_universe.name=Heart of the universe
     ```
 
-    (`item.nomifactory.heart_of_the_universe.name` is the default generated translation key. You can change to anything you want.) <br>
-    Finally, put a texture at `.minecraft/groovy/assets/nomifactory/textures/items/heart_of_the_universe.png`
+    (`item.nomifactory.heart_of_the_universe.name` 是默认生成的翻译键。您可以更改为任何内容。) <br>
+    最后，在 `.minecraft/groovy/assets/nomifactory/textures/items/heart_of_the_universe.png` 放置一个纹理。
