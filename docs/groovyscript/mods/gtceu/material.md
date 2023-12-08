@@ -64,7 +64,7 @@ an event.
 
 ```groovy
 // import the material event
-import gregtech.api.GregTechAPI.MaterialEvent
+import gregtech.api.unification.material.event.MaterialEvent
 
 // register an event listener
 event_manager.listen { MaterialEvent event ->
@@ -84,7 +84,7 @@ materials is more than all of CEu uses by itself too! The `name` must be all low
 special characters (@, %, etc).
 
 ```groovy
-import gregtech.api.GregTechAPI.MaterialEvent
+import gregtech.api.unification.material.event.MaterialEvent
 import gregtech.api.unification.material.Material
 
 // import the Material class for making new materials
@@ -99,7 +99,7 @@ event_manager.listen { MaterialEvent event ->
 ```
 
 ```groovy
-import gregtech.api.GregTechAPI.MaterialEvent
+import gregtech.api.unification.material.event.MaterialEvent
 import gregtech.api.unification.material.Material
 
 event_manager.listen { MaterialEvent event ->
@@ -363,7 +363,7 @@ Set the stats for tools which are made from this Material.
     This is example of a material using everything mentioned so far.
 
     ```groovy
-    import gregtech.api.GregTechAPI.MaterialEvent
+    import gregtech.api.unification.material.event.MaterialEvent
     import gregtech.api.unification.material.Material
 
     event_manager.listen { MaterialEvent event ->
@@ -372,7 +372,7 @@ Set the stats for tools which are made from this Material.
                 .ingot() // has ingot (and therefore dust)
                 .color(0x0000FF) // pure blue
                 .toolStats(10, 3, 256, 21) // tool stats
-                .blastTemp(2900) // EBF temperature
+                .blast(2900) // EBF temperature
                 .ore() // has ore blocks
                 .addOreByproducts(material('gold'), material('copper')) // add byproducts
                 .cableProperties(128, 2, 4, false) // add cables
@@ -434,7 +434,7 @@ The default will be determined by the property found first in this order.
 !!! example "Example with a MaterialIconSet"
 
     ```groovy
-    import gregtech.api.GregTechAPI.MaterialEvent
+    import gregtech.api.unification.material.event.MaterialEvent
     import gregtech.api.unification.material.Material
 
     event_manager.listen { MaterialEvent event ->
@@ -444,7 +444,7 @@ The default will be determined by the property found first in this order.
                 .color(0x0000FF) // pure blue
                 .iconSet("shiny") // iconset to the shiny type
                 .toolStats(10, 3, 256, 21) // tool stats
-                .blastTemp(2900) // EBF temperature
+                .blast(2900) // EBF temperature
                 .ore() // has ore blocks
                 .addOreByproducts(material('gold'), material('copper')) // add byproducts
                 .cableProperties(128, 2, 4, false) // add cables
@@ -482,7 +482,7 @@ Sets the components of the material.
 !!! example
 
     ```groovy
-    import gregtech.api.GregTechAPI.MaterialEvent
+    import gregtech.api.unification.material.event.MaterialEvent
     import gregtech.api.unification.material.Material
 
     event_manager.listen { MaterialEvent event ->
@@ -509,7 +509,8 @@ Available MaterialFlags for Every Material:
   component.
 * `"explosive"`: Add to material if it is some kind of explosive.
 * `"flammable"`: Add to material if it is some kind of flammable.
-* `"generate_plate"`:
+* `"sticky"`: Add to material if its fluid block should be sticky, so hard to move through
+* `"glowing"`: Add to material to make its fluid block glow
 
 Available MaterialFlags for Materials with `DustProperty`:
 
@@ -525,6 +526,7 @@ Available MaterialFlags for Materials with `DustProperty`:
 * `"exclude_plate_compressor_recipe"`: Prevent creating plates in the compressor from dust. Requires `"generate_plate"`.
 * `"exclude_block_crafting_by_hand_recipes"`: Prevent creating shapeless recipes for dust to block and vice versa.
 * `"mortar_grindable"`: All the material to be ground into dust when crafting with a mortar.
+* `"force_generate_block`: Adds a material block even if GT would not normally add it
 
 Available MaterialFlags for Materials with `IngotProperty`:
 
@@ -537,6 +539,7 @@ Available MaterialFlags for Materials with `IngotProperty`:
   Furnace for 2x output.
 * `"blast_furnace_calcite_triple"`: Add this to your Material if you want to have its Ore Calcite heated in a Blast
   Furnace for 3x output.
+* `"generate_double_plate"`: Generate a double plate for this material. Requires `"generate_plate"`.
 * `"generate_foil"`: Generate a foil for this material. Requires `"generate_plate"`.
 * `"generate_bolt_screw"`: Generate a bolt and screw for this material. Requires `"generate_rod"`.
 * `"generate_ring"`: Generate a ring for this material. Requires `"generate_rod"`.
@@ -548,6 +551,7 @@ Available MaterialFlags for Materials with `IngotProperty`:
   and `"generate_plate"`.
 * `"generate_dense"`: Generate a dense plate for this material. Requires `"generate_plate"`.
 * `"generate_round"`: Generate a dense plate for this material.
+* `"is_magnetic`: Add this to your Material if it is a magnetic form of another material (like Magnetic Steel).
 
 Available MaterialFlags for Materials with `GemProperty`:
 
@@ -557,6 +561,7 @@ Available MaterialFlags for Materials with `GemProperty`:
 Available MaterialFlags for Materials with `OreProperty`:
 
 * `"high_sifter_output"`: If this material has a higher output when the Crushed Purified Ore is processed in the Sifter.
+* `disable_ore_block`: Add this to remove the Ore block from this material, but keep the items like crushed, purified, impure etc..
 
 #### Adding Flags to a Material
 
@@ -568,7 +573,7 @@ Add MaterialFlags to this Material.
 !!! example
 
     ```groovy
-    import gregtech.api.GregTechAPI.MaterialEvent
+    import gregtech.api.unification.material.event.MaterialEvent
     import gregtech.api.unification.material.Material
 
     event_manager.listen { MaterialEvent event ->
@@ -579,7 +584,7 @@ Add MaterialFlags to this Material.
                 .iconSet("shiny") // iconset to the shiny type
                 .flags("generate_plate", "generate_foil") // add flags
                 .toolStats(10, 3, 256, 21) // tool stats
-                .blastTemp(2900) // EBF temperature
+                .blast(2900) // EBF temperature
                 .ore() // has ore blocks
                 .addOreByproducts(material('gold'), material('copper')) // add byproducts
                 .cableProperties(128, 2, 4, false) // add cables
@@ -748,7 +753,7 @@ Add a new element.
 !!! example "Elemental Material Example"
 
     ```groovy
-    import gregtech.api.GregTechAPI.MaterialEvent
+    import gregtech.api.unification.material.event.MaterialEvent
     import gregtech.api.unification.material.Material
     import gregtech.api.unification.Elements
 
@@ -769,7 +774,7 @@ Add a new element.
 !!! example "Material Creation Full Examples"
 
     ```groovy
-    import gregtech.api.GregTechAPI.MaterialEvent
+    import gregtech.api.unification.material.event.MaterialEvent
     import gregtech.api.unification.material.Material
 
     event_manager.listen { MaterialEvent event ->
@@ -826,11 +831,7 @@ See the **Retrieving Existing Materials** section for information on retrieving 
 
 The material registry can do more than just get materials.
 
-_`MaterialRegistry.get(String materialName)`_
-
-* `materialName` - get a `Material` by its unlocalized name.
-
-_`MaterialRegistry.getAllMaterials()`_ get
+_`GregTechAPI.materialManager.getRegisteredMaterials();`_
 
 * get a list of every material registered
 
@@ -919,7 +920,7 @@ Sets the color of this Material.
 !!! example
 
     ```groovy
-    import gregtech.api.GregTechAPI.PostMaterialEvent
+    import gregtech.api.unification.material.event.PostMaterialEvent
 
     event_manager.listen { PostMaterialEvent event ->
         def gold = material('gold')
