@@ -14,9 +14,9 @@ Converts 5 input items into the ouput after a period of time when the Pyre is li
 
 Refer to this via any of the following:
 
-```groovy hl_lines="2"
-mods.roots.Pyre
+```groovy hl_lines="1"
 mods.roots.pyre/*(1)!*/
+mods.roots.Pyre
 ```
 
 1. This identifier will be used as the default for examples on this page

@@ -14,15 +14,15 @@ Adds virtual aquifers that can be accessed via the Evershifting Fountain's Necro
 
 Refer to this via any of the following:
 
-```groovy hl_lines="8"
-mods.astral.Fountain
-mods.astral.fountain
-mods.astral_sorcery.Fountain
+```groovy hl_lines="3"
 mods.astral_sorcery.fountain
-mods.as.Fountain
-mods.as.fountain
-mods.astralsorcery.Fountain
+mods.astral_sorcery.Fountain
 mods.astralsorcery.fountain/*(1)!*/
+mods.astralsorcery.Fountain
+mods.astral.fountain
+mods.astral.Fountain
+mods.as.fountain
+mods.as.Fountain
 ```
 
 1. This identifier will be used as the default for examples on this page

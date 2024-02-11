@@ -14,9 +14,9 @@ When running the Transmutation, convert nearby blocks that match a set of condit
 
 Refer to this via any of the following:
 
-```groovy hl_lines="2"
-mods.roots.Transmutation
+```groovy hl_lines="1"
 mods.roots.transmutation/*(1)!*/
+mods.roots.Transmutation
 ```
 
 1. This identifier will be used as the default for examples on this page

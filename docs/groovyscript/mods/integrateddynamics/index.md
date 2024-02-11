@@ -9,11 +9,11 @@ hide: toc
 
 Has 4 subcategories.
 
-* [Drying Basin](./dryingbasin.md)
+* [Drying Basin](./drying_basin.md)
 
-* [Mechanical Drying Basin](./mechanicaldryingbasin.md)
+* [Mechanical Drying Basin](./mechanical_drying_basin.md)
 
-* [Mechanical Squeezer](./mechanicalsqueezer.md)
+* [Mechanical Squeezer](./mechanical_squeezer.md)
 
 * [Squeezer](./squeezer.md)
 

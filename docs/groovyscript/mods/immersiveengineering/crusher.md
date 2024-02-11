@@ -14,11 +14,11 @@ Converts an input itemstack into an output itemstack, consuming energy.
 
 Refer to this via any of the following:
 
-```groovy hl_lines="4"
-mods.ie.Crusher
+```groovy hl_lines="3"
 mods.ie.crusher
-mods.immersiveengineering.Crusher
+mods.ie.Crusher
 mods.immersiveengineering.crusher/*(1)!*/
+mods.immersiveengineering.Crusher
 ```
 
 1. This identifier will be used as the default for examples on this page

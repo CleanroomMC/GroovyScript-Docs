@@ -5,7 +5,7 @@ search:
 
 
 * [Extended Crafting](./index.md)
-* [Combination Crafting](./combinationcrafting.md)
-* [Compression Crafting](./compressioncrafting.md)
-* [Ender Crafting](./endercrafting.md)
-* [Table Crafting](./tablecrafting.md)
+* [Combination Crafting](./combination_crafting.md)
+* [Compression Crafting](./compression_crafting.md)
+* [Ender Crafting](./ender_crafting.md)
+* [Table Crafting](./table_crafting.md)

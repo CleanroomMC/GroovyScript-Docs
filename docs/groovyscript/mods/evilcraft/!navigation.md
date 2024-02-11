@@ -5,5 +5,5 @@ search:
 
 
 * [EvilCraft](./index.md)
-* [Blood Infuser](./bloodinfuser.md)
-* [Environmental Accumulator](./environmentalaccumulator.md)
+* [Blood Infuser](./blood_infuser.md)
+* [Environmental Accumulator](./environmental_accumulator.md)

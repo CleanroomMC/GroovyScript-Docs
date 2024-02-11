@@ -14,11 +14,11 @@ Controls using specific items, any items from a mod, or any items with a Capabil
 
 Refer to this via any of the following:
 
-```groovy hl_lines="2"
-mods.appliedenergistics2.Attunement
-mods.appliedenergistics2.attunement/*(1)!*/
-mods.ae2.Attunement
+```groovy hl_lines="3"
 mods.ae2.attunement
+mods.ae2.Attunement
+mods.appliedenergistics2.attunement/*(1)!*/
+mods.appliedenergistics2.Attunement
 ```
 
 1. This identifier will be used as the default for examples on this page

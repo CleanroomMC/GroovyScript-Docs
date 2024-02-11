@@ -14,15 +14,15 @@ Converts an item into an itemstack with a chance of getting twice the amount aft
 
 Refer to this via any of the following:
 
-```groovy hl_lines="8"
-mods.astral.Grindstone
-mods.astral.grindstone
-mods.astral_sorcery.Grindstone
+```groovy hl_lines="3"
 mods.astral_sorcery.grindstone
-mods.as.Grindstone
-mods.as.grindstone
-mods.astralsorcery.Grindstone
+mods.astral_sorcery.Grindstone
 mods.astralsorcery.grindstone/*(1)!*/
+mods.astralsorcery.Grindstone
+mods.astral.grindstone
+mods.astral.Grindstone
+mods.as.grindstone
+mods.as.Grindstone
 ```
 
 1. This identifier will be used as the default for examples on this page

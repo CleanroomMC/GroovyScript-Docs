@@ -14,9 +14,9 @@ Page creates a new page to be used in entries.
 
 Refer to this via any of the following:
 
-```groovy hl_lines="2"
-mods.botania.Page
+```groovy hl_lines="1"
 mods.botania.page/*(1)!*/
+mods.botania.Page
 ```
 
 1. This identifier will be used as the default for examples on this page

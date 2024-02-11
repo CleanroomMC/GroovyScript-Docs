@@ -14,11 +14,11 @@ Consumes items and power from up to 54 pedestals of at least a given tier pointi
 
 Refer to this via any of the following:
 
-```groovy hl_lines="4"
-mods.de.Fusion
+```groovy hl_lines="3"
 mods.de.fusion
-mods.draconicevolution.Fusion
+mods.de.Fusion
 mods.draconicevolution.fusion/*(1)!*/
+mods.draconicevolution.Fusion
 ```
 
 1. This identifier will be used as the default for examples on this page

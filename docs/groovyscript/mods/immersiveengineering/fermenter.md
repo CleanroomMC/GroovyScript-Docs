@@ -14,11 +14,11 @@ Converts an input itemstack into an output fluidstack with an optional output it
 
 Refer to this via any of the following:
 
-```groovy hl_lines="4"
-mods.ie.Fermenter
+```groovy hl_lines="3"
 mods.ie.fermenter
-mods.immersiveengineering.Fermenter
+mods.ie.Fermenter
 mods.immersiveengineering.fermenter/*(1)!*/
+mods.immersiveengineering.Fermenter
 ```
 
 1. This identifier will be used as the default for examples on this page

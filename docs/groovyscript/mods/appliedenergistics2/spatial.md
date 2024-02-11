@@ -14,11 +14,11 @@ Either the class itself or its String name to add or remove from the Tile Entiti
 
 Refer to this via any of the following:
 
-```groovy hl_lines="2"
-mods.appliedenergistics2.Spatial
-mods.appliedenergistics2.spatial/*(1)!*/
-mods.ae2.Spatial
+```groovy hl_lines="3"
 mods.ae2.spatial
+mods.ae2.Spatial
+mods.appliedenergistics2.spatial/*(1)!*/
+mods.appliedenergistics2.Spatial
 ```
 
 1. This identifier will be used as the default for examples on this page

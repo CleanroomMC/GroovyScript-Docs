@@ -14,9 +14,9 @@ Converts stone blocks into one of a few ore blocks at the cost of mana.
 
 Refer to this via any of the following:
 
-```groovy hl_lines="2"
-mods.botania.Orechid
+```groovy hl_lines="1"
 mods.botania.orechid/*(1)!*/
+mods.botania.Orechid
 ```
 
 1. This identifier will be used as the default for examples on this page

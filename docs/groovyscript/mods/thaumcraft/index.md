@@ -9,23 +9,23 @@ hide: toc
 
 Has 10 subcategories.
 
-* [Arcane Workbench](./arcaneworkbench.md)
+* [Arcane Workbench](./arcane_workbench.md)
 
 * [Aspect Creator](./aspect.md)
 
-* [Entity/Block Aspects](./aspecthelper.md)
+* [Entity/Block Aspects](./aspect_helper.md)
 
 * [Crucible](./crucible.md)
 
-* [Dust Trigger](./dusttrigger.md)
+* [Dust Trigger](./dust_trigger.md)
 
-* [Infusion Crafting](./infusioncrafting.md)
+* [Infusion Crafting](./infusion_crafting.md)
 
-* [Lootbag](./lootbag.md)
+* [Lootbag](./loot_bag.md)
 
 * [Research](./research.md)
 
-* [Smelting Bonus](./smeltingbonus.md)
+* [Smelting Bonus](./smelting_bonus.md)
 
 * [Warp](./warp.md)
 

@@ -14,9 +14,9 @@ Controls extra drops given by mobs. Chance and Size are both arrays 4 long, cont
 
 Refer to this via any of the following:
 
-```groovy hl_lines="2"
-mods.woot.Drops
+```groovy hl_lines="1"
 mods.woot.drops/*(1)!*/
+mods.woot.Drops
 ```
 
 1. This identifier will be used as the default for examples on this page
@@ -52,7 +52,6 @@ Don't know what a builder is? Check [the builder info page](../../../groovy/buil
         name(EntityEntry)
         name(WootMobName)
         name(String, String)
-        name(ResourceLocation)
         ```
 
     - `#!groovy List<Integer>`. Sets the quantity of the drop for each level of Looting. Requires exactly 4.

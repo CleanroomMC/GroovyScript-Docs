@@ -9,19 +9,19 @@ hide: toc
 
 Has 19 subcategories.
 
-* [Animal Harvest](./animalharvest.md)
+* [Animal Harvest](./animal_harvest.md)
 
-* [Animal Harvest Fish](./animalharvestfish.md)
+* [Animal Harvest Fish](./animal_harvest_fish.md)
 
-* [Bark Carving](./barkcarving.md)
+* [Bark Carving](./bark_carving.md)
 
 * [Chrysopoeia](./chrysopoeia.md)
 
-* [Fey Crafter](./feycrafter.md)
+* [Fey Crafter](./fey_crafter.md)
 
-* [Flower Generation](./flowergeneration.md)
+* [Flower Generation](./flower_generation.md)
 
-* [Life Essence](./lifeessence.md)
+* [Life Essence](./life_essence.md)
 
 * [Modifiers](./modifiers.md)
 
@@ -37,13 +37,13 @@ Has 19 subcategories.
 
 * [Rituals](./rituals.md)
 
-* [Runic Shear Block](./runicshearblock.md)
+* [Runic Shear Block](./runic_shear_block.md)
 
-* [Runic Shear Entity](./runicshearentity.md)
+* [Runic Shear Entity](./runic_shear_entity.md)
 
 * [Spells](./spells.md)
 
-* [Summon Creature](./summoncreature.md)
+* [Summon Creature](./summon_creature.md)
 
 * [Transmutation](./transmutation.md)
 

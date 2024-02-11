@@ -14,11 +14,11 @@ Converts any number of input itemstacks and a fluidstack into an output fluidsta
 
 Refer to this via any of the following:
 
-```groovy hl_lines="4"
-mods.ie.Mixer
+```groovy hl_lines="3"
 mods.ie.mixer
-mods.immersiveengineering.Mixer
+mods.ie.Mixer
 mods.immersiveengineering.mixer/*(1)!*/
+mods.immersiveengineering.Mixer
 ```
 
 1. This identifier will be used as the default for examples on this page

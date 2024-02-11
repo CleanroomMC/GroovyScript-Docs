@@ -14,13 +14,13 @@ Creates a custom Aspect.
 
 Refer to this via any of the following:
 
-```groovy hl_lines="6"
-mods.thaum.Aspect
-mods.thaum.aspect
-mods.tc.Aspect
-mods.tc.aspect
-mods.thaumcraft.Aspect
+```groovy hl_lines="1"
 mods.thaumcraft.aspect/*(1)!*/
+mods.thaumcraft.Aspect
+mods.tc.aspect
+mods.tc.Aspect
+mods.thaum.aspect
+mods.thaum.Aspect
 ```
 
 1. This identifier will be used as the default for examples on this page

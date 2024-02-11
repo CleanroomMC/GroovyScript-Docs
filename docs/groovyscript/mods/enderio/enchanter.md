@@ -14,11 +14,11 @@ Convert an input itemstack, player xp, and either a written book and lapis or a 
 
 Refer to this via any of the following:
 
-```groovy hl_lines="2"
-mods.enderio.Enchanter
+```groovy hl_lines="1"
 mods.enderio.enchanter/*(1)!*/
-mods.eio.Enchanter
+mods.enderio.Enchanter
 mods.eio.enchanter
+mods.eio.Enchanter
 ```
 
 1. This identifier will be used as the default for examples on this page

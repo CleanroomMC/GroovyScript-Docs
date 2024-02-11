@@ -14,9 +14,9 @@ Controls item/fluid costs of a given mob or the default cost.
 
 Refer to this via any of the following:
 
-```groovy hl_lines="2"
-mods.woot.Spawning
+```groovy hl_lines="1"
 mods.woot.spawning/*(1)!*/
+mods.woot.Spawning
 ```
 
 1. This identifier will be used as the default for examples on this page
@@ -65,7 +65,6 @@ Don't know what a builder is? Check [the builder info page](../../../groovy/buil
         name(String)
         name(EntityEntry)
         name(WootMobName)
-        name(ResourceLocation)
         ```
 
     - `#!groovy boolean`. Sets if the default recipes are being targeted instead of a specific entity name. Requires either `name` to be defined and a valid name or `defaultSpawnRecipe` to be true. (Default `false`).

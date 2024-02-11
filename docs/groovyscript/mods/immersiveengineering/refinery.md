@@ -14,11 +14,11 @@ Converts 2 input fluidstacks into an output fluidstack, consuming power.
 
 Refer to this via any of the following:
 
-```groovy hl_lines="4"
-mods.ie.Refinery
+```groovy hl_lines="3"
 mods.ie.refinery
-mods.immersiveengineering.Refinery
+mods.ie.Refinery
 mods.immersiveengineering.refinery/*(1)!*/
+mods.immersiveengineering.Refinery
 ```
 
 1. This identifier will be used as the default for examples on this page

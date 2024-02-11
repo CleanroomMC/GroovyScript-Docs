@@ -11,9 +11,9 @@ Has 19 subcategories.
 
 * [Infusion](./infusion.md)
 
-* [Chemical Infuser](./chemicalinfuser.md)
+* [Chemical Infuser](./chemical_infuser.md)
 
-* [Chemical Oxidizer](./chemicaloxidizer.md)
+* [Chemical Oxidizer](./chemical_oxidizer.md)
 
 * [Combiner](./combiner.md)
 
@@ -21,29 +21,29 @@ Has 19 subcategories.
 
 * [Crystallizer](./crystallizer.md)
 
-* [Dissolution Chamber](./dissolutionchamber.md)
+* [Dissolution Chamber](./dissolution_chamber.md)
 
-* [Electrolytic Separator](./electrolyticseparator.md)
+* [Electrolytic Separator](./electrolytic_separator.md)
 
-* [Enrichment Chamber](./enrichmentchamber.md)
+* [Enrichment Chamber](./enrichment_chamber.md)
 
-* [Injection Chamber](./injectionchamber.md)
+* [Injection Chamber](./injection_chamber.md)
 
-* [Metallurgic Infuser](./metallurgicinfuser.md)
+* [Metallurgic Infuser](./metallurgic_infuser.md)
 
-* [Osmium Compressor](./osmiumcompressor.md)
+* [Osmium Compressor](./osmium_compressor.md)
 
-* [Pressurized Reaction Chamber](./pressurizedreactionchamber.md)
+* [Pressurized Reaction Chamber](./pressurized_reaction_chamber.md)
 
-* [Purification Chamber](./purificationchamber.md)
+* [Purification Chamber](./purification_chamber.md)
 
 * [Sawmill](./sawmill.md)
 
 * [Smelting](./smelting.md)
 
-* [Solar Neutron Activator](./solarneutronactivator.md)
+* [Solar Neutron Activator](./solar_neutron_activator.md)
 
-* [Thermal Evaporation Plant](./thermalevaporationplant.md)
+* [Thermal Evaporation Plant](./thermal_evaporation_plant.md)
 
 * [Washer](./washer.md)
 

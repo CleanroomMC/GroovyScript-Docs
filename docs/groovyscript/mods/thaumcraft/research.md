@@ -14,13 +14,13 @@ Create or modify existing research entries, which contain helpful information an
 
 Refer to this via any of the following:
 
-```groovy hl_lines="6"
-mods.thaum.Research
-mods.thaum.research
-mods.tc.Research
-mods.tc.research
-mods.thaumcraft.Research
+```groovy hl_lines="1"
 mods.thaumcraft.research/*(1)!*/
+mods.thaumcraft.Research
+mods.tc.research
+mods.tc.Research
+mods.thaum.research
+mods.thaum.Research
 ```
 
 1. This identifier will be used as the default for examples on this page

@@ -14,11 +14,11 @@ Converts an input itemstack into either an output itemstack, fluidstack, or both
 
 Refer to this via any of the following:
 
-```groovy hl_lines="4"
-mods.ie.Squeezer
+```groovy hl_lines="3"
 mods.ie.squeezer
-mods.immersiveengineering.Squeezer
+mods.ie.Squeezer
 mods.immersiveengineering.squeezer/*(1)!*/
+mods.immersiveengineering.Squeezer
 ```
 
 1. This identifier will be used as the default for examples on this page

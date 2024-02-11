@@ -9,11 +9,11 @@ hide: toc
 
 Has 4 subcategories.
 
-* [Combination Crafting](./combinationcrafting.md)
+* [Combination Crafting](./combination_crafting.md)
 
-* [Compression Crafting](./compressioncrafting.md)
+* [Compression Crafting](./compression_crafting.md)
 
-* [Ender Crafting](./endercrafting.md)
+* [Ender Crafting](./ender_crafting.md)
 
-* [Table Crafting](./tablecrafting.md)
+* [Table Crafting](./table_crafting.md)
 

@@ -14,11 +14,11 @@ Converts an item into one item, with up to two additional items as chance byprod
 
 Refer to this via any of the following:
 
-```groovy hl_lines="2"
-mods.appliedenergistics2.Grinder
-mods.appliedenergistics2.grinder/*(1)!*/
-mods.ae2.Grinder
+```groovy hl_lines="3"
 mods.ae2.grinder
+mods.ae2.Grinder
+mods.appliedenergistics2.grinder/*(1)!*/
+mods.appliedenergistics2.Grinder
 ```
 
 1. This identifier will be used as the default for examples on this page

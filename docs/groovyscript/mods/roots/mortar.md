@@ -14,13 +14,13 @@ When right clicking a mortar containing the input items with a pestle, it will d
 
 Refer to this via any of the following:
 
-```groovy hl_lines="2"
-mods.roots.Mortar
+```groovy hl_lines="1"
 mods.roots.mortar/*(1)!*/
-mods.roots.MortarAndPestle
+mods.roots.Mortar
+mods.roots.mortar_and_pestle
 mods.roots.mortarandpestle
 mods.roots.mortarAndPestle
-mods.roots.mortar_and_pestle
+mods.roots.MortarAndPestle
 ```
 
 1. This identifier will be used as the default for examples on this page

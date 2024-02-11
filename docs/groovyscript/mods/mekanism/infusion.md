@@ -17,9 +17,9 @@ Add new infusion types and itemstacks to those types.
 
 Refer to this via any of the following:
 
-```groovy hl_lines="2"
-mods.mekanism.Infusion
+```groovy hl_lines="1"
 mods.mekanism.infusion/*(1)!*/
+mods.mekanism.Infusion
 ```
 
 1. This identifier will be used as the default for examples on this page

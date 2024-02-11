@@ -14,13 +14,13 @@ Determines if holding an item or equipping a piece of armor or a bauble gives wa
 
 Refer to this via any of the following:
 
-```groovy hl_lines="6"
-mods.thaum.Warp
-mods.thaum.warp
-mods.tc.Warp
-mods.tc.warp
-mods.thaumcraft.Warp
+```groovy hl_lines="1"
 mods.thaumcraft.warp/*(1)!*/
+mods.thaumcraft.Warp
+mods.tc.warp
+mods.tc.Warp
+mods.thaum.warp
+mods.thaum.Warp
 ```
 
 1. This identifier will be used as the default for examples on this page

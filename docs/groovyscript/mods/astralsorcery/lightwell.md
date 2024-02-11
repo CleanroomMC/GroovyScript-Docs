@@ -14,15 +14,15 @@ Converts an input item into fluid, with a chance at breaking every time fluid is
 
 Refer to this via any of the following:
 
-```groovy hl_lines="8"
-mods.astral.Lightwell
-mods.astral.lightwell
-mods.astral_sorcery.Lightwell
+```groovy hl_lines="3"
 mods.astral_sorcery.lightwell
-mods.as.Lightwell
-mods.as.lightwell
-mods.astralsorcery.Lightwell
+mods.astral_sorcery.Lightwell
 mods.astralsorcery.lightwell/*(1)!*/
+mods.astralsorcery.Lightwell
+mods.astral.lightwell
+mods.astral.Lightwell
+mods.as.lightwell
+mods.as.Lightwell
 ```
 
 1. This identifier will be used as the default for examples on this page

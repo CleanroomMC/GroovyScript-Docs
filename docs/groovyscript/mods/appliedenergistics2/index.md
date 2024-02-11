@@ -11,7 +11,7 @@ Has 5 subcategories.
 
 * [P2P Attunement](./attunement.md)
 
-* [Cannon Ammo](./cannonammo.md)
+* [Cannon Ammo](./cannon_ammo.md)
 
 * [Grinder](./grinder.md)
 

@@ -14,15 +14,15 @@ Create a custom Constellation.
 
 Refer to this via any of the following:
 
-```groovy hl_lines="8"
-mods.astral.Constellation
-mods.astral.constellation
-mods.astral_sorcery.Constellation
+```groovy hl_lines="3"
 mods.astral_sorcery.constellation
-mods.as.Constellation
-mods.as.constellation
-mods.astralsorcery.Constellation
+mods.astral_sorcery.Constellation
 mods.astralsorcery.constellation/*(1)!*/
+mods.astralsorcery.Constellation
+mods.astral.constellation
+mods.astral.Constellation
+mods.as.constellation
+mods.as.Constellation
 ```
 
 1. This identifier will be used as the default for examples on this page

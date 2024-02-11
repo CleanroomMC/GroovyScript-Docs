@@ -9,9 +9,9 @@ hide: toc
 
 Has 9 subcategories.
 
-* [Atomic Reconstructor](./atomicreconstructor.md)
+* [Atomic Reconstructor](./atomic_reconstructor.md)
 
-* [Ball of Fur](./balloffur.md)
+* [Ball of Fur](./ball_of_fur.md)
 
 * [Compost](./compost.md)
 
@@ -19,11 +19,11 @@ Has 9 subcategories.
 
 * [Empowerer](./empowerer.md)
 
-* [Nether Mining Lens](./nethermininglens.md)
+* [Nether Mining Lens](./nether_mining_lens.md)
 
-* [Oil Gen](./oilgen.md)
+* [Oil Gen](./oil_gen.md)
 
-* [Stone Mining Lens](./stonemininglens.md)
+* [Stone Mining Lens](./stone_mining_lens.md)
 
-* [Treasure Chest](./treasurechest.md)
+* [Treasure Chest](./treasure_chest.md)
 

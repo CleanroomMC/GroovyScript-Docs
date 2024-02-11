@@ -14,9 +14,9 @@ Pacifist is a list of entities which killing will give the player the advancemen
 
 Refer to this via any of the following:
 
-```groovy hl_lines="2"
-mods.roots.Pacifist
+```groovy hl_lines="1"
 mods.roots.pacifist/*(1)!*/
+mods.roots.Pacifist
 ```
 
 1. This identifier will be used as the default for examples on this page

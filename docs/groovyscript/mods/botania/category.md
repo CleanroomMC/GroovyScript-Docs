@@ -14,9 +14,9 @@ Category creates a new entry on the front page of the Lexica Botania.
 
 Refer to this via any of the following:
 
-```groovy hl_lines="2"
-mods.botania.Category
+```groovy hl_lines="1"
 mods.botania.category/*(1)!*/
+mods.botania.Category
 ```
 
 1. This identifier will be used as the default for examples on this page

@@ -14,9 +14,9 @@ Controls what spell modifiers are enabled and can be used.
 
 Refer to this via any of the following:
 
-```groovy hl_lines="2"
-mods.roots.Modifiers
+```groovy hl_lines="1"
 mods.roots.modifiers/*(1)!*/
+mods.roots.Modifiers
 ```
 
 1. This identifier will be used as the default for examples on this page

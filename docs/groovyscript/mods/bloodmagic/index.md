@@ -9,17 +9,17 @@ hide: toc
 
 Has 7 subcategories.
 
-* [Alchemy Array](./alchemyarray.md)
+* [Alchemy Array](./alchemy_array.md)
 
-* [Alchemy Table](./alchemytable.md)
+* [Alchemy Table](./alchemy_table.md)
 
-* [Blood Altar](./bloodaltar.md)
+* [Blood Altar](./blood_altar.md)
 
 * [Meteor](./meteor.md)
 
 * [Sacrificial](./sacrificial.md)
 
-* [Tartaric Forge](./tartaricforge.md)
+* [Tartaric Forge](./tartaric_forge.md)
 
 * [Tranquility](./tranquility.md)
 

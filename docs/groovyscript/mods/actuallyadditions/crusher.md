@@ -14,11 +14,11 @@ Converts an input itemstack into an output itemstack with a chance of a second i
 
 Refer to this via any of the following:
 
-```groovy hl_lines="4"
-mods.aa.Crusher
+```groovy hl_lines="3"
 mods.aa.crusher
-mods.actuallyadditions.Crusher
+mods.aa.Crusher
 mods.actuallyadditions.crusher/*(1)!*/
+mods.actuallyadditions.Crusher
 ```
 
 1. This identifier will be used as the default for examples on this page

@@ -17,9 +17,9 @@ Controls the recipe for the given spell, the sound, all properties, the base cos
 
 Refer to this via any of the following:
 
-```groovy hl_lines="2"
-mods.roots.Spells
+```groovy hl_lines="1"
 mods.roots.spells/*(1)!*/
+mods.roots.Spells
 ```
 
 1. This identifier will be used as the default for examples on this page

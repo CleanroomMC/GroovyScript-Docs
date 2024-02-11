@@ -14,11 +14,11 @@ Converts an item into another item, requiring either one or two additional items
 
 Refer to this via any of the following:
 
-```groovy hl_lines="2"
-mods.appliedenergistics2.Inscriber
-mods.appliedenergistics2.inscriber/*(1)!*/
-mods.ae2.Inscriber
+```groovy hl_lines="3"
 mods.ae2.inscriber
+mods.ae2.Inscriber
+mods.appliedenergistics2.inscriber/*(1)!*/
+mods.appliedenergistics2.Inscriber
 ```
 
 1. This identifier will be used as the default for examples on this page

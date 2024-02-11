@@ -14,11 +14,11 @@ Turns 5 input items into an output item at the cost of power and time. Has a con
 
 Refer to this via any of the following:
 
-```groovy hl_lines="4"
-mods.aa.Empowerer
+```groovy hl_lines="3"
 mods.aa.empowerer
-mods.actuallyadditions.Empowerer
+mods.aa.Empowerer
 mods.actuallyadditions.empowerer/*(1)!*/
+mods.actuallyadditions.Empowerer
 ```
 
 1. This identifier will be used as the default for examples on this page

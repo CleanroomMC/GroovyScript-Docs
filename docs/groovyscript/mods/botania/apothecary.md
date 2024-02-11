@@ -14,13 +14,13 @@ Converts item inputs into an item output consuming water and a seed.
 
 Refer to this via any of the following:
 
-```groovy hl_lines="2"
-mods.botania.Apothecary
+```groovy hl_lines="1"
 mods.botania.apothecary/*(1)!*/
-mods.botania.PetalApothecary
+mods.botania.Apothecary
+mods.botania.petal_apothecary
 mods.botania.petalapothecary
 mods.botania.petalApothecary
-mods.botania.petal_apothecary
+mods.botania.PetalApothecary
 ```
 
 1. This identifier will be used as the default for examples on this page

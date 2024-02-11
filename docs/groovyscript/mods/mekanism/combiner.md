@@ -14,9 +14,9 @@ Combines an input itemstack with an extra itemstack to create an output itemstac
 
 Refer to this via any of the following:
 
-```groovy hl_lines="2"
-mods.mekanism.Combiner
+```groovy hl_lines="1"
 mods.mekanism.combiner/*(1)!*/
+mods.mekanism.Combiner
 ```
 
 1. This identifier will be used as the default for examples on this page

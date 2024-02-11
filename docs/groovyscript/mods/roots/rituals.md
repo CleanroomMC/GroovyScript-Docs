@@ -17,9 +17,9 @@ Set the Pyre Ritual recipe and control all stats. Dump the modifiable stats into
 
 Refer to this via any of the following:
 
-```groovy hl_lines="2"
-mods.roots.Rituals
+```groovy hl_lines="1"
 mods.roots.rituals/*(1)!*/
+mods.roots.Rituals
 ```
 
 1. This identifier will be used as the default for examples on this page

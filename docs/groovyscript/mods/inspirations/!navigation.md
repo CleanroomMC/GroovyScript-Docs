@@ -5,5 +5,5 @@ search:
 
 
 * [Inspirations](./index.md)
-* [Anvil Smashing](./anvilsmashing.md)
+* [Anvil Smashing](./anvil_smashing.md)
 * [Cauldron](./cauldron.md)

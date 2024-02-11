@@ -20,9 +20,9 @@ Sets a group of items any item can be converted between freely, in world and in 
 
 Refer to this via any of the following:
 
-```groovy hl_lines="2"
-mods.chisel.Carving
+```groovy hl_lines="1"
 mods.chisel.carving/*(1)!*/
+mods.chisel.Carving
 ```
 
 1. This identifier will be used as the default for examples on this page

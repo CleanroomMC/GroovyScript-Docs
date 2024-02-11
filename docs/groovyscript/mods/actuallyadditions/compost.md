@@ -14,11 +14,11 @@ Converts an input item into an output item after 150 seconds. Requires an input 
 
 Refer to this via any of the following:
 
-```groovy hl_lines="4"
-mods.aa.Compost
+```groovy hl_lines="3"
 mods.aa.compost
-mods.actuallyadditions.Compost
+mods.aa.Compost
 mods.actuallyadditions.compost/*(1)!*/
+mods.actuallyadditions.Compost
 ```
 
 1. This identifier will be used as the default for examples on this page

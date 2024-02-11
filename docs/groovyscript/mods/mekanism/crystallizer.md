@@ -14,9 +14,9 @@ Converts an input gasstack into an output itemstack.
 
 Refer to this via any of the following:
 
-```groovy hl_lines="2"
-mods.mekanism.Crystallizer
+```groovy hl_lines="1"
 mods.mekanism.crystallizer/*(1)!*/
+mods.mekanism.Crystallizer
 ```
 
 1. This identifier will be used as the default for examples on this page

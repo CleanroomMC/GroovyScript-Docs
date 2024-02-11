@@ -14,9 +14,9 @@ Uses any number of specific types of Mortars to convert multiple items into a si
 
 Refer to this via any of the following:
 
-```groovy hl_lines="2"
-mods.advancedmortars.Mortar
+```groovy hl_lines="1"
 mods.advancedmortars.mortar/*(1)!*/
+mods.advancedmortars.Mortar
 ```
 
 1. This identifier will be used as the default for examples on this page

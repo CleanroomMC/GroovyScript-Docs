@@ -14,9 +14,9 @@ Converts any number of a single item into an output itemstack.
 
 Refer to this via any of the following:
 
-```groovy hl_lines="2"
-mods.avaritia.Compressor
+```groovy hl_lines="1"
 mods.avaritia.compressor/*(1)!*/
+mods.avaritia.Compressor
 ```
 
 1. This identifier will be used as the default for examples on this page

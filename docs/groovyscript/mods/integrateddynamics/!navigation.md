@@ -5,7 +5,7 @@ search:
 
 
 * [Integrated Dynamics](./index.md)
-* [Drying Basin](./dryingbasin.md)
-* [Mechanical Drying Basin](./mechanicaldryingbasin.md)
-* [Mechanical Squeezer](./mechanicalsqueezer.md)
+* [Drying Basin](./drying_basin.md)
+* [Mechanical Drying Basin](./mechanical_drying_basin.md)
+* [Mechanical Squeezer](./mechanical_squeezer.md)
 * [Squeezer](./squeezer.md)

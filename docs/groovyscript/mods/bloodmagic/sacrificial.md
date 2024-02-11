@@ -14,11 +14,11 @@ How much Life Essence is gained when using the Sacrificial Dagger on a mob.
 
 Refer to this via any of the following:
 
-```groovy hl_lines="4"
-mods.bm.Sacrificial
+```groovy hl_lines="3"
 mods.bm.sacrificial
-mods.bloodmagic.Sacrificial
+mods.bm.Sacrificial
 mods.bloodmagic.sacrificial/*(1)!*/
+mods.bloodmagic.Sacrificial
 ```
 
 1. This identifier will be used as the default for examples on this page

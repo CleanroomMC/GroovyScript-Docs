@@ -14,11 +14,11 @@ Throwing an input catalyst atop an activated Mark of the Falling Tower Ritual wi
 
 Refer to this via any of the following:
 
-```groovy hl_lines="4"
-mods.bm.Meteor
+```groovy hl_lines="3"
 mods.bm.meteor
-mods.bloodmagic.Meteor
+mods.bm.Meteor
 mods.bloodmagic.meteor/*(1)!*/
+mods.bloodmagic.Meteor
 ```
 
 1. This identifier will be used as the default for examples on this page

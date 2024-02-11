@@ -13,21 +13,21 @@ Has 14 subcategories.
 
 * [Brew Effect](./brew.md)
 
-* [Brew Recipe](./brewrecipe.md)
+* [Brew Recipe](./brew_recipe.md)
 
-* [Elven Trade](./elventrade.md)
+* [Elven Trade](./elven_trade.md)
 
 * [Magnet](./magnet.md)
 
-* [Mana Infusion](./manainfusion.md)
+* [Mana Infusion](./mana_infusion.md)
 
 * [Orechid](./orechid.md)
 
-* [Orechid Ignem](./orechidignem.md)
+* [Orechid Ignem](./orechid_ignem.md)
 
-* [Pure Daisy](./puredaisy.md)
+* [Pure Daisy](./pure_daisy.md)
 
-* [Rune Altar](./runealtar.md)
+* [Rune Altar](./rune_altar.md)
 
 * [Lexicon Knowledge](./knowledge.md)
 

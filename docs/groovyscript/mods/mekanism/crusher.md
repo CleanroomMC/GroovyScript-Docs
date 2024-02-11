@@ -14,9 +14,9 @@ Converts an input itemstack into an output itemstack.
 
 Refer to this via any of the following:
 
-```groovy hl_lines="2"
-mods.mekanism.Crusher
+```groovy hl_lines="1"
 mods.mekanism.crusher/*(1)!*/
+mods.mekanism.Crusher
 ```
 
 1. This identifier will be used as the default for examples on this page

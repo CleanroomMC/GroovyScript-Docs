@@ -14,11 +14,11 @@ Takes an item and can give up to 3 chanced item outputs and a fluid.
 
 Refer to this via any of the following:
 
-```groovy hl_lines="2"
-mods.integrateddynamics.Squeezer
-mods.integrateddynamics.squeezer/*(1)!*/
-mods.id.Squeezer
+```groovy hl_lines="3"
 mods.id.squeezer
+mods.id.Squeezer
+mods.integrateddynamics.squeezer/*(1)!*/
+mods.integrateddynamics.Squeezer
 ```
 
 1. This identifier will be used as the default for examples on this page

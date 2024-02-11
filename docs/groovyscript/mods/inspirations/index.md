@@ -9,7 +9,7 @@ hide: toc
 
 Has 2 subcategories.
 
-* [Anvil Smashing](./anvilsmashing.md)
+* [Anvil Smashing](./anvil_smashing.md)
 
 * [Cauldron](./cauldron.md)
 

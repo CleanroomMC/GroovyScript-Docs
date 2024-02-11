@@ -17,11 +17,11 @@ Converts an input itemstack into an output itemstack in a recipe exclusive to th
 
 Refer to this via any of the following:
 
-```groovy hl_lines="2"
-mods.mekanism.Smelting
+```groovy hl_lines="1"
 mods.mekanism.smelting/*(1)!*/
-mods.mekanism.Smelter
+mods.mekanism.Smelting
 mods.mekanism.smelter
+mods.mekanism.Smelter
 ```
 
 1. This identifier will be used as the default for examples on this page

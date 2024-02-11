@@ -17,9 +17,9 @@ Converts up to 1 itemstack and up to 1 fluid into up to 1 itemstack or up to 1 f
 
 Refer to this via any of the following:
 
-```groovy hl_lines="2"
-mods.inspirations.Cauldron
+```groovy hl_lines="1"
 mods.inspirations.cauldron/*(1)!*/
+mods.inspirations.Cauldron
 ```
 
 1. This identifier will be used as the default for examples on this page

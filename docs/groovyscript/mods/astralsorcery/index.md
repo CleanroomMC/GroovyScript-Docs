@@ -9,7 +9,7 @@ hide: toc
 
 Has 15 subcategories.
 
-* [Chalice Interaction](./chaliceinteraction.md)
+* [Chalice Interaction](./chalice_interaction.md)
 
 * [Constellation](./constellation.md)
 
@@ -17,25 +17,25 @@ Has 15 subcategories.
 
 * [Grindstone](./grindstone.md)
 
-* [Infusion Altar](./infusionaltar.md)
+* [Infusion Altar](./infusion_altar.md)
 
-* [Light Transmutation](./lighttransmutation.md)
+* [Light Transmutation](./light_transmutation.md)
 
 * [Lightwell](./lightwell.md)
 
-* [Perk Tree](./perktree.md)
+* [Perk Tree](./perk_tree.md)
 
-* [Perk Tree Config](./perktreeconfig.md)
+* [Perk Tree Config](./perk_tree_config.md)
 
 * [Research Pages](./research.md)
 
-* [Starlight Altar](./starlightaltar.md)
+* [Starlight Altar](./starlight_altar.md)
 
-* [Aevitas Perk Registry](./aevitasperkregistry.md)
+* [Aevitas Perk Registry](./aevitas_perk_registry.md)
 
-* [Mineralis Ritual Registry](./mineralisritualregistry.md)
+* [Mineralis Ritual Registry](./mineralis_ritual_registry.md)
 
-* [Trash Perk Registry](./trashperkregistry.md)
+* [Trash Perk Registry](./trash_perk_registry.md)
 
-* [Treasure Shrine Registry](./treasureshrineregistry.md)
+* [Treasure Shrine Registry](./treasure_shrine_registry.md)
 

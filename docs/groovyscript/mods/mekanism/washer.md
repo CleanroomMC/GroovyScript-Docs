@@ -14,13 +14,13 @@ Converts an input gasstack into an output gasstack at the cost of 5mb of water.
 
 Refer to this via any of the following:
 
-```groovy hl_lines="2"
-mods.mekanism.Washer
+```groovy hl_lines="1"
 mods.mekanism.washer/*(1)!*/
-mods.mekanism.ChemicalWasher
+mods.mekanism.Washer
+mods.mekanism.chemical_washer
 mods.mekanism.chemicalwasher
 mods.mekanism.chemicalWasher
-mods.mekanism.chemical_washer
+mods.mekanism.ChemicalWasher
 ```
 
 1. This identifier will be used as the default for examples on this page

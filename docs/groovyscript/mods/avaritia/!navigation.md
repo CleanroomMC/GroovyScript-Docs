@@ -6,4 +6,4 @@ search:
 
 * [Avaritia](./index.md)
 * [Compressor](./compressor.md)
-* [Extreme Crafting](./extremecrafting.md)
+* [Extreme Crafting](./extreme_crafting.md)

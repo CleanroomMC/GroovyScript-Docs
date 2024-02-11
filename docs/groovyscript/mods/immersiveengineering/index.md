@@ -9,19 +9,19 @@ hide: toc
 
 Has 14 subcategories.
 
-* [Alloy Kiln](./alloykiln.md)
+* [Alloy Kiln](./alloy_kiln.md)
 
-* [Arc Furnace](./arcfurnace.md)
+* [Arc Furnace](./arc_furnace.md)
 
-* [Blast Furnace](./blastfurnace.md)
+* [Blast Furnace](./blast_furnace.md)
 
-* [Blast Furnace Fuel](./blastfurnacefuel.md)
+* [Blast Furnace Fuel](./blast_furnace_fuel.md)
 
-* [Blueprint Crafting](./blueprintcrafting.md)
+* [Blueprint Crafting](./blueprint_crafting.md)
 
-* [Bottling Machine](./bottlingmachine.md)
+* [Bottling Machine](./bottling_machine.md)
 
-* [Coke Oven](./cokeoven.md)
+* [Coke Oven](./coke_oven.md)
 
 * [Crusher](./crusher.md)
 
@@ -29,7 +29,7 @@ Has 14 subcategories.
 
 * [Fermenter](./fermenter.md)
 
-* [Metal Press](./metalpress.md)
+* [Metal Press](./metal_press.md)
 
 * [Mixer](./mixer.md)
 

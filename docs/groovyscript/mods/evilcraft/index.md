@@ -9,7 +9,7 @@ hide: toc
 
 Has 2 subcategories.
 
-* [Blood Infuser](./bloodinfuser.md)
+* [Blood Infuser](./blood_infuser.md)
 
-* [Environmental Accumulator](./environmentalaccumulator.md)
+* [Environmental Accumulator](./environmental_accumulator.md)
 

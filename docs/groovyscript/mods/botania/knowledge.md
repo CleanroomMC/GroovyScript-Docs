@@ -14,9 +14,9 @@ Creates a new type of knowledge that Lexica Botania entries may be gated with. C
 
 Refer to this via any of the following:
 
-```groovy hl_lines="2"
-mods.botania.Knowledge
+```groovy hl_lines="1"
 mods.botania.knowledge/*(1)!*/
+mods.botania.Knowledge
 ```
 
 1. This identifier will be used as the default for examples on this page

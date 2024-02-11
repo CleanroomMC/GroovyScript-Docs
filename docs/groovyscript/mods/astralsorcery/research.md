@@ -14,15 +14,15 @@ Add custom Research Pages to the Astral Sorcery Book.
 
 Refer to this via any of the following:
 
-```groovy hl_lines="8"
-mods.astral.Research
-mods.astral.research
-mods.astral_sorcery.Research
+```groovy hl_lines="3"
 mods.astral_sorcery.research
-mods.as.Research
-mods.as.research
-mods.astralsorcery.Research
+mods.astral_sorcery.Research
 mods.astralsorcery.research/*(1)!*/
+mods.astralsorcery.Research
+mods.astral.research
+mods.astral.Research
+mods.as.research
+mods.as.Research
 ```
 
 1. This identifier will be used as the default for examples on this page

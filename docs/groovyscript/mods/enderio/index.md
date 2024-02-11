@@ -9,21 +9,21 @@ hide: toc
 
 Has 10 subcategories.
 
-* [Alloy Smelter](./alloysmelter.md)
+* [Alloy Smelter](./alloy_smelter.md)
 
 * [Enchanter](./enchanter.md)
 
-* [Fluid Coolant](./fluidcoolant.md)
+* [Fluid Coolant](./fluid_coolant.md)
 
-* [Fluid Fuel](./fluidfuel.md)
+* [Fluid Fuel](./fluid_fuel.md)
 
-* [Sag Mill](./sagmill.md)
+* [Sag Mill](./sag_mill.md)
 
-* [Sag Mill Grinding](./sagmillgrinding.md)
+* [Sag Mill Grinding](./sag_mill_grinding.md)
 
-* [Slice N Splice](./slicensplice.md)
+* [Slice N Splice](./slice_n_splice.md)
 
-* [Soulbinder](./soulbinder.md)
+* [Soulbinder](./soul_binder.md)
 
 * [Tank](./tank.md)
 

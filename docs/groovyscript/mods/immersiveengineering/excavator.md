@@ -17,11 +17,11 @@ Adds a Mineral Mix with the given name, weight, fail chance, ores, and allowed d
 
 Refer to this via any of the following:
 
-```groovy hl_lines="4"
-mods.ie.Excavator
+```groovy hl_lines="3"
 mods.ie.excavator
-mods.immersiveengineering.Excavator
+mods.ie.Excavator
 mods.immersiveengineering.excavator/*(1)!*/
+mods.immersiveengineering.Excavator
 ```
 
 1. This identifier will be used as the default for examples on this page

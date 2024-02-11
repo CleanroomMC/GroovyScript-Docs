@@ -14,9 +14,9 @@ Entry creates a new entry in a given category.
 
 Refer to this via any of the following:
 
-```groovy hl_lines="2"
-mods.botania.Entry
+```groovy hl_lines="1"
 mods.botania.entry/*(1)!*/
+mods.botania.Entry
 ```
 
 1. This identifier will be used as the default for examples on this page

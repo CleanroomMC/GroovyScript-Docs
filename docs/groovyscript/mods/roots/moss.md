@@ -14,9 +14,9 @@ Moss indicates a pair of items that can right click the input with a knife to tu
 
 Refer to this via any of the following:
 
-```groovy hl_lines="2"
-mods.roots.Moss
+```groovy hl_lines="1"
 mods.roots.moss/*(1)!*/
+mods.roots.Moss
 ```
 
 1. This identifier will be used as the default for examples on this page

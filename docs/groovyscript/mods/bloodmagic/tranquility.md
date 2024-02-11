@@ -14,11 +14,11 @@ Blocks in the area around the Tranquility Altar provide tranquility up to the Al
 
 Refer to this via any of the following:
 
-```groovy hl_lines="4"
-mods.bm.Tranquility
+```groovy hl_lines="3"
 mods.bm.tranquility
-mods.bloodmagic.Tranquility
+mods.bm.Tranquility
 mods.bloodmagic.tranquility/*(1)!*/
+mods.bloodmagic.Tranquility
 ```
 
 1. This identifier will be used as the default for examples on this page
