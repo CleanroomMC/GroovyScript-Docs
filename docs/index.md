@@ -24,7 +24,7 @@ Are you not seeing what other see on this wiki? Try reloading it.
 
 ### Where to go?
 
-Check [this](getting_started.md) out to get started. <br>
+Check [this](introduction/getting_started.md) out to get started. <br>
 Check out the Groovy tab for infos about the Groovy language. <br>
 Check out the GroovyScript for the GroovyScript documentation. <br>
 

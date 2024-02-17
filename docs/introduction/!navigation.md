@@ -4,5 +4,5 @@ search:
 ---
 
 
-* [Introduction](./index.md)
+* [Introduction](../index.md)
 * [Getting Started](./getting_started.md)
