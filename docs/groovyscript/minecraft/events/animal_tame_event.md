@@ -8,7 +8,7 @@ import net.minecraftforge.event.entity.living.AnimalTameEvent
 ## Sub-Classes
 
 This event extends the following events and can use all their methods and fields: <br>
-[LivingEvent](living_event.md), [EntityEvent](entity_event.md)
+[LivingEvent](living_event/living_event.md), [EntityEvent](entity_event/entity_event.md)
 
 ## Methods
 ```groovy

@@ -7,7 +7,7 @@ import net.minecraftforge.event.entity.PlaySoundAtEntityEvent
 
 ## Sub-Classes
 This event extends the following events and can use all their methods and fields: <br>
-[EntityEvent](entity_event.md)
+[EntityEvent](entity_event/entity_event.md)
 
 ## Methods
 ```groovy
@@ -49,4 +49,3 @@ void setSound(net.minecraft.util.SoundEvent arg0)
 ```groovy
 float getDefaultVolume()
 ```
-

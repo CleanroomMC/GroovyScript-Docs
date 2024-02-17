@@ -1,82 +1,129 @@
-# EnderIO Enchanter
+---
+title: "Enchanter"
+description: "Convert an input itemstack, player xp, and either a written book and lapis or a custom alternative into an enchanted book."
+source_code_link: "https://github.com/CleanroomMC/GroovyScript/blob/master/src/main/java/com/cleanroommc/groovyscript/compat/mods/enderio/Enchanter.java"
+---
 
-GroovyScript allows you to add and remove recipes for enchantments in the enchanter with custom book and lapis items.
-EnderIO automatically calculates costs and adds recipes for each level of the enchantment.
+# Enchanter (Ender IO)
+
+## Description
+
+Convert an input itemstack, player xp, and either a written book and lapis or a custom alternative into an enchanted book.
+
+## Identifier
+
+Refer to this via any of the following:
+
+```groovy hl_lines="1"
+mods.enderio.enchanter/*(1)!*/
+mods.enderio.Enchanter
+mods.eio.enchanter
+mods.eio.Enchanter
+```
+
+1. This identifier will be used as the default for examples on this page
 
 ## Adding Recipes
 
-Just like other recipe types, the Enchanter also uses a recipe builder. <br>
-You don't know what a builder is? Check [this](https://groovyscript-docs.readthedocs.io/en/latest/groovy/builder/) out
-
-```groovy
-mods.enderio.Enchanter.recipeBuilder()
-```
-
-Set input: (required)
-
-```groovy
-.input(IIngredient)
-```
-
-Set enchantment: (required)
-
-```groovy
-.enchantment(Enchantment)
-```
-
-Set input amount per level: (optional (default is amount of input ingredient))
-
-```groovy
-.amountPerLevel(int)
-```
-
-Set xp multiplier: (optional (default is 1))
-
-```groovy
-.xpCostMulitplier(double)
-```
-
-Set custom book item: (optional (default is Book and Quill))
-
-```groovy
-.customBook(IIngredient)
-```
-
-Set custom lapis item: (optional (default is Lapis Lazuli))
-
-```groovy
-.customLapis(IIngredient)
-```
-
-Register recipe: (returns a `crazypants.enderio.base.recipe.enchanter.EnchanterRecipe` instance if successful)
-
-```groovy
-.register()
-```
-
-!!! example
+- Adds recipes in the format `enchantment`, `input`:
 
     ```groovy
-    mods.enderio.Enchanter.recipeBuilder()
-            .enchantment(enchantment('efficiency'))
-            .input(item('minecraft:nether_star') * 2)
-            .xpCostMultiplier(3f)
-            .customBook(item('enderio:item_dark_steel_upgrade:0'))
-            .customLapis(item('minecraft:poisonous_potato'))
-            .register()
+    mods.enderio.enchanter.add(Enchantment, IIngredient)
     ```
+
+
+### Recipe Builder
+
+Just like other recipe types, the Enchanter also uses a recipe builder.
+
+Don't know what a builder is? Check [the builder info page](../../../groovy/builder.md) out.
+
+???+ Abstract "mods.enderio.enchanter.recipeBuilder()"
+    - `#!groovy IIngredient`. Sets the item used in the book slot. Requires not null. (Default `item('minecraft:writable_book')`).
+
+        ```groovy
+        customBook(IIngredient)
+        ```
+
+    - `#!groovy IIngredient`. Sets the key item to create the enchantment. Requires not null.
+
+        ```groovy
+        input(IIngredient)
+        ```
+
+    - `#!groovy IIngredient`. Sets the item used in the lapis slot. Requires not null. (Default `ore('gemLapis')`).
+
+        ```groovy
+        customLapis(IIngredient)
+        ```
+
+    - `#!groovy int`. Sets the amount of the input item used to create a single level of enchantment. Requires greater than 0. (Default `0`).
+
+        ```groovy
+        amountPerLevel(int)
+        ```
+
+    - `#!groovy Enchantment`. Sets the enchantment applied to the output book. Requires not null.
+
+        ```groovy
+        enchantment(Enchantment)
+        ```
+
+    - `#!groovy double`. Sets the experience cost multiplier per enchantment level created. (Default `1`).
+
+        ```groovy
+        xpCostMultiplier(double)
+        ```
+
+    - First validates the builder, returning `null` and outputting errors to the log file if the validation failed, then registers the builder and returns the registered object. (returns `null` or `crazypants.enderio.base.recipe.enchanter.EnchanterRecipe`).
+
+        ```groovy
+        register()
+        ```
+
+    ???+ Example
+        ```groovy
+        mods.enderio.enchanter.recipeBuilder()
+            .enchantment(enchantment('minecraft:unbreaking'))
+            .input(item('minecraft:diamond'))
+            .register()
+
+        mods.enderio.enchanter.recipeBuilder()
+            .enchantment(enchantment('minecraft:sharpness'))
+            .input(item('minecraft:clay'))
+            .amountPerLevel(3)
+            .xpCostMultiplier(2)
+            .customBook(item('minecraft:book'))
+            .customLapis(item('minecraft:diamond'))
+            .register()
+        ```
+
+
 
 ## Removing Recipes
 
-This removes a recipe that match the given input:
-
-```groovy
-mods.enderio.Enchantment.remove(Enchantment)
-```
-
-!!! example
+- Removes entries by enchantment:
 
     ```groovy
-    // removes all efficiency enchantment recipes
-    mods.enderio.Enchantment.remove(enchantment('efficiency'))
+    mods.enderio.enchanter.remove(Enchantment)
+    ```
+
+- Removes all registered recipes:
+
+    ```groovy
+    mods.enderio.enchanter.removeAll()
+    ```
+
+???+ Example
+    ```groovy
+    mods.enderio.enchanter.remove(enchantment('minecraft:mending'))
+    mods.enderio.enchanter.removeAll()
+    ```
+
+## Getting the value of recipes
+
+- Iterates through every entry in the registry, with the ability to call remove on any element to remove it:
+
+    ```groovy
+    mods.enderio.enchanter.streamRecipes()
     ```

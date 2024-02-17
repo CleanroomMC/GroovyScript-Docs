@@ -1,76 +1,134 @@
-# EnderIO Slice'n'Splice
+---
+title: "Slice N Splice"
+description: "Convert up to 6 input itemstacks into an output itemstack, using energy and giving XP."
+source_code_link: "https://github.com/CleanroomMC/GroovyScript/blob/master/src/main/java/com/cleanroommc/groovyscript/compat/mods/enderio/SliceNSplice.java"
+---
+
+# Slice N Splice (Ender IO)
+
+## Description
+
+Convert up to 6 input itemstacks into an output itemstack, using energy and giving XP.
+
+## Identifier
+
+Refer to this via any of the following:
+
+```groovy hl_lines="1"
+mods.enderio.slice_n_splice/*(1)!*/
+mods.enderio.slicensplice
+mods.enderio.sliceNSplice
+mods.enderio.SliceNSplice
+mods.enderio.slice_and_splice
+mods.enderio.sliceandsplice
+mods.enderio.sliceAndSplice
+mods.enderio.SliceAndSplice
+mods.eio.slice_n_splice
+mods.eio.slicensplice
+mods.eio.sliceNSplice
+mods.eio.SliceNSplice
+mods.eio.slice_and_splice
+mods.eio.sliceandsplice
+mods.eio.sliceAndSplice
+mods.eio.SliceAndSplice
+```
+
+1. This identifier will be used as the default for examples on this page
 
 ## Adding Recipes
 
-Just like other recipe types, the Soul Binder also uses a recipe builder. <br>
-You don't know what a builder is? Check [this](https://groovyscript-docs.readthedocs.io/en/latest/groovy/builder/) out
-
-```groovy
-mods.enderio.SliceNSplce.recipeBuilder()
-```
-
-Adding inputs: (requires 1 - 6) <br>
-Here the order of inputs is important. The slot order is from left to right and top to bottom.
-All Slice'n'Splice recipes are "shaped". Meaning all inputs must go in their specified slot. Empty ingredients aka. `null` are allowed.
-
-```groovy
-.input(IIngredient)
-.input(IIngredient...)
-.input(Collection<IIngredient>)
-```
-
-Adding output: (requires exactly 1)
-
-```groovy
-.output(ItemStack)
-```
-
-Set xp chance: (optional (default is 0))    <br>// needs to be tested and confirmed
-
-```groovy
-.xp(float) // 0.0 = 0% / 1.0 = 100%
-```
-
-Set required total energy: (optional (default is 5000))
-
-```groovy
-.energy(int)
-```
-
-Register recipe: (returns a `crazypants.enderio.base.recipe.Recipe` instance if successful)
-
-```groovy
-.register()
-```
-
-!!! example
-
-    Here the inputs are split into two `input()` calls. This helps to visualize the recipe.
+- Adds recipes in the format `output`, `input`, `energy`:
 
     ```groovy
-    mods.enderio.SliceNSplice.recipeBuilder()
-            .input(item('minecraft:diamond'), item('minecraft:gold_ingot'), item('minecraft:diamond'))
-            .input(item('minecraft:clay_ball'), item('minecraft:nether_star'), item('minecraft:clay_ball'))
-            .output(item('minecraft:totem_of_undying'))
-            .energy(9999)
-            .register()
+    mods.enderio.slice_n_splice.add(ItemStack, List<IIngredient>, int)
     ```
 
-    The example results in the following recipe:
 
-    ![slice_n_splice_recipe](../../../assets/images/slice_n_splice_recipe.png)
+### Recipe Builder
+
+Just like other recipe types, the Slice N Splice also uses a recipe builder.
+
+Don't know what a builder is? Check [the builder info page](../../../groovy/builder.md) out.
+
+???+ Abstract "mods.enderio.slice_n_splice.recipeBuilder()"
+    - `#!groovy IngredientList<IIngredient>`. Sets the item inputs of the recipe. Requires greater than or equal to 1 and less than or equal to 6.
+
+        ```groovy
+        input(IIngredient)
+        input(IIngredient...)
+        input(Collection<IIngredient>)
+        ```
+
+    - `#!groovy ItemStackList`. Sets the item outputs of the recipe. Requires exactly 1.
+
+        ```groovy
+        output(ItemStack)
+        output(ItemStack...)
+        output(Collection<ItemStack>)
+        ```
+
+    - `#!groovy float`. Sets the experience gained by taking the output item out of the Slice N Splice. Requires greater than or equal to 0. (Default `0.0f`).
+
+        ```groovy
+        xp(float)
+        ```
+
+    - `#!groovy int`. Sets the energy cost of the recipe. Requires greater than 0. (Default `0`).
+
+        ```groovy
+        energy(int)
+        ```
+
+    - First validates the builder, returning `null` and outputting errors to the log file if the validation failed, then registers the builder and returns the registered object. (returns `null` or `crazypants.enderio.base.recipe.IRecipe`).
+
+        ```groovy
+        register()
+        ```
+
+    ???+ Example
+        ```groovy
+        mods.enderio.slice_n_splice.recipeBuilder()
+            .input(item('minecraft:clay'), null, item('minecraft:clay'))
+            .input(null, item('minecraft:clay'), null)
+            .output(item('minecraft:gold_ingot'))
+            .energy(1000)
+            .xp(5)
+            .register()
+        ```
+
+
 
 ## Removing Recipes
 
-This removes a recipe that match the given input:
-
-```groovy
-mods.enderio.SliceNSplice.remove(ItemStack output)
-```
-
-!!! example
+- Removes all recipes that match the given output:
 
     ```groovy
-    // removes slice n splice for tormented enderman head
-    mods.enderio.SliceNSplice.remove(item('enderio:block_enderman_skull:2'))
+    mods.enderio.slice_n_splice.remove(ItemStack)
+    ```
+
+- Removes all recipes that match the given input:
+
+    ```groovy
+    mods.enderio.slice_n_splice.removeByInput(List<ItemStack>)
+    ```
+
+- Removes all registered recipes:
+
+    ```groovy
+    mods.enderio.slice_n_splice.removeAll()
+    ```
+
+???+ Example
+    ```groovy
+    mods.enderio.slice_n_splice.remove(item('enderio:item_material:40'))
+    mods.enderio.slice_n_splice.removeByInput([item('enderio:item_alloy_ingot:7'), item('enderio:block_enderman_skull'), item('enderio:item_alloy_ingot:7'), item('minecraft:potion').withNbt(['Potion': 'minecraft:water']), item('enderio:item_basic_capacitor'), item('minecraft:potion').withNbt(['Potion': 'minecraft:water'])])
+    mods.enderio.slice_n_splice.removeAll()
+    ```
+
+## Getting the value of recipes
+
+- Iterates through every entry in the registry, with the ability to call remove on any element to remove it:
+
+    ```groovy
+    mods.enderio.slice_n_splice.streamRecipes()
     ```

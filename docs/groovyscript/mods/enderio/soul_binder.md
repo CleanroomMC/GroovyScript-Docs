@@ -1,76 +1,130 @@
-# EnderIO Soul Binder
+---
+title: "Soulbinder"
+description: "Converts an input itemstack into an output itemstack, requiring one of several entities in soul vials, using energy and giving XP. Must have a unique name. To function properly, the input entities must be allowed in Soul Vials."
+source_code_link: "https://github.com/CleanroomMC/GroovyScript/blob/master/src/main/java/com/cleanroommc/groovyscript/compat/mods/enderio/SoulBinder.java"
+---
+
+# Soulbinder (Ender IO)
+
+## Description
+
+Converts an input itemstack into an output itemstack, requiring one of several entities in soul vials, using energy and giving XP. Must have a unique name. To function properly, the input entities must be allowed in Soul Vials.
+
+## Identifier
+
+Refer to this via any of the following:
+
+```groovy hl_lines="1"
+mods.enderio.soul_binder/*(1)!*/
+mods.enderio.soulbinder
+mods.enderio.soulBinder
+mods.enderio.SoulBinder
+mods.eio.soul_binder
+mods.eio.soulbinder
+mods.eio.soulBinder
+mods.eio.SoulBinder
+```
+
+1. This identifier will be used as the default for examples on this page
 
 ## Adding Recipes
 
-Just like other recipe types, the Soul Binder also uses a recipe builder. <br>
-You don't know what a builder is? Check [this](https://groovyscript-docs.readthedocs.io/en/latest/groovy/builder/) out
+### Recipe Builder
 
-```groovy
-mods.enderio.SoulBinder.recipeBuilder()
-```
+Just like other recipe types, the Soulbinder also uses a recipe builder.
 
-Adding inputs: (requires exactly 1)
+Don't know what a builder is? Check [the builder info page](../../../groovy/builder.md) out.
 
-```groovy
-.input(IIngredient)
-```
+???+ Abstract "mods.enderio.soul_binder.recipeBuilder()"
+    - `#!groovy IngredientList<IIngredient>`. Sets the item inputs of the recipe. Requires exactly 1.
 
-Adding output: (requires exactly 1)
+        ```groovy
+        input(IIngredient)
+        input(IIngredient...)
+        input(Collection<IIngredient>)
+        ```
 
-```groovy
-.output(ItemStack)
-```
+    - `#!groovy ItemStackList`. Sets the item outputs of the recipe. Requires exactly 1.
 
-Adding soul vial inputs:<br>
-Adds entity souls in form of soul vials to the input
+        ```groovy
+        output(ItemStack)
+        output(ItemStack...)
+        output(Collection<ItemStack>)
+        ```
 
-```groovy
-.entitySoul(String entityName)
-.entitySoul(String... entityNames)
-.entitySoul(Collection<String> entityNames)
-```
+    - `#!groovy int`. Sets the experience levels required to start the recipe. Requires greater than 0. (Default `0`).
 
-Set input xp levels: (optional (default is 2))
+        ```groovy
+        xp(int)
+        ```
 
-```groovy
-.xp(int)
-```
+    - `#!groovy String`. Sets the unique identifier of the recipe.
 
-Set required total energy: (optional (default is 5000))
+        ```groovy
+        name(String)
+        ```
 
-```groovy
-.energy(int)
-```
+    - `#!groovy int`. Sets the energy cost of the recipe. Requires greater than 0. (Default `0`).
 
-Register recipe: (returns a `crazypants.enderio.base.recipe.Recipe` instance if successful)
+        ```groovy
+        energy(int)
+        ```
 
-```groovy
-.register()
-```
+    - `#!groovy NNList<ResourceLocation>`. Sets the valid entities. Entities must be allowed in Soul Vials. Requires greater than or equal to 1.
 
-!!! example
+        ```groovy
+        entity(EntityEntry)
+        entity(EntityEntry...)
+        entity(Collection<EntityEntry>)
+        entitySoul(String)
+        entitySoul(String...)
+        entitySoul(Collection<String>)
+        ```
 
-    ```groovy
-    mods.enderio.SoulBinder.recipeBuilder()
+    - First validates the builder, returning `null` and outputting errors to the log file if the validation failed, then registers the builder and returns the registered object. (returns `null` or `crazypants.enderio.base.recipe.soul.BasicSoulBinderRecipe`).
+
+        ```groovy
+        register()
+        ```
+
+    ???+ Example
+        ```groovy
+        mods.enderio.soul_binder.recipeBuilder()
             .input(item('minecraft:diamond'))
-            .entitySoul('minecraft:zombie')      // zombie in a soul vial
-            .output(item('minecraft:nether_star'))
-            .xp(10)                              // requires 10 xp levels
-            .energy(6000)
+            .output(item('minecraft:clay'))
+            .entity(entity('minecraft:zombie'), entity('minecraft:enderman'))
+            .name('groovy_example')
+            .energy(1000)
+            .xp(5)
             .register()
-    ```
+        ```
+
+
 
 ## Removing Recipes
 
-This removes a recipe that match the given input:
-
-```groovy
-mods.enderio.SoulBinder.remove(ItemStack output)
-```
-
-!!! example
+- Removes all recipes that match the given output:
 
     ```groovy
-    // removes soul binding for enticing crystal
-    mods.enderio.SoulBinder.remove(item('enderio:item_material:17'))
+    mods.enderio.soul_binder.remove(ItemStack)
+    ```
+
+- Removes all registered recipes:
+
+    ```groovy
+    mods.enderio.soul_binder.removeAll()
+    ```
+
+???+ Example
+    ```groovy
+    mods.enderio.soul_binder.remove(item('enderio:item_material:17'))
+    mods.enderio.soul_binder.removeAll()
+    ```
+
+## Getting the value of recipes
+
+- Iterates through every entry in the registry, with the ability to call remove on any element to remove it:
+
+    ```groovy
+    mods.enderio.soul_binder.streamRecipes()
     ```

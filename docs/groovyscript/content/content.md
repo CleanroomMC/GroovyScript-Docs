@@ -6,8 +6,8 @@ for CraftTweaker, but for GroovyScript it doesn't require another mod.
 !!! Note
     Requires version 0.4.0+. <br>
     Before you start adding content make sure to specify the pack name and id in
-    your [runConfig](../../getting_started.md#run-config). <br>
-    Also make sure to read [pack name and id](../../getting_started.md#pack-name-and-id)
+    your [runConfig](../../introduction/getting_started.md#run-config). <br>
+    Also make sure to read [pack name and id](../../introduction/getting_started.md#pack-name-and-id)
 
 Currently, GroovyScript adds helpers to create
 

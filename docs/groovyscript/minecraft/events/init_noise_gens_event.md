@@ -7,7 +7,7 @@ import net.minecraftforge.event.terraingen.InitNoiseGensEvent
 
 ## Sub-Classes
 This event extends the following events and can use all their methods and fields: <br>
-[WorldEvent](world_event.md)
+[WorldEvent](world_event/world_event.md)
 
 ## Methods
 ```groovy
@@ -21,4 +21,3 @@ net.minecraftforge.event.terraingen.InitNoiseGensEvent$Context getOriginal()
 ```groovy
 java.util.Random getRandom()
 ```
-

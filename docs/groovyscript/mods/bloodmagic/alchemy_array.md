@@ -1,122 +1,158 @@
-# Blood Magic Alchemy Array
+---
+title: "Alchemy Array"
+description: "Converts two items into an output itemstack by using Arcane Ashes in-world. Has a configurable texture for the animation."
+source_code_link: "https://github.com/CleanroomMC/GroovyScript/blob/master/src/main/java/com/cleanroommc/groovyscript/compat/mods/bloodmagic/AlchemyArray.java"
+---
 
-Package:
+# Alchemy Array (Blood Magic: Alchemical Wizardry)
 
-```groovy
+## Description
+
+Converts two items into an output itemstack by using Arcane Ashes in-world. Has a configurable texture for the animation.
+
+## Identifier
+
+Refer to this via any of the following:
+
+```groovy hl_lines="5"
+mods.bm.alchemy_array
+mods.bm.alchemyarray
+mods.bm.alchemyArray
+mods.bm.AlchemyArray
+mods.bloodmagic.alchemy_array/*(1)!*/
+mods.bloodmagic.alchemyarray
+mods.bloodmagic.alchemyArray
 mods.bloodmagic.AlchemyArray
 ```
 
-!!! Note
-    An Alchemy Array is created in-world via Right Clicking Arcane Ashes on the ground.
-    Right Clicking first the input and then the catalyst on the Arcane Ashes will cause an animation, ending with the item being spawned in-world.
+1. This identifier will be used as the default for examples on this page
 
 ## Adding Recipes
 
-Just like other recipe types, the Alchemy Array also uses a recipe builder. <br>
-You don't know what a builder is? Check [this](https://groovyscript-docs.readthedocs.io/en/latest/groovy/builder/) out
-
-```groovy
-mods.bloodmagic.AlchemyArray.recipeBuilder()
-```
-
-Adding inputs: (requires exactly 1)
-
-```groovy
-.input(IIngredient)
-.input(IIngredient...)
-.input(Collection<IIngredient>)
-```
-
-Setting catalyst item: (required exactly 1)
-
-```groovy
-.catalyst(IIngredient)
-```
-
-Setting the texture location: (option (default WIP))
-
-```groovy
-.texture(String)
-.texture(ResourceLocation)
-```
-
-Adding output: (requires exactly 1)
-
-```groovy
-.output(ItemStack)
-```
-
-Register recipe: (returns `WayofTime.bloodmagic.api.impl.recipe.RecipeAlchemyArray`)
-
-```groovy
-.register()
-```
-
-!!! example
+- Adds recipes in the format `input`, `catalyst`, `output`, `circleTexture`:
 
     ```groovy
-    mods.bloodmagic.AlchemyArray.recipeBuilder()
-            .input(item("minecraft:diamond"))
-            .catalyst(item("bloodmagic:slate:1"))
-            .output(item("minecraft:gold_ingot"))
+    mods.bloodmagic.alchemy_array.add(Ingredient, Ingredient, ItemStack)
+    ```
+
+- Adds recipes in the format `input`, `catalyst`, `output`, optional `circleTexture`:
+
+    ```groovy
+    mods.bloodmagic.alchemy_array.add(Ingredient, Ingredient, ItemStack, ResourceLocation)
+    ```
+
+- Adds recipes in the format `input`, `catalyst`, `output`, optional `circleTexture`:
+
+    ```groovy
+    mods.bloodmagic.alchemy_array.add(Ingredient, Ingredient, ItemStack, String)
+    ```
+
+
+### Recipe Builder
+
+Just like other recipe types, the Alchemy Array also uses a recipe builder.
+
+Don't know what a builder is? Check [the builder info page](../../../groovy/builder.md) out.
+
+???+ Abstract "mods.bloodmagic.alchemy_array.recipeBuilder()"
+    - `#!groovy IngredientList<IIngredient>`. Sets the item inputs of the recipe. Requires exactly 1.
+
+        ```groovy
+        input(IIngredient)
+        input(IIngredient...)
+        input(Collection<IIngredient>)
+        ```
+
+    - `#!groovy ItemStackList`. Sets the item outputs of the recipe. Requires exactly 1.
+
+        ```groovy
+        output(ItemStack)
+        output(ItemStack...)
+        output(Collection<ItemStack>)
+        ```
+
+    - `#!groovy ResourceLocation`. Sets the animation texture.
+
+        ```groovy
+        texture(String)
+        texture(ResourceLocation)
+        ```
+
+    - `#!groovy IIngredient`. Sets the catalyst.
+
+        ```groovy
+        catalyst(IIngredient)
+        ```
+
+    - First validates the builder, returning `null` and outputting errors to the log file if the validation failed, then registers the builder and returns the registered object. (returns `null` or `WayofTime.bloodmagic.api.impl.recipe.RecipeAlchemyArray`).
+
+        ```groovy
+        register()
+        ```
+
+    ???+ Example
+        ```groovy
+        mods.bloodmagic.alchemy_array.recipeBuilder()
+            .input(item('minecraft:diamond'))
+            .catalyst(item('bloodmagic:slate:1'))
+            .output(item('minecraft:gold_ingot'))
+            .texture('bloodmagic:textures/models/AlchemyArrays/LightSigil.png')
             .register()
 
-    mods.bloodmagic.AlchemyArray.recipeBuilder()
-            .input(item("minecraft:clay"))
-            .catalyst(item("minecraft:gold_ingot"))
-            .output(item("minecraft:diamond"))
-            .texture("bloodmagic:textures/models/AlchemyArrays/LightSigil.png")
+        mods.bloodmagic.alchemy_array.recipeBuilder()
+            .input(item('minecraft:clay'))
+            .catalyst(item('minecraft:gold_ingot'))
+            .output(item('minecraft:diamond'))
             .register()
-    ```
+        ```
+
+
 
 ## Removing Recipes
 
-This removes ALL recipes that match the given input:
-
-```groovy
-mods.bloodmagic.AlchemyArray.removeByInput(IIngredient)
-```
-
-This removes ALL recipes that match the given catalyst:
-
-```groovy
-mods.bloodmagic.AlchemyArray.removeByCatalyst(IIngredient)
-```
-
-This removes ALL recipes that match both the given input and catalyst:
-
-```groovy
-mods.bloodmagic.AlchemyArray.removeByInputAndCatalyst(IIngredient input, IIngredient catalyst)
-```
-
-This removes ALL recipes that match the given output:
-
-```groovy
-mods.bloodmagic.AlchemyArray.removeByOutput(ItemStack)
-```
-
-Removes all registed Alchemy Array recipes:
-
-```groovy
-mods.bloodmagic.AlchemyArray.removeAll()
-```
-
-!!! example
+- Removes all recipes that match the given catalyst:
 
     ```groovy
-    // Removes all recipes that have an input of Haste Reagent. (1)
-    mods.bloodmagic.AlchemyArray.removeByInput(item("bloodmagic:component:13"))
-
-    // Removes all recipes that have the target catalyst item. (2)
-    mods.bloodmagic.AlchemyArray.removeByCatalyst(item("bloodmagic:slate:2"))
-
-    // Removes all recipes that have both the target input and catalyst items. (3)
-    mods.bloodmagic.AlchemyArray.removeByInputAndCatalyst(item("bloodmagic:component:7"), item("bloodmagic:slate:1"))
-
-    // Removes all recipes that output the Sigil of the Void.
-    mods.bloodmagic.AlchemyArray.removeByOutput(item("bloodmagic:sigil_void"))
+    mods.bloodmagic.alchemy_array.removeByCatalyst(IIngredient)
     ```
 
-    1. This would remove the recipe for the Sigil of Haste.
-    2. This would remove the recipe for the Sigil of the Claw, Elemental Affinity, Magnetism, Blood Lamp, and Holding.
-    3. This would remove the recipe for the Seer's Sigil.
+- Removes all recipes that match the given input:
+
+    ```groovy
+    mods.bloodmagic.alchemy_array.removeByInput(IIngredient)
+    ```
+
+- This removes all recipes that match the given input and Catalyst:
+
+    ```groovy
+    mods.bloodmagic.alchemy_array.removeByInputAndCatalyst(IIngredient, IIngredient)
+    ```
+
+- Removes all recipes that match the given output:
+
+    ```groovy
+    mods.bloodmagic.alchemy_array.removeByOutput(ItemStack)
+    ```
+
+- Removes all registered recipes:
+
+    ```groovy
+    mods.bloodmagic.alchemy_array.removeAll()
+    ```
+
+???+ Example
+    ```groovy
+    mods.bloodmagic.alchemy_array.removeByCatalyst(item('bloodmagic:slate:2'))
+    mods.bloodmagic.alchemy_array.removeByInput(item('bloodmagic:component:13'))
+    mods.bloodmagic.alchemy_array.removeByInputAndCatalyst(item('bloodmagic:component:7'), item('bloodmagic:slate:1'))
+    mods.bloodmagic.alchemy_array.removeByOutput(item('bloodmagic:sigil_void'))
+    mods.bloodmagic.alchemy_array.removeAll()
+    ```
+
+## Getting the value of recipes
+
+- Iterates through every entry in the registry, with the ability to call remove on any element to remove it:
+
+    ```groovy
+    mods.bloodmagic.alchemy_array.streamRecipes()
+    ```

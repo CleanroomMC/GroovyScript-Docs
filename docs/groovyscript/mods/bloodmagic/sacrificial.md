@@ -1,77 +1,130 @@
-# Blood Magic Entity Sacrifice Amount
+---
+title: "Sacrificial"
+description: "How much Life Essence is gained when using the Sacrificial Dagger on a mob."
+source_code_link: "https://github.com/CleanroomMC/GroovyScript/blob/master/src/main/java/com/cleanroommc/groovyscript/compat/mods/bloodmagic/Sacrificial.java"
+---
 
-Package:
+# Sacrificial (Blood Magic: Alchemical Wizardry)
 
-```groovy
+## Description
+
+How much Life Essence is gained when using the Sacrificial Dagger on a mob.
+
+## Identifier
+
+Refer to this via any of the following:
+
+```groovy hl_lines="3"
+mods.bm.sacrificial
+mods.bm.Sacrificial
+mods.bloodmagic.sacrificial/*(1)!*/
 mods.bloodmagic.Sacrificial
 ```
 
-!!! Note
-    Affects the value of Entities sacrificed to the Blood Altar via Sacrificial Dagger or Well of Suffering.
-    Amount gained is `value * HP`. If not set, the default value of `25` is used for the Sacrificial Dagger,
-    and configurable via config with a default value of `25` for the Well of Suffering Ritual.
+1. This identifier will be used as the default for examples on this page
 
-## Setting the Sacrificial value of Entities
+## Adding Recipes
 
-Just like other recipe types, Sacrificial also uses a recipe builder. <br>
-You don't know what a builder is? Check [this](https://groovyscript-docs.readthedocs.io/en/latest/groovy/builder/) out
-
-```groovy
-mods.bloodmagic.Sacrificial.recipeBuilder()
-```
-
-Set the target Entity.
-
-```groovy
-.entity(String)
-.entity(ResourceLocation)
-.entity(Entity)
-```
-
-Set the Blood amount per HP when Sacrificed:
-
-```groovy
-.value(int)
-```
-
-Register recipe:
-
-```groovy
-.register()
-```
-
-!!! example
+- Adds recipes in the format `entity`, `value`:
 
     ```groovy
-    mods.bloodmagic.Sacrificial.recipeBuilder()
-        .entity("minecraft:enderman") // If the Entity is already registered, overrides the prior value.
-        .value(1000)
-        .register()
+    mods.bloodmagic.sacrificial.add(Entity, int)
     ```
+
+- Adds recipes in the format `entity`, `value`:
+
+    ```groovy
+    mods.bloodmagic.sacrificial.add(ResourceLocation, int)
+    ```
+
+- Adds recipes in the format `entity`, `value`:
+
+    ```groovy
+    mods.bloodmagic.sacrificial.add(String, int)
+    ```
+
+
+### Recipe Builder
+
+Just like other recipe types, the Sacrificial also uses a recipe builder.
+
+Don't know what a builder is? Check [the builder info page](../../../groovy/builder.md) out.
+
+???+ Abstract "mods.bloodmagic.sacrificial.recipeBuilder()"
+    - `#!groovy int`. Sets how much Life Essence the entity gives. Requires greater than or equal to 0. (Default `0`).
+
+        ```groovy
+        value(int)
+        ```
+
+    - `#!groovy ResourceLocation`. Sets the target entity. Requires not null.
+
+        ```groovy
+        entity(Entity)
+        entity(String)
+        entity(ResourceLocation)
+        ```
+
+    - First validates the builder, returning `null` and outputting errors to the log file if the validation failed, then registers the builder and returns the registered object. (returns `null` or `java.lang.Object`).
+
+        ```groovy
+        register()
+        ```
+
+    ???+ Example
+        ```groovy
+        mods.bloodmagic.sacrificial.recipeBuilder()
+            .entity('minecraft:enderman')
+            .value(1000)
+            .register()
+        ```
+
+
 
 ## Removing Recipes
 
-!!! Danger "Warning"
-    Some Entities are set to 0 by default to prevent exploits - for example, Vanilla's Armor Stand.
-    Removing these Sacrificial values may introduce unintentional exploits.
-
-Removes the recipe that matches the given catalyst item:
-
-```groovy
-mods.bloodmagic.Sacrificial.remove(String)
-mods.bloodmagic.Sacrificial.remove(ResourceLocation)
-mods.bloodmagic.Sacrificial.remove(Entity)
-```
-
-Removes all registed Entities, resetting them to the default value:
-
-```groovy
-mods.bloodmagic.Sacrificial.removeAll()
-```
-
-!!! example
+- Removes any Sacrificial values entry with the given Entity as a ResourceLocation:
 
     ```groovy
-    // Removes the default Sacrificial value of a Villager.
-    mods.bloodmagic.Sacrificial.remove("minecraft:villager")
+    mods.bloodmagic.sacrificial.remove(Entity)
+    ```
+
+- Removes any Sacrificial values entry with the given EntityEntry as a ResourceLocation:
+
+    ```groovy
+    mods.bloodmagic.sacrificial.remove(EntityEntry)
+    ```
+
+- Removes any Sacrificial values entry with the given ResourceLocation:
+
+    ```groovy
+    mods.bloodmagic.sacrificial.remove(ResourceLocation)
+    ```
+
+- Removes any Sacrificial values entry with the given String as a ResourceLocation:
+
+    ```groovy
+    mods.bloodmagic.sacrificial.remove(String)
+    ```
+
+- Removes all registered recipes:
+
+    ```groovy
+    mods.bloodmagic.sacrificial.removeAll()
+    ```
+
+???+ Example
+    ```groovy
+    mods.bloodmagic.sacrificial.remove(entity('minecraft:villager'))
+    mods.bloodmagic.sacrificial.remove(resource('minecraft:villager'))
+    mods.bloodmagic.sacrificial.remove('minecraft:villager')
+    mods.bloodmagic.sacrificial.removeAll()
+    ```
+
+## Getting the value of recipes
+
+- Iterates through every entry in the registry, with the ability to call remove on any element to remove it:
+
+    ```groovy
+    mods.bloodmagic.sacrificial.streamRecipes()
     ```

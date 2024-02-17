@@ -1,88 +1,163 @@
-# EnderIO Vat
+---
+title: "Vat"
+description: "Converts an input fluidstack into an output itemstack at a rate based on up 2 itemstack inputs, and using power. Can be set to require at least NORMAL or ENHANCED tiers, or to IGNORE the tier. NORMAL and IGNORE are effectively the same."
+source_code_link: "https://github.com/CleanroomMC/GroovyScript/blob/master/src/main/java/com/cleanroommc/groovyscript/compat/mods/enderio/Vat.java"
+---
+
+# Vat (Ender IO)
+
+## Description
+
+Converts an input fluidstack into an output itemstack at a rate based on up 2 itemstack inputs, and using power. Can be set to require at least NORMAL or ENHANCED tiers, or to IGNORE the tier. NORMAL and IGNORE are effectively the same.
+
+## Identifier
+
+Refer to this via any of the following:
+
+```groovy hl_lines="1"
+mods.enderio.vat/*(1)!*/
+mods.enderio.Vat
+mods.eio.vat
+mods.eio.Vat
+```
+
+1. This identifier will be used as the default for examples on this page
 
 ## Adding Recipes
 
-Just like other recipe types, the Vat also uses a recipe builder. <br>
-You don't know what a builder is? Check [this](https://groovyscript-docs.readthedocs.io/en/latest/groovy/builder/) out
+### Recipe Builder
 
-```groovy
-mods.enderio.Vat.recipeBuilder()
-```
+Just like other recipe types, the Vat also uses a recipe builder.
 
-Adding input: (requires exactly 1)
+Don't know what a builder is? Check [the builder info page](../../../groovy/builder.md) out.
 
-```groovy
-.input(FluidStack)
-```
+???+ Abstract "mods.enderio.vat.recipeBuilder()"
+    - `#!groovy FluidStack`. Sets the input fluid. Requires not null.
 
-Adding output: (requires exactly 1)
+        ```groovy
+        input(FluidStack)
+        ```
 
-```groovy
-.output(FluidStack)
-```
+    - `#!groovy RecipeLevel`. Sets the minimum required machine tier of the recipe. (Default `RecipeLevel.IGNORE`).
 
-Set base multiplier: (optional (default is 1))
+        ```groovy
+        tierAny()
+        tierNormal()
+        tierEnhanced()
+        ```
 
-```groovy
-.baseMultiplier(float)
-```
+    - `#!groovy int`. Sets the energy cost of the recipe. Requires greater than 0. (Default `0`).
 
-Adding left item input: (optional)
+        ```groovy
+        energy(int)
+        ```
 
-```groovy
-.itemInputLeft(ItemStack item, float multiplier)
-```
+    - `#!groovy FluidStack`. Sets the output fluid. Requires not null.
 
-Adding right item input: (optional)
+        ```groovy
+        output(FluidStack)
+        ```
 
-```groovy
-.itemInputRight(ItemStack item, float multiplier)
-```
+    - `#!groovy IngredientList<IIngredient>`. Sets the valid input items for the left side.
 
-Set required machine tier: (optional (default is any))
+        ```groovy
+        itemInputLeft(IIngredient, float)
+        ```
 
-```groovy
-.tierAny() // Default: Allows any tier
-.tierNormal()
-.tierEnhanced()
-```
+    - `#!groovy IngredientList<IIngredient>`. Sets the valid input items for the right side.
 
-Set required total energy: (optional (default is 5000))
+        ```groovy
+        itemInputRight(IIngredient, float)
+        ```
 
-```groovy
-.energy(int)
-```
+    - `#!groovy FloatList`. Sets the multiplier applied to the respective input item on the left side.
 
-Register recipe: (returns nothing)
+        ```groovy
+        itemInputLeft(IIngredient, float)
+        ```
 
-```groovy
-.register()
-```
+    - `#!groovy FloatList`. Sets the multiplier applied to the respective input item on the right side.
 
-!!! example
+        ```groovy
+        itemInputRight(IIngredient, float)
+        ```
 
-    ```groovy
-    mods.enderio.Vat.recipeBuilder()
-            .input(fluid('water') * 500)
-            .output(fluid('lava') * 500)
-            .itemInputLeft(item('minecraft:diamond'), 1.5)
-            .itemInputRight(item('minecraft:iron_ingot'), 0.7)
-            .itemInputRight(item('minecraft:gold_ingot'), 7)
-            .baseMultiplier(1)
+    - `#!groovy float`. Sets the base amount of fluid output. Requires greater than 0. (Default `1`).
+
+        ```groovy
+        baseMultiplier(float)
+        ```
+
+    - First validates the builder, returning `null` and outputting errors to the log file if the validation failed, then registers the builder and returns the registered object. (returns `null` or `crazypants.enderio.base.recipe.Recipe`).
+
+        ```groovy
+        register()
+        ```
+
+    ???+ Example
+        ```groovy
+        mods.enderio.vat.recipeBuilder()
+            .input(fluid('lava'))
+            .output(fluid('hootch'))
+            .baseMultiplier(2)
+            .itemInputLeft(item('minecraft:clay'), 2)
+            .itemInputLeft(item('minecraft:clay_ball'), 0.5)
+            .itemInputRight(item('minecraft:diamond'), 5)
+            .itemInputRight(item('minecraft:diamond_block'), 50)
+            .itemInputRight(item('minecraft:gold_block'), 10)
+            .itemInputRight(item('minecraft:gold_ingot'), 1)
+            .itemInputRight(item('minecraft:gold_nugget'), 0.1)
+            .energy(1000)
+            .tierEnhanced()
             .register()
-    ```
+
+        mods.enderio.vat.recipeBuilder()
+            .input(fluid('hootch') * 100)
+            .output(fluid('water') * 50)
+            .itemInputLeft(item('minecraft:clay_ball'), 1)
+            .itemInputRight(item('minecraft:diamond'), 1)
+            .energy(1000)
+            .tierNormal()
+            .register()
+
+        mods.enderio.vat.recipeBuilder()
+            .input(fluid('water'))
+            .output(fluid('hootch'))
+            .itemInputLeft(item('minecraft:clay'), 2)
+            .itemInputLeft(item('minecraft:clay_ball'), 0.5)
+            .itemInputRight(item('minecraft:diamond'), 5)
+            .itemInputRight(item('minecraft:gold_ingot'), 1)
+            .energy(1000)
+            .tierAny()
+            .register()
+        ```
+
+
 
 ## Removing Recipes
 
-This removes ALL recipes that match the given output:
-
-```groovy
-mods.enderio.Vat.remove(ItemStack output)
-```
-
-!!! example
+- Removes all recipes that match the given output:
 
     ```groovy
-    // removes Nutrient Distillation recipe from the Vat
-    mods.enderio.Vat.remove(fluid('nutrient_distillation'))
+    mods.enderio.vat.remove(FluidStack)
+    ```
+
+- Removes all registered recipes:
+
+    ```groovy
+    mods.enderio.vat.removeAll()
+    ```
+
+???+ Example
+    ```groovy
+    mods.enderio.vat.remove(fluid('nutrient_distillation'))
+    mods.enderio.vat.removeAll()
+    ```
+
+## Getting the value of recipes
+
+- Iterates through every entry in the registry, with the ability to call remove on any element to remove it:
+
+    ```groovy
+    mods.enderio.vat.streamRecipes()
     ```

@@ -1,8 +1,58 @@
+
+.md-grid {
+  margin-left: 0;
+  margin-right: 0;
+  max-width: none;
+}
+
 [data-md-color-scheme="slate"] {
   --md-typeset-a-color: #7087E0;
 }
 
 .md-typeset .admonition,
 .md-typeset details {
-  font-size:.80rem;
+  font-size: 0.80rem;
+}
+
+.md-source-file__part {
+  color: var(--md-default-fg-color--light);
+  display: inline-flex;
+  gap: 0.5rem;
+  margin-right: 0.5rem;
+}
+
+.md-footer-actions {
+  float: right;
+  direction: rtl;
+}
+
+.md-footer-actions .md-content__button {
+  float: none
+}
+
+/*
+ * By checking that the parent doesn't have `#fakeGivePriority`, we get a selector specificity of 1-1-1, which we need to beat a 0-5-0 applying specific margins.
+ * Definitely better than just using `!important` four times, trust me.
+ */
+div:not(#fakeGivePriority) .md-content__inner {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.md-sidebar--primary {
+  width: 16rem;
+}
+
+@media screen and (max-width: 76.2344em) {
+
+  div:not(#fakeGivePriority) .md-content__inner {
+    margin: 0 .8rem 1.2rem;
+    width: auto;
+  }
+
+  .md-sidebar--primary {
+    width: 12.1rem;
+  }
+
 }

@@ -42,7 +42,7 @@ def print_numbers = { int n -> /*(1)!*/
 1. Most of the time the type is optional, so here it would become `{ n -> ...`
 
 This closure does the same thing as the method above, but it's a variable instead of a method. Just like any other
-variable you can pass it to other methods. (See [Events](../groovyscript/minecraft/events/aa_events.md)).
+variable you can pass it to other methods. (See [Events](../groovyscript/minecraft/events/index.md)).
 You can invoke this closure the same way you do with a method:
 
 ```groovy

@@ -7,7 +7,7 @@ import net.minecraftforge.event.world.GetCollisionBoxesEvent
 
 ## Sub-Classes
 This event extends the following events and can use all their methods and fields: <br>
-[WorldEvent](world_event.md)
+[WorldEvent](world_event/world_event.md)
 
 ## Methods
 ```groovy
@@ -21,4 +21,3 @@ java.util.List getCollisionBoxesList()
 ```groovy
 net.minecraft.util.math.AxisAlignedBB getAabb()
 ```
-
