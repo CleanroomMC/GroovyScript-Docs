@@ -62,6 +62,9 @@ extra:
     - name: English
       lang: en
       link: /en/
+    - name: Simplified Chinese
+      lang: zh
+      link: /zh/
 
 markdown_extensions:
   - admonition
@@ -99,6 +102,9 @@ plugins:
           name: English
           build: true
           default: true
+        - locale: zh
+          name: Simplified Chinese
+          build: true
   - literate-nav:
       nav_file: "!navigation.md"
   - git-revision-date-localized:
