@@ -5,6 +5,7 @@ search:
 
 * [Actually Additions](./actuallyadditions/)
 * [Advanced Mortars](./advancedmortars/)
+* [Aether Legacy](./aether_legacy/)
 * [Applied Energistics 2](./appliedenergistics2/)
 * [Astral Sorcery](./astralsorcery/)
 * [Avaritia](./avaritia/)
