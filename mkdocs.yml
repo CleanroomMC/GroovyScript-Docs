@@ -30,7 +30,8 @@ theme:
     - content.action.edit
     - content.action.view
 
-    - navigation.instant
+    # todo instant nav doesnt work with static i18n. figure out how to overwrite the behavior of changing locales to fix.
+    #- navigation.instant
     - navigation.tracking
     - navigation.tabs
     - navigation.top
