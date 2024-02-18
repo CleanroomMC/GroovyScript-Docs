@@ -9,6 +9,7 @@ nav:
   - GroovyScript: groovyscript/
 
 theme:
+  language: en
   name: material
   palette:
     - scheme: slate
@@ -56,6 +57,10 @@ extra:
     - icon: fontawesome/brands/discord
       link: https://discord.com/invite/m53yxTjjKM
       name: Join the Cleanroom Discord
+  alternate:
+    - name: English
+      lang: en
+      link: /en/
 
 markdown_extensions:
   - admonition
@@ -83,6 +88,16 @@ markdown_extensions:
 
 plugins:
   - search
+  - i18n:
+      docs_structure: suffix
+      fallback_to_default: true
+      reconfigure_material: true
+      reconfigure_search: true
+      languages:
+        - locale: en
+          name: English
+          build: true
+          default: true
   - literate-nav:
       nav_file: "!navigation.md"
   - git-revision-date-localized:
