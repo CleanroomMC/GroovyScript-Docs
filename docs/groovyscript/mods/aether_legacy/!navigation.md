@@ -7,6 +7,6 @@ search:
 * [GroovyScript - The Aether](./index.md)
 * [Accessory](./accessory.md)
 * [Enchanter](./enchanter.md)
-* [Enchanter Fuel](./enchanterfuel.md)
+* [Enchanter Fuel](./enchanter_fuel.md)
 * [Freezer](./freezer.md)
-* [Freezer](./freezerfuel.md)
+* [Freezer](./freezer_fuel.md)

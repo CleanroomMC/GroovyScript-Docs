@@ -16,9 +16,9 @@ Refer to this via any of the following:
 
 ```groovy hl_lines="1"
 mods.aether_legacy.enchanter/*(1)!*/
-mods.aether_legacy.enchanter
+mods.aether_legacy.Enchanter
 mods.aether.enchanter
-mods.aether.enchanter
+mods.aether.Enchanter
 ```
 
 1. This identifier will be used as the default for examples on this page

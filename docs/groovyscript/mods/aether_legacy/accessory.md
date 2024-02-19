@@ -16,9 +16,9 @@ Refer to this via any of the following:
 
 ```groovy hl_lines="1"
 mods.aether_legacy.accessory/*(1)!*/
-mods.aether_legacy.accessory
+mods.aether_legacy.Accessory
 mods.aether.accessory
-mods.aether.accessory
+mods.aether.Accessory
 ```
 
 1. This identifier will be used as the default for examples on this page

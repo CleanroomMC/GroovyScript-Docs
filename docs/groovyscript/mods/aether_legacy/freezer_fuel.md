@@ -15,10 +15,14 @@ source_code_link: "https://github.com/CleanroomMC/GroovyScript/blob/master/src/m
 Refer to this via any of the following:
 
 ```groovy hl_lines="1"
-mods.aether_legacy.freezerfuel/*(1)!*/
+mods.aether_legacy.freezer_fuel/*(1)!*/
+mods.aether_legacy.freezerfuel
 mods.aether_legacy.freezerFuel
+mods.aether_legacy.FreezerFuel
+mods.aether.freezer_fuel
 mods.aether.freezerfuel
 mods.aether.freezerFuel
+mods.aether.FreezerFuel
 ```
 
 1. This identifier will be used as the default for examples on this page
@@ -28,12 +32,12 @@ mods.aether.freezerFuel
 - Adds a Freezer fuel in the format `item`, `timeGiven`.:
 
     ```groovy
-    mods.aether_legacy.freezerfuel.add(ItemStack, int)
+    mods.aether_legacy.freezer_fuel.add(ItemStack, int)
     ```
 
 ???+ Example
     ```groovy
-    mods.aether_legacy.freezerfuel.add(item('minecraft:packed_ice'), 1000)
+    mods.aether_legacy.freezer_fuel.add(item('minecraft:packed_ice'), 1000)
     ```
 
 ## Removing Recipes
@@ -41,19 +45,19 @@ mods.aether.freezerFuel
 - Removes all recipes that match the given input:
 
     ```groovy
-    mods.aether_legacy.freezerfuel.removeByItem(ItemStack)
+    mods.aether_legacy.freezer_fuel.removeByItem(ItemStack)
     ```
 
 - Removes all registered recipes:
 
     ```groovy
-    mods.aether_legacy.freezerfuel.removeAll()
+    mods.aether_legacy.freezer_fuel.removeAll()
     ```
 
 ???+ Example
     ```groovy
-    mods.aether_legacy.freezerfuel.removeByItem(item('aether_legacy:icestone'))
-    mods.aether_legacy.freezerfuel.removeAll()
+    mods.aether_legacy.freezer_fuel.removeByItem(item('aether_legacy:icestone'))
+    mods.aether_legacy.freezer_fuel.removeAll()
     ```
 
 ## Getting the value of recipes
@@ -61,5 +65,5 @@ mods.aether.freezerFuel
 - Iterates through every entry in the registry, with the ability to call remove on any element to remove it:
 
     ```groovy
-    mods.aether_legacy.freezerfuel.streamEntries()
+    mods.aether_legacy.freezer_fuel.streamEntries()
     ```

@@ -16,9 +16,9 @@ Refer to this via any of the following:
 
 ```groovy hl_lines="1"
 mods.aether_legacy.freezer/*(1)!*/
-mods.aether_legacy.freezer
+mods.aether_legacy.Freezer
 mods.aether.freezer
-mods.aether.freezer
+mods.aether.Freezer
 ```
 
 1. This identifier will be used as the default for examples on this page
