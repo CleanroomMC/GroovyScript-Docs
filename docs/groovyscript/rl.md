@@ -16,7 +16,7 @@ There are two ways to do that:
 2. Using the `resource()` game object handler (acts like a global method)
     - `resource("domain:path")`
     - `resource("domain", "path")`
-    - `resource("path")` (defaults to the pack id specified in the run config (see [here](../getting_started.md#run-config)))
+    - `resource("path")` (defaults to the pack id specified in the run config (see [here](../introduction/getting_started.md#run-config)))
 
 We can see that both methods are mostly the same except that the game object handler defaults to the pack id instead of
 minecraft. This way is the preferred way.
