@@ -29,7 +29,7 @@ theme:
     - content.action.edit
     - content.action.view
 
-    - navigation.instant
+    #- navigation.instant
     - navigation.tracking
     - navigation.tabs
     - navigation.top
