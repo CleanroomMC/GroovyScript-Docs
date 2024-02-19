@@ -23,6 +23,7 @@ search:
 * [Integrated Dynamics](./integrateddynamics/)
 * [JEI](./jei/)
 * [Mekanism](./mekanism/)
+* [Pyrotech](./pyrotech/)
 * [Roots](./roots/)
 * [Thaumcraft](./thaumcraft/)
 * [Thermal Expansion](./thermal/)
