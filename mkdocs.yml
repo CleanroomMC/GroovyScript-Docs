@@ -86,7 +86,7 @@ plugins:
   - literate-nav:
       nav_file: "!navigation.md"
   - git-revision-date-localized:
-      enable_creation_date: true
+      enable_creation_date: !ENV [CI, false]
       type: timeago
 
 extra_css:
