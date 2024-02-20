@@ -36,11 +36,11 @@ The Recipe Builders in GroovyScript and with a `.register()` call, because the r
     Now let's create a new recipe using the builder
 
     ```groovy
-    def recipe = new RecipeBuilder()            // first create a recipe builder instance
-            .input('<minecraft:iron_ingot>')    // add a input
-            .input('<minecraft:clay_ball>' * 3) // add another input
-            .output('<minecraft:nether_star>')  // add a output
-            .build()                            // build and return a recipe instance
+    def recipe = new RecipeBuilder()                // first create a recipe builder instance
+            .input(item('minecraft:iron_ingot'))    // add a input
+            .input(item('minecraft:clay_ball') * 3) // add another input
+            .output(item('minecraft:nether_star'))  // add a output
+            .build()                                // build and return a recipe instance
     ```
 
     Notice how each method call is chained together. This is because `input()` and `output()` return the same builder instance.<br>
@@ -48,7 +48,7 @@ The Recipe Builders in GroovyScript and with a `.register()` call, because the r
     The same code as above can also be put in a single line:
 
     ```groovy
-    def recipe = new RecipeBuilder().input('<minecraft:iron_ingot>').input('<minecraft:clay_ball>' * 3).output('<minecraft:nether_star>').build()
+    def recipe = new RecipeBuilder().input(item('minecraft:iron_ingot')).input(item('minecraft:clay_ball') * 3).output(item('minecraft:nether_star')).build()
     ```
 
     This does exactly the same thing, but as you can see it is uglier and harder to read. The line breaks are purely aesthetically, but are highly recommended.
@@ -56,7 +56,7 @@ The Recipe Builders in GroovyScript and with a `.register()` call, because the r
     Now lets see what the recipe could look like without a builder:
 
     ```groovy
-    def recipe = new Recipe(['<minecraft:iron_ingot>', '<minecraft:clay_ball>' * 3], ['<minecraft:nether_star>'])
+    def recipe = new Recipe([item('minecraft:iron_ingot'), item('minecraft:clay_ball') * 3], [item('minecraft:nether_star')])
     ```
 
     That doesn't look too bad right? Now imagine the recipe requires 5 inputs. Or 10. Or 20. And you need to specify energy requirement, duration and maybe fluids.<br>

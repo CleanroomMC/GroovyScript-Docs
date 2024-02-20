@@ -35,12 +35,12 @@ for(init; condition; incrementor) {
 `init` is called before the loop. `condition` is checked before each run and `incrementor` is called after each run.
 
 !!! example
-This will print `0, 1, 2, 3, 4, 5, 6, 7, 8, 9`.
-```groovy
-for(int i = 0; i < 10; i++) {
-    print("${i++}, ")
-}
-```
+    This will print `0, 1, 2, 3, 4, 5, 6, 7, 8, 9`.
+    ```groovy
+    for(int i = 0; i < 10; i++) {
+        print("${i++}, ")
+    }
+    ```
 
 ## Enhanced for loop
 Those are very useful for lists and maps.
@@ -53,7 +53,7 @@ for(part in list) {
 ```
 `part` creates a new variable on each run for the current element in the list `lists`.
 
-For maps it looks like this
+For maps, it looks like this
 ```groovy
 def elements = [
         'Au': 'Gold',

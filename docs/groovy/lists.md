@@ -36,13 +36,13 @@ def subList3 = list[2..-1] // [7, 6, 5, 4, 3, 2, 1]
 
 ## Modifying lists
 Lists can modified by using `set()`, `add()` and `remove()`.
-We can also use the `[]` operators
+We can also use the `[]` and `<<` operators
 ```groovy
 def list = []
 list.add(1) // adds 1 to the lest
 // list is now [1]
-list.add(3)
-list.add(9)
+list << 3 // adds 3 to the list
+list << 9
 // [1, 3, 9]
 list.set(1, 5) // sets the element at index 1 to 5
 list[1] = 5 // same thing as above
