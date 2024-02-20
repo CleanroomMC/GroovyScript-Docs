@@ -76,3 +76,37 @@ In the second line that transformer is applied to the item. So at the end when y
 
 - `.noreturn()` will not return anything. Useful when you want to consume a water bucket with the bucket for example.
 - `.reuse()` will return itself. That means the item will not be consumed.
+
+## Comparing items
+Sometimes you want to check if items are equal to each other. This is more complicated than it sounds.
+Using `==` will almost always fail. Instead, you can use `in` operator. It compares the item, meta and nbt data.
+The count is ignored.
+???+ Example
+    ```groovy
+    def wool0 = item('minecraft:wool', 0)
+    def wool1 = item('minecraft:wool', 1)
+    println wool0 in wool1                          // false, since different meta
+    println item('minecraft:wool', 0) in wool0      // true, since same item and meta
+    println item('minecraft:wool', 0) * 5 in wool0  // true, amount is ignored
+    ```
+
+If you want to check if two items are exactly equal with count you need to use `ItemStack.areItemsEqual(ItemStack, ItemStack)`.
+???+ Example
+    ```groovy
+    def wool0 = item('minecraft:wool', 0)
+    def wool1 = item('minecraft:wool', 1)
+    println ItemStack.areItemsEqual(wool0, wool1)                       // false
+    println ItemStack.areItemsEqual(item('minecraft:wool', 0), wool1)   // true
+    println ItemStack.areItemsEqual(item('minecraft:wool', 0) * 5, wool1)   // false
+    ```
+
+You can also use the `in` operator if it matches any `IIngredient`.
+???+ Example
+    ```groovy
+    println item('minecraft:iron_ingot') in ore('ingotIron') // true
+    println ore('ingotIron') in item('minecraft:iron_ingot') // false, the iron ingot is in the ore dict and not vice versa.
+    ```
+
+To elevate the level of cursedness you can use `<<` and `>>` to further compare items.
+`<<` is exactly like the `in` operator, but the count of the ingredient must also be greater or equal to the item on the left side.
+`>>` is the same thing but sides swapped.
