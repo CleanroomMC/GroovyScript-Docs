@@ -13,9 +13,10 @@ tooltips for multiple items inside the event. You don't need to call listen for 
 
     ```groovy
     import net.minecraftforge.event.entity.player.ItemTooltipEvent
+    import net.minecraftforge.items.ItemHandlerHelper
 
     event_manager.listen { ItemTooltipEvent event ->
-        if (ItemStack.areItemsEqual(event.getItemStack(), item('minecraft:diamond'))) {
+        if (ItemHandlerHelper.canItemStacksStack(event.getItemStack(), item('minecraft:diamond'))) {
             event.getToolTip().add('Epic diamond tooltip')
         }
     }
