@@ -17,6 +17,7 @@ search:
 * [EvilCraft](./evilcraft/)
 * [Extended Crafting](./extendedcrafting/)
 * [Forestry](./forestry/forestry.md)
+* [Harken Scythe: Resharpened](./harkenscythe/)
 * [GregTech](./gtceu/)
 * [Immersive Engineering](./immersiveengineering/)
 * [Inspirations](./inspirations/)
