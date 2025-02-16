@@ -18,6 +18,7 @@ search:
 * [Extended Crafting](./extendedcrafting/)
 * [Forestry](./forestry/forestry.md)
 * [GregTech](./gtceu/)
+* [Harken Scythe: Resharpened](./harkenscythe/)
 * [Immersive Engineering](./immersiveengineering/)
 * [Inspirations](./inspirations/)
 * [Integrated Dynamics](./integrateddynamics/)
